@@ -1,0 +1,193 @@
+{
+	"@context":
+	{
+		"PublicService": "http://purl.org/vocab/cpsv#PublicService",
+		"Event": "http://data.europa.eu/m8g/Event",
+		"BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
+		"LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
+		"PublicServiceDataset": "http://data.europa.eu/m8g/PublicServiceDataset",
+		"Participation": "http://data.europa.eu/m8g/Participation",
+		"CriterionRequirement": "http://data.europa.eu/m8g/CriterionRequirement",
+		"Evidence": "http://data.europa.eu/m8g/Evidence",
+		"Output": "http://data.europa.eu/m8g/Output",
+		"Cost": "http://data.europa.eu/m8g/Cost",
+		"Channel": "http://data.europa.eu/m8g/Channel",
+		"Rule": "http://purl.org/vocab/cpsv#Rule",
+		"FormalFramework": "http://purl.org/vocab/cpsv#FormalFramework",
+		"Agent": "http://purl.org/dc/terms/Agent",
+		"PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
+		"ContactPoint": "https://schema.org/ContactPoint",
+		"title": {
+			"@id": "http://purl.org/dc/terms/title",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"description": {
+			"@id": "http://purl.org/dc/terms/description",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"keyword": {
+			"@id": "http://www.w3.org/ns/dcat#keyword",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"sector": {
+			"@id": "http://data.europa.eu/m8g/sector",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"type": {
+			"@id": "http://purl.org/dc/terms/type",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"language": {
+			"@id": "http://purl.org/dc/terms/language",
+			"@type": "http://purl.org/dc/terms/LinguisticSystem"
+		},
+		"status": {
+			"@id": "http://www.w3.org/ns/adms#status",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"isGroupedBy": {
+			"@id": "http://data.europa.eu/m8g/isGroupedBy",
+			"@type": "http://data.europa.eu/m8g/Event"
+		},
+		"requires": {
+			"@id": "http://purl.org/dc/terms/requires",
+			"@type": "http://purl.org/vocab/cpsv#PublicService"
+		},
+		"relation": {
+			"@id": "http://purl.org/dc/terms/relation",
+			"@type": "http://purl.org/vocab/cpsv#PublicService"
+		},
+		"hasCriterion": {
+			"@id": "http://data.europa.eu/m8g/hasCriterion",
+			"@type": "http://data.europa.eu/m8g/CriterionRequirement"
+		},
+		"hasCompetentAuthority": {
+			"@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+		},
+		"hasParticipation": {
+			"@id": "http://data.europa.eu/m8g/hasParticipation",
+			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+		},
+		"hasInput": {
+			"@id": "http://purl.org/vocab/cpsv#hasInput",
+			"@type": "http://data.europa.eu/m8g/Evidence"
+		},
+		"hasFormalFramework": {
+			"@id": "http://data.europa.eu/m8g/hasFormalFramework",
+			"@type": "http://purl.org/vocab/cpsv#FormalFramework"
+		},
+		"produces": {
+			"@id": "http://purl.org/vocab/cpsv#produces",
+			"@type": "http://data.europa.eu/m8g/Output"
+		},
+		"follows": {
+			"@id": "http://purl.org/vocab/cpsv#follows",
+			"@type": "http://purl.org/vocab/cpsv#Rule"
+		},
+		"spatial": {
+			"@id": "http://purl.org/dc/terms/spatial",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"hasContactPoint": {
+			"@id": "http://data.europa.eu/m8g/hasContactPoint",
+			"@type": "http://schema.org/ContactPoint"
+		},
+		"hasChannel": {
+			"@id": "http://data.europa.eu/m8g/hasChannel",
+			"@type": "http://data.europa.eu/m8g/Channel"
+		},
+		"processingTime": {
+			"@id": "http://data.europa.eu/m8g/processingTime",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"hasCost": {
+			"@id": "http://data.europa.eu/m8g/hasCost",
+			"@type": "http://data.europa.eu/m8g/Cost"
+		},
+		"isDescribedAt": {
+			"@id": "http://data.europa.eu/m8g/isDescribedAt",
+			"@type": "http://data.europa.eu/m8g/PublicServiceDataset"
+		},
+		"publisher": {
+			"@id": "http://purl.org/dc/terms/publisher",
+			"@type": "http://xmlns.com/foaf/0.1/Agent"
+		},
+		"landingPage": {
+			"@id": "http://www.w3.org/ns/dcat#landingPage",
+			"@type": "http://xmlns.com/foaf/0.1/Document"
+		},
+		"role": {
+			"@id": "http://data.europa.eu/m8g/role",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"page": {
+			"@id": "http://xmlns.com/foaf/0.1/page",
+			"@type": "http://xmlns.com/foaf/0.1/Document"
+		},
+		"value": {
+			"@id": "http://data.europa.eu/m8g/value",
+			"@type": "http://www.w3.org/2001/XMLSchema#double"
+		},
+		"currency": {
+			"@id": "http://data.europa.eu/m8g/currency",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"isDefinedBy": {
+			"@id": "http://data.europa.eu/m8g/isDefinedBy",
+			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+		},
+		"ifAccessedThrough": {
+			"@id": "http://data.europa.eu/m8g/ifAccessedThrough",
+			"@type": "http://data.europa.eu/m8g/Channel"
+		},
+		"ownedBy": {
+			"@id": "http://data.europa.eu/m8g/ownedBy",
+			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+		},
+		"openingHours": {
+			"@id": "https://schema.org/openingHours",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"hoursAvailable": {
+			"@id": "https://schema.org/hoursAvailable",
+			"@type": "http://schema.org/OpeningHoursSpecification"
+		},
+		"implements": {
+			"@id": "http://purl.org/vocab/cpsv#implements",
+			"@type": "http://purl.org/vocab/cpsv#FormalFramework"
+		},
+		"languageELI": {
+			"@id": "http://data.europa.eu/eli/ontology#language",
+			"@type": "http://data.europa.eu/eli/ontology#Language"
+		},
+		"subject": {
+			"@id": "http://data.europa.eu/m8g/subject",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"territorialApplication": {
+			"@id": "http://data.europa.eu/m8g/territorialApplication",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+		"playsRole": {
+			"@id": "http://data.europa.eu/m8g/playsRole",
+			"@type": "http://data.europa.eu/m8g/Participation"
+		},
+		"hasAddress": {
+			"@id": "http://data.europa.eu/m8g/hasAddress",
+			"@type": "http://www.w3.org/ns/locn#Address"
+		},
+		"prefLabel": {
+			"@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"email": {
+			"@id": "https://schema.org/email",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"telephone": {
+			"@id": "https://schema.org/telephone",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		}
+	}
+}
