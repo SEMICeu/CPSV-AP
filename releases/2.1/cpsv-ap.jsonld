@@ -57,6 +57,10 @@
 			"@id": "http://purl.org/dc/terms/relation",
 			"@type": "http://purl.org/vocab/cpsv#PublicService"
 		},
+		"related": {
+			"@id": "http://purl.org/dc/terms/relation",
+			"@type": "http://purl.org/vocab/cpsv#FormalFramework"
+		},
 		"hasCriterion": {
 			"@id": "http://data.europa.eu/m8g/hasCriterion",
 			"@type": "http://data.europa.eu/m8g/CriterionRequirement"
@@ -67,7 +71,7 @@
 		},
 		"hasParticipation": {
 			"@id": "http://data.europa.eu/m8g/hasParticipation",
-			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+			"@type": "http://data.europa.eu/m8g/Participation"
 		},
 		"hasInput": {
 			"@id": "http://purl.org/vocab/cpsv#hasInput",
