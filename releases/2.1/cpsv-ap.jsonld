@@ -53,11 +53,11 @@
 			"@id": "http://purl.org/dc/terms/requires",
 			"@type": "http://purl.org/vocab/cpsv#PublicService"
 		},
-		"relation": {
+		"relatedService": {
 			"@id": "http://purl.org/dc/terms/relation",
 			"@type": "http://purl.org/vocab/cpsv#PublicService"
 		},
-		"related": {
+		"relatedFramework": {
 			"@id": "http://purl.org/dc/terms/relation",
 			"@type": "http://purl.org/vocab/cpsv#FormalFramework"
 		},
