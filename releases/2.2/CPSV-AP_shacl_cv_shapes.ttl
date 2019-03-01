@@ -1,0 +1,60 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+cpsv:HasShapeCV-MDRLanguage
+	a sh:PropertyShape ;
+	sh:path dct:language ;
+	sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
+	sh:nodeKind sh:IRI ;
+	sh:severity sh:Warning .
+
+cpsv:HasShapeCV-ADMSStatus
+	a sh:PropertyShape ;
+	sh:path adms:status ;
+	sh:pattern "^http://purl.org/adms/status/" ;
+	sh:nodeKind sh:IRI ;
+	sh:severity sh:Warning .
+
+cpsv:PublicServiceShapeCV
+	a sh:NodeShape ;
+	sh:targetClass cpsv:PublicService ;
+	sh:property cpsv:HasShapeCV-MDRLanguage ;
+	sh:property cpsv:HasShapeCV-MDRSpatial ;
+	sh:property cpsv:HasShapeCV-ADMSStatus .
+
+cpsv:EvidenceShapeCV
+	a sh:NodeShape ;
+	sh:targetClass cv:Evidence ;
+	sh:property cpsv:HasShapeCV-MDRLanguage .
+
+cpsv:RuleShapeCV
+	a sh:NodeShape ;
+	sh:targetClass cpsv:Rule ;
+	sh:property cpsv:HasShapeCV-MDRLanguage .
+
+cpsv:HasShapeCV-MDRSpatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:pattern "^(http://publications.europa.eu/resource/authority/continent/|http://publications.europa.eu/resource/authority/country/|http://publications.europa.eu/resource/authority/place/|http://sws.geonames.org/)" ;
+	sh:nodeKind sh:IRI ;
+	sh:severity sh:Warning .
+
+cpsv:PublicOrganizationShapeCV
+	a sh:NodeShape ;
+	sh:targetClass cv:PublicOrganisation ;
+	sh:property cpsv:HasShapeCV-MDRSpatial .
+
+cpsv:HasShapeCV-MDRCurrency
+	a sh:PropertyShape ;
+	sh:path cv:currency ;
+	sh:pattern "^http://publications.europa.eu/resource/authority/currency/" ;
+	sh:nodeKind sh:IRI ;
+	sh:severity sh:Warning .
+
+cpsv:CostShapeCV
+	a sh:NodeShape ;
+	sh:targetClass cv:Cost ;
+	sh:property cpsv:HasShapeCV-MDRCurrency .

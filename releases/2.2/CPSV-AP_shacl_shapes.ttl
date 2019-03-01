@@ -1,0 +1,462 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cpsv:hasMin0Max1Shape-description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin1Max1Shape-description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin1Max1Shape-identifier
+	a sh:PropertyShape ;
+	sh:path dct:identifier ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin1Max1Shape-name
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+	
+cpsv:hasMin1MaxNShape-name
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:minCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-keyword
+	a sh:PropertyShape ;
+	sh:path dcat:keyword ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-processingTime
+	a sh:PropertyShape ;
+	sh:path cv:processingTime ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-sector
+	a sh:PropertyShape ;
+	sh:path cv:sector ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-status
+	a sh:PropertyShape ;
+	sh:path adms:status ;
+	sh:maxCount 1 ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-thematicArea
+	a sh:PropertyShape ;
+	sh:path cv:thematicArea ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin0MaxNShape-type
+	a sh:PropertyShape ;
+	sh:path dct:type ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin0Max1Shape-type
+	a sh:PropertyShape ;
+	sh:path dct:type ;
+	sh:maxCount 1 ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+	
+cpsv:PublicServiceShape-hasLegalResource
+	a sh:PropertyShape ;
+	sh:path cv:hasLegalResouce ;
+	sh:class eli:LegalResource ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-follows
+	a sh:PropertyShape ;
+	sh:path cpsv:follows ;
+	sh:class cpsv:Rule ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasCompetentAuthority
+	a sh:PropertyShape ;
+	sh:path cv:hasCompetentAuthority ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:class cv:PublicOrganisation ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-produces
+	a sh:PropertyShape ;
+	sh:path cpsv:produces ;
+	sh:class cv:Output ;
+	sh:severity sh:Violation .
+
+cpsv:hasMin0MaxNShape-hasInput
+	a sh:PropertyShape ;
+	sh:path cpsv:hasInput ;
+	sh:class cv:Evidence ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasChannel
+	a sh:PropertyShape ;
+	sh:path cv:hasChannel ;
+	sh:class cv:Channel ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasContactPoint
+	a sh:PropertyShape ;
+	sh:path cv:hasContactPoint ;
+	sh:class schema:ContactPoint ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasCost
+	a sh:PropertyShape ;
+	sh:path cv:hasCost ;
+	sh:class cv:Cost ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-isClassifiedBy
+	a sh:PropertyShape ;
+	sh:path cv:isClassifiedBy ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasCriterion
+	a sh:PropertyShape ;
+	sh:path cv:hasCriterion ;
+	sh:class cv:CriterionRequirement ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-requires
+	a sh:PropertyShape ;
+	sh:path dct:requires ;
+	sh:class cpsv:PublicService ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-isGroupedBy
+	a sh:PropertyShape ;
+	sh:path cv:isGroupedBy ;
+	sh:class cv:Event ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-isDescribedAt
+	a sh:PropertyShape ;
+	sh:path cv:isDescribedAt ;
+	sh:class cv:PublicServiceDataset ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape-hasParticipation
+	a sh:PropertyShape ;
+	sh:path cv:hasParticipation ;
+	sh:class cv:Participation ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceShape
+	a sh:NodeShape ;
+	sh:targetClass cpsv:PublicService ;
+	sh:property cpsv:hasMin1Max1Shape-description ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name ;
+	sh:property cpsv:PublicServiceShape-keyword ;
+	sh:property cpsv:hasMin0MaxNShape-language ;
+	sh:property cpsv:PublicServiceShape-processingTime ;
+	sh:property cpsv:PublicServiceShape-sector ;
+	sh:property cpsv:PublicServiceShape-spatial ;
+	sh:property cpsv:PublicServiceShape-status ;
+	sh:property cpsv:PublicServiceShape-thematicArea ;
+	sh:property cpsv:PublicServiceShape-hasLegalResource ;
+	sh:property cpsv:PublicServiceShape-follows ;
+	sh:property cpsv:PublicServiceShape-hasCompetentAuthority ;
+	sh:property cpsv:PublicServiceShape-produces ;
+	sh:property cpsv:hasMin0MaxNShape-hasInput ;
+	sh:property cpsv:PublicServiceShape-hasChannel ;
+	sh:property cpsv:PublicServiceShape-hasContactPoint ;
+	sh:property cpsv:PublicServiceShape-hasCost ;
+	sh:property cpsv:PublicServiceShape-isClassifiedBy ;
+	sh:property cpsv:PublicServiceShape-hasCriterion ;
+	sh:property cpsv:hasMin0MaxNShape-related ;
+	sh:property cpsv:PublicServiceShape-requires ;
+	sh:property cpsv:PublicServiceShape-isGroupedBy ;
+	sh:property cpsv:PublicServiceShape-isDescribedAt ;
+	sh:property cpsv:PublicServiceShape-hasParticipation .
+
+cpsv:PublicOrganizationShape-preferredLabel
+	a sh:PropertyShape ;
+	sh:path skos:prefLabel ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:PublicOrganizationShape-spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:PublicOrganizationShape
+	a sh:NodeShape ;
+	sh:targetClass cv:PublicOrganisation ;
+	sh:property cpsv:PublicOrganizationShape-preferredLabel ;
+	sh:property cpsv:PublicOrganizationShape-spatial .
+
+cpsv:hasMin0MaxNShape-language
+	a sh:PropertyShape ;
+	sh:path dct:language ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:EvidenceShape-relatedDocumentation
+	a sh:PropertyShape ;
+	sh:path foaf:page ;
+	sh:class foaf:Document ;
+	sh:severity sh:Violation .
+
+cpsv:EvidenceShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Evidence ;
+	sh:property cpsv:hasMin0Max1Shape-description ;
+	sh:property cpsv:hasMin0MaxNShape-language ;
+	sh:property cpsv:EvidenceShape-relatedDocumentation ;
+	sh:property cpsv:hasMin0Max1Shape-type ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name .
+
+cpsv:CostShape-currency
+	a sh:PropertyShape ;
+	sh:path cv:currency ;
+	sh:maxCount 1 ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:CostShape-value
+	a sh:PropertyShape ;
+	sh:path cv:value ;
+	sh:maxCount 1 ;
+	sh:datatype xsd:integer ;
+	sh:severity sh:Violation .
+
+cpsv:CostShape-isDefinedBy
+	a sh:PropertyShape ;
+	sh:path cv:isDefinedBy ;
+	sh:class cv:PublicOrganisation ;
+	sh:severity sh:Violation .
+
+cpsv:CostShape-ifAccessedThrough
+	a sh:PropertyShape ;
+	sh:path cv:ifAccessedThrough ;
+	sh:maxCount 1 ;
+	sh:class cv:Channel ;
+	sh:severity sh:Violation .
+
+cpsv:CostShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Cost ;
+	sh:property cpsv:CostShape-currency ;
+	sh:property cpsv:hasMin0Max1Shape-description ;
+	sh:property cpsv:CostShape-value ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:CostShape-isDefinedBy ;
+	sh:property cpsv:CostShape-ifAccessedThrough .
+
+cpsv:ChannelShape-openingHours
+	a sh:PropertyShape ;
+	sh:path schema:openingHours ;
+	sh:nodeKind sh:Literal ;
+	sh:severity sh:Violation .
+
+cpsv:ChannelShape-ownedBy
+	a sh:PropertyShape ;
+	sh:path cv:ownedBy ;
+	sh:class cv:PublicOrganisation ;
+	sh:severity sh:Violation .
+
+cpsv:ChannelShape-availabilityRestriction
+	a sh:PropertyShape ;
+	sh:path schema:hoursAvailable ;
+	sh:maxCount 1 ;
+	sh:class schema:OpeningHoursSpecification ;
+	sh:severity sh:Violation .
+
+cpsv:ChannelShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Channel ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:ChannelShape-openingHours ;
+	sh:property cpsv:hasMin0Max1Shape-type ;
+	sh:property cpsv:ChannelShape-ownedBy ;
+	sh:property cpsv:hasMin0MaxNShape-hasInput ;
+	sh:property cpsv:ChannelShape-availabilityRestriction .
+
+cpsv:OutputShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Output ;
+	sh:property cpsv:hasMin0Max1Shape-description ;
+	sh:property cpsv:hasMin0MaxNShape-type ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name .
+
+cpsv:RuleShape-implements
+	a sh:PropertyShape ;
+	sh:path cpsv:implements ;
+	sh:class cpsv:PublicService ;
+	sh:severity sh:Violation .
+
+cpsv:RuleShape
+	a sh:NodeShape ;
+	sh:targetClass cpsv:Rule ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name ;
+	sh:property cpsv:hasMin1Max1Shape-description ;
+	sh:property cpsv:hasMin0MaxNShape-language ;
+	sh:property cpsv:RuleShape-implements .
+
+cpsv:LegalResourceShape-related
+	a sh:PropertyShape ;
+	sh:path dct:relation ;
+	sh:class eli:LegalResource ;
+	sh:severity sh:Violation .
+
+cpsv:LegalResourceShape
+	a sh:NodeShape ;
+	sh:targetClass eli:LegalResource ;
+	sh:property cpsv:LegalResourceShape-related .
+
+cpsv:CollectionShape-member
+	a sh:PropertyShape ;
+	sh:path skos:member ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:CollectionShape
+	a sh:NodeShape ;
+	sh:targetClass skos:Collection ;
+	sh:property cpsv:CollectionShape-member .
+
+cpsv:AgentShape-hasAddress
+	a sh:PropertyShape ;
+	sh:path cv:hasAddress ;
+	sh:maxCount 1 ;
+	sh:class locn:Address ;
+	sh:severity sh:Violation .
+
+cpsv:AgentShape-playsRole
+	a sh:PropertyShape ;
+	sh:path cv:playsRole ;
+	sh:class cv:Participation ;
+	sh:severity sh:Violation .
+
+cpsv:AgentShape
+	a sh:NodeShape ;
+	sh:targetClass dct:Agent ;
+	sh:property cpsv:hasMin1Max1Shape-name ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:AgentShape-hasAddress ;
+	sh:property cpsv:AgentShape-playsRole .
+
+cpsv:ParticipationShape-role
+	a sh:PropertyShape ;
+	sh:path cv:role ;
+	sh:minCount 1 ;
+	sh:class skos:Concept ;
+	sh:severity sh:Violation .
+
+cpsv:ParticipationShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Participation ;
+	sh:property cpsv:hasMin1Max1Shape-description ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:ParticipationShape-role .
+
+cpsv:PublicServiceDatasetShape-landingPage
+	a sh:PropertyShape ;
+	sh:path dcat:landingPage ;
+	sh:minCount 1 ;
+	sh:class foaf:Document ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceDatasetShape-publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:class dct:Agent ;
+	sh:severity sh:Violation .
+
+cpsv:PublicServiceDatasetShape
+	a sh:NodeShape ;
+	sh:targetClass cv:PublicServiceDataset ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1MaxNShape-name ;
+	sh:property cpsv:PublicServiceDatasetShape-landingPage ;
+	sh:property cpsv:PublicServiceDatasetShape-publisher .
+
+cpsv:hasMin0MaxNShape-related
+	a sh:PropertyShape ;
+	sh:path dct:relation ;
+	sh:class cpsv:PublicService ;
+	sh:severity sh:Violation .
+
+cpsv:EventShape
+	a sh:NodeShape ;
+	sh:targetClass cv:Event ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name ;
+	sh:property cpsv:hasMin0Max1Shape-description ;
+	sh:property cpsv:hasMin0MaxNShape-type ;
+	sh:property cpsv:hasMin0MaxNShape-related .
+
+cpsv:CriterionRequirementShape
+	a sh:NodeShape ;
+	sh:targetClass cv:CriterionRequirement ;
+	sh:property cpsv:hasMin1Max1Shape-identifier ;
+	sh:property cpsv:hasMin1Max1Shape-name ;
+	sh:property cpsv:hasMin0MaxNShape-type .
+
+cpsv:ContactPointShape-availabilityRestriction
+	a sh:PropertyShape ;
+	sh:path schema:hoursAvailable ;
+	sh:class schema:OpeningHoursSpecification ;
+	sh:severity sh:Violation .
+
+cpsv:ContactPointShape
+	a sh:NodeShape ;
+	sh:targetClass schema:ContactPoint ;
+	sh:property cpsv:ContactPointShape-availabilityRestriction .
