@@ -248,7 +248,7 @@ cpsv:implements rdf:type owl:ObjectProperty ;
                 rdfs:label "implements"@en .
 
 				
-###  http://purl.org/dc/terms/related
+###  http://purl.org/dc/terms/relation
 dct:relation rdf:type owl:ObjectProperty ;
               rdfs:range eli:LegalResource ;
               vann:usageNote "Cardinality [0..n]. This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en ;
