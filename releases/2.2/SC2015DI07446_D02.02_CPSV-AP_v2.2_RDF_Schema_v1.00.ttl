@@ -177,8 +177,7 @@ cv:thematicArea rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:ObjectProperty ;
-             rdfs:range dct:LinguisticSystem ,
-                        skos:Concept ;
+             rdfs:range dct:LinguisticSystem ;
              vann:usageNote "Cardinality [0..n]. Indicates the language(s) in which the Evidence must be provided. The CPSV-AP v2.0 recommends to use as controlled vocabulary the European Publications Office's Languages Named Authority List (NAL) (http://publications.europa.eu/mdr/authority/language/index.html)."@en ,
                             "Cardinality [0..n]. This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The CPSV-AP v2.0 recommends to use as controlled vocabulary the European Publications Office's Languages Named Authority List (NAL) (http://publications.europa.eu/mdr/authority/language/index.html)."@en ,
                             "Cardinality [0..n]. This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The CPSV-AP v2.0 recommends to use as controlled vocabulary the European Publications Office's Languages Named Authority List (NAL) (http://publications.europa.eu/mdr/authority/language/index.html)."@en ;
@@ -332,22 +331,7 @@ dct:description rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/identifier
 dct:identifier rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal ;
-			   vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ;
-               rdfs:label "Identifier"@en ;
-               dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Public Service Dataset."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
-               rdfs:isDefinedBy dct: ;
-               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Criterion Requirement."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
-                              "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
-               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
-               vann:usageNote "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en .
+               rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/title
@@ -568,5 +552,27 @@ schema:OpeningHoursSpecification rdf:type owl:Class .
 ###  http://purl.org/dc/terms/identifier
 dct:identifier rdf:type owl:NamedIndividual ;
                dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dct:identifier vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ;
+               rdfs:label "Identifier"@en ;
+               dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
+               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Public Service Dataset."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
+               rdfs:isDefinedBy dct: ;
+               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Criterion Requirement."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
+               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+               vann:usageNote "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en .
+
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
