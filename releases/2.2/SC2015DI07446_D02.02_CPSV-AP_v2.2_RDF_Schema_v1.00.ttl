@@ -28,6 +28,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/hasVersion
+dct:hasVersion rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/usageNote
 vann:usageNote rdf:type owl:AnnotationProperty .
 
@@ -190,9 +194,11 @@ dct:publisher rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/relation
 dct:relation rdf:type owl:ObjectProperty ;
-             rdfs:range cpsv:PublicService ;
+             rdfs:range eli:LegalResource ,
+                        cpsv:PublicService ;
              vann:usageNote "Cardinality [0..n]. This property links an event directly to a public service that is related to it."@en ,
-                            "Cardinality [0..n]. This property represents a Public Service related to the particular instance of the Public Service class."@en ;
+                            "Cardinality [0..n]. This property represents a Public Service related to the particular instance of the Public Service class."@en ,
+                            "Cardinality [0..n]. This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en ;
              rdfs:label "related"@en ,
                         "relatedService"@en .
 
@@ -247,13 +253,6 @@ cpsv:implements rdf:type owl:ObjectProperty ;
                 vann:usageNote "Cardinality [0..n]. The Implements property links a Rule to relevant legislation or policy documents i.e. the Formal Framework under which the Rules are being defined."@en ;
                 rdfs:label "implements"@en .
 
-				
-###  http://purl.org/dc/terms/relation
-dct:relation rdf:type owl:ObjectProperty ;
-              rdfs:range eli:LegalResource ;
-              vann:usageNote "Cardinality [0..n]. This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en ;
-              rdfs:label "related"@en .
-				
 
 ###  http://purl.org/vocab/cpsv#produces
 cpsv:produces rdf:type owl:ObjectProperty ;
@@ -285,6 +284,7 @@ dcat:landingPage rdf:type owl:ObjectProperty ;
 
 ###  http://xmlns.com/foaf/0.1/page
 foaf:page rdf:type owl:ObjectProperty ;
+          rdfs:domain owl:Thing ;
           rdfs:range foaf:Document ;
           vann:usageNote "Cardinality [0..n]. This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input."@en ;
           rdfs:label "relatedDocumentation"@en .
@@ -328,6 +328,26 @@ dct:description rdf:type owl:DatatypeProperty ;
                                "Cardinality [1..1]. This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ,
                                "Cardinality [1..1]. This property represents a free text Description of the Rule."@en ;
                 rdfs:label "description"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:range rdfs:Literal ;
+			   vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ;
+               rdfs:label "Identifier"@en ;
+               dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
+               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Public Service Dataset."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
+               rdfs:isDefinedBy dct: ;
+               vann:usageNote "Cardinality [1..1]. This property represents an Identifier for the Criterion Requirement."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                              "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
+               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+               vann:usageNote "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -544,5 +564,9 @@ schema:OpeningHoursSpecification rdf:type owl:Class .
 ###  http://purl.org/adms/assettype/Ontology
 <http://purl.org/adms/assettype/Ontology> rdf:type owl:NamedIndividual .
 
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:NamedIndividual ;
+               dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en .
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
