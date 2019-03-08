@@ -71,7 +71,7 @@ cpsv:PublicServiceShape-sector
 cpsv:PublicServiceShape-spatial
 	a sh:PropertyShape ;
 	sh:path dct:spatial ;
-	sh:class skos:Concept ;
+	sh:class dct:Location ;
 	sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-status
@@ -240,7 +240,7 @@ cpsv:PublicOrganizationShape
 cpsv:hasMin0MaxNShape-language
 	a sh:PropertyShape ;
 	sh:path dct:language ;
-	sh:class skos:Concept ;
+	sh:class dct:LinguisticSystem ;
 	sh:severity sh:Violation .
 
 cpsv:EvidenceShape-relatedDocumentation
