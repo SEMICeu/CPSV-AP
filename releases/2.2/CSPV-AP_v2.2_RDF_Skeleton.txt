@@ -29,7 +29,7 @@
 			},
 			{
 				"name": "schema",
-				"uri": "http://schema.org/"
+				"uri": "https://schema.org/"
 			},
 			{
 				"name": "adms",
@@ -81,6 +81,16 @@
 							"expression": "value",
 							"isRowNumberCell": false,
 							"columnName": "Name"
+						}
+					},
+					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
 						}
 					},
 					{
@@ -389,6 +399,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://purl.org/dc/terms/description",
 						"curie": "dct:description",
 						"target": {
@@ -441,6 +461,16 @@
 							"expression": "value",
 							"isRowNumberCell": false,
 							"columnName": "Name"
+						}
+					},
+					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
 						}
 					},
 					{
@@ -501,6 +531,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://purl.org/dc/terms/title",
 						"curie": "dct:title",
 						"target": {
@@ -544,6 +584,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://data.europa.eu/m8g/role",
 						"curie": "cv:role",
 						"target": {
@@ -577,6 +627,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://purl.org/dc/terms/type",
 						"curie": "dct:type",
 						"target": {
@@ -604,6 +664,16 @@
 							"expression": "value",
 							"isRowNumberCell": false,
 							"columnName": "Name"
+						}
+					},
+					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
 						}
 					},
 					{
@@ -671,6 +741,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://purl.org/dc/terms/description",
 						"curie": "dct:description",
 						"target": {
@@ -701,6 +781,16 @@
 				"columnName": "CostURI",
 				"rdfTypes": [],
 				"links": [{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://data.europa.eu/m8g/value",
 						"curie": "cv:value",
 						"target": {
@@ -769,6 +859,16 @@
 					"curie": "cv:Channel"
 				}],
 				"links": [{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://data.europa.eu/m8g/ownedBy",
 						"curie": "cv:ownedBy",
 						"target": {
@@ -915,6 +1015,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://purl.org/dc/terms/language",
 						"curie": "dct:language",
 						"target": {
@@ -992,6 +1102,16 @@
 						}
 					},
 					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://data.europa.eu/m8g/playsRole",
 						"curie": "cv:playsRole",
 						"target": {
@@ -1027,6 +1147,26 @@
 					"curie": "cv:PublicOrganisation"
 				}],
 				"links": [{
+						"uri": "http://purl.org/dc/terms/title",
+						"curie": "dct:title",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Name"
+						}
+					},
+					{
+						"uri": "http://purl.org/dc/terms/identifier",
+						"curie": "dct:identifier",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Identifier"
+						}
+					},
+					{
 						"uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
 						"curie": "skos:prefLabel",
 						"target": {
@@ -1044,6 +1184,30 @@
 							"expression": "value",
 							"isRowNumberCell": false,
 							"columnName": "Spatial",
+							"rdfTypes": [],
+							"links": []
+						}
+					}
+					{
+						"uri": "http://data.europa.eu/m8g/playsRole",
+						"curie": "cv:playsRole",
+						"target": {
+							"nodeType": "cell-as-resource",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Plays Role",
+							"rdfTypes": [],
+							"links": []
+						}
+					},
+					{
+						"uri": "http://data.europa.eu/m8g/hasAddress",
+						"curie": "cv:hasAddress",
+						"target": {
+							"nodeType": "cell-as-resource",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Has Address",
 							"rdfTypes": [],
 							"links": []
 						}
@@ -1089,6 +1253,70 @@
 							"columnName": "Hours Available",
 							"rdfTypes": [],
 							"links": []
+						}
+					},
+					{
+						"uri": "http://schema.org/areaServed",
+						"curie": "schema:areaServed",
+						"target": {
+							"nodeType": "cell-as-resource",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "Area served",
+							"rdfTypes": [],
+							"links": []
+						}
+					},
+					{
+						"uri": "http://schema.org/availableLanguage",
+						"curie": "schema:availableLanguage",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "availableLanguage"
+						}
+					},
+					{
+						"uri": "http://schema.org/contactOption",
+						"curie": "schema:contactOption",
+						"target": {
+							"nodeType": "cell-as-resource",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "contactOption",
+							"rdfTypes": [],
+							"links": []
+						}
+					},
+					{
+						"uri": "http://schema.org/contactType",
+						"curie": "schema:contactType",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "contactType"
+						}
+					},
+					{
+						"uri": "http://schema.org/faxNumber",
+						"curie": "schema:faxNumber",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "faxNumber"
+						}
+					},
+					{
+						"uri": "http://schema.org/productSupported",
+						"curie": "schema:productSupported",
+						"target": {
+							"nodeType": "cell-as-literal",
+							"expression": "value",
+							"isRowNumberCell": false,
+							"columnName": "productSupported"
 						}
 					}
 				]
