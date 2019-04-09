@@ -184,7 +184,7 @@
 		"telephone": {
 			"@id": "https://schema.org/telephone",
 			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-		}
+		},
 		"thematicArea": {
 			"@id": "http://data.europa.eu/m8g/thematicArea",
 			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
