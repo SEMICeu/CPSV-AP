@@ -20,7 +20,7 @@
 		"Evidence": "cv:Evidence",
 		"LegalResource": "eli:LegalResource",
 		"LifeEvent": "cv:LifeEvent",
-		"OpeningHoursSpecification": "OpeningHoursSpecification",
+		"OpeningHoursSpecification": "schema:OpeningHoursSpecification",
 		"Output": "cv:Output",
 		"Participation": "cv:Participation",
 		"PublicOrganisation": "cv:PublicOrganisation",
