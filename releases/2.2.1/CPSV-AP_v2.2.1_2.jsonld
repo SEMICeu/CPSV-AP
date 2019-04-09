@@ -30,7 +30,7 @@
 
 		"currency": {
 			"@id": "http://data.europa.eu/m8g/currency",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@type": "skos:Concept"
 		},
 		"description": {
 			"@id": "http://purl.org/dc/terms/description",
@@ -42,7 +42,7 @@
 		},
 		"follows": {
 			"@id": "http://purl.org/vocab/cpsv#follows",
-			"@type": "http://purl.org/vocab/cpsv#Rule"
+			"@type": "cpsv:Rule"
 		},
 		"hasAddress": {
 			"@id": "http://data.europa.eu/m8g/hasAddress",
