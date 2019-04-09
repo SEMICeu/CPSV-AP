@@ -8,6 +8,8 @@
 		"skos": "http://www.w3.org/2004/02/skos/core#",
 		"eli": "http://data.europa.eu/eli/ontology#",
 		"schema": "https://schema.org/",
+		"dcat": "http://www.w3.org/ns/dcat#",
+		"adms": "http://www.w3.org/ns/adms#",
 		"Agent": "dct:Agent",
 		"BusinessEvent": "cv:BusinessEvent",
 		"Channel": "cv:Channel",
