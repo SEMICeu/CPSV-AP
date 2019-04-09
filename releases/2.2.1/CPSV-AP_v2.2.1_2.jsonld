@@ -5,19 +5,22 @@
 		"dct" : "http://purl.org/dc/terms/",
 		"cv" : "http://data.europa.eu/m8g/",
 		"cpsv" : "http://purl.org/vocab/cpsv#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"eli": "http://data.europa.eu/eli/ontology#",
+		"schema": "https://schema.org/",
 		"Agent": "dct:Agent",
 		"BusinessEvent": "cv:BusinessEvent",
 		"Channel": "cv:Channel",
-		"Collection": "http://www.w3.org/2004/02/skos/core#Collection",
-		"Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-		"ContactPoint": "https://schema.org/ContactPoint",
+		"Collection": "skos:Collection",
+		"Concept": "skos:Concept",
+		"ContactPoint": "schema:ContactPoint",
 		"Cost": "cv:Cost",
 		"CriterionRequirement": "cv:CriterionRequirement",
 		"Event": "cv:Event",
 		"Evidence": "cv:Evidence",
-		"LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
+		"LegalResource": "eli:LegalResource",
 		"LifeEvent": "cv:LifeEvent",
-		"OpeningHoursSpecification": "https://schema.org/OpeningHoursSpecification",
+		"OpeningHoursSpecification": "OpeningHoursSpecification",
 		"Output": "cv:Output",
 		"Participation": "cv:Participation",
 		"PublicOrganisation": "cv:PublicOrganisation",
@@ -107,7 +110,7 @@
 		},
 		"isGroupedBy": {
 			"@id": "cv:isGroupedBy",
-			"@type": "@id"
+			"@type": "http://data.europa.eu/m8g/Event"
 		},
 		"keyword": {
 			"@id": "http://www.w3.org/ns/dcat#keyword",
@@ -174,8 +177,8 @@
 			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
 		},
 		"sector": {
-			"@id": "http://data.europa.eu/m8g/sector",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:sector",
+			"@type": "skos:Concept"
 		},
 		"spatial": {
 			"@id": "http://purl.org/dc/terms/spatial",
