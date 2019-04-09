@@ -109,7 +109,7 @@
 			"@type": "http://data.europa.eu/m8g/PublicServiceDataset"
 		},
 		"isGroupedBy": {
-			"@id": "cv:isGroupedBy",
+			"@id": "http://data.europa.eu/m8g/isGroupedBy",
 			"@type": "http://data.europa.eu/m8g/Event"
 		},
 		"keyword": {
