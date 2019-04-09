@@ -177,8 +177,8 @@
 			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
 		},
 		"sector": {
-			"@id": "cv:sector",
-			"@type": "skos:Concept"
+			"@id": "http://data.europa.eu/m8g/sector",
+			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
 		},
 		"spatial": {
 			"@id": "http://purl.org/dc/terms/spatial",
