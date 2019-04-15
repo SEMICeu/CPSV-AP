@@ -228,7 +228,7 @@ cpsv:PublicOrganizationShape-spatial
 	sh:path dct:spatial ;
 	sh:minCount 1 ;
 	sh:maxCount 1 ;
-	sh:class skos:Concept ;
+	sh:class dct:Location ;
 	sh:severity sh:Violation .
 
 cpsv:PublicOrganizationShape

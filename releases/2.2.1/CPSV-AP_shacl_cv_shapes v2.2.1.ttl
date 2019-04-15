@@ -35,17 +35,6 @@ cpsv:RuleShapeCV
 	sh:targetClass cpsv:Rule ;
 	sh:property cpsv:HasShapeCV-MDRLanguage .
 
-cpsv:HasShapeCV-MDRSpatial
-	a sh:PropertyShape ;
-	sh:path dct:spatial ;
-	sh:pattern "^(http://publications.europa.eu/resource/authority/continent/|http://publications.europa.eu/resource/authority/country/|http://publications.europa.eu/resource/authority/place/|http://sws.geonames.org/)" ;
-	sh:nodeKind sh:IRI ;
-	sh:severity sh:Warning .
-
-cpsv:PublicOrganizationShapeCV
-	a sh:NodeShape ;
-	sh:targetClass cv:PublicOrganisation ;
-	sh:property cpsv:HasShapeCV-MDRSpatial .
 
 cpsv:HasShapeCV-MDRCurrency
 	a sh:PropertyShape ;
