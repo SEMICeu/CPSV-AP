@@ -22,7 +22,6 @@ cpsv:PublicServiceShapeCV
 	a sh:NodeShape ;
 	sh:targetClass cpsv:PublicService ;
 	sh:property cpsv:HasShapeCV-MDRLanguage ;
-	sh:property cpsv:HasShapeCV-MDRSpatial ;
 	sh:property cpsv:HasShapeCV-ADMSStatus .
 
 cpsv:EvidenceShapeCV
