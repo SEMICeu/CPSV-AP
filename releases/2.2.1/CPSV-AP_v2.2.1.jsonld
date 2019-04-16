@@ -1,205 +1,217 @@
 {
 	"@context":
 	{
-		"Agent": "http://purl.org/dc/terms/Agent",
-		"BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
-		"Channel": "http://data.europa.eu/m8g/Channel",
-		"Collection": "http://www.w3.org/2004/02/skos/core#Collection",
-		"Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-		"ContactPoint": "https://schema.org/ContactPoint",
-		"Cost": "http://data.europa.eu/m8g/Cost",
-		"CriterionRequirement": "http://data.europa.eu/m8g/CriterionRequirement",
-		"Event": "http://data.europa.eu/m8g/Event",
-		"Evidence": "http://data.europa.eu/m8g/Evidence",
-		"LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
-		"LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
-		"OpeningHoursSpecification": "https://schema.org/OpeningHoursSpecification",
-		"Output": "http://data.europa.eu/m8g/Output",
-		"Participation": "http://data.europa.eu/m8g/Participation",
-		"PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
-		"PublicService": "http://purl.org/vocab/cpsv#PublicService",
-		"PublicServiceDataset": "http://data.europa.eu/m8g/PublicServiceDataset",
-		"Rule": "http://purl.org/vocab/cpsv#Rule",
+                "adms": "http://www.w3.org/ns/adms#",
+                "cpsv": "http://purl.org/vocab/cpsv#",
+                "cv" : "http://data.europa.eu/m8g/",
+                "dcat": "http://www.w3.org/ns/dcat#",
+                "dct": "http://purl.org/dc/terms/",
+                "eli": "http://data.europa.eu/eli/ontology#",
+                "foaf": "http://xmlns.com/foaf/0.1/",
+                "locn": "http://www.w3.org/ns/locn#",
+                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                "schema": "https://schema.org/",
+                "skos": "http://www.w3.org/2004/02/skos/core#",
+                 "xsd": "http://www.w3.org/2001/XMLSchema#",
+		"Agent": "dct:Agent",
+		"BusinessEvent": "cv:BusinessEvent",
+		"Channel": "cv:Channel",
+		"Collection": "skos:Collection",
+		"Concept": "skos:Concept",
+		"ContactPoint": "schema:ContactPoint",
+		"Cost": "cv:Cost",
+		"CriterionRequirement": "cv:CriterionRequirement",
+		"Event": "cv:Event",
+		"Evidence": "cv:Evidence",
+		"LegalResource": "eli:LegalResource",
+		"LifeEvent": "cv:LifeEvent",
+		"OpeningHoursSpecification": "schema:OpeningHoursSpecification",
+		"Output": "cv:Output",
+		"Participation": "cv:Participation",
+		"PublicOrganisation": "cv:PublicOrganisation",
+		"PublicService": "cpsv:PublicService",
+		"PublicServiceDataset": "cv:PublicServiceDataset",
+		"Rule": "cpsv:Rule",
 
 		"currency": {
-			"@id": "http://data.europa.eu/m8g/currency",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:currency",
+			"@type": "skos:Concept"
 		},
 		"description": {
-			"@id": "http://purl.org/dc/terms/description",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "dct:description",
+			"@type": "rdfs:Literal"
 		},
 		"email": {
-			"@id": "https://schema.org/email",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "schema:email",
+			"@type": "rdfs:Literal"
 		},
 		"follows": {
-			"@id": "http://purl.org/vocab/cpsv#follows",
-			"@type": "http://purl.org/vocab/cpsv#Rule"
+			"@id": "cpsv:follows",
+			"@type": "cpsv:Rule"
 		},
 		"hasAddress": {
-			"@id": "http://data.europa.eu/m8g/hasAddress",
-			"@type": "http://www.w3.org/ns/locn#Address"
+			"@id": "cv:hasAddress",
+			"@type": "locn:Address"
 		},
 		"hasChannel": {
-			"@id": "http://data.europa.eu/m8g/hasChannel",
-			"@type": "http://data.europa.eu/m8g/Channel"
+			"@id": "cv:hasChannel",
+			"@type": "cv:Channel"
 		},
 		"hasCompetentAuthority": {
-			"@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
-			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+			"@id": "cv:hasCompetentAuthority",
+			"@type": "cv:PublicOrganisation"
 		},
 		"hasContactPoint": {
-			"@id": "http://data.europa.eu/m8g/hasContactPoint",
-			"@type": "https://schema.org/ContactPoint"
+			"@id": "cv:hasContactPoint",
+			"@type": "schema:ContactPoint"
 		},
 		"hasCost": {
-			"@id": "http://data.europa.eu/m8g/hasCost",
-			"@type": "http://data.europa.eu/m8g/Cost"
+			"@id": "cv:hasCost",
+			"@type": "cv:Cost"
 		},
 		"hasCriterion": {
-			"@id": "http://data.europa.eu/m8g/hasCriterion",
-			"@type": "http://data.europa.eu/m8g/CriterionRequirement"
+			"@id": "cv:hasCriterion",
+			"@type": "cv:CriterionRequirement"
 		},
 		"hasInput": {
-			"@id": "http://purl.org/vocab/cpsv#hasInput",
-			"@type": "http://data.europa.eu/m8g/Evidence"
+			"@id": "cpsv:hasInput",
+			"@type": "cv:Evidence"
 		},
 		"hasLegalResource": {
-			"@id": "http://data.europa.eu/m8g/hasLegalResource",
-			"@type": "http://data.europa.eu/eli/ontology#LegalResource"
+			"@id": "cv:hasLegalResource",
+			"@type": "eli:LegalResource"
 		},
 		"hasParticipation": {
-			"@id": "http://data.europa.eu/m8g/hasParticipation",
-			"@type": "http://data.europa.eu/m8g/Participation"
+			"@id": "cv:hasParticipation",
+			"@type": "cv:Participation"
 		},
 		"hoursAvailable": {
-			"@id": "https://schema.org/hoursAvailable",
-			"@type": "https://schema.org/OpeningHoursSpecification"
+			"@id": "schema:hoursAvailable",
+			"@type": "schema:OpeningHoursSpecification"
 		},
 		"identifier": {
-			"@id": "http://purl.org/dc/terms/identifier",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "dct:identifier",
+			"@type": "rdfs:Literal"
 		},
 		"ifAccessedThrough": {
-			"@id": "http://data.europa.eu/m8g/ifAccessedThrough",
-			"@type": "http://data.europa.eu/m8g/Channel"
+			"@id": "cv:ifAccessedThrough",
+			"@type": "cv:Channel"
 		},
 		"implements": {
-			"@id": "http://purl.org/vocab/cpsv#implements",
-			"@type": "http://data.europa.eu/eli/ontology#LegalResource"
+			"@id": "cpsv:implements",
+			"@type": "eli:LegalResource"
 		},
 		"isClassifiedBy": {
-			"@id": "http://data.europa.eu/m8g/isClassifiedBy",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:isClassifiedBy",
+			"@type": "skos:Concept"
 		},
 		"isDefinedBy": {
-			"@id": "http://data.europa.eu/m8g/isDefinedBy",
-			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+			"@id": "cv:isDefinedBy",
+			"@type": "cv:PublicOrganisation"
 		},
 		"isDescribedAt": {
-			"@id": "http://data.europa.eu/m8g/isDescribedAt",
-			"@type": "http://data.europa.eu/m8g/PublicServiceDataset"
+			"@id": "cv:isDescribedAt",
+			"@type": "cv:PublicServiceDataset"
 		},
 		"isGroupedBy": {
-			"@id": "http://data.europa.eu/m8g/isGroupedBy",
-			"@type": "http://data.europa.eu/m8g/Event"
+			"@id": "cv:isGroupedBy",
+			"@type": "cv:Event"
 		},
 		"keyword": {
-			"@id": "http://www.w3.org/ns/dcat#keyword",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "dcat:keyword",
+			"@type": "rdfs:Literal"
 		},
 		"landingPage": {
-			"@id": "http://www.w3.org/ns/dcat#landingPage",
-			"@type": "http://xmlns.com/foaf/0.1/Document"
+			"@id": "dcat:landingPage",
+			"@type": "foaf:Document"
 		},
 		"language": {
-			"@id": "http://purl.org/dc/terms/language",
-			"@type": "http://purl.org/dc/terms/LinguisticSystem"
+			"@id": "dct:language",
+			"@type": "dct:LinguisticSystem"
 		},
 		"member": {
-			"@id": "http://www.w3.org/2004/02/skos/core#member",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "skos:member",
+			"@type": "skos:Concept"
 		},
 		"openingHours": {
-			"@id": "https://schema.org/openingHours",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "schema:openingHours",
+			"@type": "rdfs:Literal"
 		},
 		"ownedBy": {
-			"@id": "http://data.europa.eu/m8g/ownedBy",
-			"@type": "http://data.europa.eu/m8g/PublicOrganisation"
+			"@id": "cv:ownedBy",
+			"@type": "cv:PublicOrganisation"
 		},
 		"page": {
-			"@id": "http://xmlns.com/foaf/0.1/page",
-			"@type": "http://xmlns.com/foaf/0.1/Document"
+			"@id": "foaf:page",
+			"@type": "foaf:Document"
 		},
 		"playsRole": {
-			"@id": "http://data.europa.eu/m8g/playsRole",
-			"@type": "http://data.europa.eu/m8g/Participation"
+			"@id": "cv:playsRole",
+			"@type": "cv:Participation"
 		},
 		"prefLabel": {
-			"@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "skos:prefLabel",
+			"@type": "rdfs:Literal"
 		},
 		"processingTime": {
-			"@id": "http://data.europa.eu/m8g/processingTime",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "cv:processingTime",
+			"@type": "rdfs:Literal"
 		},
 		"produces": {
-			"@id": "http://purl.org/vocab/cpsv#produces",
-			"@type": "http://data.europa.eu/m8g/Output"
+			"@id": "cpsv:produces",
+			"@type": "cv:Output"
 		},
 		"publisher": {
-			"@id": "http://purl.org/dc/terms/publisher",
-			"@type": "http://purl.org/dc/terms/Agent"
+			"@id": "dct:publisher",
+			"@type": "dct:Agent"
 		},
 		"relatedService": {
-			"@id": "http://purl.org/dc/terms/relation",
-			"@type": "http://purl.org/vocab/cpsv#PublicService"
+			"@id": "dct:relation",
+			"@type": "cpsv:PublicService"
 		},
 		"relatedLegalResource" : {
-			"@id": "http://purl.org/dc/terms/relation",
-			"@type": "http://data.europa.eu/eli/ontology#LegalResource"
+			"@id": "dct:relation",
+			"@type": "eli:LegalResource"
 		},
 		"requires": {
-			"@id": "http://purl.org/dc/terms/requires",
-			"@type": "http://purl.org/vocab/cpsv#PublicService"
+			"@id": "dct:requires",
+			"@type": "cpsv:PublicService"
 		},
 		"role": {
-			"@id": "http://data.europa.eu/m8g/role",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:role",
+			"@type": "skos:Concept"
 		},
 		"sector": {
-			"@id": "http://data.europa.eu/m8g/sector",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:sector",
+			"@type": "skos:Concept"
 		},
 		"spatial": {
-			"@id": "http://purl.org/dc/terms/spatial",
-			"@type": "http://purl.org/dc/terms/Location"
+			"@id": "dct:spatial",
+			"@type": "dct:Location"
 		},
 		"status": {
-			"@id": "http://www.w3.org/ns/adms#status",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "adms:status",
+			"@type": "skos:Concept"
 		},
 		"telephone": {
-			"@id": "https://schema.org/telephone",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "schema:telephone",
+			"@type": "rdfs:Literal"
 		},
 		"thematicArea": {
-			"@id": "http://data.europa.eu/m8g/thematicArea",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "cv:thematicArea",
+			"@type": "skos:Concept"
 		},
 		"title": {
-			"@id": "http://purl.org/dc/terms/title",
-			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@id": "dct:title",
+			"@type": "rdfs:Literal"
 		},
 		"type": {
-			"@id": "http://purl.org/dc/terms/type",
-			"@type": "http://www.w3.org/2004/02/skos/core#Concept"
+			"@id": "dct:type",
+			"@type": "skos:Concept"
 		},
 		"value": {
-			"@id": "http://data.europa.eu/m8g/value",
-			"@type": "http://www.w3.org/2001/XMLSchema#double"
+			"@id": "cv:value",
+			"@type": "xsd:double"
 		}
 	}
 }
