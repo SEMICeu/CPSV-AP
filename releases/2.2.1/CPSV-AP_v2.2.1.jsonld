@@ -1,18 +1,19 @@
 {
 	"@context":
 	{
-                "adms": "http://www.w3.org/ns/adms#",
-                "cpsv": "http://purl.org/vocab/cpsv#",
-                "cv" : "http://data.europa.eu/m8g/",
-                "dcat": "http://www.w3.org/ns/dcat#",
-                "dct": "http://purl.org/dc/terms/",
-                "eli": "http://data.europa.eu/eli/ontology#",
-                "foaf": "http://xmlns.com/foaf/0.1/",
-                "locn": "http://www.w3.org/ns/locn#",
-                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-                "schema": "https://schema.org/",
-                "skos": "http://www.w3.org/2004/02/skos/core#",
-                 "xsd": "http://www.w3.org/2001/XMLSchema#",
+		"adms": "http://www.w3.org/ns/adms#",
+		"cpsv": "http://purl.org/vocab/cpsv#",
+		"cv" : "http://data.europa.eu/m8g/",
+		"dcat": "http://www.w3.org/ns/dcat#",
+		"dct": "http://purl.org/dc/terms/",
+		"eli": "http://data.europa.eu/eli/ontology#",
+		"foaf": "http://xmlns.com/foaf/0.1/",
+		"locn": "http://www.w3.org/ns/locn#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "https://schema.org/",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+
 		"Agent": "dct:Agent",
 		"BusinessEvent": "cv:BusinessEvent",
 		"Channel": "cv:Channel",
@@ -35,7 +36,7 @@
 
 		"currency": {
 			"@id": "cv:currency",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"description": {
 			"@id": "dct:description",
@@ -47,47 +48,47 @@
 		},
 		"follows": {
 			"@id": "cpsv:follows",
-			"@type": "cpsv:Rule"
+			"@type": "@id"
 		},
 		"hasAddress": {
 			"@id": "cv:hasAddress",
-			"@type": "locn:Address"
+			"@type": "@id"
 		},
 		"hasChannel": {
 			"@id": "cv:hasChannel",
-			"@type": "cv:Channel"
+			"@type": "@id"
 		},
 		"hasCompetentAuthority": {
 			"@id": "cv:hasCompetentAuthority",
-			"@type": "cv:PublicOrganisation"
+			"@type": "@id"
 		},
 		"hasContactPoint": {
 			"@id": "cv:hasContactPoint",
-			"@type": "schema:ContactPoint"
+			"@type": "@id"
 		},
 		"hasCost": {
 			"@id": "cv:hasCost",
-			"@type": "cv:Cost"
+			"@type": "@id"
 		},
 		"hasCriterion": {
 			"@id": "cv:hasCriterion",
-			"@type": "cv:CriterionRequirement"
+			"@type": "@id"
 		},
 		"hasInput": {
 			"@id": "cpsv:hasInput",
-			"@type": "cv:Evidence"
+			"@type": "@id"
 		},
 		"hasLegalResource": {
 			"@id": "cv:hasLegalResource",
-			"@type": "eli:LegalResource"
+			"@type": "@id"
 		},
 		"hasParticipation": {
 			"@id": "cv:hasParticipation",
-			"@type": "cv:Participation"
+			"@type": "@id"
 		},
 		"hoursAvailable": {
 			"@id": "schema:hoursAvailable",
-			"@type": "schema:OpeningHoursSpecification"
+			"@type": "@id"
 		},
 		"identifier": {
 			"@id": "dct:identifier",
@@ -95,27 +96,27 @@
 		},
 		"ifAccessedThrough": {
 			"@id": "cv:ifAccessedThrough",
-			"@type": "cv:Channel"
+			"@type": "@id"
 		},
 		"implements": {
 			"@id": "cpsv:implements",
-			"@type": "eli:LegalResource"
+			"@type": "@id"
 		},
 		"isClassifiedBy": {
 			"@id": "cv:isClassifiedBy",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"isDefinedBy": {
 			"@id": "cv:isDefinedBy",
-			"@type": "cv:PublicOrganisation"
+			"@type": "@id
 		},
 		"isDescribedAt": {
 			"@id": "cv:isDescribedAt",
-			"@type": "cv:PublicServiceDataset"
+			"@type": "@id"
 		},
 		"isGroupedBy": {
 			"@id": "cv:isGroupedBy",
-			"@type": "cv:Event"
+			"@type": "@id"
 		},
 		"keyword": {
 			"@id": "dcat:keyword",
@@ -123,15 +124,15 @@
 		},
 		"landingPage": {
 			"@id": "dcat:landingPage",
-			"@type": "foaf:Document"
+			"@type": "@id"
 		},
 		"language": {
 			"@id": "dct:language",
-			"@type": "dct:LinguisticSystem"
+			"@type": "@id"
 		},
 		"member": {
 			"@id": "skos:member",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"openingHours": {
 			"@id": "schema:openingHours",
@@ -139,15 +140,15 @@
 		},
 		"ownedBy": {
 			"@id": "cv:ownedBy",
-			"@type": "cv:PublicOrganisation"
+			"@type": "@id"
 		},
 		"page": {
 			"@id": "foaf:page",
-			"@type": "foaf:Document"
+			"@type": "@id"
 		},
 		"playsRole": {
 			"@id": "cv:playsRole",
-			"@type": "cv:Participation"
+			"@type": "@id"
 		},
 		"prefLabel": {
 			"@id": "skos:prefLabel",
@@ -159,39 +160,39 @@
 		},
 		"produces": {
 			"@id": "cpsv:produces",
-			"@type": "cv:Output"
+			"@type": "@id
 		},
 		"publisher": {
 			"@id": "dct:publisher",
-			"@type": "dct:Agent"
+			"@type": "@id"
 		},
 		"relatedService": {
 			"@id": "dct:relation",
-			"@type": "cpsv:PublicService"
+			"@type": "@id"
 		},
 		"relatedLegalResource" : {
 			"@id": "dct:relation",
-			"@type": "eli:LegalResource"
+			"@type": "@id"
 		},
 		"requires": {
 			"@id": "dct:requires",
-			"@type": "cpsv:PublicService"
+			"@type": @id"
 		},
 		"role": {
 			"@id": "cv:role",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"sector": {
 			"@id": "cv:sector",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"spatial": {
 			"@id": "dct:spatial",
-			"@type": "dct:Location"
+			"@type": "@id"
 		},
 		"status": {
 			"@id": "adms:status",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"telephone": {
 			"@id": "schema:telephone",
@@ -199,7 +200,7 @@
 		},
 		"thematicArea": {
 			"@id": "cv:thematicArea",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"title": {
 			"@id": "dct:title",
@@ -207,7 +208,7 @@
 		},
 		"type": {
 			"@id": "dct:type",
-			"@type": "skos:Concept"
+			"@type": "@id"
 		},
 		"value": {
 			"@id": "cv:value",
