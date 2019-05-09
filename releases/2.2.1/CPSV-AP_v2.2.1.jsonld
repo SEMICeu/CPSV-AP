@@ -166,11 +166,7 @@
 			"@id": "dct:publisher",
 			"@type": "@id"
 		},
-		"relatedService": {
-			"@id": "dct:relation",
-			"@type": "@id"
-		},
-		"relatedLegalResource" : {
+		"related": {
 			"@id": "dct:relation",
 			"@type": "@id"
 		},
