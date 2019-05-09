@@ -108,7 +108,7 @@
 		},
 		"isDefinedBy": {
 			"@id": "cv:isDefinedBy",
-			"@type": "@id
+			"@type": "@id"
 		},
 		"isDescribedAt": {
 			"@id": "cv:isDescribedAt",
@@ -160,7 +160,7 @@
 		},
 		"produces": {
 			"@id": "cpsv:produces",
-			"@type": "@id
+			"@type": "@id"
 		},
 		"publisher": {
 			"@id": "dct:publisher",
@@ -176,7 +176,7 @@
 		},
 		"requires": {
 			"@id": "dct:requires",
-			"@type": @id"
+			"@type": "@id"
 		},
 		"role": {
 			"@id": "cv:role",
