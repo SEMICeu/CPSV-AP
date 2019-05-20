@@ -82,6 +82,10 @@
 			"@id": "cv:hasLegalResource",
 			"@type": "@id"
 		},
+		"hasPart": {
+			"@id": "dct:hasPart",
+			"@type": "@id"
+		},
 		"hasParticipation": {
 			"@id": "cv:hasParticipation",
 			"@type": "@id"
@@ -182,10 +186,7 @@
 			"@id": "cv:sector",
 			"@type": "@id"
 		},
-		"spatial": {
-			"@id": "dct:spatial",
-			"@type": "@id"
-		},
+		"dct:spatial": {"@type": "@id"},
 		"status": {
 			"@id": "adms:status",
 			"@type": "@id"
