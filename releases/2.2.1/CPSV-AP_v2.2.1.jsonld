@@ -1,6 +1,8 @@
 {
 	"@context":
 	{
+        "type": "@type",
+        "id": "@id",
 		"adms": "http://www.w3.org/ns/adms#",
 		"cpsv": "http://purl.org/vocab/cpsv#",
 		"cv" : "http://data.europa.eu/m8g/",
