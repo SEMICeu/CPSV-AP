@@ -227,7 +227,6 @@ cpsv:PublicOrganizationShape-spatial
 	a sh:PropertyShape ;
 	sh:path dct:spatial ;
 	sh:minCount 1 ;
-	sh:maxCount 1 ;
 	sh:class dct:Location ;
 	sh:severity sh:Warning .
 
