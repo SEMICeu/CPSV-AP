@@ -1,7 +1,7 @@
 {
 	"@context":
 	{
-		"type": "@type",
+		"isTypeOf": "@type",
 		"id": "@id",
 		"adms": "http://www.w3.org/ns/adms#",
 		"cpsv": "http://purl.org/vocab/cpsv#",
