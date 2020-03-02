@@ -28,6 +28,7 @@
 		"Evidence": "cv:Evidence",
 		"LegalResource": "eli:LegalResource",
 		"LifeEvent": "cv:LifeEvent",
+		"Location": "dct:Location",
 		"OpeningHoursSpecification": "schema:OpeningHoursSpecification",
 		"Output": "cv:Output",
 		"Participation": "cv:Participation",
