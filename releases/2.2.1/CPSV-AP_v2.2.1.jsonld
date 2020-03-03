@@ -49,6 +49,10 @@
 			"@id": "schema:email",
 			"@type": "rdfs:Literal"
 		},
+		"fax": {
+			"@id": "schema:faxNumber",
+			"@type": "rdfs:Literal"
+		},
 		"follows": {
 			"@id": "cpsv:follows",
 			"@type": "@id"
