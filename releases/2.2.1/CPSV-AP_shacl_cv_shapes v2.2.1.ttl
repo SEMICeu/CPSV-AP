@@ -4,45 +4,46 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-cpsv:HasShapeCV-MDRLanguage
-	a sh:PropertyShape ;
-	sh:path dct:language ;
-	sh:pattern "^http://publications.europa.eu/resource/authority/language/" ;
-	sh:nodeKind sh:IRI ;
-	sh:severity sh:Warning .
+cpsv:PublicServiceShapeCV a sh:NodeShape;
+  sh:name "PublicService"@en;
+  sh:property cpsv:HasShapeCV-ADMSStatus, cpsv:HasShapeCV-MDRLanguage;
+  sh:targetClass cpsv:PublicService .
 
-cpsv:HasShapeCV-ADMSStatus
-	a sh:PropertyShape ;
-	sh:path adms:status ;
-	sh:pattern "^http://purl.org/adms/status/" ;
-	sh:nodeKind sh:IRI ;
-	sh:severity sh:Warning .
+cpsv:EvidenceShapeCV a sh:NodeShape;
+  sh:name "Evidence"@en;
+  sh:property cpsv:HasShapeCV-MDRLanguage;
+  sh:targetClass cv:Evidence .
 
-cpsv:PublicServiceShapeCV
-	a sh:NodeShape ;
-	sh:targetClass cpsv:PublicService ;
-	sh:property cpsv:HasShapeCV-MDRLanguage ;
-	sh:property cpsv:HasShapeCV-ADMSStatus .
+cpsv:CostShapeCV a sh:NodeShape;
+  sh:name "Cost"@en;
+  sh:property cpsv:HasShapeCV-MDRCurrency;
+  sh:targetClass cv:Cost .
 
-cpsv:EvidenceShapeCV
-	a sh:NodeShape ;
-	sh:targetClass cv:Evidence ;
-	sh:property cpsv:HasShapeCV-MDRLanguage .
+cpsv:RuleShapeCV a sh:NodeShape;
+  sh:name "Rule"@en;
+  sh:property cpsv:HasShapeCV-MDRLanguage;
+  sh:targetClass cpsv:Rule .
 
-cpsv:RuleShapeCV
-	a sh:NodeShape ;
-	sh:targetClass cpsv:Rule ;
-	sh:property cpsv:HasShapeCV-MDRLanguage .
+cpsv:HasShapeCV-MDRLanguage a sh:PropertyShape;
+  sh:message "The property dct:language SHOULD have the following pattern: \"^http://publications.europa.eu/resource/authority/language/\""@en;
+  sh:name "language"@en;
+  sh:nodeKind sh:IRI;
+  sh:path dct:language;
+  sh:pattern "\"^http://publications.europa.eu/resource/authority/language/\""@en;
+  sh:severity sh:Warning .
 
+cpsv:HasShapeCV-ADMSStatus a sh:PropertyShape;
+  sh:message "The property adms:status SHOULD have the following pattern: \"^http://purl.org/adms/status/\""@en;
+  sh:name "status"@en;
+  sh:nodeKind sh:IRI;
+  sh:path adms:status;
+  sh:pattern "\"^http://purl.org/adms/status/\""@en;
+  sh:severity sh:Warning .
 
-cpsv:HasShapeCV-MDRCurrency
-	a sh:PropertyShape ;
-	sh:path cv:currency ;
-	sh:pattern "^http://publications.europa.eu/resource/authority/currency/" ;
-	sh:nodeKind sh:IRI ;
-	sh:severity sh:Warning .
-
-cpsv:CostShapeCV
-	a sh:NodeShape ;
-	sh:targetClass cv:Cost ;
-	sh:property cpsv:HasShapeCV-MDRCurrency .
+cpsv:HasShapeCV-MDRCurrency a sh:PropertyShape;
+  sh:message "The property cv:currency SHOULD have the following pattern: \"^http://publications.europa.eu/resource/authority/currency/\""@en;
+  sh:name "currency"@en;
+  sh:nodeKind sh:IRI;
+  sh:path cv:currency;
+  sh:pattern "\"^http://publications.europa.eu/resource/authority/currency/\""@en;
+  sh:severity sh:Warning .
