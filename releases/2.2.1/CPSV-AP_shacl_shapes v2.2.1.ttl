@@ -159,18 +159,21 @@ cpsv:PublicServiceShape-processingTime a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-sector a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:name "sector"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:sector;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-spatial a sh:PropertyShape;
+  sh:class dct:Location;
   sh:name "spatial"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:spatial;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-status a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:maxCount 1;
   sh:message "The property adms:status SHOULD appear only once"@en;
   sh:name "status"@en;
@@ -179,18 +182,21 @@ cpsv:PublicServiceShape-status a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-thematicArea a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:name "thematicArea"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:thematicArea;
   sh:severity sh:Warning .
 
 cpsv:hasMin0MaxNShape-type a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:name "type"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:type;
   sh:severity sh:Warning .
 
 cpsv:hasMin0Max1Shape-type a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:maxCount 1;
   sh:message "The property dct:type SHOULD appear only once"@en;
   sh:name "type"@en;
@@ -199,18 +205,21 @@ cpsv:hasMin0Max1Shape-type a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-hasLegalResource a sh:PropertyShape;
+  sh:class eli:LegalResource;
   sh:name "hasLegalResource"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasLegalResource;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-follows a sh:PropertyShape;
+  sh:class cpsv:Rule;
   sh:name "follows"@en;
   sh:nodeKind sh:IRI;
   sh:path cpsv:follows;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-hasCompetentAuthority a sh:PropertyShape;
+  sh:class cv:PublicOrganisation;
   sh:maxCount 1;
   sh:message "The property cv:hasCompetentAuthority MUST appear exactly once"@en;
   sh:minCount 1;
@@ -220,66 +229,77 @@ cpsv:PublicServiceShape-hasCompetentAuthority a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-produces a sh:PropertyShape;
+  sh:class cv:Output;
   sh:name "produces"@en;
   sh:nodeKind sh:IRI;
   sh:path cpsv:produces;
   sh:severity sh:Violation .
 
 cpsv:hasMin0MaxNShape-hasInput a sh:PropertyShape;
+  sh:class cv:Evidence;
   sh:name "hasInput"@en;
   sh:nodeKind sh:IRI;
   sh:path cpsv:hasInput;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-hasChannel a sh:PropertyShape;
+  sh:class cv:Channel;
   sh:name "hasChannel"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasChannel;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-hasContactPoint a sh:PropertyShape;
+  sh:class schema:ContactPoint;
   sh:name "hasContactPoint"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasContactPoint;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-hasCost a sh:PropertyShape;
+  sh:class cv:Cost;
   sh:name "hasCost"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasCost;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-isClassifiedBy a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:name "isClassifiedBy"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:isClassifiedBy;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-hasCriterion a sh:PropertyShape;
+  sh:class cv:CriterionRequirement;
   sh:name "hasCriterion"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasCriterion;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-requires a sh:PropertyShape;
+  sh:class cpsv:PublicService;
   sh:name "requires"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:requires;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-isGroupedBy a sh:PropertyShape;
+  sh:class cv:Event;
   sh:name "IsGroupedBy"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:IsGroupedBy;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceShape-isDescribedAt a sh:PropertyShape;
+  sh:class cv:PublicServiceDataset;
   sh:name "isDescribedAt"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:isDescribedAt;
   sh:severity sh:Violation .
 
 cpsv:PublicServiceShape-hasParticipation a sh:PropertyShape;
+  sh:class cv:Participation;
   sh:name "hasParticipation"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:hasParticipation;
@@ -295,6 +315,7 @@ cpsv:PublicOrganizationShape-preferredLabel a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:PublicOrganizationShape-spatial a sh:PropertyShape;
+  sh:class dct:Location;
   sh:message "The property dct:spatial SHOULD appear at least once"@en;
   sh:minCount 1;
   sh:name "spatial"@en;
@@ -303,6 +324,7 @@ cpsv:PublicOrganizationShape-spatial a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:hasMin0MaxNShape-language a sh:PropertyShape;
+  sh:class dct:LinguisticSystem;
   sh:name "language"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:language;
@@ -311,12 +333,14 @@ cpsv:hasMin0MaxNShape-language a sh:PropertyShape;
 cv:EvidenceShape sh:property cpsv:hasMin0MaxNShape-language .
 
 cpsv:EvidenceShape-relatedDocumentation a sh:PropertyShape;
+  sh:class foaf:Document;
   sh:name "page"@en;
   sh:nodeKind sh:IRI;
   sh:path foaf:page;
   sh:severity sh:Warning .
 
 cpsv:CostShape-currency a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:maxCount 1;
   sh:message "The property cv:currency SHOULD appear only once"@en;
   sh:name "currency"@en;
@@ -333,12 +357,14 @@ cpsv:CostShape-value a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:CostShape-isDefinedBy a sh:PropertyShape;
+  sh:class cv:PublicOrganisation;
   sh:name "isDefinedBy"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:isDefinedBy;
   sh:severity sh:Violation .
 
 cpsv:CostShape-ifAccessedThrough a sh:PropertyShape;
+  sh:class cv:Channel;
   sh:maxCount 1;
   sh:message "The property cv:ifAccessedThrough MUST appear only once"@en;
   sh:name "ifAccessedThrough"@en;
@@ -353,12 +379,14 @@ cpsv:ChannelShape-openingHours a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:ChannelShape-ownedBy a sh:PropertyShape;
+  sh:class cv:PublicOrganisation;
   sh:name "ownedBy"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:ownedBy;
   sh:severity sh:Violation .
 
 cpsv:ChannelShape-availabilityRestriction a sh:PropertyShape;
+  sh:class schema:OpeningHoursSpecification;
   sh:maxCount 1;
   sh:message "The property schema:hoursAvailable MUST appear only once"@en;
   sh:name "hoursAvailable"@en;
@@ -367,24 +395,28 @@ cpsv:ChannelShape-availabilityRestriction a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:RuleShape-implements a sh:PropertyShape;
+  sh:class cpsv:PublicService;
   sh:name "implements"@en;
   sh:nodeKind sh:IRI;
   sh:path cpsv:implements;
   sh:severity sh:Violation .
 
 cpsv:LegalResourceShape-related a sh:PropertyShape;
+  sh:class eli:LegalResource;
   sh:name "relation"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:relation;
   sh:severity sh:Violation .
 
 cpsv:CollectionShape-member a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:name "member"@en;
   sh:nodeKind sh:IRI;
   sh:path skos:member;
   sh:severity sh:Warning .
 
 cpsv:AgentShape-hasAddress a sh:PropertyShape;
+  sh:class locn:Address;
   sh:maxCount 1;
   sh:message "The property cv:hasAddress MUST appear only once"@en;
   sh:name "hasAddress"@en;
@@ -393,12 +425,14 @@ cpsv:AgentShape-hasAddress a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:AgentShape-playsRole a sh:PropertyShape;
+  sh:class cv:Participation;
   sh:name "playsRole"@en;
   sh:nodeKind sh:IRI;
   sh:path cv:playsRole;
   sh:severity sh:Violation .
 
 cpsv:ParticipationShape-role a sh:PropertyShape;
+  sh:class skos:Concept;
   sh:message "The property cv:role SHOULD appear at least once"@en;
   sh:minCount 1;
   sh:name "role"@en;
@@ -407,6 +441,7 @@ cpsv:ParticipationShape-role a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceDatasetShape-landingPage a sh:PropertyShape;
+  sh:class foaf:Document;
   sh:message "The property dcat:landingPage SHOULD appear at least once"@en;
   sh:minCount 1;
   sh:name "landingPage"@en;
@@ -415,6 +450,7 @@ cpsv:PublicServiceDatasetShape-landingPage a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceDatasetShape-publisher a sh:PropertyShape;
+  sh:class dct:Agent;
   sh:maxCount 1;
   sh:message "The property dct:publisher MUST appear exactly once"@en;
   sh:minCount 1;
@@ -424,12 +460,14 @@ cpsv:PublicServiceDatasetShape-publisher a sh:PropertyShape;
   sh:severity sh:Violation .
 
 cpsv:hasMin0MaxNShape-related a sh:PropertyShape;
+  sh:class cpsv:PublicService;
   sh:name "relation"@en;
   sh:nodeKind sh:IRI;
   sh:path dct:relation;
   sh:severity sh:Violation .
 
 cpsv:ContactPointShape-availabilityRestriction a sh:PropertyShape;
+  sh:class schema:OpeningHoursSpecification;
   sh:name "hoursAvailable"@en;
   sh:nodeKind sh:IRI;
   sh:path schema:hoursAvailable;
