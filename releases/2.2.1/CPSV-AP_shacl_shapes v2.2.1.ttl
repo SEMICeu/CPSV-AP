@@ -441,7 +441,6 @@ cpsv:ParticipationShape-role a sh:PropertyShape;
   sh:severity sh:Warning .
 
 cpsv:PublicServiceDatasetShape-landingPage a sh:PropertyShape;
-  sh:class foaf:Document;
   sh:message "The property dcat:landingPage SHOULD appear at least once"@en;
   sh:minCount 1;
   sh:name "landingPage"@en;
