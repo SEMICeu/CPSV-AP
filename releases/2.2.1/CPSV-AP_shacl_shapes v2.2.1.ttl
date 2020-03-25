@@ -374,7 +374,7 @@ cpsv:CostShape-ifAccessedThrough a sh:PropertyShape;
 
 cpsv:ChannelShape-openingHours a sh:PropertyShape;
   sh:name "openingHours"@en;
-  sh:nodeKind sh:IRI;
+  sh:nodeKind sh:Literal;
   sh:path schema:openingHours;
   sh:severity sh:Violation .
 
