@@ -352,7 +352,7 @@ cpsv:CostShape-value a sh:PropertyShape;
   sh:maxCount 1;
   sh:message "The property cv:value MUST appear only once"@en;
   sh:name "value"@en;
-  sh:nodeKind sh:IRI;
+  sh:nodeKind sh:Literal;
   sh:path cv:value;
   sh:severity sh:Violation .
 
