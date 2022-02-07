@@ -14,36 +14,15 @@
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
 
-  <link rel="icon" sizes="192x192" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/cms/icons/DUETLogo.jpg" />
-
-  <meta name="msapplication-square70x70logo" content="/cms/icons/DUETLogo.jpg" />
-  <meta name="msapplication-square150x150logo" content="/cms/icons/DUETLogo.jpg" />
-  <meta name="msapplication-wide310x150logo" content="/cms/icons/DUETLogo.jpg" />
-  <meta name="msapplication-square310x310logo" content="/cms/icons/DUETLogo.jpg" />
   <meta name="msapplication-TileColor" content="#7ED956" />
 </head>
 
 <body>
 
-  <script type="text/javascript">
-      function iframeLoaded() {
-         var iFrameID = document.getElementById('exampleiframe');
-          if(iFrameID) {
-                // here you can make the height, I delete it first, then I make it again
-                iFrameID.height = "";
-                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-          }   
-      }
-  </script> 
-
-  <div style="min-height:44px;;" id="duet-header" class="header">
+  <div style="min-height:44px;;" id="logo-header" class="header">
     <!-- insert your global header here -->
     <title>SEMIC</title>
-    <!-- <i class="logo">SEMIC logo</i> -->
+    <i class="logo">SEMIC logo</i>
     <!-- end global header-->
   </div>
 
@@ -140,6 +119,17 @@
                 							</span>
                           </dd>
                         
+                          <dd inlist="" rel="bibo:editor" class="p-author h-card vcard">
+                              <span typeof="foaf:Person">
+                              <span class="p-name fn" property="foaf:lastName">Stani</span>,
+                              <span class="p-name fn" property="foaf:firstName">Emidio</span>
+                              
+                                 - <span class="p-org org h-org h-card">PwC EU Services</span>
+                              
+                							
+                							</span>
+                          </dd>
+                        
                         
                       
                       
@@ -168,7 +158,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/TODO/tree/master/releases/2.00">https://github.com/SEMICeu/TODO/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="https://github.com/bertvannuffelen/semiceuthema/blob/51e759583dc28a834f4c36c765213b8f1cd7bb29/CHANGELOG">https://github.com/bertvannuffelen/semiceuthema/blob/51e759583dc28a834f4c36c765213b8f1cd7bb29/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="https://github.com/bertvannuffelen/semiceuthema/blob/b32da714c1267498b1c3cfdff6b8de125589654c/CHANGELOG">https://github.com/bertvannuffelen/semiceuthema/blob/b32da714c1267498b1c3cfdff6b8de125589654c/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -229,25 +219,26 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Working Draft published on 2021-07-01.
+                  This Core Vocabulary has the status of Working Draft published at 2021-07-01.
 	        </p>
                 
               </section>
             </div>
 
-            <div class="region region--no-space-top typography" id="license">
+            <!-- <div class="region region--no-space-top typography" id="license">
               <h2 class="h2">License</h2>
               
 <p>This specification of <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic">SEMIC</a> is published under the <a href="https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11">ISA Open Metadata Licence 1.1</a>.</p>
 
             </div>
-	   
+			
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
               
               <p>TBD</p>
               
             </div>
+			-->
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
@@ -265,12 +256,15 @@
                       <a href="#Concept">Concept</a> |
                       <a href="#Contact Point">Contact Point</a> |
                       <a href="#Cost">Cost</a> |
-                      <a href="#Criterion Requirement">Criterion Requirement</a> |
+                      <a href="#Criterion">Criterion</a> |
                       <a href="#Dataset">Dataset</a> |
+                      <a href="#Document">Document</a> |
                       <a href="#Event">Event</a> |
                       <a href="#Evidence">Evidence</a> |
                       <a href="#Legal Resource">Legal Resource</a> |
                       <a href="#Life Event">Life Event</a> |
+                      <a href="#LinguisticSystem">LinguisticSystem</a> |
+                      <a href="#Location">Location</a> |
                       <a href="#Opening Hours Specification">Opening Hours Specification</a> |
                       <a href="#Output">Output</a> |
                       <a href="#Participation">Participation</a> |
@@ -298,7 +292,7 @@
               <h3 class="h3" id="Address"><a href="http://www.w3.org/ns/locn#Address" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#Address" data-placement="right">Address</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A spatial object that identifies a fixed location of a property, in a human-readable way.</dd>
+                    <dt>Definition</dt><dd>A spatial object that identifies a fixed location of a property, in a human-readable way.</dd>
                     
                     <dt>Usage</dt><dd><p>
 An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353
@@ -349,7 +343,7 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -425,7 +419,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         </td>
 			<td>1</td>
                         <td property="rdfs:comment">The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country.</td>
-                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
+                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
                         <td></td>
                       </tr>
                     
@@ -608,7 +602,7 @@ The key difference between a locator and a locator name is that the latter is a 
               <h3 class="h3" id="Agent"><a href="http://xmlns.com/foaf/0.1/Agent" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Agent" data-placement="right">Agent</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Agent class is any resource that acts or has the power to act. This includes people, organisations and groups. The Public Organization class, defined in the Core Public Organisation Vocabulary, is a notable subclass of Agent.</dd>
+                    <dt>Definition</dt><dd>The Agent class is any resource that acts or has the power to act. This includes people, organisations and groups. The Public Organization class, defined in the Core Public Organisation Vocabulary, is a notable subclass of Agent.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -628,7 +622,7 @@ The key difference between a locator and a locator name is that the latter is a 
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -704,10 +698,10 @@ The key difference between a locator and a locator name is that the latter is a 
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Business Event"><a href="https://data.europa.eu/m8g/BusinessEvent" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/BusinessEvent" data-placement="right">Business Event</a></h3>
+              <h3 class="h3" id="Business Event"><a href="http://data.europa.eu/m8g/BusinessEvent" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/BusinessEvent" data-placement="right">Business Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents a Business Event, which specialises Event. A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time. A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State.
+                    <dt>Definition</dt><dd>This class represents a Business Event, which specialises Event. A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time. A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State.
 
 In other words, a Business Event groups together a number of public services that need to be delivered for completing that particular event.</dd>
                     
@@ -718,7 +712,7 @@ In other words, a Business Event groups together a number of public services tha
                     
                     <dt>Properties</dt>
 		    
-                    <dd>No properties have been defined for this entity.</dd>
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
                     
                   </dl>
                 </div>
@@ -726,10 +720,10 @@ In other words, a Business Event groups together a number of public services tha
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Channel"><a href="https://data.europa.eu/m8g/Channel" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Channel" data-placement="right">Channel</a></h3>
+              <h3 class="h3" id="Channel"><a href="http://data.europa.eu/m8g/Channel" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Channel" data-placement="right">Channel</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Channel class represents the medium through which an Agent provides, uses or interacts in another way with a Public Service. Typical examples include online services, phone, walk-in centres etc.</dd>
+                    <dt>Definition</dt><dd>The Channel class represents the medium through which an Agent provides, uses or interacts in another way with a Public Service. Typical examples include online services, phone, walk-in centres etc.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -752,7 +746,7 @@ In other words, a Business Event groups together a number of public services tha
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -880,7 +874,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">This property represents the type of Channel as defined in a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">TODO</td>
                         <td></td>
                       </tr>
                     
@@ -894,7 +888,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
               <h3 class="h3" id="Collection"><a href="http://www.w3.org/2004/02/skos/core#Collection" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Collection" data-placement="right">Collection</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents the Collection to which a Concept belongs. Grouping different concepts defines a controlled vocabulary. In this context, the CPSV-AP reuses the Collection class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Collection (labels, preferred labels, alternative labels, definition ...) we refer to SKOS.</dd>
+                    <dt>Definition</dt><dd>This class represents the Collection to which a Concept belongs. Grouping different concepts defines a controlled vocabulary. In this context, the CPSV-AP reuses the Collection class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Collection (labels, preferred labels, alternative labels, definition ...) we refer to SKOS.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -912,7 +906,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -950,16 +944,16 @@ If it is appropriate to add opening hours then this follows the day so if a phon
               <h3 class="h3" id="Concept"><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Concept</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitely defined in the CPSV-AP.
+                    <dt>Definition</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitely defined in the CPSV-AP.
 
-In this context the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition ) we refer to SKOS.
+In this context the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition ...) we refer to SKOS.
 
 The Concept may or may not belong to (member) a certain Collection.</dd>
                     
 		    
                     <dt>Properties</dt>
 		    
-                    <dd>No properties have been defined for this entity.</dd>
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
                     
                   </dl>
                 </div>
@@ -970,7 +964,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
               <h3 class="h3" id="Contact Point"><a href="https://schema.org/ContactPoint" data-toggle="tooltip" data-content="https://schema.org/ContactPoint" data-placement="right">Contact Point</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents the contact information for a Public Service, Channel, Public Organization, etc.</dd>
+                    <dt>Definition</dt><dd>This class represents the contact information for a Public Service, Channel, Public Organization, etc.</dd>
                     
                     <dt>Usage</dt><dd>Similarly to the Channel class, a Contact Point may have regular opening hours that are then overridden by, for example, public holidays, using the Opening Hours Specification class.</dd>
                     
@@ -978,7 +972,9 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>.</dd>
+                      <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>, 
+                      <a href="#Contact%20Point%3Ahas%20email">has email</a>, 
+                      <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>.</dd>
                     
                   </dl>
                 </div>
@@ -990,7 +986,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1018,6 +1014,46 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
+                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="https://schema.org/email">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email" data-placement="right">
+                            has email</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">the email of the ContactPoint</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="https://schema.org/telephone">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone" data-placement="right">
+                            has telephone</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">the telephone of the ContactPoint</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -1025,10 +1061,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Cost"><a href="https://data.europa.eu/m8g/Cost" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Cost" data-placement="right">Cost</a></h3>
+              <h3 class="h3" id="Cost"><a href="http://data.europa.eu/m8g/Cost" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Cost" data-placement="right">Cost</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Cost class represents any costs related to the execution of a Public Service that the Agent consuming it needs to pay.</dd>
+                    <dt>Definition</dt><dd>The Cost class represents any costs related to the execution of a Public Service that the Agent consuming it needs to pay.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1051,7 +1087,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1059,10 +1095,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
 
                     <tbody class="supertype">
                     
-                      <tr id="Cost%3Acurrency" typeof="rdfs:Property" resource="https://data.europa.eu/m8g/currency">
+                      <tr id="Cost%3Acurrency" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/currency">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.europa.eu/m8g/currency" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/currency" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/currency" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/currency" data-placement="right">
                             currency</a>
                           </code>
                         </td>
@@ -1074,15 +1110,16 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed. The possible values for this property are described in a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed.</td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary 
+<a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/currency">Currency</a> Authority Table of Publications Office</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Cost%3Adescription" typeof="rdfs:Property" resource="https://data.europa.eu/m8g/description">
+                      <tr id="Cost%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.europa.eu/m8g/description" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/description" data-placement="right">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
                             description</a>
                           </code>
                         </td>
@@ -1159,10 +1196,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Cost%3Avalue" typeof="rdfs:Property" resource="https://data.europa.eu/m8g/value">
+                      <tr id="Cost%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/value">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.europa.eu/m8g/value" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/value" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/value" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/value" data-placement="right">
                             value</a>
                           </code>
                         </td>
@@ -1186,20 +1223,20 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Criterion Requirement"><a href="https://data.europa.eu/m8g/CriterionRequirement" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/CriterionRequirement" data-placement="right">Criterion Requirement</a></h3>
+              <h3 class="h3" id="Criterion"><a href="http://data.europa.eu/m8g/Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Criterion" data-placement="right">Criterion</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A Criterion can be expressed as a set of requirements where every requirement must be valid. A Criterion requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A Criterion requirement can specify the expected value that the Criterion response has to contain, or a range of threshold values within which the Criterion response has to fit in. The Criterion requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the Criterion requirement.</dd>
+                    <dt>Definition</dt><dd>A Criterion can be expressed as a set of requirements where every requirement must be valid. A Criterion requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A Criterion requirement can specify the expected value that the Criterion response has to contain, or a range of threshold values within which the Criterion response has to fit in. The Criterion requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the Criterion requirement.</dd>
                     
-                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class. The CCCEV provides more details but the Criterion Requirement class has three mandatory properties.</dd>
+                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.</dd>
                     
 		    
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Criterion%20Requirement%3Aidentifier">identifier</a>, 
-                      <a href="#Criterion%20Requirement%3Aname">name</a>, 
-                      <a href="#Criterion%20Requirement%3Atype">type</a>.</dd>
+                      <a href="#Criterion%3Aidentifier">identifier</a>, 
+                      <a href="#Criterion%3Aname">name</a>, 
+                      <a href="#Criterion%3Atype">type</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1211,7 +1248,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1219,7 +1256,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
 
                     <tbody class="supertype">
                     
-                      <tr id="Criterion%20Requirement%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                      <tr id="Criterion%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
@@ -1239,7 +1276,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Criterion%20Requirement%3Aname" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                      <tr id="Criterion%3Aname" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
@@ -1259,7 +1296,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Criterion%20Requirement%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
+                      <tr id="Criterion%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
@@ -1289,13 +1326,14 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
               <h3 class="h3" id="Dataset"><a href="http://www.w3.org/ns/dcat#Dataset" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Dataset" data-placement="right">Dataset</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The class describes the metada of where the dataset is being described, for instance on a regional public service portal and/or a national eGovernment portal.</dd>
+                    <dt>Definition</dt><dd>The class describes the metada of where the dataset is being described, for instance on a regional public service portal and/or a national eGovernment portal.</dd>
                     
 		    
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Dataset%3Adescription">description</a>, 
+                      <a href="#Dataset%3Ahas%20part">has part</a>, 
                       <a href="#Dataset%3Aidentifier">identifier</a>, 
                       <a href="#Dataset%3Alanding%20page">landing page</a>, 
                       <a href="#Dataset%3Apublisher">publisher</a>, 
@@ -1311,7 +1349,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1335,6 +1373,26 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
 			<td>1..*</td>
                         <td property="rdfs:comment">This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Dataset%3Ahas%20part" typeof="rdfs:Property" resource="http://purl.org/dc/terms/hasPart">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/hasPart" data-toggle="tooltip" data-content="http://purl.org/dc/terms/hasPart" data-placement="right">
+                            has part</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Public Service" data-placement="right">Public Service</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The has part property links a Public Service Dataset to the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1368,9 +1426,9 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
                         <td>
                           
-			     
-			    <a href="http://fixme.com#Document" data-toggle="tooltip" data-content="http://fixme.com#Document" data-placement="right">Document</a>
-                            
+			    
+			    <a href="#Document" data-placement="right">Document</a>
+			    
                           
                         </td>
 			<td>0..*</td>
@@ -1426,10 +1484,26 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Event"><a href="https://data.europa.eu/m8g/Event" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Event" data-placement="right">Event</a></h3>
+              <h3 class="h3" id="Document"><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service. It is not expected to be used directly, rather, one or other of its subclasses should be used. The properties of the class are, of course, inherited by those subclasses.
+                    <dt>Definition</dt><dd>A document.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		    
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Event"><a href="http://data.europa.eu/m8g/Event" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Event" data-placement="right">Event</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service. It is not expected to be used directly, rather, one or other of its subclasses should be used. The properties of the class are, of course, inherited by those subclasses.
 
 The Event class is used as a hook either to a single related Public Service, such as diagnosis of illness being related to application for sickness benefit ;
 or to a group of Public Services, such as all those related to the establishment of a new business.</dd>
@@ -1454,7 +1528,7 @@ or to a group of Public Services, such as all those related to the establishment
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1569,10 +1643,10 @@ or to a group of Public Services, such as all those related to the establishment
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Evidence"><a href="https://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Evidence" data-placement="right">Evidence</a></h3>
+              <h3 class="h3" id="Evidence"><a href="http://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Evidence" data-placement="right">Evidence</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can document or support a criterion response. It contains information that proves that a criterion requirement exists or is true, in particular evidences are used to prove that a specific criterion is met.</dd>
+                    <dt>Definition</dt><dd>The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can document or support a criterion response. It contains information that proves that a criterion requirement exists or is true, in particular evidences are used to prove that a specific criterion is met.</dd>
                     
                     <dt>Usage</dt><dd>Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces.
 
@@ -1601,7 +1675,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1658,14 +1732,14 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
                         <td>
                           
-			     
-			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
-                            
+			    
+			    <a href="#LinguisticSystem" data-placement="right">LinguisticSystem</a>
+			    
                           
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">Indicates the language(s) in which the Evidence must be provided.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office</td>
                         <td></td>
                       </tr>
                     
@@ -1698,9 +1772,9 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
                         <td>
                           
-			     
-			    <a href="http://fixme.com#Document" data-toggle="tooltip" data-content="http://fixme.com#Document" data-placement="right">Document</a>
-                            
+			    
+			    <a href="#Document" data-placement="right">Document</a>
+			    
                           
                         </td>
 			<td>0..*</td>
@@ -1739,9 +1813,9 @@ In some cases, the Output of one service will be Evidence for another service. S
               <h3 class="h3" id="Legal Resource"><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Legal Resource</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents the legislation, policy or policies that lie behind the Rules that govern the service.</dd>
+                    <dt>Definition</dt><dd>This class represents the legislation, policy or policies that lie behind the Rules that govern the service.</dd>
                     
-                    <dt>Usage</dt><dd>The definition and properties of the Legal Resource class in the CPSV-AP are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (ELI)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition ) we refer to the ELI ontology.</dd>
+                    <dt>Usage</dt><dd>The definition and properties of the Legal Resource class in the CPSV-AP are aligned with the ontology included in "Council conclusions inviting the introduction of the European Legislation Identifier (ELI)". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition ...) we refer to the ELI ontology.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1759,7 +1833,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1794,10 +1868,10 @@ In some cases, the Output of one service will be Evidence for another service. S
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Life Event"><a href="https://data.europa.eu/m8g/LifeEvent" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/LifeEvent" data-placement="right">Life Event</a></h3>
+              <h3 class="h3" id="Life Event"><a href="http://data.europa.eu/m8g/LifeEvent" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/LifeEvent" data-placement="right">Life Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Life Event class represents an important event or situations in a citizen&#39;s life where public services may be required. Note the scope: an individual will encounter any number of &#39;events&#39; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related.
+                    <dt>Definition</dt><dd>The Life Event class represents an important event or situations in a citizen&#39;s life where public services may be required. Note the scope: an individual will encounter any number of &#39;events&#39; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related.
 
 For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.</dd>
                     
@@ -1808,7 +1882,7 @@ For example, a couple becoming engaged is not a CPSV-AP Life Event, getting marr
                     
                     <dt>Properties</dt>
 		    
-                    <dd>No properties have been defined for this entity.</dd>
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
                     
                   </dl>
                 </div>
@@ -1816,10 +1890,42 @@ For example, a couple becoming engaged is not a CPSV-AP Life Event, getting marr
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Opening Hours Specification"><a href="https://schema.org/OpeningHoursSpecfication" data-toggle="tooltip" data-content="https://schema.org/OpeningHoursSpecfication" data-placement="right">Opening Hours Specification</a></h3>
+              <h3 class="h3" id="LinguisticSystem"><a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The CPSV-AP makes use of schema.org&#39;s openingHours property to provide details of regular operations.</dd>
+                    <dt>Definition</dt><dd>A system of signs, symbols, sounds, gestures, or rules used in communication.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		    
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Location"><a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>An identifiable geographic place or named place.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		    
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Opening Hours Specification"><a href="https://schema.org/OpeningHoursSpecification" data-toggle="tooltip" data-content="https://schema.org/OpeningHoursSpecification" data-placement="right">Opening Hours Specification</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>The CPSV-AP makes use of schema.org&#39;s openingHours property to provide details of regular operations.</dd>
                     
                     <dt>Usage</dt><dd>The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus:
 ex:PublicHolidayClosed a schema:OpeningHoursSpecification;
@@ -1834,7 +1940,7 @@ schema:validThrough "2017-01-02T09:00Z".
 		    
                     <dt>Properties</dt>
 		    
-                    <dd>No properties have been defined for this entity.</dd>
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
                     
                   </dl>
                 </div>
@@ -1842,10 +1948,10 @@ schema:validThrough "2017-01-02T09:00Z".
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Output"><a href="https://data.europa.eu/m8g/Output" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Output" data-placement="right">Output</a></h3>
+              <h3 class="h3" id="Output"><a href="http://data.europa.eu/m8g/Output" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Output" data-placement="right">Output</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>An output can be any resource - document, artefact - anything produced by the Public Service. In the context of a Public Service, the output provides an official document or other artefact of the Competent Authority (Public Organization) that permits/authorises/entitles an Agent to (do) something.</dd>
+                    <dt>Definition</dt><dd>An output can be any resource - document, artefact - anything produced by the Public Service. In the context of a Public Service, the output provides an official document or other artefact of the Competent Authority (Public Organization) that permits/authorises/entitles an Agent to (do) something.</dd>
                     
                     <dt>Usage</dt><dd>In some cases, the Output of one Public Service will be used as evidence to fulfil a criterion requirement of another Public Service. Such relationships should be described in the associated Rule(s).</dd>
                     
@@ -1868,7 +1974,7 @@ schema:validThrough "2017-01-02T09:00Z".
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1952,7 +2058,7 @@ schema:validThrough "2017-01-02T09:00Z".
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property represents the type of Output as defined in a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit</td>
                         <td></td>
                       </tr>
                     
@@ -1963,10 +2069,10 @@ schema:validThrough "2017-01-02T09:00Z".
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Participation"><a href="https://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/Participation" data-placement="right">Participation</a></h3>
+              <h3 class="h3" id="Participation"><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participation</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority. However, this simple structure does not allow statements to be made about those participants, such the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology&#39;s Membership class that allows more complex
+                    <dt>Definition</dt><dd>The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority. However, this simple structure does not allow statements to be made about those participants, such the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology&#39;s Membership class that allows more complex
 relationships and richer metadata to be applied to a role filled by a given Agent.</dd>
                     
 		    
@@ -1987,7 +2093,7 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -2035,10 +2141,10 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                         <td></td>
                       </tr>
                     
-                      <tr id="Participation%3Arole" typeof="rdfs:Property" resource="https://data.europa.eu/m8g/role">
+                      <tr id="Participation%3Arole" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/role">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.europa.eu/m8g/role" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/role" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/role" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/role" data-placement="right">
                             role</a>
                           </code>
                         </td>
@@ -2063,10 +2169,10 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Public Organization"><a href="https://data.europa.eu/m8g/PublicOrganization" data-toggle="tooltip" data-content="https://data.europa.eu/m8g/PublicOrganization" data-placement="right">Public Organization</a></h3>
+              <h3 class="h3" id="Public Organization"><a href="http://data.europa.eu/m8g/PublicOrganization" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganization" data-placement="right">Public Organization</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Any Organization that is defined as being part of the public sector by a legal framework at any level.</dd>
+                    <dt>Definition</dt><dd>Any Organization that is defined as being part of the public sector by a legal framework at any level.</dd>
                     
                     <dt>Usage</dt><dd>Within the CPSV-AP the following properties are mandatory: preferred label and spatial. The value of the latter should be a URI from the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry.</dd>
                     
@@ -2087,7 +2193,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -2124,14 +2230,14 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
                         </td>
                         <td>
                           
-			     
-			    <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
-                            
+			    
+			    <a href="#Location" data-placement="right">Location</a>
+			    
                           
                         </td>
 			<td>1</td>
                         <td property="rdfs:comment">A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority.</td>
-                        <td property="skos:scopeNote">The value should be a URI from the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry.</td>
+                        <td property="skos:scopeNote">The value should be a URI from the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units</a> Authority Table maintained by the Publications Office.</td>
                         <td></td>
                       </tr>
                     
@@ -2145,7 +2251,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
               <h3 class="h3" id="Public Service"><a href="http://purl.org/vocab/cpsv#PublicService" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#PublicService" data-placement="right">Public Service</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents the Public Service itself, as it is described in a public service
+                    <dt>Definition</dt><dd>This class represents the Public Service itself, as it is described in a public service
 catalogue. A Public Service is a mandatory or discretionary set of activities
 performed, or able to be performed, by or on behalf of a public organisation, publicly
 funded and arise from public policy. Services may be for the benefit of an individual,
@@ -2163,6 +2269,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                       <a href="#Public%20Service%3Adescription">description</a>, 
                       <a href="#Public%20Service%3Afollows">follows</a>, 
                       <a href="#Public%20Service%3Ahas%20channel">has channel</a>, 
+                      <a href="#Public%20Service%3Ahas%20competent%20authority">has competent authority</a>, 
                       <a href="#Public%20Service%3Ahas%20contact%20point">has contact point</a>, 
                       <a href="#Public%20Service%3Ahas%20cost">has cost</a>, 
                       <a href="#Public%20Service%3Ahas%20criterion">has criterion</a>, 
@@ -2196,7 +2303,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -2264,6 +2371,39 @@ behalf, to businesses, citizens or others public administrations.</dd>
                         <td></td>
                       </tr>
                     
+                      <tr id="Public%20Service%3Ahas%20competent%20authority" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCompetentAuthority">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasCompetentAuthority" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasCompetentAuthority" data-placement="right">
+                            has competent authority</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Public Organization" data-placement="right">Public Organization</a>
+			    
+                          
+                        </td>
+			<td>1</td>
+                        <td property="rdfs:comment">This property links a Public Service to a Public Organization, which is the responsible
+Agent for the delivery of the Public Service. Whether the particular Public
+Organization provides the public service directly or outsources it is not relevant. The
+Public Organization that is the Competent Authority of the service is the one that is
+ultimately responsible for managing and providing the public service.
+
+The term Competent Authority is defined in the Services Directive (2006/123/EC) in
+the following way:
+&quot;Any body or authority which has a supervisory or regulatory role in a Member State
+in relation to service activities, including, in particular, administrative authorities,
+including courts acting as such, professional bodies, and those professional
+associations or other professional organisations which, in the exercise of their legal
+autonomy, regulate in a collective manner access to service activities or the exercise
+thereof&quot;.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Public%20Service%3Ahas%20contact%20point" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasContactPoint">
                         <td>
                           <code property="rdfs:label">
@@ -2304,23 +2444,24 @@ behalf, to businesses, citizens or others public administrations.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Ahas%20criterion" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCompetentAuthority">
+                      <tr id="Public%20Service%3Ahas%20criterion" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCriterion">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasCompetentAuthority" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasCompetentAuthority" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasCriterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasCriterion" data-placement="right">
                             has criterion</a>
                           </code>
                         </td>
                         <td>
                           
 			    
-			    <a href="#Criterion Requirement" data-placement="right">Criterion Requirement</a>
+			    <a href="#Criterion" data-placement="right">Criterion</a>
 			    
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: &quot;Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities,
-including courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof.&quot;</td>
+                        <td property="rdfs:comment">Links a Public Service to a class that describes the criteria for needing or using the 
+service, such as residency in a given location, being over a certain age etc. The 
+Criterion class is defined in the Core Criterion and Core Evidence Vocabulary</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2405,10 +2546,10 @@ including courts acting as such, professional bodies, and those professional ass
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Ais%20classified%20by" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCompetentAuthority">
+                      <tr id="Public%20Service%3Ais%20classified%20by" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/isClassifiedBy">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasCompetentAuthority" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasCompetentAuthority" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/isClassifiedBy" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/isClassifiedBy" data-placement="right">
                             is classified by</a>
                           </code>
                         </td>
@@ -2486,23 +2627,23 @@ Public Services may be associated with a particular Event and, likewise, the sam
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Alanguage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/LinguisticSystem">
+                      <tr id="Public%20Service%3Alanguage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">
+                            <a href="http://purl.org/dc/terms/language" data-toggle="tooltip" data-content="http://purl.org/dc/terms/language" data-placement="right">
                             language</a>
                           </code>
                         </td>
                         <td>
                           
-			     
-			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
-                            
+			    
+			    <a href="#LinguisticSystem" data-placement="right">LinguisticSystem</a>
+			    
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office</td>
                         <td></td>
                       </tr>
                     
@@ -2526,10 +2667,10 @@ Public Services may be associated with a particular Event and, likewise, the sam
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Aprocessing%20time" typeof="rdfs:Property" resource="http://fixme.com#processingTime">
+                      <tr id="Public%20Service%3Aprocessing%20time" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/processingTime">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://fixme.com#processingTime" data-toggle="tooltip" data-content="http://fixme.com#processingTime" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/processingTime" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/processingTime" data-placement="right">
                             processing time</a>
                           </code>
                         </td>
@@ -2541,9 +2682,8 @@ Public Services may be associated with a particular Event and, likewise, the sam
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. 
-
-Some examples are provided below:
+                        <td property="rdfs:comment">The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. </td>
+                        <td property="skos:scopeNote">Some examples are provided below:
 Duration Syntax - Syntax
 5 years - P5Y
 1 month - P1M
@@ -2553,10 +2693,9 @@ Duration Syntax - Syntax
 Durations begin with an uppercase P followed by the number and the relevant designator, formally: P[n]Y[n]M[n]DT[n]H[n]M[n]S, where Y is for years, M for months etc. 
 
 Note that days and times are separated by an uppercase T which also
-disambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the Wikipedia page16 that references the official ISO standard17.
+disambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">Wikipedia page</a> that references the official <a href="https://www.iso.org/standard/40874.htm">ISO standard</a>.
 
 This approach is consistent with both schema.org and the W3C OWL Time Ontology.</td>
-                        <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
@@ -2620,10 +2759,10 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Asector" typeof="rdfs:Property" resource="http://fixme.com#sector">
+                      <tr id="Public%20Service%3Asector" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/sector">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://fixme.com#sector" data-toggle="tooltip" data-content="http://fixme.com#sector" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/sector" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/sector" data-placement="right">
                             sector</a>
                           </code>
                         </td>
@@ -2649,17 +2788,17 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                         </td>
                         <td>
                           
-			     
-			    <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
-                            
+			    
+			    <a href="#Location" data-placement="right">Location</a>
+			    
                           
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority.</td>
-                        <td property="skos:scopeNote">A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers <a href="http://publications.europa.eu/resource/dataset/atu">a URI set</a> that is suitable for this purpose, e.g. Malta is identified by
+                        <td property="skos:scopeNote">A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">a URI set</a> that is suitable for this purpose, e.g. Malta is identified by
 http://publications.europa.eu/resource/authority/atu/MLT,
 West Flanders by
-http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. In case the ATU code list is not suitable, <a href="https://op.europa.eu/en/publication-detail/-/publication/f056ba08-ac53-11ea-bb7a-01aa75ed71a1/language-en/format-PDF/source-search">NUTS</a> or <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">LAU</a>, <a href="http://publications.europa.eu/resource/dataset/place">NAL Place</a> or <a href="http://www.geonames.org">Geonames</a> are recommended to use, in that order. If those are still not sufficient, we recommend to define your own code list.
+http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. In case the ATU code list is not suitable, <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts">NUTS</a> or <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">LAU</a>, <a href="http://publications.europa.eu/resource/dataset/place">NAL Place</a> or <a href="http://www.geonames.org">Geonames</a> are recommended to use, in that order. If those are still not sufficient, we recommend to define your own code list.
 
 N.B. The spatial restriction is not meant to be used to describe eligibility or the speed of operation of the service. These aspects will be covered by the Criterion class.</td>
                         <td></td>
@@ -2685,10 +2824,10 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Athematic%20area" typeof="rdfs:Property" resource="http://fixme.com#thematicArea">
+                      <tr id="Public%20Service%3Athematic%20area" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/thematicArea">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://fixme.com#thematicArea" data-toggle="tooltip" data-content="http://fixme.com#thematicArea" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/thematicArea" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/thematicArea" data-placement="right">
                             thematic area</a>
                           </code>
                         </td>
@@ -2735,7 +2874,7 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
               <h3 class="h3" id="Rule"><a href="http://purl.org/vocab/cpsv#Rule" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#Rule" data-placement="right">Rule</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service, licence, and authentication requirements of the Public Service.
+                    <dt>Definition</dt><dd>The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service, licence, and authentication requirements of the Public Service.
 
 Instances of the Rule class are FRBR Expressions, that is, a concrete expression such
 as a document, of the more abstract concept of the rules themselves. The CPSV-AP does not envisage instances of the Rule class as machine-readable business rules.
@@ -2763,7 +2902,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -2827,7 +2966,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The Implements property links a Rule to relevant legislation or policy documents i.e.
-the Legal Resource under which the Rules are being defined (see section 3.16).</td>
+the Legal Resource under which the Rules are being defined.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2841,14 +2980,14 @@ the Legal Resource under which the Rules are being defined (see section 3.16).</
                         </td>
                         <td>
                           
-			     
-			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
-                            
+			    
+			    <a href="#LinguisticSystem" data-placement="right">LinguisticSystem</a>
+			    
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
                     
@@ -2886,7 +3025,7 @@ the Legal Resource under which the Rules are being defined (see section 3.16).</
                             
                           
                         </td>
-			<td>1</td>
+			<td>0..1</td>
                         <td property="rdfs:comment">Type of Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2929,7 +3068,7 @@ the Legal Resource under which the Rules are being defined (see section 3.16).</
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 (non-normative)
                 
-		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/context/cpsv-ap_en.jsonld" target="_blank">/context/cpsv-ap_en.jsonld</a></p>
+		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/doc/application-profile/cpsv-ap/context/cpsv-ap_en.jsonld" target="_blank">/doc/application-profile/cpsv-ap/context/cpsv-ap_en.jsonld</a></p>
                 
             </div>
 	    <!--
@@ -2960,10 +3099,11 @@ the Legal Resource under which the Rules are being defined (see section 3.16).</
 			      <li class="side-navigation__item">
                                   <a href="#license">License</a>
                               </li>
-			      -->
+			      
                               <li class="side-navigation__item">
                                   <a href="#conformance">Conformance</a>
                               </li>
+				-->
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
                               </li>
@@ -2977,7 +3117,7 @@ the Legal Resource under which the Rules are being defined (see section 3.16).</
                               </li>
 			      -->
                               <li class="side-navigation__item">
-                                  <a href="#jsonld">JSON-LD Context</a>
+                                  <a href="#jsonld">JSON-LD context</a>
                               </li>
 			      <!--
                               <li class="side-navigation__item">

@@ -58,12 +58,493 @@
       "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
     },
     {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#BusinessEventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/m8g/BusinessEvent"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#ChannelShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://schema.org/OpeningHoursSpecification",
+          "sh:definition": {
+            "en": "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "availability restriction"
+          },
+          "sh:path": "https://schema.org/hoursAvailable"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:definition": {
+            "en": "In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be\r\nrequired for an online channel, whereas a physical signature may be required for a face to face service provision.\r"
+          },
+          "sh:name": {
+            "en": "has input"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#hasInput"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Channel."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents the normal opening hours of a channel."
+          },
+          "sh:name": {
+            "en": "opening hours"
+          },
+          "sh:path": "https://schema.org/openingHours"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:definition": {
+            "en": "This property indicates the owner of a specific Channel through which a Public Service is being delivered."
+          },
+          "sh:name": {
+            "en": "owned by"
+          },
+          "sh:path": "http://data.europa.eu/m8g/ownedBy"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "This property represents the type of Channel as defined in a controlled vocabulary."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Channel"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#CostShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "currency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/currency"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents a free text description of the Cost."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Cost."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/Channel",
+          "sh:definition": {
+            "en": "Where the cost varies depending on the channel used, for example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property. "
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "if accessed through"
+          },
+          "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:definition": {
+            "en": "This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.\r"
+          },
+          "sh:name": {
+            "en": "is defined by"
+          },
+          "sh:path": "http://data.europa.eu/m8g/isDefinedBy"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#double",
+          "sh:definition": {
+            "en": "This property represents a numeric value indicating the amount of the Cost."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "value"
+          },
+          "sh:path": "http://data.europa.eu/m8g/value"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Cost"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#CriterionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Criterion Requirement."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents the official Name of the Criterion Requirement."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "This property represents the type of Criterion Requirement as described in a controlled vocabulary."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Criterion"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#EventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Event."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents the Name (or title) of the Event."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
+          "sh:definition": {
+            "en": "This property links an event directly to a public service that is related to it."
+          },
+          "sh:name": {
+            "en": "related service"
+          },
+          "sh:path": "http://purl.org/dc/terms/relation"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.\r"
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Event"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#EvidenceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents a free text Description of the piece of Evidence."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the piece of Evidence."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
+          "sh:definition": {
+            "en": "Indicates the language(s) in which the Evidence must be provided."
+          },
+          "sh:name": {
+            "en": "language"
+          },
+          "sh:path": "http://purl.org/dc/terms/language"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents the official Name of the piece of Evidence."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:definition": {
+            "en": "This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input."
+          },
+          "sh:name": {
+            "en": "related documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "This property represents the type of Evidence as described in a controlled vocabulary."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#LifeEventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/m8g/LifeEvent"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#OutputShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents a free text Description of the Output."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Output."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents the official Name of the Output."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "This property represents the type of Output as defined in a controlled vocabulary."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Output"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#ParticipationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "A free text description of the Participation."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "This property represents an Identifier for the Participation."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:definition": {
+            "en": "Provides the role played. This should be provided using a controlled vocabulary. Since \r\nthis is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "role"
+          },
+          "sh:path": "http://data.europa.eu/m8g/role"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Participation"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#PublicOrganizationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "The primary (e.g. legally recognized) name."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:definition": {
+            "en": "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganization"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#LinguisticSystemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/LinguisticSystem"
+    },
+    {
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
+    },
+    {
       "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#PublicServiceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."
           },
@@ -85,7 +566,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#follows"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Channel",
+          "sh:class": "http://data.europa.eu/m8g/Channel",
           "sh:definition": {
             "en": "This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."
           },
@@ -93,6 +574,18 @@
             "en": "has channel"
           },
           "sh:path": "http://data.europa.eu/m8g/hasChannel"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:definition": {
+            "en": "This property links a Public Service to a Public Organization, which is the responsible\r\nAgent for the delivery of the Public Service. Whether the particular Public\r\nOrganization provides the public service directly or outsources it is not relevant. The\r\nPublic Organization that is the Competent Authority of the service is the one that is\r\nultimately responsible for managing and providing the public service.\r\n\r\nThe term Competent Authority is defined in the Services Directive (2006/123/EC) in\r\nthe following way:\r\n\"Any body or authority which has a supervisory or regulatory role in a Member State\r\nin relation to service activities, including, in particular, administrative authorities,\r\nincluding courts acting as such, professional bodies, and those professional\r\nassociations or other professional organisations which, in the exercise of their legal\r\nautonomy, regulate in a collective manner access to service activities or the exercise\r\nthereof\".\r"
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has competent authority"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
         },
         {
           "sh:class": "https://schema.org/ContactPoint",
@@ -105,7 +598,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasContactPoint"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Cost",
+          "sh:class": "http://data.europa.eu/m8g/Cost",
           "sh:definition": {
             "en": "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."
           },
@@ -115,17 +608,17 @@
           "sh:path": "http://data.europa.eu/m8g/hasCost"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/CriterionRequirement",
+          "sh:class": "http://data.europa.eu/m8g/Criterion",
           "sh:definition": {
-            "en": "The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities,\r\nincluding courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof.\"\r"
+            "en": "Links a Public Service to a class that describes the criteria for needing or using the \r\nservice, such as residency in a given location, being over a certain age etc. The \r\nCriterion class is defined in the Core Criterion and Core Evidence Vocabulary"
           },
           "sh:name": {
             "en": "has criterion"
           },
-          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
+          "sh:path": "http://data.europa.eu/m8g/hasCriterion"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Evidence",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:definition": {
             "en": "The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."
           },
@@ -145,7 +638,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasLegalResource"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Participation",
+          "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:definition": {
             "en": "This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."
           },
@@ -155,7 +648,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasParticipation"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents a formally-issued Identifier for the Public Service."
           },
@@ -174,7 +667,7 @@
           "sh:name": {
             "en": "is classified by"
           },
-          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
+          "sh:path": "http://data.europa.eu/m8g/isClassifiedBy"
         },
         {
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
@@ -187,7 +680,7 @@
           "sh:path": "http://data.europa.eu/m8g/isDescribedAt"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Event",
+          "sh:class": "http://data.europa.eu/m8g/Event",
           "sh:definition": {
             "en": "This property links the Public Service to the Event class. Several\r\nPublic Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. "
           },
@@ -197,7 +690,7 @@
           "sh:path": "http://data.europa.eu/m8g/isGroupedBy"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents a keyword, term or phrase to describe the Public Service."
           },
@@ -209,15 +702,15 @@
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:definition": {
-            "en": "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4.\r"
+            "en": "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."
           },
           "sh:name": {
             "en": "language"
           },
-          "sh:path": "http://purl.org/dc/terms/LinguisticSystem"
+          "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents the official Name of the Public Service."
           },
@@ -231,16 +724,16 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
           "sh:definition": {
-            "en": "The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. \r\n\r\nSome examples are provided below:\r\nDuration Syntax - Syntax\r\n5 years - P5Y\r\n1 month - P1M\r\n3 days - P3D\r\n2 days 4 hours - P2DT4H\r\n\r\nDurations begin with an uppercase P followed by the number and the relevant designator, formally: P[n]Y[n]M[n]DT[n]H[n]M[n]S, where Y is for years, M for months etc. \r\n\r\nNote that days and times are separated by an uppercase T which also\r\ndisambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the Wikipedia page16 that references the official ISO standard17.\r\n\r\nThis approach is consistent with both schema.org and the W3C OWL Time Ontology."
+            "en": "The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. "
           },
           "sh:maxCount": "1",
           "sh:name": {
             "en": "processing time"
           },
-          "sh:path": "http://fixme.com#processingTime"
+          "sh:path": "http://data.europa.eu/m8g/processingTime"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Output",
+          "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:definition": {
             "en": "The Produces property links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service. Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service."
           },
@@ -277,7 +770,7 @@
           "sh:name": {
             "en": "sector"
           },
-          "sh:path": "http://fixme.com#sector"
+          "sh:path": "http://data.europa.eu/m8g/sector"
         },
         {
           "sh:class": "http://purl.org/dc/terms/Location",
@@ -308,7 +801,7 @@
           "sh:name": {
             "en": "thematic area"
           },
-          "sh:path": "http://fixme.com#thematicArea"
+          "sh:path": "http://data.europa.eu/m8g/thematicArea"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -329,7 +822,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents a free text Description of the Rule."
           },
@@ -341,7 +834,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents an Identifier for the Rule."
           },
@@ -355,7 +848,7 @@
         {
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:definition": {
-            "en": "The Implements property links a Rule to relevant legislation or policy documents i.e.\r\nthe Legal Resource under which the Rules are being defined (see section 3.16)."
+            "en": "The Implements property links a Rule to relevant legislation or policy documents i.e.\r\nthe Legal Resource under which the Rules are being defined."
           },
           "sh:name": {
             "en": "implements"
@@ -365,7 +858,7 @@
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:definition": {
-            "en": "This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary."
+            "en": "This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."
           },
           "sh:name": {
             "en": "language"
@@ -373,7 +866,7 @@
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents the Name of the Rule."
           },
@@ -390,7 +883,6 @@
             "en": "Type of Rule."
           },
           "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "type"
           },
@@ -430,7 +922,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description."
           },
@@ -441,7 +933,17 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
+          "sh:definition": {
+            "en": "The has part property links a Public Service Dataset to the Public Service."
+          },
+          "sh:name": {
+            "en": "has part"
+          },
+          "sh:path": "http://purl.org/dc/terms/hasPart"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."
           },
@@ -451,7 +953,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "sh:class": "http://fixme.com#Document",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:definition": {
             "en": "This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information."
           },
@@ -473,7 +975,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property contains a name given to the Dataset."
           },
@@ -492,7 +994,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."
           },
@@ -528,7 +1030,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities."
           },
@@ -540,7 +1042,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "The complete address written as a formatted string."
           },
@@ -564,7 +1066,7 @@
           "sh:path": "http://www.w3.org/ns/locn#locatorDesignator"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "Proper noun(s) applied to the real world entity identified by the locator."
           },
@@ -600,7 +1102,7 @@
           "sh:path": "http://www.w3.org/ns/locn#postCode"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)\r\n For example, \"Paris\"."
           },
@@ -612,7 +1114,7 @@
           "sh:path": "http://www.w3.org/ns/locn#postName"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature."
           },
@@ -632,7 +1134,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents an Identifier for the Agent."
           },
@@ -644,7 +1146,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:definition": {
             "en": "This property represents the Name of the Agent."
           },
@@ -656,7 +1158,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "sh:class": "https://data.europa.eu/m8g/Participation",
+          "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:definition": {
             "en": "This property links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.\r\n"
           },
@@ -669,471 +1171,11 @@
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
     },
     {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#BusinessEventShape",
+      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#DocumentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "https://data.europa.eu/m8g/BusinessEvent"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#ChannelShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://schema.org/OpeningHoursSpecfication",
-          "sh:definition": {
-            "en": "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "availability restriction"
-          },
-          "sh:path": "https://schema.org/hoursAvailable"
-        },
-        {
-          "sh:class": "https://data.europa.eu/m8g/Evidence",
-          "sh:definition": {
-            "en": "In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be\r\nrequired for an online channel, whereas a physical signature may be required for a face to face service provision.\r"
-          },
-          "sh:name": {
-            "en": "has input"
-          },
-          "sh:path": "http://purl.org/vocab/cpsv#hasInput"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Channel."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents the normal opening hours of a channel."
-          },
-          "sh:name": {
-            "en": "opening hours"
-          },
-          "sh:path": "https://schema.org/openingHours"
-        },
-        {
-          "sh:class": "https://data.europa.eu/m8g/PublicOrganization",
-          "sh:definition": {
-            "en": "This property indicates the owner of a specific Channel through which a Public Service is being delivered."
-          },
-          "sh:name": {
-            "en": "owned by"
-          },
-          "sh:path": "http://data.europa.eu/m8g/ownedBy"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "This property represents the type of Channel as defined in a controlled vocabulary."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Channel"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#CostShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed. The possible values for this property are described in a controlled vocabulary."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "currency"
-          },
-          "sh:path": "https://data.europa.eu/m8g/currency"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents a free text description of the Cost."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "https://data.europa.eu/m8g/description"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Cost."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "https://data.europa.eu/m8g/Channel",
-          "sh:definition": {
-            "en": "Where the cost varies depending on the channel used, for example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property. "
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "if accessed through"
-          },
-          "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough"
-        },
-        {
-          "sh:class": "https://data.europa.eu/m8g/PublicOrganization",
-          "sh:definition": {
-            "en": "This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.\r"
-          },
-          "sh:name": {
-            "en": "is defined by"
-          },
-          "sh:path": "http://data.europa.eu/m8g/isDefinedBy"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#double",
-          "sh:definition": {
-            "en": "This property represents a numeric value indicating the amount of the Cost."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "value"
-          },
-          "sh:path": "https://data.europa.eu/m8g/value"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Cost"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#CriterionRequirementShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Criterion Requirement."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents the official Name of the Criterion Requirement."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "This property represents the type of Criterion Requirement as described in a controlled vocabulary."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/CriterionRequirement"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#EventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Event."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents the Name (or title) of the Event."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
-          "sh:definition": {
-            "en": "This property links an event directly to a public service that is related to it."
-          },
-          "sh:name": {
-            "en": "related service"
-          },
-          "sh:path": "http://purl.org/dc/terms/relation"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.\r"
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Event"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#EvidenceShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents a free text Description of the piece of Evidence."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the piece of Evidence."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
-          "sh:definition": {
-            "en": "Indicates the language(s) in which the Evidence must be provided."
-          },
-          "sh:name": {
-            "en": "language"
-          },
-          "sh:path": "http://purl.org/dc/terms/language"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents the official Name of the piece of Evidence."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "sh:class": "http://fixme.com#Document",
-          "sh:definition": {
-            "en": "This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input."
-          },
-          "sh:name": {
-            "en": "related documentation"
-          },
-          "sh:path": "http://xmlns.com/foaf/0.1/page"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "This property represents the type of Evidence as described in a controlled vocabulary."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Evidence"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#LifeEventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.europa.eu/m8g/LifeEvent"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#OutputShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents a free text Description of the Output."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Output."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents the official Name of the Output."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "name"
-          },
-          "sh:path": "http://purl.org/dc/terms/title"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "This property represents the type of Output as defined in a controlled vocabulary."
-          },
-          "sh:name": {
-            "en": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Output"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#ParticipationShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "A free text description of the Participation."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "description"
-          },
-          "sh:path": "http://purl.org/dc/terms/description"
-        },
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "This property represents an Identifier for the Participation."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:definition": {
-            "en": "Provides the role played. This should be provided using a controlled vocabulary. Since \r\nthis is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "role"
-          },
-          "sh:path": "https://data.europa.eu/m8g/role"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/Participation"
-    },
-    {
-      "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#PublicOrganizationShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:definition": {
-            "en": "The primary (e.g. legally recognized) name."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "preferred label"
-          },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
-        },
-        {
-          "sh:class": "http://purl.org/dc/terms/Location",
-          "sh:definition": {
-            "en": "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "spatial"
-          },
-          "sh:path": "http://purl.org/dc/terms/spatial"
-        }
-      ],
-      "sh:targetClass": "https://data.europa.eu/m8g/PublicOrganization"
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
     },
     {
       "@id": "https://semiceu.github.io/shacl/cpsv-ap_en#ContactPointShape",
@@ -1141,7 +1183,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://schema.org/OpeningHoursSpecfication",
+          "sh:class": "https://schema.org/OpeningHoursSpecification",
           "sh:definition": {
             "en": "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
           },
@@ -1149,6 +1191,26 @@
             "en": "availability restriction"
           },
           "sh:path": "https://schema.org/hoursAvailable"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "the email of the ContactPoint"
+          },
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:path": "https://schema.org/email"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:definition": {
+            "en": "the telephone of the ContactPoint"
+          },
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:path": "https://schema.org/telephone"
         }
       ],
       "sh:targetClass": "https://schema.org/ContactPoint"
@@ -1158,7 +1220,7 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "https://schema.org/OpeningHoursSpecfication"
+      "sh:targetClass": "https://schema.org/OpeningHoursSpecification"
     }
   ]
 }
