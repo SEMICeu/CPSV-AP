@@ -77,7 +77,7 @@
     "BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
     "Channel": "http://data.europa.eu/m8g/Channel",
     "Channel.availabilityRestriction": {
-      "@id": "https://schema.org/hoursAvailable",
+      "@id": "http://data.europa.eu/m8g/hoursAvailable",
       "@type": "@id"
     },
     "Channel.hasInput": {
@@ -113,7 +113,7 @@
     "ContactPoint": "http://data.europa.e/m8g/ContactPoint",
     "ContactPoint.availabilityRestriction": {
       "@container": "@set",
-      "@id": "https://schema.org/hoursAvailable",
+      "@id": "http://data.europa.eu/m8g/hoursAvailable",
       "@type": "@id"
     },
     "ContactPoint.hasEmail": {
