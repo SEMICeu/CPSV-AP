@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
+  <xs:element name="LegalResource" type="LegalResourceType"/>
+  <xs:element name="BusinessEvent" type="BusinessEventType"/>
+  <xs:element name="Channel" type="ChannelType"/>
+  <xs:element name="Cost" type="CostType"/>
+  <xs:element name="Criterion" type="CriterionType"/>
+  <xs:element name="Event" type="EventType"/>
+  <xs:element name="Evidence" type="EvidenceType"/>
+  <xs:element name="LifeEvent" type="LifeEventType"/>
+  <xs:element name="Output" type="OutputType"/>
+  <xs:element name="Participation" type="ParticipationType"/>
+  <xs:element name="PublicOrganization" type="PublicOrganizationType"/>
+  <xs:element name="LinguisticSystem" type="LinguisticSystemType"/>
+  <xs:element name="Location" type="LocationType"/>
+  <xs:element name="PublicService" type="PublicServiceType"/>
+  <xs:element name="Rule" type="RuleType"/>
+  <xs:element name="Collection" type="CollectionType"/>
+  <xs:element name="Concept" type="ConceptType"/>
+  <xs:element name="Dataset" type="DatasetType"/>
+  <xs:element name="Address" type="AddressType"/>
+  <xs:element name="Agent" type="AgentType"/>
+  <xs:element name="Document" type="DocumentType"/>
+  <xs:element name="ContactPoint" type="ContactPointType"/>
+  <xs:element name="OpeningHoursSpecification" type="OpeningHoursSpecificationType"/>
+  <xs:complexType name="LegalResourceType">
+    <xs:sequence>
+      <xs:element name="related" ref="LegalResource" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BusinessEventType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="ChannelType">
+    <xs:sequence>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="hasInput" ref="Evidence" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="openingHours" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="ownedBy" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="type" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CostType">
+    <xs:sequence>
+      <xs:element name="currency" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="ifAccessedThrough" ref="Channel" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="isDefinedBy" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="value" type="http://www.w3.org/2001/XMLSchema#double" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CriterionType">
+    <xs:sequence>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="type" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="relatedService" ref="PublicService" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="type" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EvidenceType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="relatedDocumentation" ref="Document" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="type" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LifeEventType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="OutputType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="type" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParticipationType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="role" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PublicOrganizationType">
+    <xs:sequence>
+      <xs:element name="preferredLabel" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="spatial" ref="Location" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinguisticSystemType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="LocationType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="PublicServiceType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="follows" ref="Rule" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasChannel" ref="Channel" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasCompetentAuthority" ref="PublicOrganization" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="hasContactPoint" ref="ContactPoint" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasCost" ref="Cost" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasCriterion" ref="Criterion" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasInput" ref="Evidence" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasLegalResource" ref="LegalResource" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasParticipation" ref="Participation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="isClassifiedBy" ref="Concept" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="isDescribedAt" ref="Dataset" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="isGroupedBy" ref="Event" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="keyword" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="processingTime" type="http://www.w3.org/2001/XMLSchema#duration" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="produces" ref="Output" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="related" ref="PublicService" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="requires" ref="PublicService" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="sector" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="spatial" ref="Location" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="status" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="thematicArea" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="type" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RuleType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="implements" ref="LegalResource" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="type" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CollectionType">
+    <xs:sequence>
+      <xs:element name="member" ref="Concept" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="DatasetType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="1"/>
+      <xs:element name="hasPart" ref="PublicService" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="landingPage" ref="Document" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="publisher" ref="Agent" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="title" type="xs:string" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element name="addressArea" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="administrativeUnitLevel2 (country/region/state)" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="fullAddress" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="locatorName" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="postName (city)" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="thoroughfare" type="xs:string" maxOccurs="1" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgentType">
+    <xs:sequence>
+      <xs:element name="hasAddress" ref="Address" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="playsRole" ref="Participation" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DocumentType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="ContactPointType">
+    <xs:sequence>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OpeningHoursSpecificationType">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
