@@ -41,6 +41,44 @@
   "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en",
   "shapes": [
     {
+      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://data.europa.eu/m8g/OpeningHoursSpecification",
+          "sh:description": {
+            "en": "This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
+          },
+          "sh:name": {
+            "en": "availability restriction"
+          },
+          "sh:path": "https://schema.org/hoursAvailable"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "the email of the ContactPoint"
+          },
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:path": "http://data.europa.eu/m8g/email"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "the telephone of the ContactPoint"
+          },
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:path": "http://data.europa.eu/m8g/telephone"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.e/m8g/ContactPoint"
+    },
+    {
       "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -71,7 +109,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://schema.org/OpeningHoursSpecification",
+          "sh:class": "http://data.europa.eu/m8g/OpeningHoursSpecification",
           "sh:description": {
             "en": "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
           },
@@ -111,10 +149,10 @@
           "sh:name": {
             "en": "opening hours"
           },
-          "sh:path": "https://schema.org/openingHours"
+          "sh:path": "http://data.europa.eu/m8g/openingHours"
         },
         {
-          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
             "en": "This property indicates the owner of a specific Channel through which a Public Service is being delivered."
           },
@@ -188,7 +226,7 @@
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough"
         },
         {
-          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
             "en": "This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.\r"
           },
@@ -219,7 +257,7 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "This property represents an Identifier for the Criteriont."
+            "en": "This property represents an Identifier for the Criterion."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -398,6 +436,13 @@
       "sh:targetClass": "http://data.europa.eu/m8g/LifeEvent"
     },
     {
+      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/m8g/OpeningHoursSpecification"
+    },
+    {
       "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OutputShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -494,14 +539,14 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Participation"
     },
     {
-      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganizationShape",
+      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganisationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "The primary (e.g. legally recognized) name."
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -522,7 +567,7 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         }
       ],
-      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganization"
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
     },
     {
       "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LinguisticSystemShape",
@@ -576,7 +621,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasChannel"
         },
         {
-          "sh:class": "http://data.europa.eu/m8g/PublicOrganization",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
             "en": "This property links a Public Service to a Public Organization, which is the responsible\r\nAgent for the delivery of the Public Service. Whether the particular Public\r\nOrganization provides the public service directly or outsources it is not relevant. The\r\nPublic Organization that is the Competent Authority of the service is the one that is\r\nultimately responsible for managing and providing the public service.\r\n\r\nThe term Competent Authority is defined in the Services Directive (2006/123/EC) in\r\nthe following way:\r\n\"Any body or authority which has a supervisory or regulatory role in a Member State\r\nin relation to service activities, including, in particular, administrative authorities,\r\nincluding courts acting as such, professional bodies, and those professional\r\nassociations or other professional organisations which, in the exercise of their legal\r\nautonomy, regulate in a collective manner access to service activities or the exercise\r\nthereof\".\r"
           },
@@ -588,7 +633,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
         },
         {
-          "sh:class": "https://schema.org/ContactPoint",
+          "sh:class": "http://data.europa.e/m8g/ContactPoint",
           "sh:description": {
             "en": "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "
           },
@@ -996,10 +1041,8 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."
+            "en": "The name of a geographic area that groups Addresses."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "address area"
           },
@@ -1010,8 +1053,6 @@
           "sh:description": {
             "en": "A globally unique identifier for each instance of an Address."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "address ID"
           },
@@ -1020,22 +1061,18 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country."
+            "en": "The name of the uppermost level of the address, almost always a country."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "administrative unit level 1 (country)"
           },
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities."
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "administrative unit level 2 (country/region/state)"
           },
@@ -1044,10 +1081,8 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "The complete address written as a formatted string."
+            "en": "The complete address written as a string."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "full address"
           },
@@ -1056,10 +1091,8 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
-            "en": "A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators."
+            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "locator designator"
           },
@@ -1070,8 +1103,6 @@
           "sh:description": {
             "en": "Proper noun(s) applied to the real world entity identified by the locator."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "locator name"
           },
@@ -1080,10 +1111,8 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
-            "en": "The Post Office Box number."
+            "en": "A location designator for a postal delivery point at a post office, usually a number."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "post office box"
           },
@@ -1092,10 +1121,8 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
-            "en": "The post/zip code of an address. (INSPIRE's definition is \"A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\")"
+            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "post code"
           },
@@ -1104,10 +1131,8 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)\r\n For example, \"Paris\"."
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "post name (city)"
           },
@@ -1116,10 +1141,8 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "en": "An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature."
+            "en": "The name of a passage or way through from one location to another."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "thoroughfare"
           },
@@ -1187,51 +1210,6 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
-    },
-    {
-      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://schema.org/OpeningHoursSpecification",
-          "sh:description": {
-            "en": "This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
-          },
-          "sh:name": {
-            "en": "availability restriction"
-          },
-          "sh:path": "https://schema.org/hoursAvailable"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "en": "the email of the ContactPoint"
-          },
-          "sh:name": {
-            "en": "has email"
-          },
-          "sh:path": "https://schema.org/email"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "en": "the telephone of the ContactPoint"
-          },
-          "sh:name": {
-            "en": "has telephone"
-          },
-          "sh:path": "https://schema.org/telephone"
-        }
-      ],
-      "sh:targetClass": "https://schema.org/ContactPoint"
-    },
-    {
-      "@id": "https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://schema.org/OpeningHoursSpecification"
     }
   ]
 }

@@ -2,46 +2,57 @@
   "@context": {
     "Address": "http://www.w3.org/ns/locn#Address",
     "Address.addressArea": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#addressArea",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.addressId": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#addressID",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Address.administrativeUnitLevel1 (country)": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#adminUnitL1",
       "@type": "@id"
     },
     "Address.administrativeUnitLevel2 (country/region/state)": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      "@type": "@id"
     },
     "Address.fullAddress": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#fullAddress",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.locatorDesignator": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#locatorDesignator",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Address.locatorName": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#locatorName",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.postCode": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#postCode",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Address.postName (city)": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#postName",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.postOfficeBox": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#poBox",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Address.thoroughfare": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#thoroughfare",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -80,7 +91,7 @@
     },
     "Channel.openingHours": {
       "@container": "@set",
-      "@id": "https://schema.org/openingHours",
+      "@id": "http://data.europa.eu/m8g/openingHours",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Channel.ownedBy": {
@@ -99,7 +110,7 @@
       "@type": "@id"
     },
     "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ContactPoint": "https://schema.org/ContactPoint",
+    "ContactPoint": "http://data.europa.e/m8g/ContactPoint",
     "ContactPoint.availabilityRestriction": {
       "@container": "@set",
       "@id": "https://schema.org/hoursAvailable",
@@ -107,12 +118,12 @@
     },
     "ContactPoint.hasEmail": {
       "@container": "@set",
-      "@id": "https://schema.org/email",
+      "@id": "http://data.europa.eu/m8g/email",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "ContactPoint.hasTelephone": {
       "@container": "@set",
-      "@id": "https://schema.org/telephone",
+      "@id": "http://data.europa.eu/m8g/telephone",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Cost": "http://data.europa.eu/m8g/Cost",
@@ -245,7 +256,7 @@
     "LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
     "LinguisticSystem": "http://purl.org/dc/terms/LinguisticSystem",
     "Location": "http://purl.org/dc/terms/Location",
-    "OpeningHoursSpecification": "https://schema.org/OpeningHoursSpecification",
+    "OpeningHoursSpecification": "http://data.europa.eu/m8g/OpeningHoursSpecification",
     "Output": "http://data.europa.eu/m8g/Output",
     "Output.description": {
       "@id": "http://purl.org/dc/terms/description",
@@ -278,7 +289,7 @@
       "@id": "http://data.europa.eu/m8g/role",
       "@type": "@id"
     },
-    "PublicOrganization": "http://data.europa.eu/m8g/PublicOrganization",
+    "PublicOrganization": "http://data.europa.eu/m8g/PublicOrganisation",
     "PublicOrganization.preferredLabel": {
       "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"

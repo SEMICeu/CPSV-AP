@@ -64,7 +64,7 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>Working Draft</dd>
-              <dt>Published at</dt><dd>2021-07-01</dd>
+              <dt>Published at</dt><dd>2022-03-02</dd>
               <dt>This version</dt><dd><a href="https://semiceu.github.io/TODO/releases/2.00">https://semiceu.github.io/TODO/releases/2.00</a></dd>
               
               
@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/TODO/tree/master/releases/2.00">https://github.com/SEMICeu/TODO/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/be87dbfcd335b6d415431de95e89d5d757ece182/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/be87dbfcd335b6d415431de95e89d5d757ece182/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/d5fa6c1fccc0960ceac40b0ea4cd4a604849bed5/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/d5fa6c1fccc0960ceac40b0ea4cd4a604849bed5/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -251,12 +251,12 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Working Draft published on 2021-07-01.
+                  This specification has the status of Working Draft published on 2022-03-02.
 	        </p>
                 
               </section>
             </div>
-
+			<!--
             <div class="region region--no-space-top typography" id="license">
               <h2 class="h2">License</h2>
               
@@ -270,6 +270,7 @@
               <p>TBD</p>
               
             </div>
+			-->
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
@@ -396,9 +397,9 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.</td>
-                        <td property="skos:scopeNote">This would typically be part of a city, a neighbourhood or village, e.g. Montmartre.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The name of a geographic area that groups Addresses.</td>
+                        <td property="skos:scopeNote">This would typically be part of a city, a neighbourhood or village, e.g. Montmartre. Address area is not an administrative unit.</td>
                         <td></td>
                       </tr>
                     
@@ -416,21 +417,15 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
                             
                           
                         </td>
-			<td>1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">A globally unique identifier for each instance of an Address.</td>
-                        <td property="skos:scopeNote"><p>
-The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an
-address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
-</p></br>
-<p>
+                        <td property="skos:scopeNote">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
+
 The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Location Core Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
-</p></br>
-<p>
+
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
-</p></br>
-<p>
-To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Location Core Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.
-</p></td>
+
+To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Location Core Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
                         <td></td>
                       </tr>
                     
@@ -448,9 +443,9 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country.</td>
-                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The name of the uppermost level of the address, almost always a country.</td>
+                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
                         <td></td>
                       </tr>
                     
@@ -464,16 +459,13 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities.</td>
-                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office include:
-<a href="http://publications.europa.eu/resource/authority/atu">Administrative Territorial Units (ATU)</a>,
-<a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and
-<a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA_AR_PAR01" in the ATU controlled vocabulary.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</td>
+                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
                         <td></td>
                       </tr>
                     
@@ -491,8 +483,8 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The complete address written as a formatted string.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The complete address written as a string.</td>
                         <td property="skos:scopeNote">Use of this property is recommended as it will not suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France".</td>
                         <td></td>
                       </tr>
@@ -511,8 +503,8 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">A number or sequence of characters that uniquely identifies the locator within the relevant scope.</td>
                         <td property="skos:scopeNote">In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".</td>
                         <td></td>
                       </tr>
@@ -531,14 +523,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             
                           
                         </td>
-			<td>1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">Proper noun(s) applied to the real world entity identified by the locator.</td>
-                        <td property="skos:scopeNote"><p>
-The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
-</p></br>
-<p>
-The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Schuman, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.
-</p></td>
+                        <td property="skos:scopeNote">The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
+
+The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
                         <td></td>
                       </tr>
                     
@@ -556,8 +545,8 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The post/zip code of an address. (INSPIRE&#39;s definition is &quot;A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.&quot;)</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</td>
                         <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".</td>
                         <td></td>
                       </tr>
@@ -576,10 +565,9 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The key postal division of the address, usually the city. (INSPIRE&#39;s definition is &quot;One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)
- For example, &quot;Paris&quot;.</td>
-                        <td property="skos:scopeNote"></td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</td>
+                        <td property="skos:scopeNote">Usually a city, for example "Paris".</td>
                         <td></td>
                       </tr>
                     
@@ -597,8 +585,8 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">The Post Office Box number.</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">A location designator for a postal delivery point at a post office, usually a number.</td>
                         <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".</td>
                         <td></td>
                       </tr>
@@ -617,9 +605,9 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-			<td>1</td>
-                        <td property="rdfs:comment">An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.</td>
-                        <td property="skos:scopeNote">For example, "Avenue des Champs-Élysées".</td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The name of a passage or way through from one location to another.</td>
+                        <td property="skos:scopeNote">A thoroughfare is usually a street, but it might be a waterway or some other feature. For example, "Avenue des Champs-Élysées".</td>
                         <td></td>
                       </tr>
                     
@@ -775,7 +763,7 @@ In other words, a Business Event groups together a number of public services tha
               <h3 class="h3" id="Channel"><a href="http://data.europa.eu/m8g/Channel" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Channel" data-placement="right">Channel</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Channel class represents the medium through which an Agent provides, uses or interacts in another way with a Public Service. Typical examples include online services, phone, walk-in centres etc.</dd>
+                    <dt>Description</dt><dd>A medium through which an Agent provides, uses or interacts in another way with a Public Service. Typical examples include online services, phone, walk-in centres etc.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -867,10 +855,10 @@ required for an online channel, whereas a physical signature may be required for
                         <td></td>
                       </tr>
                     
-                      <tr id="Channel%3Aopening%20hours" typeof="rdfs:Property" resource="https://schema.org/openingHours">
+                      <tr id="Channel%3Aopening%20hours" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/openingHours">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://schema.org/openingHours" data-toggle="tooltip" data-content="https://schema.org/openingHours" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/openingHours" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/openingHours" data-placement="right">
                             opening hours</a>
                           </code>
                         </td>
@@ -1013,7 +1001,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Contact Point"><a href="https://schema.org/ContactPoint" data-toggle="tooltip" data-content="https://schema.org/ContactPoint" data-placement="right">Contact Point</a></h3>
+              <h3 class="h3" id="Contact Point"><a href="http://data.europa.e/m8g/ContactPoint" data-toggle="tooltip" data-content="http://data.europa.e/m8g/ContactPoint" data-placement="right">Contact Point</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>This class represents the contact information for a Public Service, Channel, Public Organization, etc.</dd>
@@ -1066,10 +1054,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="https://schema.org/email">
+                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/email">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://schema.org/email" data-toggle="tooltip" data-content="https://schema.org/email" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/email" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/email" data-placement="right">
                             has email</a>
                           </code>
                         </td>
@@ -1086,10 +1074,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="https://schema.org/telephone">
+                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/telephone">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://schema.org/telephone" data-toggle="tooltip" data-content="https://schema.org/telephone" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/telephone" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/telephone" data-placement="right">
                             has telephone</a>
                           </code>
                         </td>
@@ -1278,9 +1266,12 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
               <h3 class="h3" id="Criterion"><a href="http://data.europa.eu/m8g/Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Criterion" data-placement="right">Criterion</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A Criterion can be expressed as a set of requirements where every requirement must be valid. A Criterion requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A Criterion requirement can specify the expected value that the Criterion response has to contain, or a range of threshold values within which the Criterion response has to fit in. The Criterion requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the Criterion requirement.</dd>
+                    <dt>Description</dt><dd>Condition for evaluation or assessment.</dd>
                     
-                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.</dd>
+                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
+
+In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. 
+For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1323,7 +1314,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Criteriont.</td>
+                        <td property="rdfs:comment">This property represents an Identifier for the Criterion.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1974,12 +1965,14 @@ For example, a couple becoming engaged is not a CPSV-AP Life Event, getting marr
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Opening Hours Specification"><a href="https://schema.org/OpeningHoursSpecification" data-toggle="tooltip" data-content="https://schema.org/OpeningHoursSpecification" data-placement="right">Opening Hours Specification</a></h3>
+              <h3 class="h3" id="Opening Hours Specification"><a href="http://data.europa.eu/m8g/OpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/OpeningHoursSpecification" data-placement="right">Opening Hours Specification</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The CPSV-AP makes use of schema.org&#39;s openingHours property to provide details of regular operations.</dd>
+                    <dt>Description</dt><dd>An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays.</dd>
                     
-                    <dt>Usage</dt><dd>The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus:
+                    <dt>Usage</dt><dd>This class is aligned to Schema.org OpeningHoursSpecification class
+
+The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus:
 ex:PublicHolidayClosed a schema:OpeningHoursSpecification;
 schema:dayOfWeek <http://schema.org/PublicHoliday>.
 
@@ -2221,12 +2214,14 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Public Organization"><a href="http://data.europa.eu/m8g/PublicOrganization" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganization" data-placement="right">Public Organization</a></h3>
+              <h3 class="h3" id="Public Organization"><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">Public Organization</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Any Organization that is defined as being part of the public sector by a legal framework at any level.</dd>
+                    <dt>Description</dt><dd>An Organization that is defined as being part of the public sector by a legal framework at any level.</dd>
                     
-                    <dt>Usage</dt><dd>Within the CPSV-AP the following properties are mandatory: preferred label and spatial. The value of the latter should be a URI from the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry.</dd>
+                    <dt>Usage</dt><dd>Organizations which exist to provide services for its citizens and companies are called Public Organizations. The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships.
+
+This definition is consistent with the more detailed definition of a "public sector body" as given in the PSI Directive: "the State, regional or local authorities, bodies governed by public law and associations formed by one or several such authorities or one or several such bodies governed by public law". It further defines a body governed by public law as any body "(a) established for the specific purpose of meeting needs in the general interest, not having an industrial or commercial character; and (b) having legal personality; and (c) financed, for the most part by the State, or regional or local authorities, or other bodies governed by public law; or subject to management supervision by those bodies; or having an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional or local authorities or by other bodies governed by public law".</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -2268,8 +2263,8 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">The primary (e.g. legally recognized) name.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</td>
+                        <td property="skos:scopeNote">Refers to the official or legal name of a Public Organization. An organization may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.</td>
                         <td></td>
                       </tr>
                     
@@ -3120,7 +3115,7 @@ the Legal Resource under which the Rules are being defined.</td>
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">UML representation</h2>
                 (non-normative)
                 
-		<p>The UML representation from which this Core Vocabulary has been build is available <a href="/doc/application-profile/cpsv-ap/uml/cpsv-ap.eap" target="_blank">here.</a></p>
+		<p>The UML representation from which this specification has been build is available <a href="./uml/cpsv-ap.eap" target="_blank">here.</a></p>
                 
             </div>
 			
@@ -3128,7 +3123,7 @@ the Legal Resource under which the Rules are being defined.</td>
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">RDF representation</h2>
                 (non-normative)
                 
-		<p>A reusable RDF representation (in turtle) for this Core Vocabulary is retrievable <a href="/doc/application-profile/cpsv-ap/rdf/cpsv-ap.ttl" target="_blank">here.</a></p></a></p>
+		<p>A reusable RDF representation (in turtle) for this specification is retrievable <a href="./rdf/cpsv-ap.ttl" target="_blank">here.</a></p></a></p>
                 
             </div>
 			
@@ -3136,14 +3131,14 @@ the Legal Resource under which the Rules are being defined.</td>
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 (non-normative)
                 
-		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/doc/application-profile/cpsv-ap/context/cpsv-ap_en.jsonld" target="_blank">/doc/application-profile/cpsv-ap/context/cpsv-ap_en.jsonld</a></p>
+		<p>A reusable JSON-LD context definition for this specification is retrievable <a href="./context/cpsv-ap_en.jsonld" target="_blank">here</a></p>
                 
             </div>
             <div class="region region--no-space-top" id="shacl">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
                 (non-normative)
                 
-		<p>A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/doc/application-profile/cpsv-ap/shacl/cpsv-ap_en-SHACL.ttl" target="_blank">/doc/application-profile/cpsv-ap/shacl/cpsv-ap_en-SHACL.ttl</a></p>
+		<p>A reusable SHACL template for this specification is retrievable <a href="./shacl/cpsv-ap_en-SHACL.ttl" target="_blank">here</a></p>
                 
             </div>
           </div>
@@ -3165,10 +3160,11 @@ the Legal Resource under which the Rules are being defined.</td>
 			      <li class="side-navigation__item">
                                   <a href="#license">License</a>
                               </li>
-			      -->
+			      
                               <li class="side-navigation__item">
                                   <a href="#conformance">Conformance</a>
                               </li>
+					-->
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
                               </li>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
+  <xs:element name="ContactPoint" type="ContactPointType"/>
   <xs:element name="LegalResource" type="LegalResourceType"/>
   <xs:element name="BusinessEvent" type="BusinessEventType"/>
   <xs:element name="Channel" type="ChannelType"/>
@@ -8,6 +9,7 @@
   <xs:element name="Event" type="EventType"/>
   <xs:element name="Evidence" type="EvidenceType"/>
   <xs:element name="LifeEvent" type="LifeEventType"/>
+  <xs:element name="OpeningHoursSpecification" type="OpeningHoursSpecificationType"/>
   <xs:element name="Output" type="OutputType"/>
   <xs:element name="Participation" type="ParticipationType"/>
   <xs:element name="PublicOrganization" type="PublicOrganizationType"/>
@@ -21,8 +23,13 @@
   <xs:element name="Address" type="AddressType"/>
   <xs:element name="Agent" type="AgentType"/>
   <xs:element name="Document" type="DocumentType"/>
-  <xs:element name="ContactPoint" type="ContactPointType"/>
-  <xs:element name="OpeningHoursSpecification" type="OpeningHoursSpecificationType"/>
+  <xs:complexType name="ContactPointType">
+    <xs:sequence>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="LegalResourceType">
     <xs:sequence>
       <xs:element name="related" ref="LegalResource" maxOccurs="unbounded" minOccurs="0"/>
@@ -78,6 +85,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LifeEventType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="OpeningHoursSpecificationType">
     <xs:sequence/>
   </xs:complexType>
   <xs:complexType name="OutputType">
@@ -167,17 +177,17 @@
   </xs:complexType>
   <xs:complexType name="AddressType">
     <xs:sequence>
-      <xs:element name="addressArea" type="xs:string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="administrativeUnitLevel2 (country/region/state)" type="xs:string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="fullAddress" type="xs:string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="locatorName" type="xs:string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="postName (city)" type="xs:string" maxOccurs="1" minOccurs="1"/>
-      <xs:element name="thoroughfare" type="xs:string" maxOccurs="1" minOccurs="1"/>
+      <xs:element name="addressArea" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel2 (country/region/state)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="fullAddress" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postName (city)" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="thoroughfare" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgentType">
@@ -189,16 +199,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="DocumentType">
-    <xs:sequence/>
-  </xs:complexType>
-  <xs:complexType name="ContactPointType">
-    <xs:sequence>
-      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="OpeningHoursSpecificationType">
     <xs:sequence/>
   </xs:complexType>
 </xs:schema>

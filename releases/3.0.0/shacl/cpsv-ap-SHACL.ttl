@@ -7,7 +7,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#BusinessEventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ChannelShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape>,
@@ -15,9 +16,10 @@
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EvidenceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LifeEventShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OutputShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ParticipationShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganizationShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganisationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LinguisticSystemShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LocationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicServiceShape>,
@@ -27,88 +29,63 @@
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DatasetShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AddressShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AgentShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DocumentShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape> .
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DocumentShape> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AddressShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "The name of a geographic area that groups Addresses."@en;
     shacl:name "address area"@en;
     shacl:path <http://www.w3.org/ns/locn#addressArea>
   ], [
     shacl:datatype xsd:string;
     shacl:description "A globally unique identifier for each instance of an Address."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressID>
   ], [
     shacl:class skos:Concept;
-    shacl:description "The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "The name of the uppermost level of the address, almost always a country."@en;
     shacl:name "administrative unit level 1 (country)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
   ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:class skos:Concept;
+    shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
     shacl:name "administrative unit level 2 (country/region/state)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "The complete address written as a formatted string."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "The complete address written as a string."@en;
     shacl:name "full address"@en;
     shacl:path <http://www.w3.org/ns/locn#fullAddress>
   ], [
     shacl:datatype xsd:string;
-    shacl:description "A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope."@en;
     shacl:name "locator designator"@en;
     shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Proper noun(s) applied to the real world entity identified by the locator."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "locator name"@en;
     shacl:path <http://www.w3.org/ns/locn#locatorName>
   ], [
     shacl:datatype xsd:string;
-    shacl:description "The Post Office Box number."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "A location designator for a postal delivery point at a post office, usually a number."@en;
     shacl:name "post office box"@en;
     shacl:path <http://www.w3.org/ns/locn#poBox>
   ], [
     shacl:datatype xsd:string;
-    shacl:description "The post/zip code of an address. (INSPIRE's definition is \"A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\")"@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
     shacl:name "post code"@en;
     shacl:path <http://www.w3.org/ns/locn#postCode>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description """The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)
- For example, \"Paris\"."""@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
     shacl:name "post name (city)"@en;
     shacl:path <http://www.w3.org/ns/locn#postName>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:description "The name of a passage or way through from one location to another."@en;
     shacl:name "thoroughfare"@en;
     shacl:path <http://www.w3.org/ns/locn#thoroughfare>
   ];
@@ -152,7 +129,7 @@
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ChannelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class schemas:OpeningHoursSpecification;
+    shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
     shacl:description "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
     shacl:maxCount 1;
     shacl:name "availability restriction"@en;
@@ -174,9 +151,9 @@ required for an online channel, whereas a physical signature may be required for
     shacl:datatype rdf:langString;
     shacl:description "This property represents the normal opening hours of a channel."@en;
     shacl:name "opening hours"@en;
-    shacl:path schemas:openingHours
+    shacl:path <http://data.europa.eu/m8g/openingHours>
   ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganization>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "This property indicates the owner of a specific Channel through which a Public Service is being delivered."@en;
     shacl:name "owned by"@en;
     shacl:path <http://data.europa.eu/m8g/ownedBy>
@@ -206,7 +183,7 @@ required for an online channel, whereas a physical signature may be required for
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class schemas:OpeningHoursSpecification;
+    shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
     shacl:description "This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
     shacl:name "availability restriction"@en;
     shacl:path schemas:hoursAvailable
@@ -214,14 +191,14 @@ required for an online channel, whereas a physical signature may be required for
     shacl:datatype rdf:langString;
     shacl:description "the email of the ContactPoint"@en;
     shacl:name "has email"@en;
-    shacl:path schemas:email
+    shacl:path <http://data.europa.eu/m8g/email>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "the telephone of the ContactPoint"@en;
     shacl:name "has telephone"@en;
-    shacl:path schemas:telephone
+    shacl:path <http://data.europa.eu/m8g/telephone>
   ];
-  shacl:targetClass schemas:ContactPoint .
+  shacl:targetClass <http://data.europa.e/m8g/ContactPoint> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape> a shacl:NodeShape;
   shacl:closed false;
@@ -251,7 +228,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "if accessed through"@en;
     shacl:path <http://data.europa.eu/m8g/ifAccessedThrough>
   ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganization>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description """This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service."""@en;
     shacl:name "is defined by"@en;
     shacl:path <http://data.europa.eu/m8g/isDefinedBy>
@@ -268,7 +245,7 @@ required for an online channel, whereas a physical signature may be required for
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Criteriont."@en;
+    shacl:description "This property represents an Identifier for the Criterion."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
@@ -431,7 +408,7 @@ required for an online channel, whereas a physical signature may be required for
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass schemas:OpeningHoursSpecification .
+  shacl:targetClass <http://data.europa.eu/m8g/OpeningHoursSpecification> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OutputShape> a shacl:NodeShape;
   shacl:closed false;
@@ -489,11 +466,11 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
 
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganizationShape> a shacl:NodeShape;
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganisationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "The primary (e.g. legally recognized) name."@en;
+    shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "preferred label"@en;
@@ -505,7 +482,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:name "spatial"@en;
     shacl:path dc:spatial
   ];
-  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganization> .
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicServiceShape> a shacl:NodeShape;
   shacl:closed false;
@@ -527,7 +504,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:name "has channel"@en;
     shacl:path <http://data.europa.eu/m8g/hasChannel>
   ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganization>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description """This property links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
 Organization provides the public service directly or outsources it is not relevant. The
@@ -547,7 +524,7 @@ thereof\"."""@en;
     shacl:name "has competent authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ], [
-    shacl:class schemas:ContactPoint;
+    shacl:class <http://data.europa.e/m8g/ContactPoint>;
     shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "@en;
     shacl:name "has contact point"@en;
     shacl:path <http://data.europa.eu/m8g/hasContactPoint>
