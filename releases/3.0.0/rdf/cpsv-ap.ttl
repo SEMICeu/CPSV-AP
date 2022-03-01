@@ -114,13 +114,6 @@ cv:hasCost rdf:type owl:ObjectProperty ;
            rdfs:label "has cost"@en .
 
 
-###  http://data.europa.eu/m8g/hasCriterion
-cv:hasCriterion rdf:type owl:ObjectProperty ;
-                rdfs:range cv:Criterion ;
-                rdfs:comment "Cardinality [0..n]. Links a Public Service to a class that describes the criteria for needing or using the service, such as residency in a given location, being over a certain age etc. The Criterion class is defined in the Core Criterion and Core Evidence Vocabulary."@en ;
-                rdfs:label "has criterion"@en .
-
-
 ###  http://data.europa.eu/m8g/hasLegalResource
 cv:hasLegalResource rdf:type owl:ObjectProperty ;
                     rdfs:range eli:LegalResource ;
@@ -133,6 +126,12 @@ cv:hasParticipation rdf:type owl:ObjectProperty ;
                     rdfs:range cv:Participation ;
                     rdfs:comment "Cardinality [0..n]. This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en ;
                     rdfs:label "has participation"@en .
+
+
+###  http://data.europa.eu/m8g/holdsRequirement
+cv:holdsRequirement rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Cardinality [0..n]. Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en ;
+                    rdfs:label "holds requirement"@en .
 
 
 ###  http://data.europa.eu/m8g/ifAccessedThrough
@@ -350,8 +349,8 @@ foaf:page rdf:type owl:ObjectProperty ;
                                               "Cardinality [0..n]. The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child."@en ,
                                               "Cardinality [0..n]. This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en ,
                                               "Cardinality [0..n]. This property represents the type of Channel as defined in a controlled vocabulary."@en ,
-                                              "Cardinality [0..n]. This property represents the type of Criterion as described in a controlled vocabulary."@en ,
-                                              "Cardinality [0..n]. This property represents the type of Output as defined in a controlled vocabulary.."@en .
+                                              "Cardinality [0..n]. This property represents the type of Output as defined in a controlled vocabulary.."@en ,
+                                              "Cardinality [0..n]. This property represents the type of Requirement as described in a controlled vocabulary."@en .
 
 
 ###  https://schema.org/hoursAvailable
@@ -401,9 +400,9 @@ dct:title rdf:type owl:DatatypeProperty ;
           rdfs:comment "Cardinality [1..1]. This property represents the Name (or title) of the Event."@en ,
                        "Cardinality [1..1]. This property represents the Name of the Agent."@en ,
                        "Cardinality [1..1]. This property represents the Name of the Rule."@en ,
-                       "Cardinality [1..1]. This property represents the official Name of the Criterion."@en ,
                        "Cardinality [1..1]. This property represents the official Name of the Output."@en ,
                        "Cardinality [1..1]. This property represents the official Name of the Public Service."@en ,
+                       "Cardinality [1..1]. This property represents the official Name of the Requirement."@en ,
                        "Cardinality [1..1]. This property represents the official Name of the piece of Evidence."@en ,
                        "Cardinality [1..n]. This property contains a name given to the Public Service Dataset. This property can be repeated for parallel language versions of the name."@en ;
           rdfs:label "name"@en .
@@ -574,14 +573,6 @@ cv:Cost rdf:type owl:Class ;
         rdfs:label "Cost"@en .
 
 
-###  http://data.europa.eu/m8g/Criterion
-cv:Criterion rdf:type owl:Class ;
-             vann:usageNote "Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class. In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service."@en ;
-             rdfs:comment "Optional class. Condition for evaluation or assessment."@en ;
-             rdfs:isDefinedBy cv:cccev ;
-             rdfs:label "Criterion"@en .
-
-
 ###  http://data.europa.eu/m8g/Event
 cv:Event rdf:type owl:Class ;
          rdfs:comment "Optional class. This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service.  It is not expected to be used directly, rather, one or other of its subclasses should be used. The properties of the class are, of course, inherited by those subclasses."@en ;
@@ -625,6 +616,17 @@ cv:PublicOrganisation rdf:type owl:Class ;
                       rdfs:comment "Mandatory class. Any Organization that is defined as being part of the public sector by a legal framework at any level."@en ;
                       rdfs:isDefinedBy cv:cpov ;
                       rdfs:label "Public Organisation"@en .
+
+
+###  http://data.europa.eu/m8g/Requirement
+cv:Requirement rdf:type owl:Class ;
+               vann:usageNote """Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
+
+Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.
+To illustrate the notion: the European Directive on services in the internal market defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy."""@en ;
+               rdfs:comment "Optional class. Condition or prerequisite that is to be proven by Evidence."@en ;
+               rdfs:isDefinedBy cv:cccev ;
+               rdfs:label "Requirement"@en .
 
 
 ###  http://purl.org/vocab/cpsv#PublicService
@@ -758,16 +760,16 @@ foaf:Agent rdf:type owl:Class ;
                                                     "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
                                        dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ;
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ;
                                        rdfs:isDefinedBy dct: ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Criterion."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
                                        rdfs:label "identifier"@en .
 
 

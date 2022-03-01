@@ -11,7 +11,6 @@
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#BusinessEventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ChannelShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CriterionShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EvidenceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LifeEventShape>,
@@ -19,6 +18,7 @@
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OutputShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ParticipationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganisationShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RequirementShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LinguisticSystemShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LocationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicServiceShape>,
@@ -239,30 +239,6 @@ required for an online channel, whereas a physical signature may be required for
     shacl:path <http://data.europa.eu/m8g/value>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Cost> .
-
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CriterionShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Criterion."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "identifier"@en;
-    shacl:path dc:identifier
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "This property represents the official Name of the Criterion."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "name"@en;
-    shacl:path dc:title
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "This property represents the type of Criterion as described in a controlled vocabulary."@en;
-    shacl:name "type"@en;
-    shacl:path dc:type
-  ];
-  shacl:targetClass <http://data.europa.eu/m8g/Criterion> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DatasetShape> a shacl:NodeShape;
   shacl:closed false;
@@ -533,13 +509,6 @@ thereof\"."""@en;
     shacl:name "has cost"@en;
     shacl:path <http://data.europa.eu/m8g/hasCost>
   ], [
-    shacl:class <http://data.europa.eu/m8g/Criterion>;
-    shacl:description """Links a Public Service to a class that describes the criteria for needing or using the 
-service, such as residency in a given location, being over a certain age etc. The 
-Criterion class is defined in the Core Criterion and Core Evidence Vocabulary"""@en;
-    shacl:name "has criterion"@en;
-    shacl:path <http://data.europa.eu/m8g/hasCriterion>
-  ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
     shacl:description "The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."@en;
     shacl:name "has input"@en;
@@ -554,6 +523,11 @@ Criterion class is defined in the Core Criterion and Core Evidence Vocabulary"""
     shacl:description "This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en;
     shacl:name "has participation"@en;
     shacl:path <http://data.europa.eu/m8g/hasParticipation>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en;
+    shacl:name "hold requirement"@en;
+    shacl:path <http://data.europa.eu/m8g/holdsRequirement>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a formally-issued Identifier for the Public Service."@en;
@@ -643,6 +617,30 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:path dc:type
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
+
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RequirementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Unambiguous reference to a Requirement."@en;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Name of the Requirement"@en;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "name"@en;
+    shacl:path dc:title
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Category to which the Requirement belongs."@en;
+    shacl:name "type"@en;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Requirement> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RuleShape> a shacl:NodeShape;
   shacl:closed false;

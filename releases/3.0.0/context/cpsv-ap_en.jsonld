@@ -152,20 +152,6 @@
       "@id": "http://data.europa.eu/m8g/value",
       "@type": "http://www.w3.org/2001/XMLSchema#double"
     },
-    "Criterion": "http://data.europa.eu/m8g/Criterion",
-    "Criterion.identifier": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Criterion.name": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Criterion.type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "@id"
-    },
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "Dataset.description": {
       "@container": "@set",
@@ -328,11 +314,6 @@
       "@id": "http://data.europa.eu/m8g/hasCost",
       "@type": "@id"
     },
-    "PublicService.hasCriterion": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasCriterion",
-      "@type": "@id"
-    },
     "PublicService.hasInput": {
       "@container": "@set",
       "@id": "http://purl.org/vocab/cpsv#hasInput",
@@ -346,6 +327,11 @@
     "PublicService.hasParticipation": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "@id"
+    },
+    "PublicService.holdRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/holdsRequirement",
       "@type": "@id"
     },
     "PublicService.identifier": {
@@ -420,6 +406,20 @@
       "@type": "@id"
     },
     "PublicService.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Requirement": "http://data.europa.eu/m8g/Requirement",
+    "Requirement.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Requirement.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Requirement.type": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"

@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/10b037d2e8d54c160763617c7ba0f12620e13087/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/10b037d2e8d54c160763617c7ba0f12620e13087/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/59e634fb216c3dddd004b814b578d786c3f31a54/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/59e634fb216c3dddd004b814b578d786c3f31a54/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -288,7 +288,6 @@
                       <a href="#Concept">Concept</a> |
                       <a href="#Contact Point">Contact Point</a> |
                       <a href="#Cost">Cost</a> |
-                      <a href="#Criterion">Criterion</a> |
                       <a href="#Dataset">Dataset</a> |
                       <a href="#Document">Document</a> |
                       <a href="#Event">Event</a> |
@@ -302,6 +301,7 @@
                       <a href="#Participation">Participation</a> |
                       <a href="#Public Organization">Public Organization</a> |
                       <a href="#Public Service">Public Service</a> |
+                      <a href="#Requirement">Requirement</a> |
                       <a href="#Rule">Rule</a> |
                     </p>
                   </div>
@@ -1252,109 +1252,6 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">This property represents a numeric value indicating the amount of the Cost.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Criterion"><a href="http://data.europa.eu/m8g/Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Criterion" data-placement="right">Criterion</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Description</dt><dd>Condition for evaluation or assessment.</dd>
-                    
-                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
-
-In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. 
-For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service.</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		     
-                    <dd>For this entity the following properties are defined:
-                      <a href="#Criterion%3Aidentifier">identifier</a>, 
-                      <a href="#Criterion%3Aname">name</a>, 
-                      <a href="#Criterion%3Atype">type</a>.</dd>
-                    
-                  </dl>
-                </div>
-		 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
-                        <th class="data-table__header-title--sortable">Expected Range</th>
-			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Description</th>
-                        <th class="data-table__header-title--sortable">Usage</th>
-                        <th class="data-table__header-title--sortable">Codelist</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Criterion%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
-                            identifier</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
-                            
-                          
-                        </td>
-			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Criterion.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Criterion%3Aname" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
-                            name</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
-                            
-                          
-                        </td>
-			<td>1</td>
-                        <td property="rdfs:comment">This property represents the official Name of the Criterion.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Criterion%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
-                            type</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
-                            
-                          
-                        </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the type of Criterion as described in a controlled vocabulary.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2319,10 +2216,10 @@ behalf, to businesses, citizens or others public administrations.</dd>
                       <a href="#Public%20Service%3Ahas%20competent%20authority">has competent authority</a>, 
                       <a href="#Public%20Service%3Ahas%20contact%20point">has contact point</a>, 
                       <a href="#Public%20Service%3Ahas%20cost">has cost</a>, 
-                      <a href="#Public%20Service%3Ahas%20criterion">has criterion</a>, 
                       <a href="#Public%20Service%3Ahas%20input">has input</a>, 
                       <a href="#Public%20Service%3Ahas%20legal%20resource">has legal resource</a>, 
                       <a href="#Public%20Service%3Ahas%20participation">has participation</a>, 
+                      <a href="#Public%20Service%3Ahold%20requirement">hold requirement</a>, 
                       <a href="#Public%20Service%3Aidentifier">identifier</a>, 
                       <a href="#Public%20Service%3Ais%20classified%20by">is classified by</a>, 
                       <a href="#Public%20Service%3Ais%20described%20at">is described at</a>, 
@@ -2491,28 +2388,6 @@ thereof&quot;.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Ahas%20criterion" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCriterion">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasCriterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasCriterion" data-placement="right">
-                            has criterion</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Criterion" data-placement="right">Criterion</a>
-			    
-                          
-                        </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">Links a Public Service to a class that describes the criteria for needing or using the 
-service, such as residency in a given location, being over a certain age etc. The 
-Criterion class is defined in the Core Criterion and Core Evidence Vocabulary</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Public%20Service%3Ahas%20input" typeof="rdfs:Property" resource="http://purl.org/vocab/cpsv#hasInput">
                         <td>
                           <code property="rdfs:label">
@@ -2569,6 +2444,26 @@ Criterion class is defined in the Core Criterion and Core Evidence Vocabulary</t
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Public%20Service%3Ahold%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/holdsRequirement">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/holdsRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/holdsRequirement" data-placement="right">
+                            hold requirement</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Requirement" data-placement="right">Requirement</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2907,6 +2802,109 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Requirement"><a href="http://data.europa.eu/m8g/Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Requirement" data-placement="right">Requirement</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>Condition or prerequisite that is to be proven by Evidence.</dd>
+                    
+                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
+
+Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.
+To illustrate the notion: the European Directive on services in the internal market defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Requirement%3Aidentifier">identifier</a>, 
+                      <a href="#Requirement%3Aname">name</a>, 
+                      <a href="#Requirement%3Atype">type</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Requirement%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>1</td>
+                        <td property="rdfs:comment">Unambiguous reference to a Requirement.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Requirement%3Aname" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
+                            name</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>1</td>
+                        <td property="rdfs:comment">Name of the Requirement</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Requirement%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
+                            type</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">Category to which the Requirement belongs.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
