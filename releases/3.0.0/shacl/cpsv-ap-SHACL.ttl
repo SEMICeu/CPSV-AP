@@ -476,7 +476,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:path skos:prefLabel
   ], [
     shacl:class dc:Location;
-    shacl:description "Cardinality [1..n]. A Public Organisation has to be associated to one or multiple locations."@en;
+    shacl:description "A Public Organisation has to be associated to one or multiple locations."@en;
     shacl:minCount 1;
     shacl:name "spatial"@en;
     shacl:path dc:spatial
