@@ -239,10 +239,10 @@ dct:requires rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/spatial
 dct:spatial rdf:type owl:ObjectProperty ;
             rdfs:range <https://purl.org/dc/terms/Location> ;
-            vann:usageNote """Cardinality [0..n]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority. A common usage of the spatial property will be to define the Administrative Territorial Unit(s) – typically a country or region – in which a Public Service is available. The Publications Office of the European Union offers a URI set  that is suitable for this purpose, e.g. Malta is identified by http://publications.europa.eu/resource/authority/atu/MLT, West Flanders by http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. N.B. The spatial restriction is not meant to be used to describe eligibility or the speed of operation of the service. These aspects will be covered by the Criterion class.
- The CPSV-AP v2.2 recommends to use as controlled vocabulary the MDR Continents Named Authority List (http://publications.europa.eu/mdr/authority/continent/index.html), MDR Countries Named Authority List (http://publications.europa.eu/mdr/authority/country/), MDR Places Named Authority List (http://publications.europa.eu/mdr/authority/place/index.html), Geonames (http://sws.geonames.org/)."""@en ;
+            vann:usageNote "A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers URI set (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) that is suitable for this purpose, e.g. Malta is identified by http://publications.europa.eu/resource/authority/atu/MLT, West Flanders by http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. In case the ATU code list is not suitable, NUTS (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts) or LAU (https://ec.europa.eu/eurostat/web/nuts/local-administrative-units), NAL Place (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place) or Geonames (http://www.geonames.org/) are recommended to use, in that order. If those are still not sufficient, we recommend to define your own code list. N.B. The spatial restriction is not meant to be used to describe eligibility or the speed of operation of the service. These aspects will be covered by the Criterion class."@en ,
+                           "The value should be a URI from the Administrative Territorial Units (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) Authority Table maintained by the Publications Office."@en ;
             rdfs:comment "Cardinality [0..n]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ,
-                         "Cardinality [1..1]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ;
+                         "Cardinality [1..n]. A Public Organisation has to be associated to one or multiple locations."@en ;
             rdfs:label "spatial"@en .
 
 
@@ -576,8 +576,8 @@ cv:Cost rdf:type owl:Class ;
 
 ###  http://data.europa.eu/m8g/Criterion
 cv:Criterion rdf:type owl:Class ;
-             vann:usageNote "Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class."@en ;
-             rdfs:comment "Optional class. A Criterion can be expressed as a set of requirements where every requirement must be valid. A Criterion requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A Criterion requirement can specify the expected value that the Criterion response has to contain, or a range of threshold values within which the Criterion response has to fit in. The Criterion requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the Criterion requirement."@en ;
+             vann:usageNote "Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class. In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service."@en ;
+             rdfs:comment "Optional class. Condition for evaluation or assessment."@en ;
              rdfs:isDefinedBy cv:cccev ;
              rdfs:label "Criterion"@en .
 
@@ -621,7 +621,7 @@ cv:Participation rdf:type owl:Class ;
 
 ###  http://data.europa.eu/m8g/PublicOrganisation
 cv:PublicOrganisation rdf:type owl:Class ;
-                      vann:usageNote "Within the CPSV-AP the following properties are mandatory: preferred label and spatial. The value of the latter should be a URI from the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry."@en ;
+                      vann:usageNote "Organizations which exist to provide services for its citizens and companies are called Public Organizations. The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships. This definition is consistent with the more detailed definition of a \"public sector body\" as given in the PSI Directive: \"the State, regional or local authorities, bodies governed by public law and associations formed by one or several such authorities or one or several such bodies governed by public law\". It further defines a body governed by public law as any body \"(a) established for the specific purpose of meeting needs in the general interest, not having an industrial or commercial character; and (b) having legal personality; and (c) financed, for the most part by the State, or regional or local authorities, or other bodies governed by public law; or subject to management supervision by those bodies; or having an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional or local authorities or by other bodies governed by public law\"."@en ;
                       rdfs:comment "Mandatory class. Any Organization that is defined as being part of the public sector by a legal framework at any level."@en ;
                       rdfs:isDefinedBy cv:cpov ;
                       rdfs:label "Public Organisation"@en .
@@ -706,8 +706,8 @@ foaf:Agent rdf:type owl:Class ;
 
 ###  https://schema.org/OpeningHoursSpecification
 <https://schema.org/OpeningHoursSpecification> rdf:type owl:Class ;
-                                               vann:usageNote "The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus: ex:PublicHolidayClosed a schema:OpeningHoursSpecification; schema:dayOfWeek . Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties, for example: ex:ChristmasClosed a schema:OpeningHoursSpecification; schema:validFrom \"2016-12-24T012:00Z\"; schema:validThrough \"2017-01-02T09:00Z\"."@en ;
-                                               rdfs:comment "Optional class. The CPSV-AP makes use of schema.org's openingHours property to provide details of regular operations."@en ;
+                                               vann:usageNote "This class is aligned to Schema.org OpeningHoursSpecification class The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus: ex:PublicHolidayClosed a schema:OpeningHoursSpecification; schema:dayOfWeek . Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties, for example: ex:ChristmasClosed a schema:OpeningHoursSpecification; schema:validFrom \"2016-12-24T012:00Z\"; schema:validThrough \"2017-01-02T09:00Z\"."@en ;
+                                               rdfs:comment "Optional class. An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays."@en ;
                                                rdfs:isDefinedBy "https://schema.org/OpeningHoursSpecification"@en ;
                                                rdfs:label "Opening Hours Specification"@en .
 
@@ -758,16 +758,16 @@ foaf:Agent rdf:type owl:Class ;
                                                     "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
                                        dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ;
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ;
                                        rdfs:isDefinedBy dct: ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Criterion."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
                                        rdfs:label "identifier"@en .
 
 
