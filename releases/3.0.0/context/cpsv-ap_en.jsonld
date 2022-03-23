@@ -119,7 +119,7 @@
     },
     "ContactPoint.contactPage": {
       "@container": "@set",
-      "@id": "http://data.europa.e/m8g/contactPage",
+      "@id": "http://data.europa.eu/m8g/contactPage",
       "@type": "@id"
     },
     "ContactPoint.hasEmail": {

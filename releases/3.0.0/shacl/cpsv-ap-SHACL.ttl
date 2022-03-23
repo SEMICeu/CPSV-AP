@@ -189,7 +189,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:class foaf:Document;
     shacl:description "A contact form that could be used to reach out the contact point"@en;
     shacl:name "contact page"@en;
-    shacl:path <http://data.europa.e/m8g/contactPage>
+    shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "the email of the ContactPoint"@en;
