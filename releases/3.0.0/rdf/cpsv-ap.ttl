@@ -71,19 +71,25 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://data.europa.eu/m8g/address
+cv:address rdf:type owl:ObjectProperty ;
+           rdfs:range locn:Address ;
+           rdfs:comment "Cardinality [0..1]. This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en ;
+           rdfs:label "address"@en .
+
+
+###  http://data.europa.eu/m8g/contactPage
+cv:contactPage rdf:type owl:ObjectProperty ;
+               rdfs:comment "Cardinality [0..*]. A contact form that could be used to reach out the contact point."@en ;
+               rdfs:label "contact page"@en .
+
+
 ###  http://data.europa.eu/m8g/currency
 cv:currency rdf:type owl:ObjectProperty ;
             rdfs:range skos:Concept ;
             vann:usageNote "The CPSV-AP v2.0 recommends to use as controlled vocabulary the European Publications Office's Currencies Named Authority List (NAL) (http://publications.europa.eu/mdr/authority/currency/index.html)."@en ;
             rdfs:comment "Cardinality [0..1]. This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed. The possible values for this property are described in a controlled vocabulary."@en ;
             rdfs:label "currency"@en .
-
-
-###  http://data.europa.eu/m8g/hasAddress
-cv:hasAddress rdf:type owl:ObjectProperty ;
-              rdfs:range locn:Address ;
-              rdfs:comment "Cardinality [0..1]. This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en ;
-              rdfs:label "has address"@en .
 
 
 ###  http://data.europa.eu/m8g/hasChannel
@@ -383,28 +389,28 @@ cv:value rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:DatatypeProperty ;
                 rdfs:range rdf:langString ;
-                rdfs:comment "Cardinality [0..1]. This property represents a free text Description of the Output."@en ,
-                             "Cardinality [0..1]. This property represents a free text Description of the piece of Evidence."@en ,
-                             "Cardinality [0..1]. This property represents a free text description of the Cost."@en ,
-                             "Cardinality [0..1]. This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."@en ,
-                             "Cardinality [1..1]. A free text description of the Participation."@en ,
-                             "Cardinality [1..1]. This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ,
-                             "Cardinality [1..1]. This property represents a free text Description of the Rule."@en ,
-                             "Cardinality [1..n]. This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en ;
+                rdfs:comment "Cardinality [0..n]. This property represents a free text Description of the Output."@en ,
+                             "Cardinality [0..n]. This property represents a free text Description of the piece of Evidence."@en ,
+                             "Cardinality [0..n]. This property represents a free text description of the Cost."@en ,
+                             "Cardinality [0..n]. This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."@en ,
+                             "Cardinality [1..n]. A free text description of the Participation."@en ,
+                             "Cardinality [1..n]. This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en ,
+                             "Cardinality [1..n]. This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ,
+                             "Cardinality [1..n]. This property represents a free text Description of the Rule."@en ;
                 rdfs:label "description"@en .
 
 
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:range rdf:langString ;
-          rdfs:comment "Cardinality [1..1]. This property represents the Name (or title) of the Event."@en ,
-                       "Cardinality [1..1]. This property represents the Name of the Agent."@en ,
-                       "Cardinality [1..1]. This property represents the Name of the Rule."@en ,
-                       "Cardinality [1..1]. This property represents the official Name of the Output."@en ,
-                       "Cardinality [1..1]. This property represents the official Name of the Public Service."@en ,
-                       "Cardinality [1..1]. This property represents the official Name of the Requirement."@en ,
-                       "Cardinality [1..1]. This property represents the official Name of the piece of Evidence."@en ,
-                       "Cardinality [1..n]. This property contains a name given to the Public Service Dataset. This property can be repeated for parallel language versions of the name."@en ;
+          rdfs:comment "Cardinality [1..n]. This property contains a name given to the Public Service Dataset. This property can be repeated for parallel language versions of the name."@en ,
+                       "Cardinality [1..n]. This property represents the Name (or title) of the Event."@en ,
+                       "Cardinality [1..n]. This property represents the Name of the Agent."@en ,
+                       "Cardinality [1..n]. This property represents the Name of the Rule."@en ,
+                       "Cardinality [1..n]. This property represents the official Name of the Output."@en ,
+                       "Cardinality [1..n]. This property represents the official Name of the Public Service."@en ,
+                       "Cardinality [1..n]. This property represents the official Name of the Requirement."@en ,
+                       "Cardinality [1..n]. This property represents the official Name of the piece of Evidence."@en ;
           rdfs:label "name"@en .
 
 
@@ -760,16 +766,16 @@ foaf:Agent rdf:type owl:Class ;
                                                     "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
                                        dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ;
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ;
                                        rdfs:isDefinedBy dct: ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
                                        rdfs:label "identifier"@en .
 
 
