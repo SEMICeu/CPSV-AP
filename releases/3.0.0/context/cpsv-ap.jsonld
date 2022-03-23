@@ -57,8 +57,8 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
-    "Agent.hasAddress": {
-      "@id": "http://data.europa.eu/m8g/hasAddress",
+    "Agent.address": {
+      "@id": "http://data.europa.eu/m8g/address",
       "@type": "@id"
     },
     "Agent.identifier": {
@@ -66,6 +66,7 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Agent.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -116,6 +117,11 @@
       "@id": "http://data.europa.eu/m8g/hoursAvailable",
       "@type": "@id"
     },
+    "ContactPoint.contactPage": {
+      "@container": "@set",
+      "@id": "http://data.europa.e/m8g/contactPage",
+      "@type": "@id"
+    },
     "ContactPoint.hasEmail": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/email",
@@ -132,6 +138,7 @@
       "@type": "@id"
     },
     "Cost.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -149,7 +156,7 @@
       "@type": "@id"
     },
     "Cost.value": {
-      "@id": "http://data.europa.eu/m8g/value",
+      "@id": "http://data.europa.eu/m8g/hasValue",
       "@type": "http://www.w3.org/2001/XMLSchema#double"
     },
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
@@ -185,6 +192,7 @@
     "Document": "http://xmlns.com/foaf/0.1/Document",
     "Event": "http://data.europa.eu/m8g/Event",
     "Event.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -193,6 +201,7 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Event.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -208,6 +217,7 @@
     },
     "Evidence": "http://data.europa.eu/m8g/Evidence",
     "Evidence.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -221,6 +231,7 @@
       "@type": "@id"
     },
     "Evidence.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -245,6 +256,7 @@
     "OpeningHoursSpecification": "http://data.europa.eu/m8g/OpeningHoursSpecification",
     "Output": "http://data.europa.eu/m8g/Output",
     "Output.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -253,6 +265,7 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Output.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -263,6 +276,7 @@
     },
     "Participation": "http://data.europa.eu/m8g/Participation",
     "Participation.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -287,6 +301,7 @@
     },
     "PublicService": "http://purl.org/vocab/cpsv#PublicService",
     "PublicService.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -364,6 +379,7 @@
       "@type": "@id"
     },
     "PublicService.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -416,6 +432,7 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Requirement.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -426,6 +443,7 @@
     },
     "Rule": "http://purl.org/vocab/cpsv#Rule",
     "Rule.description": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -444,6 +462,7 @@
       "@type": "@id"
     },
     "Rule.name": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },

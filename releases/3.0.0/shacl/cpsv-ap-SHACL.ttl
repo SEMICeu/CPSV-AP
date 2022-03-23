@@ -96,8 +96,8 @@
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en;
     shacl:maxCount 1;
-    shacl:name "hasAddress"@en;
-    shacl:path <http://data.europa.eu/m8g/hasAddress>
+    shacl:name "address"@en;
+    shacl:path <http://data.europa.eu/m8g/address>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents an Identifier for the Agent."@en;
@@ -108,7 +108,6 @@
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the Name of the Agent."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -187,6 +186,11 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "availability restriction"@en;
     shacl:path <http://data.europa.eu/m8g/hoursAvailable>
   ], [
+    shacl:class foaf:Document;
+    shacl:description "A contact form that could be used to reach out the contact point"@en;
+    shacl:name "contact page"@en;
+    shacl:path <http://data.europa.e/m8g/contactPage>
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "the email of the ContactPoint"@en;
     shacl:name "has email"@en;
@@ -210,7 +214,6 @@ required for an online channel, whereas a physical signature may be required for
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text description of the Cost."@en;
-    shacl:maxCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
@@ -236,7 +239,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:description "This property represents a numeric value indicating the amount of the Cost."@en;
     shacl:maxCount 1;
     shacl:name "value"@en;
-    shacl:path <http://data.europa.eu/m8g/value>
+    shacl:path <http://data.europa.eu/m8g/hasValue>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Cost> .
 
@@ -288,7 +291,6 @@ required for an online channel, whereas a physical signature may be required for
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."@en;
-    shacl:maxCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
@@ -301,7 +303,6 @@ required for an online channel, whereas a physical signature may be required for
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the Name (or title) of the Event."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -323,7 +324,6 @@ required for an online channel, whereas a physical signature may be required for
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text Description of the piece of Evidence."@en;
-    shacl:maxCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
@@ -341,7 +341,6 @@ required for an online channel, whereas a physical signature may be required for
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the official Name of the piece of Evidence."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -390,7 +389,6 @@ required for an online channel, whereas a physical signature may be required for
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text Description of the Output."@en;
-    shacl:maxCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
@@ -403,7 +401,6 @@ required for an online channel, whereas a physical signature may be required for
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the official Name of the Output."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -420,7 +417,6 @@ required for an online channel, whereas a physical signature may be required for
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "A free text description of the Participation."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
@@ -464,7 +460,6 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
@@ -564,7 +559,6 @@ Public Services may be associated with a particular Event and, likewise, the sam
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the official Name of the Public Service."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -630,7 +624,6 @@ Public Services may be associated with a particular Event and, likewise, the sam
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Name of the Requirement"@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -647,7 +640,6 @@ Public Services may be associated with a particular Event and, likewise, the sam
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "This property represents a free text Description of the Rule."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
@@ -672,7 +664,6 @@ the Legal Resource under which the Rules are being defined."""@en;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the Name of the Rule."@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title

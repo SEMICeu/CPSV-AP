@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/59e634fb216c3dddd004b814b578d786c3f31a54/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/59e634fb216c3dddd004b814b578d786c3f31a54/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/e798d161c7f75e503fb89a1f11a7e0ebbd0aeddb/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/e798d161c7f75e503fb89a1f11a7e0ebbd0aeddb/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -627,7 +627,7 @@ The key difference between a locator and a locator name is that the latter is a 
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Agent%3AhasAddress">hasAddress</a>, 
+                      <a href="#Agent%3Aaddress">address</a>, 
                       <a href="#Agent%3Aidentifier">identifier</a>, 
                       <a href="#Agent%3Aname">name</a>, 
                       <a href="#Agent%3Aplays%20role">plays role</a>.</dd>
@@ -650,11 +650,11 @@ The key difference between a locator and a locator name is that the latter is a 
 
                     <tbody class="supertype">
                     
-                      <tr id="Agent%3AhasAddress" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasAddress">
+                      <tr id="Agent%3Aaddress" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/address">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasAddress" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasAddress" data-placement="right">
-                            hasAddress</a>
+                            <a href="http://data.europa.eu/m8g/address" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/address" data-placement="right">
+                            address</a>
                           </code>
                         </td>
                         <td>
@@ -704,7 +704,7 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the Name of the Agent.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1013,6 +1013,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>, 
+                      <a href="#Contact%20Point%3Acontact%20page">contact page</a>, 
                       <a href="#Contact%20Point%3Ahas%20email">has email</a>, 
                       <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>.</dd>
                     
@@ -1050,6 +1051,26 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Contact%20Point%3Acontact%20page" typeof="rdfs:Property" resource="http://data.europa.e/m8g/contactPage">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.e/m8g/contactPage" data-toggle="tooltip" data-content="http://data.europa.e/m8g/contactPage" data-placement="right">
+                            contact page</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Document" data-placement="right">Document</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">A contact form that could be used to reach out the contact point</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1170,7 +1191,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                             
                           
                         </td>
-			<td>0..1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">This property represents a free text description of the Cost.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1236,10 +1257,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td></td>
                       </tr>
                     
-                      <tr id="Cost%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/value">
+                      <tr id="Cost%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasValue">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/value" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/value" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasValue" data-placement="right">
                             value</a>
                           </code>
                         </td>
@@ -1490,7 +1511,7 @@ or to a group of Public Services, such as all those related to the establishment
                             
                           
                         </td>
-			<td>0..1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1530,7 +1551,7 @@ or to a group of Public Services, such as all those related to the establishment
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the Name (or title) of the Event.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1637,7 +1658,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                             
                           
                         </td>
-			<td>0..1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">This property represents a free text Description of the piece of Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1697,7 +1718,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the official Name of the piece of Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1938,7 +1959,7 @@ schema:validThrough "2017-01-02T09:00Z".
                             
                           
                         </td>
-			<td>0..1</td>
+			<td>0..*</td>
                         <td property="rdfs:comment">This property represents a free text Description of the Output.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1978,7 +1999,7 @@ schema:validThrough "2017-01-02T09:00Z".
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the official Name of the Output.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2057,7 +2078,7 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">A free text description of the Participation.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2269,7 +2290,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2603,7 +2624,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the official Name of the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2883,7 +2904,7 @@ To illustrate the notion: the European Directive on services in the internal mar
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">Name of the Requirement</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2969,7 +2990,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents a free text Description of the Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -3050,7 +3071,7 @@ the Legal Resource under which the Rules are being defined.</td>
                             
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property represents the Name of the Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
