@@ -371,19 +371,19 @@ foaf:page rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://data.europa.eu/m8g/hasValue
+cv:hasValue rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:double ;
+            rdfs:comment "Cardinality [0..1]. This property represents a numeric value indicating the amount of the Cost."@en ;
+            rdfs:label "has value"@en .
+
+
 ###  http://data.europa.eu/m8g/processingTime
 cv:processingTime rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:duration ;
                   vann:usageNote "Some examples are provided below: Duration Syntax - Syntax 5 years - P5Y 1 month - P1M 3 days - P3D 2 days 4 hours - P2DT4H Durations begin with an uppercase P followed by the number and the relevant designator, formally: P[n]Y[n]M[n]DT[n]H[n]M[n]S, where Y is for years, M for months etc. Note that days and times are separated by an uppercase T which also disambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the Wikipedia page that references the official ISO standard. This approach is consistent with both schema.org and the W3C OWL Time Ontology."@en ;
                   rdfs:comment "Cardinality [0..1]. The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations."@en ;
                   rdfs:label "processing time"@en .
-
-
-###  http://data.europa.eu/m8g/value
-cv:value rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:double ;
-         rdfs:comment "Cardinality [0..1]. This property represents a numeric value indicating the amount of the Cost."@en ;
-         rdfs:label "value"@en .
 
 
 ###  http://purl.org/dc/terms/description
@@ -773,9 +773,9 @@ foaf:Agent rdf:type owl:Class ;
                                                     "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
                                        rdfs:label "identifier"@en .
 
 
