@@ -43,12 +43,12 @@
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressID>
   ], [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
     shacl:name "administrative unit level 1 (country)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
   ], [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
     shacl:name "administrative unit level 2 (country/region/state)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL2>

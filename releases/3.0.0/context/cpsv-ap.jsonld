@@ -14,12 +14,12 @@
     "Address.administrativeUnitLevel1 (country)": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-      "@type": "@id"
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.administrativeUnitLevel2 (country/region/state)": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-      "@type": "@id"
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Address.fullAddress": {
       "@container": "@set",

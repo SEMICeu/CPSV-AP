@@ -646,12 +646,12 @@ the Legal Resource under which the Rules are being defined.</xs:documentation>
           <xs:documentation xml:lang="en">A globally unique identifier for each instance of an Address.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="administrativeUnitLevel1country" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="administrativeUnitLevel1country" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">The name of the uppermost level of the address, almost always a country.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="administrativeUnitLevel2countryregionstate" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="administrativeUnitLevel2countryregionstate" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</xs:documentation>
         </xs:annotation>
