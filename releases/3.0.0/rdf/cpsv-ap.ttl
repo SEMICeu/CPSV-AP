@@ -2,6 +2,7 @@
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -19,8 +20,9 @@
 <http://data.europa.eu/m8g/cpsvap> rdf:type owl:Ontology ;
                                     dct:created "2018-07-09"^^xsd:date ;
                                     dct:creator <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
-                                    dct:status <http://purl.org/adms/status/Completed> ;
+                                    dct:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
                                     vann:preferredNamespacePrefix "cpsvap" ;
+                                    owl:versionInfo "3.0.0" ;
                                     foaf:homepage <https://joinup.ec.europa.eu/asset/cpsv-ap/home> .
 
 #################################################################
@@ -37,6 +39,10 @@ dct:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/hasVersion
 dct:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/status
@@ -71,15 +77,9 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://data.europa.eu/m8g/address
-cv:address rdf:type owl:ObjectProperty ;
-           rdfs:range locn:Address ;
-           rdfs:comment "Cardinality [0..1]. This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en ;
-           rdfs:label "address"@en .
-
-
 ###  http://data.europa.eu/m8g/contactPage
 cv:contactPage rdf:type owl:ObjectProperty ;
+               rdfs:range <https://xmlns.com/foaf/0.1/Document> ;
                rdfs:comment "Cardinality [0..*]. A contact form that could be used to reach out the contact point."@en ;
                rdfs:label "contact page"@en .
 
@@ -102,13 +102,13 @@ cv:hasChannel rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/hasCompetentAuthority
 cv:hasCompetentAuthority rdf:type owl:ObjectProperty ;
                          rdfs:range cv:PublicOrganisation ;
-                         rdfs:comment "Cardinality [1..1]. This property links a Public Service to a Public Organisation, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organisation provides the public service directly or outsources it is not relevant. The Public Organisation that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service."@en ;
+                         rdfs:comment "Cardinality [1..n]. This property links a Public Service to a Public Organisation, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organisation provides the public service directly or outsources it is not relevant. The Public Organisation that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service."@en ;
                          rdfs:label "has competent authority"@en .
 
 
 ###  http://data.europa.eu/m8g/hasContactPoint
 cv:hasContactPoint rdf:type owl:ObjectProperty ;
-                   rdfs:range <https://schema.org/ContactPoint> ;
+                   rdfs:range cv:ContactPoint ;
                    rdfs:comment "Cardinality [0..n]. A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using VCard. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant."@en ;
                    rdfs:label "has contact point"@en .
 
@@ -136,8 +136,17 @@ cv:hasParticipation rdf:type owl:ObjectProperty ;
 
 ###  http://data.europa.eu/m8g/holdsRequirement
 cv:holdsRequirement rdf:type owl:ObjectProperty ;
+                    rdfs:range cv:Requirement ;
                     rdfs:comment "Cardinality [0..n]. Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en ;
                     rdfs:label "holds requirement"@en .
+
+
+###  http://data.europa.eu/m8g/hoursAvailable
+cv:hoursAvailable rdf:type owl:ObjectProperty ;
+                  rdfs:range cv:OpeningHoursSpecification ;
+                  rdfs:comment "Cardinality [0..1]. This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en ,
+                               "Cardinality [0..n]. This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en ;
+                  rdfs:label "availability restriction"@en .
 
 
 ###  http://data.europa.eu/m8g/ifAccessedThrough
@@ -156,7 +165,7 @@ cv:isClassifiedBy rdf:type owl:ObjectProperty ;
 
 ###  http://data.europa.eu/m8g/isDefinedBy
 cv:isDefinedBy rdf:type owl:ObjectProperty ;
-               rdfs:range cv:PublicOrganisation ;
+               rdfs:range org:Organization ;
                rdfs:comment "Cardinality [0..n]. This property links the Cost class with one or more instances of the Public Organisation class. This property indicates which Public Organisation is the Competent Authority for defining the costs associated with the delivery of a particular Public Service."@en ;
                rdfs:label "is defined by"@en .
 
@@ -177,7 +186,7 @@ cv:isGroupedBy rdf:type owl:ObjectProperty ;
 
 ###  http://data.europa.eu/m8g/ownedBy
 cv:ownedBy rdf:type owl:ObjectProperty ;
-           rdfs:range cv:PublicOrganisation ;
+           rdfs:range org:Organization ;
            rdfs:comment "Cardinality [0..n]. This property links the Channel class with one or more instances of the Public Organisation class. This property indicates the owner of a specific Channel through which a Public Service is being delivered."@en ;
            rdfs:label "owned by"@en .
 
@@ -215,6 +224,7 @@ dct:language rdf:type owl:ObjectProperty ;
              rdfs:range <https://purl.org/dc/terms/LinguisticSystem> ;
              vann:usageNote "The recommended controlled vocabularies for this property is the Language Authority Table of the Publications Office (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language)"@en ;
              rdfs:comment "Cardinality [0..n]. Indicates the language(s) in which the Evidence must be provided."@en ,
+                          "Cardinality [0..n]. This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ,
                           "Cardinality [0..n]. This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."@en ,
                           "Cardinality [0..n]. This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ;
              rdfs:label "language"@en .
@@ -237,7 +247,7 @@ dct:relation rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/requires
 dct:requires rdf:type owl:ObjectProperty ;
              rdfs:range cpsv:PublicService ;
-             rdfs:comment "Cardinality [0..n]. One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Input."@en ;
+             rdfs:comment "Cardinality [0..n]. One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence."@en ;
              rdfs:label "requires"@en .
 
 
@@ -302,25 +312,11 @@ dcat:landingPage rdf:type owl:ObjectProperty ;
                  rdfs:label "landing page"@en .
 
 
-###  http://www.w3.org/ns/locn#adminUnitL1
-locn:adminUnitL1 rdf:type owl:ObjectProperty ;
-                 rdfs:range skos:Concept ;
-                 vann:usageNote """Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The Country controlled vocabulary from the Publications Office can be reused for this.
-https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country"""@en ;
-                 rdfs:comment "Cardinality [1..1]. The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country."@en ;
-                 rdfs:label "administrative unit level 1 (country)"@en .
-
-
-###  http://www.w3.org/ns/locn#adminUnitL2
-locn:adminUnitL2 rdf:type owl:ObjectProperty ;
-                 rdfs:range skos:Concept ;
-                 vann:usageNote """Some recommended codelists from the EU Publications Office include: Administrative Territorial Units (ATU), NUTS and Local Administrative Units (LAU). The first arrondissement of Paris is for example expressed as \"http://publications.europa.eu/resource/authority/atu/FRA_AR_PAR01\" in the ATU controlled vocabulary.
-
-http://publications.europa.eu/resource/authority/atu
-https://ec.europa.eu/eurostat/web/nuts/background
-https://ec.europa.eu/eurostat/web/nuts/local-administrative-units"""@en ;
-                 rdfs:comment "Cardinality [1..1]. The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities."@en ;
-                 rdfs:label "administrative unit level 2 (country/region/state)"@en .
+###  http://www.w3.org/ns/locn#address
+locn:address rdf:type owl:ObjectProperty ;
+             rdfs:range locn:Address ;
+             rdfs:comment "Cardinality [0..1]. This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en ;
+             rdfs:label "address"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/page
@@ -359,17 +355,16 @@ foaf:page rdf:type owl:ObjectProperty ;
                                               "Cardinality [0..n]. This property represents the type of Requirement as described in a controlled vocabulary."@en .
 
 
-###  https://schema.org/hoursAvailable
-<https://schema.org/hoursAvailable> rdf:type owl:ObjectProperty ;
-                                    rdfs:range <https://schema.org/OpeningHoursSpecification> ;
-                                    rdfs:comment "Cardinality [0..1]. This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en ,
-                                                 "Cardinality [0..n]. This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en ;
-                                    rdfs:label "availability restriction"@en .
-
-
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://data.europa.eu/m8g/email
+cv:email rdf:type owl:DatatypeProperty ;
+         rdfs:range rdf:langString ;
+         rdfs:comment "Cardinality [0..n]. the email of the ContactPoint"@en ;
+         rdfs:label "has email"@en .
+
 
 ###  http://data.europa.eu/m8g/hasValue
 cv:hasValue rdf:type owl:DatatypeProperty ;
@@ -378,12 +373,28 @@ cv:hasValue rdf:type owl:DatatypeProperty ;
             rdfs:label "has value"@en .
 
 
+###  http://data.europa.eu/m8g/openingHours
+cv:openingHours rdf:type owl:DatatypeProperty ;
+                rdfs:range rdf:langString ;
+                vann:usageNote "The value should follow the flexible format defined for schema.org's opening hours property. Following that structure, days of the week are represented by two letter codes (Mo,Tu, We, Th, Fr, Sa, Su). Lists should be comma separated (for example: Mo, We, Fr) and periods separated by a hyphen (for example: Mo-Fr). If it is appropriate to add opening hours then this follows the day so if a phone service is available 08:00-20:00 Monday to Saturday and 08:00-18:00 on Sundays that would be encoded as Mo-Sa 08:00-20:00, Su 08:00-18:00."@en ;
+                rdfs:comment "Cardinality [0..n]. This property represents the normal opening hours of a channel."@en ;
+                rdfs:label "opening hours"@en .
+
+
 ###  http://data.europa.eu/m8g/processingTime
 cv:processingTime rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:duration ;
                   vann:usageNote "Some examples are provided below: Duration Syntax - Syntax 5 years - P5Y 1 month - P1M 3 days - P3D 2 days 4 hours - P2DT4H Durations begin with an uppercase P followed by the number and the relevant designator, formally: P[n]Y[n]M[n]DT[n]H[n]M[n]S, where Y is for years, M for months etc. Note that days and times are separated by an uppercase T which also disambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the Wikipedia page that references the official ISO standard. This approach is consistent with both schema.org and the W3C OWL Time Ontology."@en ;
-                  rdfs:comment "Cardinality [0..1]. The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations."@en ;
+                  rdfs:comment "Cardinality [0..1]. The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations."@en ,
+                               "Cardinality [0..1]. The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations."@en ;
                   rdfs:label "processing time"@en .
+
+
+###  http://data.europa.eu/m8g/telephone
+cv:telephone rdf:type owl:DatatypeProperty ;
+             rdfs:range rdf:langString ;
+             rdfs:comment "Cardinality [0..n]. the telephone of the ContactPoint"@en ;
+             rdfs:label "has telephone"@en .
 
 
 ###  http://purl.org/dc/terms/description
@@ -433,7 +444,7 @@ dcat:keyword rdf:type owl:DatatypeProperty ;
 locn:addressArea rdf:type owl:DatatypeProperty ;
                  rdfs:range rdf:langString ;
                  vann:usageNote "This would typically be part of a city, a neighbourhood or village, e.g. Montmartre."@en ;
-                 rdfs:comment "Cardinality [1..1]. The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."@en ;
+                 rdfs:comment "Cardinality [0..n]. The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit."@en ;
                  rdfs:label "address area"@en .
 
 
@@ -450,15 +461,32 @@ Many datasets that include address data as one piece of information about someth
 
 
 To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Location Core Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID."""@en ;
-               rdfs:comment "Cardinality [1..1]. A globally unique identifier for each instance of an Address."@en ;
+               rdfs:comment "Cardinality [0..n]. A globally unique identifier for each instance of an Address."@en ;
                rdfs:label "address ID"@en .
+
+
+###  http://www.w3.org/ns/locn#adminUnitL1
+locn:adminUnitL1 rdf:type owl:DatatypeProperty ;
+                 rdfs:range rdf:langString ;
+                 vann:usageNote """Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The Country controlled vocabulary from the Publications Office can be reused for this.
+https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country"""@en ;
+                 rdfs:comment "Cardinality [0..n]. The name of the uppermost level of the address, almost always a country."@en ;
+                 rdfs:label "administrative unit level 1 (country)"@en .
+
+
+###  http://www.w3.org/ns/locn#adminUnitL2
+locn:adminUnitL2 rdf:type owl:DatatypeProperty ;
+                 rdfs:range rdf:langString ;
+                 vann:usageNote "Values could be a region or province, more granular than level 1."@en ;
+                 rdfs:comment "Cardinality [0..n]. The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en ;
+                 rdfs:label "administrative unit level 2 (country/region/state)"@en .
 
 
 ###  http://www.w3.org/ns/locn#fullAddress
 locn:fullAddress rdf:type owl:DatatypeProperty ;
                  rdfs:range rdf:langString ;
                  vann:usageNote "Use of this property is recommended as it will not suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is \"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France\"."@en ;
-                 rdfs:comment "Cardinality [1..1]. The complete address written as a formatted string."@en ;
+                 rdfs:comment "Cardinality [0..n]. The complete address written as a formatted string."@en ;
                  rdfs:label "full address"@en .
 
 
@@ -466,7 +494,7 @@ locn:fullAddress rdf:type owl:DatatypeProperty ;
 locn:locatorDesignator rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:string ;
                        vann:usageNote "In simpler terms, this is the building number, apartment number, etc. For an address such as \"Flat 3, 17 Bridge Street\", the locator is \"flat 3, 17\"."@en ;
-                       rdfs:comment "Cardinality [1..1]. A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators"@en ;
+                       rdfs:comment "Cardinality [0..n]. A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators"@en ;
                        rdfs:label "locator designator"@en .
 
 
@@ -476,7 +504,7 @@ locn:locatorName rdf:type owl:DatatypeProperty ;
                  vann:usageNote """The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
 
 The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, \"Schuman, Berlaymont\" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator."""@en ;
-                 rdfs:comment "Cardinality [1..1]. Proper noun(s) applied to the real world entity identified by the locator."@en ;
+                 rdfs:comment "Cardinality [0..n]. Proper noun(s) applied to the real world entity identified by the locator."@en ;
                  rdfs:label "locator name"@en .
 
 
@@ -484,7 +512,7 @@ The key difference between a locator and a locator name is that the latter is a 
 locn:poBox rdf:type owl:DatatypeProperty ;
            rdfs:range xsd:string ;
            vann:usageNote "INSPIRE's name for this is \"postalDeliveryIdentifier\" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is \"9383\"."@en ;
-           rdfs:comment "Cardinality [1..1]. The Post Office Box number."@en ;
+           rdfs:comment "Cardinality [0..n]. The Post Office Box number."@en ;
            rdfs:label "post office box"@en .
 
 
@@ -492,14 +520,14 @@ locn:poBox rdf:type owl:DatatypeProperty ;
 locn:postCode rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:string ;
               vann:usageNote "Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example \"75000\"."@en ;
-              rdfs:comment "Cardinality [1..1]. The post/zip code of an address. (INSPIRE's definition is \"A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\")"@en ;
+              rdfs:comment "Cardinality [0..n]. The post/zip code of an address. (INSPIRE's definition is \"A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\")"@en ;
               rdfs:label "post code"@en .
 
 
 ###  http://www.w3.org/ns/locn#postName
 locn:postName rdf:type owl:DatatypeProperty ;
               rdfs:range rdf:langString ;
-              rdfs:comment "Cardinality [1..1]. The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.) For example, \"Paris\"."@en ;
+              rdfs:comment "Cardinality [0..n]. The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.) For example, \"Paris\"."@en ;
               rdfs:label "post name (city)"@en .
 
 
@@ -507,7 +535,7 @@ locn:postName rdf:type owl:DatatypeProperty ;
 locn:thoroughfare rdf:type owl:DatatypeProperty ;
                   rdfs:range rdf:langString ;
                   vann:usageNote "For example, \"Avenue des Champs-Élysées\"."@en ;
-                  rdfs:comment "Cardinality [1..1]. An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature."@en ;
+                  rdfs:comment "Cardinality [0..n]. An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature."@en ;
                   rdfs:label "thoroughfare"@en .
 
 
@@ -524,28 +552,6 @@ locn:thoroughfare rdf:type owl:DatatypeProperty ;
                                   rdfs:label "title"@en .
 
 
-###  https://schema.org/email
-<https://schema.org/email> rdf:type owl:DatatypeProperty ;
-                           rdfs:range rdf:langString ;
-                           rdfs:comment "Cardinality [0..n]. the email of the ContactPoint"@en ;
-                           rdfs:label "has email"@en .
-
-
-###  https://schema.org/openingHours
-<https://schema.org/openingHours> rdf:type owl:DatatypeProperty ;
-                                  rdfs:range rdf:langString ;
-                                  vann:usageNote "The value should follow the flexible format defined for schema.org's opening hours property. Following that structure, days of the week are represented by two letter codes (Mo,Tu, We, Th, Fr, Sa, Su). Lists should be comma separated (for example: Mo, We, Fr) and periods separated by a hyphen (for example: Mo-Fr). If it is appropriate to add opening hours then this follows the day so if a phone service is available 08:00-20:00 Monday to Saturday and 08:00-18:00 on Sundays that would be encoded as Mo-Sa 08:00-20:00, Su 08:00-18:00."@en ;
-                                  rdfs:comment "Cardinality [0..n]. This property represents the normal opening hours of a channel."@en ;
-                                  rdfs:label "opening hours"@en .
-
-
-###  https://schema.org/telephone
-<https://schema.org/telephone> rdf:type owl:DatatypeProperty ;
-                               rdfs:range rdf:langString ;
-                               rdfs:comment "Cardinality [0..n]. the telephone of the ContactPoint"@en ;
-                               rdfs:label "has telephone"@en .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -554,7 +560,7 @@ locn:thoroughfare rdf:type owl:DatatypeProperty ;
 eli:LegalResource rdf:type owl:Class ;
                   vann:usageNote "The definition and properties of the Legal Resource class in the CPSV-AP are aligned with the ontology included in \"Council conclusions inviting the introduction of the European Legislation Identifier (ELI)\". For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition ...) we refer to the ELI ontology."@en ;
                   rdfs:comment "Optional class. This class represents the legislation, policy or policies that lie behind the Rules that govern the service."@en ;
-                  rdfs:isDefinedBy "http://data.europa.eu/eli/ontology#LegalResource"@en ;
+                  rdfs:isDefinedBy eli: ;
                   rdfs:label "Legal Resource"@en .
 
 
@@ -562,14 +568,23 @@ eli:LegalResource rdf:type owl:Class ;
 cv:BusinessEvent rdf:type owl:Class ;
                  rdfs:subClassOf cv:Event ;
                  rdfs:comment "Optional class. This class represents a Business Event, which specialises Event. A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time. A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State. In other words, a Business Event groups together a number of public services that need to be delivered for completing that particular event."@en ;
+                 rdfs:isDefinedBy <http://data.europa.eu/m8g/cpsvap> ;
                  rdfs:label "Business Event"@en .
 
 
 ###  http://data.europa.eu/m8g/Channel
 cv:Channel rdf:type owl:Class ;
            rdfs:comment "Optional class. The Channel class represents the medium through which an Agent provides, uses or interacts in another way with a Public Service. Typical examples include online services, phone, walk-in centres etc."@en ;
-           rdfs:isDefinedBy <http://data.europa.eu/m8g/cpsvap> ;
+           rdfs:isDefinedBy cv: ;
            rdfs:label "Channel"@en .
+
+
+###  http://data.europa.eu/m8g/ContactPoint
+cv:ContactPoint rdf:type owl:Class ;
+                vann:usageNote "Similarly to the Channel class, a Contact Point may have regular opening hours that are then overridden by, for example, public holidays, using the Opening Hours Specification class."@en ;
+                rdfs:comment "Optional class. This class represents the contact information for a Public Service, Channel, Public Organization, etc."@en ;
+                rdfs:isDefinedBy cv: ;
+                rdfs:label "Contact Point"@en .
 
 
 ###  http://data.europa.eu/m8g/Cost
@@ -590,7 +605,7 @@ cv:Event rdf:type owl:Class ;
 cv:Evidence rdf:type owl:Class ;
             vann:usageNote "Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces. Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered. In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s)."@en ;
             rdfs:comment "Optional class. The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can document or support a criterion response. It contains information that proves that a criterion requirement exists or is true, in particular evidences are used to prove that a specific criterion is met."@en ;
-            rdfs:isDefinedBy cv:cccev ;
+            rdfs:isDefinedBy cv: ;
             rdfs:label "Evidence"@en .
 
 
@@ -598,29 +613,39 @@ cv:Evidence rdf:type owl:Class ;
 cv:LifeEvent rdf:type owl:Class ;
              rdfs:subClassOf cv:Event ;
              rdfs:comment "Optional class. The Life Event class represents an important event or situations in a citizen's life where public services may be required. Note the scope: an individual will encounter any number of 'events' in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related. For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/m8g/cpsvap> ;
              rdfs:label "Life Event"@en .
+
+
+###  http://data.europa.eu/m8g/OpeningHoursSpecification
+cv:OpeningHoursSpecification rdf:type owl:Class ;
+                             vann:usageNote "This class is aligned to Schema.org OpeningHoursSpecification class The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus: ex:PublicHolidayClosed a schema:OpeningHoursSpecification; schema:dayOfWeek . Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties, for example: ex:ChristmasClosed a schema:OpeningHoursSpecification; schema:validFrom \"2016-12-24T012:00Z\"; schema:validThrough \"2017-01-02T09:00Z\"."@en ;
+                             rdfs:comment "Optional class. An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays."@en ;
+                             rdfs:isDefinedBy <https://schema.org/> ;
+                             rdfs:label "Opening Hours Specification"@en .
 
 
 ###  http://data.europa.eu/m8g/Output
 cv:Output rdf:type owl:Class ;
           vann:usageNote "In some cases, the Output of one Public Service will be used as evidence to fulfil a criterion requirement of another Public Service. Such relationships should be described in the associated Rule(s)."@en ;
           rdfs:comment "Optional class. Outputs can be any resource - document, artefact – anything produced by the Public Service. In the context of a Public Service, the output provides an official document or other artefact of the Competent Authority (Public Organisation) that permits/authorises/entitles an Agent to (do) something."@en ;
-          rdfs:isDefinedBy <http://data.europa.eu/m8g/cpsvap> ;
+          rdfs:isDefinedBy cpsv: ;
           rdfs:label "Output"@en .
 
 
 ###  http://data.europa.eu/m8g/Participation
 cv:Participation rdf:type owl:Class ;
                  rdfs:comment "Optional class. The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority. However, this simple structure does not allow statements to be made about those participants, such the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology's Membership class that allows more complex relationships and richer metadata to be applied to a role filled by a given Agent."@en ;
-                 rdfs:isDefinedBy cv:cpov ;
+                 rdfs:isDefinedBy cv: ;
                  rdfs:label "Participation"@en .
 
 
 ###  http://data.europa.eu/m8g/PublicOrganisation
 cv:PublicOrganisation rdf:type owl:Class ;
+                      rdfs:subClassOf org:Organization ;
                       vann:usageNote "Organizations which exist to provide services for its citizens and companies are called Public Organizations. The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships. This definition is consistent with the more detailed definition of a \"public sector body\" as given in the PSI Directive: \"the State, regional or local authorities, bodies governed by public law and associations formed by one or several such authorities or one or several such bodies governed by public law\". It further defines a body governed by public law as any body \"(a) established for the specific purpose of meeting needs in the general interest, not having an industrial or commercial character; and (b) having legal personality; and (c) financed, for the most part by the State, or regional or local authorities, or other bodies governed by public law; or subject to management supervision by those bodies; or having an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional or local authorities or by other bodies governed by public law\"."@en ;
                       rdfs:comment "Mandatory class. Any Organization that is defined as being part of the public sector by a legal framework at any level."@en ;
-                      rdfs:isDefinedBy cv:cpov ;
+                      rdfs:isDefinedBy cv: ;
                       rdfs:label "Public Organisation"@en .
 
 
@@ -631,35 +656,35 @@ cv:Requirement rdf:type owl:Class ;
 Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.
 To illustrate the notion: the European Directive on services in the internal market defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy."""@en ;
                rdfs:comment "Optional class. Condition or prerequisite that is to be proven by Evidence."@en ;
-               rdfs:isDefinedBy cv:cccev ;
+               rdfs:isDefinedBy cv: ;
                rdfs:label "Requirement"@en .
 
 
 ###  http://purl.org/vocab/cpsv#PublicService
 cpsv:PublicService rdf:type owl:Class ;
                    rdfs:comment "Mandatory class. This class represents the Public Service itself, as it is described in a public service catalogue. A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy. Services may be for the benefit of an individual, a business, or other public authority, or groups of any of these. A service exists whether it is used or not, and the term 'benefit' may apply in the sense of enabling the fulfilment of an obligation. As defined in the revised version of the European Interoperability Framework, a European public service comprises any service provided by public administrations in Europe, or by other organisations on their behalf, to businesses, citizens or others public administrations."@en ;
-                   rdfs:isDefinedBy "http://purl.org/vocab/cpsv#PublicService"@en ;
+                   rdfs:isDefinedBy cpsv: ;
                    rdfs:label "Public Service"@en .
 
 
 ###  http://purl.org/vocab/cpsv#Rule
 cpsv:Rule rdf:type owl:Class ;
           rdfs:comment "Optional class. The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service, licence, and authentication requirements of the Public Service. Instances of the Rule class are FRBR Expressions, that is, a concrete expression such as a document, of the more abstract concept of the rules themselves. The CPSV-AP does not envisage instances of the Rule class as machine-readable business rules. Detailed modelling of the rules related to Public Services is out of scope of the CPSV-AP."@en ;
-          rdfs:isDefinedBy "http://purl.org/vocab/cpsv#Rule"@en ;
+          rdfs:isDefinedBy cpsv: ;
           rdfs:label "Rule"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Collection
 skos:Collection rdf:type owl:Class ;
                 rdfs:comment "Optional class. This class represents the Collection to which a Concept belongs. Grouping different concepts defines a controlled vocabulary. In this context the CPSV-AP reuses the Collection  class as defined in the SKOS Simple Knowledge Organization System . For describing the attributes of a Collection (labels, preferred labels, alternative labels, definition …) we refer to SKOS."@en ;
-                rdfs:isDefinedBy <https://www.w3.org/2009/08/skos-reference/skos.html#Collection> ;
+                rdfs:isDefinedBy skos: ;
                 rdfs:label "Collection"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:comment "Optional class. This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitely defined in the CPSV-AP. In this context the CPSV-AP reuses the Concept  class as defined in the SKOS Simple Knowledge Organization System . For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition …) we refer to SKOS. The Concept may or may not belong to (member) a certain Collection."@en ;
-             rdfs:isDefinedBy "https://www.w3.org/2009/08/skos-reference/skos.html#Concept"@en ;
+             rdfs:isDefinedBy skos: ;
              rdfs:label "Concept"@en .
 
 
@@ -679,58 +704,46 @@ The first of these allows publishers to simply provide the complete Address as o
 
 The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL."""@en ;
              rdfs:comment "Optional class. A spatial object that identifies a fixed location of a property, in a human-readable way."@en ;
-             rdfs:isDefinedBy <https://www.w3.org/ns/locn#Address> ;
+             rdfs:isDefinedBy locn: ;
              rdfs:label "Address"@en .
+
+
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:comment "Optional class. The Agent class is any resource that acts or has the power to act. This includes people, organisations and groups. The Public Organization class, defined in the Core Public Organisation Vocabulary, is a notable subclass of Agent."@en ;
-           rdfs:isDefinedBy <http://xmlns.com/foaf/spec/> ;
+           rdfs:isDefinedBy foaf: ;
            rdfs:label "Agent"@en .
 
 
 ###  https://purl.org/dc/terms/LinguisticSystem
 <https://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class ;
                                              rdfs:comment "Optional class. A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
-                                             rdfs:isDefinedBy "http://purl.org/dc/terms/LinguisticSystem"@en ;
+                                             rdfs:isDefinedBy dct: ;
                                              rdfs:label "Linguistic System"@en .
 
 
 ###  https://purl.org/dc/terms/Location
 <https://purl.org/dc/terms/Location> rdf:type owl:Class ;
                                      rdfs:comment "Optional class. An identifiable geographic place or named place."@en ;
-                                     rdfs:isDefinedBy "http://purl.org/dc/terms/Location"@en ;
+                                     rdfs:isDefinedBy dct: ;
                                      rdfs:label "Location"@en .
-
-
-###  https://schema.org/ContactPoint
-<https://schema.org/ContactPoint> rdf:type owl:Class ;
-                                  vann:usageNote "Similarly to the Channel class, a Contact Point may have regular opening hours that are then overridden by, for example, public holidays, using the Opening Hours Specification class."@en ;
-                                  rdfs:comment "Optional class. This class represents the contact information for a Public Service, Channel, Public Organization, etc."@en ;
-                                  rdfs:isDefinedBy "https://schema.org/ContactPoint"@en ;
-                                  rdfs:label "Contact Point"@en .
-
-
-###  https://schema.org/OpeningHoursSpecification
-<https://schema.org/OpeningHoursSpecification> rdf:type owl:Class ;
-                                               vann:usageNote "This class is aligned to Schema.org OpeningHoursSpecification class The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus: ex:PublicHolidayClosed a schema:OpeningHoursSpecification; schema:dayOfWeek . Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties, for example: ex:ChristmasClosed a schema:OpeningHoursSpecification; schema:validFrom \"2016-12-24T012:00Z\"; schema:validThrough \"2017-01-02T09:00Z\"."@en ;
-                                               rdfs:comment "Optional class. An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays."@en ;
-                                               rdfs:isDefinedBy "https://schema.org/OpeningHoursSpecification"@en ;
-                                               rdfs:label "Opening Hours Specification"@en .
 
 
 ###  https://www.w3.org/ns/dcat#Dataset
 <https://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
                                      rdfs:comment "Optional class. The class describes the metada of where the dataset is being described, for instance on a regional public service portal and/or a national eGovernment portal."@en ;
-                                     rdfs:isDefinedBy "https://www.w3.org/ns/dcat#Dataset"@en ;
+                                     rdfs:isDefinedBy <https://www.w3.org/ns/dcat#> ;
                                      rdfs:label "Dataset"@en .
 
 
 ###  https://xmlns.com/foaf/0.1/Document
 <https://xmlns.com/foaf/0.1/Document> rdf:type owl:Class ;
                                       rdfs:comment "Optional class. A document."@en ;
-                                      rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/Document"@en ;
+                                      rdfs:isDefinedBy foaf: ;
                                       rdfs:label "Document"@en .
 
 
@@ -741,6 +754,7 @@ foaf:Agent rdf:type owl:Class ;
 ###  http://data.europa.eu/m8g/cpsvap
 <http://data.europa.eu/m8g/cpsvap> rdf:type owl:NamedIndividual ;
                                    dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+                                   adms:status <http://purl.org/adms/status/Completed> ;
                                    dct:description "The original CPSV-AP was prepared in the context of Action 1.3 – Accessing Member State information resources at European level – Catalogue of Services  of the European Commission’s Interoperability for European Public Administrations (ISA) programme. The CPSV-AP has been seen as a first step for creating a model for describing public services related to business events, to facilitate the set-up of catalogues of services in the context of the Services Directive. Update to version 2.2 finds its motivation in the experience of implementing version 2.1 of the CPSV-AP by different MSs and stakeholders and consequent requests received from them, as detailed in https://github.com/catalogue-of-services-isa/CPSV-AP/issues."@en ;
                                    dct:title "Core Public Service Vocabulary Application Profile"@en .
 
@@ -751,6 +765,10 @@ foaf:Agent rdf:type owl:Class ;
 
 ###  http://purl.org/adms/assettype/Ontology
 <http://purl.org/adms/assettype/Ontology> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/adms/status/Completed
+<http://purl.org/adms/status/Completed> rdf:type owl:NamedIndividual .
 
 
 ###  https://purl.org/dc/terms/identifier
@@ -766,16 +784,16 @@ foaf:Agent rdf:type owl:Class ;
                                                     "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
                                        dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ;
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ;
                                        rdfs:isDefinedBy dct: ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ;
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
                                        rdfs:label "identifier"@en .
 
 
