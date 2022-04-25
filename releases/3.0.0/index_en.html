@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/bf1d32b0a018f8a6c5dfcd5fe2323b092ba2f131/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/bf1d32b0a018f8a6c5dfcd5fe2323b092ba2f131/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/f9b9390a5c5558a5038a423e4c660bf7ce1bf83d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/f9b9390a5c5558a5038a423e4c660bf7ce1bf83d/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -650,10 +650,10 @@ The key difference between a locator and a locator name is that the latter is a 
 
                     <tbody class="supertype">
                     
-                      <tr id="Agent%3Aaddress" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/address">
+                      <tr id="Agent%3Aaddress" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#address">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/address" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/address" data-placement="right">
+                            <a href="http://www.w3.org/ns/locn#address" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#address" data-placement="right">
                             address</a>
                           </code>
                         </td>
@@ -774,6 +774,7 @@ In other words, a Business Event groups together a number of public services tha
                       <a href="#Channel%3Aidentifier">identifier</a>, 
                       <a href="#Channel%3Aopening%20hours">opening hours</a>, 
                       <a href="#Channel%3Aowned%20by">owned by</a>, 
+                      <a href="#Channel%3Aprocessing%20time">processing time</a>, 
                       <a href="#Channel%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -894,6 +895,26 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property indicates the owner of a specific Channel through which a Public Service is being delivered.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Channel%3Aprocessing%20time" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/processingTime">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/processingTime" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/processingTime" data-placement="right">
+                            processing time</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#duration" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#duration" data-placement="right">Duration</a>
+                            
+                          
+                        </td>
+			<td>0..1</td>
+                        <td property="rdfs:comment">The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. </td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1924,6 +1945,7 @@ schema:validThrough "2017-01-02T09:00Z".
                     <dd>For this entity the following properties are defined:
                       <a href="#Output%3Adescription">description</a>, 
                       <a href="#Output%3Aidentifier">identifier</a>, 
+                      <a href="#Output%3Alanguage">language</a>, 
                       <a href="#Output%3Aname">name</a>, 
                       <a href="#Output%3Atype">type</a>.</dd>
                     
@@ -1982,6 +2004,26 @@ schema:validThrough "2017-01-02T09:00Z".
 			<td>1</td>
                         <td property="rdfs:comment">This property represents an Identifier for the Output.</td>
                         <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Output%3Alanguage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/language" data-toggle="tooltip" data-content="http://purl.org/dc/terms/language" data-placement="right">
+                            language</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#LinguisticSystem" data-placement="right">LinguisticSystem</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment"></td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
                     
@@ -2350,7 +2392,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
 			    
                           
                         </td>
-			<td>1</td>
+			<td>1..*</td>
                         <td property="rdfs:comment">This property links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
 Organization provides the public service directly or outsources it is not relevant. The
@@ -2717,7 +2759,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Input.</td>
+                        <td property="rdfs:comment">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3093,7 +3135,7 @@ the Legal Resource under which the Rules are being defined.</td>
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">Type of Rule.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">For example: a rule for non-disclosure of a dataset, a rule for disclosure of a dataset, etc.</td>
                         <td></td>
                       </tr>
                     

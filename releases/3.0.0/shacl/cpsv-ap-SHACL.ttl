@@ -97,7 +97,7 @@
     shacl:description "This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en;
     shacl:maxCount 1;
     shacl:name "address"@en;
-    shacl:path <http://data.europa.eu/m8g/address>
+    shacl:path <http://www.w3.org/ns/locn#address>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents an Identifier for the Agent."@en;
@@ -155,6 +155,12 @@ required for an online channel, whereas a physical signature may be required for
     shacl:description "This property indicates the owner of a specific Channel through which a Public Service is being delivered."@en;
     shacl:name "owned by"@en;
     shacl:path <http://data.europa.eu/m8g/ownedBy>
+  ], [
+    shacl:datatype xsd:duration;
+    shacl:description "The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. "@en;
+    shacl:maxCount 1;
+    shacl:name "processing time"@en;
+    shacl:path <http://data.europa.eu/m8g/processingTime>
   ], [
     shacl:class skos:Concept;
     shacl:description "This property represents the type of Channel as defined in a controlled vocabulary."@en;
@@ -399,6 +405,10 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:name "language"@en;
+    shacl:path dc:language
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "This property represents the official Name of the Output."@en;
     shacl:minCount 1;
@@ -489,7 +499,6 @@ including courts acting as such, professional bodies, and those professional
 associations or other professional organisations which, in the exercise of their legal
 autonomy, regulate in a collective manner access to service activities or the exercise
 thereof\"."""@en;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "has competent authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
@@ -580,7 +589,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:path dc:relation
   ], [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Input."@en;
+    shacl:description "One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence."@en;
     shacl:name "requires"@en;
     shacl:path dc:requires
   ], [

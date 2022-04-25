@@ -58,7 +58,7 @@
     },
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
     "Agent.address": {
-      "@id": "http://data.europa.eu/m8g/address",
+      "@id": "http://www.w3.org/ns/locn#address",
       "@type": "@id"
     },
     "Agent.identifier": {
@@ -99,6 +99,10 @@
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/ownedBy",
       "@type": "@id"
+    },
+    "Channel.processingTime": {
+      "@id": "http://data.europa.eu/m8g/processingTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
     },
     "Channel.type": {
       "@id": "http://purl.org/dc/terms/type",
@@ -264,6 +268,11 @@
       "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "Output.language": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
     "Output.name": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/title",
@@ -316,6 +325,7 @@
       "@type": "@id"
     },
     "PublicService.hasCompetentAuthority": {
+      "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
       "@type": "@id"
     },
