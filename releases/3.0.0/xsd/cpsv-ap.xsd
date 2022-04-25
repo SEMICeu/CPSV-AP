@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
-  <xs:element name="ContactPoint" type="ContactPointType"/>
   <xs:element name="LegalResource" type="LegalResourceType"/>
   <xs:element name="BusinessEvent" type="BusinessEventType"/>
   <xs:element name="Channel" type="ChannelType"/>
+  <xs:element name="ContactPoint" type="ContactPointType"/>
   <xs:element name="Cost" type="CostType"/>
   <xs:element name="Event" type="EventType"/>
   <xs:element name="Evidence" type="EvidenceType"/>
@@ -37,35 +37,6 @@
         <xs:attribute name="conceptSchemeRef" type="xs:IDREF"/>
       </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="ContactPointType">
-    <xs:sequence>
-      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="contactPage" ref="Document" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">A contact form that could be used to reach out the contact point</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">the email of the ContactPoint</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">the telephone of the ContactPoint</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute name="ContactPointRef" type="xs:IDREF">
-      <xs:annotation>
-        <xs:documentation xml:lang="en">Reference to ContactPoint ID</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="LegalResourceType">
     <xs:sequence>
@@ -131,6 +102,35 @@ required for an online channel, whereas a physical signature may be required for
     <xs:attribute name="ChannelRef" type="xs:IDREF">
       <xs:annotation>
         <xs:documentation xml:lang="en">Reference to Channel ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ContactPointType">
+    <xs:sequence>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="contactPage" ref="Document" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A contact form that could be used to reach out the contact point</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">the email of the ContactPoint</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">the telephone of the ContactPoint</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ContactPointRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ContactPoint ID</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>

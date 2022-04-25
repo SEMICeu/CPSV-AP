@@ -8,7 +8,7 @@
     },
     "Address.addressId": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/locn#addressID",
+      "@id": "http://www.w3.org/ns/locn#addressId",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Address.administrativeUnitLevel1 (country)": {
@@ -115,7 +115,7 @@
       "@type": "@id"
     },
     "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ContactPoint": "http://data.europa.e/m8g/ContactPoint",
+    "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
     "ContactPoint.availabilityRestriction": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hoursAvailable",

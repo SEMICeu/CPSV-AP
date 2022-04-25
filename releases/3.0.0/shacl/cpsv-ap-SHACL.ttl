@@ -6,10 +6,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#BusinessEventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ChannelShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EvidenceShape>,
@@ -41,7 +41,7 @@
     shacl:datatype xsd:string;
     shacl:description "A globally unique identifier for each instance of an Address."@en;
     shacl:name "address ID"@en;
-    shacl:path <http://www.w3.org/ns/locn#addressID>
+    shacl:path <http://www.w3.org/ns/locn#addressId>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
@@ -207,7 +207,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "has telephone"@en;
     shacl:path <http://data.europa.eu/m8g/telephone>
   ];
-  shacl:targetClass <http://data.europa.e/m8g/ContactPoint> .
+  shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape> a shacl:NodeShape;
   shacl:closed false;
@@ -504,7 +504,7 @@ thereof\"."""@en;
     shacl:name "has competent authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ], [
-    shacl:class <http://data.europa.e/m8g/ContactPoint>;
+    shacl:class <http://data.europa.eu/m8g/ContactPoint>;
     shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "@en;
     shacl:name "has contact point"@en;
     shacl:path <http://data.europa.eu/m8g/hasContactPoint>
