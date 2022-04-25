@@ -406,6 +406,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:path dc:identifier
   ], [
     shacl:class dc:LinguisticSystem;
+    shacl:description "This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
     shacl:name "language"@en;
     shacl:path dc:language
   ], [

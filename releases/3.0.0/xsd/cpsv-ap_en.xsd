@@ -117,6 +117,11 @@ required for an online channel, whereas a physical signature may be required for
           <xs:documentation xml:lang="en">This property indicates the owner of a specific Channel through which a Public Service is being delivered.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="processingTime" type="xs:duration" maxOccurs="1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">This property represents the type of Channel as defined in a controlled vocabulary.</xs:documentation>
@@ -269,6 +274,11 @@ required for an online channel, whereas a physical signature may be required for
           <xs:documentation xml:lang="en">This property represents an Identifier for the Output.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="en">This property represents the official Name of the Output.</xs:documentation>
@@ -387,7 +397,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
           <xs:documentation xml:lang="en">This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasCompetentAuthority" ref="PublicOrganization" maxOccurs="1" minOccurs="1">
+      <xs:element name="hasCompetentAuthority" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="en">This property links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
@@ -488,7 +498,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
       </xs:element>
       <xs:element name="requires" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Input.</xs:documentation>
+          <xs:documentation xml:lang="en">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="sector" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
