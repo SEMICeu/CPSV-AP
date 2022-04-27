@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/07b328e8f8810654a2dda3bd58aa64d19d91f7d4/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/07b328e8f8810654a2dda3bd58aa64d19d91f7d4/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/a89d8958ed10e40a4b1b40abd05d58a2e20c1c5f/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/a89d8958ed10e40a4b1b40abd05d58a2e20c1c5f/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -286,17 +286,17 @@
                       <a href="#Channel">Channel</a> |
                       <a href="#Collection">Collection</a> |
                       <a href="#Concept">Concept</a> |
+                      <a href="#Concession Contract">Concession Contract</a> |
                       <a href="#Contact Point">Contact Point</a> |
+                      <a href="#Contract">Contract</a> |
                       <a href="#Cost">Cost</a> |
                       <a href="#Dataset">Dataset</a> |
-                      <a href="#Document">Document</a> |
                       <a href="#Event">Event</a> |
                       <a href="#Evidence">Evidence</a> |
                       <a href="#Legal Resource">Legal Resource</a> |
                       <a href="#Life Event">Life Event</a> |
-                      <a href="#Linguistic System">Linguistic System</a> |
-                      <a href="#Location">Location</a> |
                       <a href="#Opening Hours Specification">Opening Hours Specification</a> |
+                      <a href="#Organization">Organization</a> |
                       <a href="#Output">Output</a> |
                       <a href="#Participation">Participation</a> |
                       <a href="#Public Organization">Public Organization</a> |
@@ -770,6 +770,7 @@ In other words, a Business Event groups together a number of public services tha
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Channel%3Aavailability%20restriction">availability restriction</a>, 
+                      <a href="#Channel%3Adescription">description</a>, 
                       <a href="#Channel%3Ahas%20input">has input</a>, 
                       <a href="#Channel%3Aidentifier">identifier</a>, 
                       <a href="#Channel%3Aopening%20hours">opening hours</a>, 
@@ -795,10 +796,10 @@ In other words, a Business Event groups together a number of public services tha
 
                     <tbody class="supertype">
                     
-                      <tr id="Channel%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hoursAvailable">
+                      <tr id="Channel%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hoursAvailable" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hoursAvailable" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-placement="right">
                             availability restriction</a>
                           </code>
                         </td>
@@ -811,6 +812,26 @@ In other words, a Business Event groups together a number of public services tha
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Channel%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
+                            description</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">This property represents a free text description of the Channel, for example to describe conditiions when to use it.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -889,7 +910,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                         <td>
                           
 			    
-			    <a href="#Public Organization" data-placement="right">Public Organization</a>
+			    <a href="#Organization" data-placement="right">Organization</a>
 			    
                           
                         </td>
@@ -935,7 +956,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">This property represents the type of Channel as defined in a controlled vocabulary.</td>
-                        <td property="skos:scopeNote">TODO</td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/snb/com-channel/25831c2">Europass channel type</a> Authority Table of the Publications Office</td>
                         <td></td>
                       </tr>
                     
@@ -1022,6 +1043,174 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
             </div>
             
               <div class="region region--no-space-top">
+              <h3 class="h3" id="Concession Contract"><a href="http://data.europa.eu/m8g/ConcessionContract" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ConcessionContract" data-placement="right">Concession Contract</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>Concessions are contracts for pecuniary interest by means of which one or more contracting authorities or contracting entities entrusts the execution of works, or the provision and the management of services, to one or more economic operators. The object of such contracts is the procurement of works or services by means of a concession, the consideration of which consists in the right to exploit the works or services or in that right together with payment. Such contracts may, but do not necessarily, involve a transfer of ownership to contracting authorities or contracting entities, but contracting authorities or contracting entities always obtain the benefits of the works or services in question.</dd>
+                    
+                    <dt>Usage</dt><dd>The defnition comes from the Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0023&from=EN">2014/23/EU</a></dd>
+                    
+		     
+		    <dt>Subclass of<dt><dd>
+                        <a href="#Contract">Contract</a>
+		   </dd>
+                    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Concession%20Contract%3Adescription">description</a>, 
+                      <a href="#Concession%20Contract%3Aestablished%20under">established under</a>, 
+                      <a href="#Concession%20Contract%3Ahas%20contracting%20authority">has contracting authority</a>, 
+                      <a href="#Concession%20Contract%3Ahas%20economic%20operator">has economic operator</a>, 
+                      <a href="#Concession%20Contract%3Aidentifier">identifier</a>, 
+                      <a href="#Concession%20Contract%3Aname">name</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Concession%20Contract%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
+                            description</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>1..*</td>
+                        <td property="rdfs:comment">This property represents a free text description of the Concession Contract.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Concession%20Contract%3Aestablished%20under" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/establishedUnder">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/establishedUnder" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/establishedUnder" data-placement="right">
+                            established under</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Legal Resource" data-placement="right">Legal Resource</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">This property links a Concession Contract to relevant legislation or policy documents i.e.
+the Legal Resource under which the Concession Contracts are being defined.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Concession%20Contract%3Ahas%20contracting%20authority" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasContractingAuthority">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasContractingAuthority" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasContractingAuthority" data-placement="right">
+                            has contracting authority</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Public Organization" data-placement="right">Public Organization</a>
+			    
+                          
+                        </td>
+			<td>1..*</td>
+                        <td property="rdfs:comment">This property links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Concession%20Contract%3Ahas%20economic%20operator" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasEconomicOperator">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasEconomicOperator" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasEconomicOperator" data-placement="right">
+                            has economic operator</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Organization" data-placement="right">Organization</a>
+			    
+                          
+                        </td>
+			<td>1..*</td>
+                        <td property="rdfs:comment">This property links a Concession Contract with the Economic Operator in charge for the provision and the management of public services.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Concession%20Contract%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>1</td>
+                        <td property="rdfs:comment">This property represents an Identifier for the Concession Contract.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Concession%20Contract%3Aname" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
+                            name</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+			<td>1..*</td>
+                        <td property="rdfs:comment">This property represents the Name of the Concession Contract.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
               <h3 class="h3" id="Contact Point"><a href="http://data.europa.eu/m8g/ContactPoint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ContactPoint" data-placement="right">Contact Point</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -1056,10 +1245,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
 
                     <tbody class="supertype">
                     
-                      <tr id="Contact%20Point%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hoursAvailable">
+                      <tr id="Contact%20Point%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hoursAvailable" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hoursAvailable" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-placement="right">
                             availability restriction</a>
                           </code>
                         </td>
@@ -1085,13 +1274,13 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
                         <td>
                           
-			    
-			    <a href="#Document" data-placement="right">Document</a>
-			    
+			     
+			    <a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a>
+                            
                           
                         </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">A contact form that could be used to reach out the contact point</td>
+			<td>0..n</td>
+                        <td property="rdfs:comment">A contact form that could be used to reach out the contact point.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1140,6 +1329,22 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                   </table>
                 </div>
       			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Contract"><a href="http://data.europa.eu/ePO/ontology#Contract" data-toggle="tooltip" data-content="http://data.europa.eu/ePO/ontology#Contract" data-placement="right">Contract</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>A voluntary, deliberate, and legally binding agreement between two or more competent parties.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		    
+                    <dd>No properties have been defined for this entity.</dd>
+                    
+                  </dl>
+                </div>
+		
             </div>
             
               <div class="region region--no-space-top">
@@ -1268,7 +1473,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         <td>
                           
 			    
-			    <a href="#Public Organization" data-placement="right">Public Organization</a>
+			    <a href="#Organization" data-placement="right">Organization</a>
 			    
                           
                         </td>
@@ -1408,12 +1613,12 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                         </td>
                         <td>
                           
-			    
-			    <a href="#Document" data-placement="right">Document</a>
-			    
+			     
+			    <a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a>
+                            
                           
                         </td>
-			<td>0..*</td>
+			<td>0..n</td>
                         <td property="rdfs:comment">This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.</td>
                         <td property="skos:scopeNote">It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator.</td>
                         <td></td>
@@ -1463,22 +1668,6 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                   </table>
                 </div>
       			  
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Document"><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Description</dt><dd>A document.</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		    
-                    <dd>No properties have been defined for this entity.</dd>
-                    
-                  </dl>
-                </div>
-		
             </div>
             
               <div class="region region--no-space-top">
@@ -1714,14 +1903,14 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
                         <td>
                           
-			    
-			    <a href="#Linguistic System" data-placement="right">Linguistic System</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
+                            
                           
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">Indicates the language(s) in which the Evidence must be provided.</td>
-                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office</td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     
@@ -1754,13 +1943,13 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
                         <td>
                           
-			    
-			    <a href="#Document" data-placement="right">Document</a>
-			    
+			     
+			    <a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a>
+                            
                           
                         </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input.</td>
+			<td>0..n</td>
+                        <td property="rdfs:comment">This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1872,38 +2061,6 @@ For example, a couple becoming engaged is not a CPSV-AP Life Event, getting marr
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Linguistic System"><a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">Linguistic System</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Description</dt><dd>A system of signs, symbols, sounds, gestures, or rules used in communication.</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		    
-                    <dd>No properties have been defined for this entity.</dd>
-                    
-                  </dl>
-                </div>
-		
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Location"><a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Description</dt><dd>An identifiable geographic place or named place.</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		    
-                    <dd>No properties have been defined for this entity.</dd>
-                    
-                  </dl>
-                </div>
-		
-            </div>
-            
-              <div class="region region--no-space-top">
               <h3 class="h3" id="Opening Hours Specification"><a href="http://data.europa.eu/m8g/OpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/OpeningHoursSpecification" data-placement="right">Opening Hours Specification</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -1922,6 +2079,26 @@ schema:validThrough "2017-01-02T09:00Z".
 </dd>
                     
 		    
+                    <dt>Properties</dt>
+		    
+                    <dd>No properties have been defined for this entity.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Organization"><a href="http://www.w3.org/ns/org#Organization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#Organization" data-placement="right">Organization</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.</dd>
+                    
+		     
+		    <dt>Subclass of<dt><dd>
+                        <a href="#Agent">Agent</a>
+		   </dd>
+                    
                     <dt>Properties</dt>
 		    
                     <dd>No properties have been defined for this entity.</dd>
@@ -2016,9 +2193,9 @@ schema:validThrough "2017-01-02T09:00Z".
                         </td>
                         <td>
                           
-			    
-			    <a href="#Linguistic System" data-placement="right">Linguistic System</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
+                            
                           
                         </td>
 			<td>0..*</td>
@@ -2183,7 +2360,11 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
 
 This definition is consistent with the more detailed definition of a "public sector body" as given in the PSI Directive: "the State, regional or local authorities, bodies governed by public law and associations formed by one or several such authorities or one or several such bodies governed by public law". It further defines a body governed by public law as any body "(a) established for the specific purpose of meeting needs in the general interest, not having an industrial or commercial character; and (b) having legal personality; and (c) financed, for the most part by the State, or regional or local authorities, or other bodies governed by public law; or subject to management supervision by those bodies; or having an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional or local authorities or by other bodies governed by public law".</dd>
                     
-		    
+		     
+		    <dt>Subclass of<dt><dd>
+                        <a href="#Organization">Organization</a>
+		   </dd>
+                    
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
@@ -2237,9 +2418,9 @@ This definition is consistent with the more detailed definition of a "public sec
                         </td>
                         <td>
                           
-			    
-			    <a href="#Location" data-placement="right">Location</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
+                            
                           
                         </td>
 			<td>1..*</td>
@@ -2275,6 +2456,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                     <dd>For this entity the following properties are defined:
                       <a href="#Public%20Service%3Adescription">description</a>, 
                       <a href="#Public%20Service%3Afollows">follows</a>, 
+                      <a href="#Public%20Service%3Afunctions%20of%20government">functions of government</a>, 
                       <a href="#Public%20Service%3Ahas%20channel">has channel</a>, 
                       <a href="#Public%20Service%3Ahas%20competent%20authority">has competent authority</a>, 
                       <a href="#Public%20Service%3Ahas%20contact%20point">has contact point</a>, 
@@ -2282,7 +2464,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                       <a href="#Public%20Service%3Ahas%20input">has input</a>, 
                       <a href="#Public%20Service%3Ahas%20legal%20resource">has legal resource</a>, 
                       <a href="#Public%20Service%3Ahas%20participation">has participation</a>, 
-                      <a href="#Public%20Service%3Ahold%20requirement">hold requirement</a>, 
+                      <a href="#Public%20Service%3Aholds%20requirement">holds requirement</a>, 
                       <a href="#Public%20Service%3Aidentifier">identifier</a>, 
                       <a href="#Public%20Service%3Ais%20classified%20by">is classified by</a>, 
                       <a href="#Public%20Service%3Ais%20described%20at">is described at</a>, 
@@ -2297,8 +2479,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                       <a href="#Public%20Service%3Asector">sector</a>, 
                       <a href="#Public%20Service%3Aspatial">spatial</a>, 
                       <a href="#Public%20Service%3Astatus">status</a>, 
-                      <a href="#Public%20Service%3Athematic%20area">thematic area</a>, 
-                      <a href="#Public%20Service%3Atype">type</a>.</dd>
+                      <a href="#Public%20Service%3Athematic%20area">thematic area</a>.</dd>
                     
                   </dl>
                 </div>
@@ -2355,6 +2536,26 @@ behalf, to businesses, citizens or others public administrations.</dd>
 			<td>0..*</td>
                         <td property="rdfs:comment">The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</td>
                         <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Public%20Service%3Afunctions%20of%20government" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
+                            functions of government</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/main-activity">COFOG main activity</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
                     
@@ -2511,11 +2712,11 @@ thereof&quot;.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Ahold%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/holdsRequirement">
+                      <tr id="Public%20Service%3Aholds%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/holdsRequirement">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/holdsRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/holdsRequirement" data-placement="right">
-                            hold requirement</a>
+                            holds requirement</a>
                           </code>
                         </td>
                         <td>
@@ -2641,9 +2842,9 @@ Public Services may be associated with a particular Event and, likewise, the sam
                         </td>
                         <td>
                           
-			    
-			    <a href="#Linguistic System" data-placement="right">Linguistic System</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
+                            
                           
                         </td>
 			<td>0..*</td>
@@ -2780,7 +2981,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme">Data theme</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
                     
@@ -2793,13 +2994,13 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                         </td>
                         <td>
                           
-			    
-			    <a href="#Location" data-placement="right">Location</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
+                            
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority.</td>
+                        <td property="rdfs:comment"></td>
                         <td property="skos:scopeNote">A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">a URI set</a> that is suitable for this purpose, e.g. Malta is identified by
 http://publications.europa.eu/resource/authority/atu/MLT,
 West Flanders by
@@ -2849,26 +3050,6 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Service%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
-                            type</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
-                            
-                          
-                        </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
                     </tbody>
                   </table>
                 </div>
@@ -2890,6 +3071,7 @@ To illustrate the notion: the European Directive on services in the internal mar
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
+                      <a href="#Requirement%3Afulfils">fulfils</a>, 
                       <a href="#Requirement%3Aidentifier">identifier</a>, 
                       <a href="#Requirement%3Aname">name</a>, 
                       <a href="#Requirement%3Atype">type</a>.</dd>
@@ -2911,6 +3093,26 @@ To illustrate the notion: the European Directive on services in the internal mar
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Requirement%3Afulfils" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/fulfils">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/fulfils" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/fulfils" data-placement="right">
+                            fulfils</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Rule" data-placement="right">Rule</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">This property links a Requirement to the Rules that the requiremens fulfils. </td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Requirement%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
                         <td>
@@ -2995,7 +3197,6 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                     <dd>For this entity the following properties are defined:
                       <a href="#Rule%3Adescription">description</a>, 
                       <a href="#Rule%3Aidentifier">identifier</a>, 
-                      <a href="#Rule%3Aimplements">implements</a>, 
                       <a href="#Rule%3Alanguage">language</a>, 
                       <a href="#Rule%3Aname">name</a>, 
                       <a href="#Rule%3Atype">type</a>.</dd>
@@ -3058,27 +3259,6 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                         <td></td>
                       </tr>
                     
-                      <tr id="Rule%3Aimplements" typeof="rdfs:Property" resource="http://purl.org/vocab/cpsv#implements">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/vocab/cpsv#implements" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#implements" data-placement="right">
-                            implements</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Legal Resource" data-placement="right">Legal Resource</a>
-			    
-                          
-                        </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">The Implements property links a Rule to relevant legislation or policy documents i.e.
-the Legal Resource under which the Rules are being defined.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Rule%3Alanguage" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language">
                         <td>
                           <code property="rdfs:label">
@@ -3088,14 +3268,14 @@ the Legal Resource under which the Rules are being defined.</td>
                         </td>
                         <td>
                           
-			    
-			    <a href="#Linguistic System" data-placement="right">Linguistic System</a>
-			    
+			     
+			    <a href="http://purl.org/dc/terms/LinguisticSystem" data-toggle="tooltip" data-content="http://purl.org/dc/terms/LinguisticSystem" data-placement="right">LinguisticSystem</a>
+                            
                           
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office. </td>
+                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     

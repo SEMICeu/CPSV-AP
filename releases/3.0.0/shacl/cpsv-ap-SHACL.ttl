@@ -1,14 +1,17 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContractShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LegalResourceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#BusinessEventShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ChannelShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ConcessionContractShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EventShape>,
@@ -19,16 +22,14 @@
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ParticipationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicOrganisationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RequirementShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LinguisticSystemShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LocationShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#PublicServiceShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RuleShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CollectionShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ConceptShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DatasetShape>,
     <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AddressShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AgentShape>,
-    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DocumentShape> .
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OrganizationShape>,
+    <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AgentShape> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#AddressShape> a shacl:NodeShape;
   shacl:closed false;
@@ -131,7 +132,12 @@
     shacl:description "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
     shacl:maxCount 1;
     shacl:name "availability restriction"@en;
-    shacl:path <http://data.europa.eu/m8g/hoursAvailable>
+    shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "This property represents a free text description of the Channel, for example to describe conditiions when to use it."@en;
+    shacl:name "description"@en;
+    shacl:path dc:description
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
     shacl:description """In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be
@@ -151,7 +157,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "opening hours"@en;
     shacl:path <http://data.europa.eu/m8g/openingHours>
   ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:class org:Organization;
     shacl:description "This property indicates the owner of a specific Channel through which a Public Service is being delivered."@en;
     shacl:name "owned by"@en;
     shacl:path <http://data.europa.eu/m8g/ownedBy>
@@ -184,16 +190,58 @@ required for an online channel, whereas a physical signature may be required for
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ConcessionContractShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "This property represents a free text description of the Concession Contract."@en;
+    shacl:minCount 1;
+    shacl:name "description"@en;
+    shacl:path dc:description
+  ], [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description """This property links a Concession Contract to relevant legislation or policy documents i.e.
+the Legal Resource under which the Concession Contracts are being defined."""@en;
+    shacl:name "established under"@en;
+    shacl:path <http://data.europa.eu/m8g/establishedUnder>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "This property links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service"@en;
+    shacl:minCount 1;
+    shacl:name "has contracting authority"@en;
+    shacl:path <http://data.europa.eu/m8g/hasContractingAuthority>
+  ], [
+    shacl:class org:Organization;
+    shacl:description "This property links a Concession Contract with the Economic Operator in charge for the provision and the management of public services."@en;
+    shacl:minCount 1;
+    shacl:name "has economic operator"@en;
+    shacl:path <http://data.europa.eu/m8g/hasEconomicOperator>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "This property represents an Identifier for the Concession Contract."@en;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "This property represents the Name of the Concession Contract."@en;
+    shacl:minCount 1;
+    shacl:name "name"@en;
+    shacl:path dc:title
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/ConcessionContract> .
+
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
     shacl:description "This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
     shacl:name "availability restriction"@en;
-    shacl:path <http://data.europa.eu/m8g/hoursAvailable>
+    shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
     shacl:class foaf:Document;
-    shacl:description "A contact form that could be used to reach out the contact point"@en;
+    shacl:description "A contact form that could be used to reach out the contact point."@en;
     shacl:name "contact page"@en;
     shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
@@ -208,6 +256,10 @@ required for an online channel, whereas a physical signature may be required for
     shacl:path <http://data.europa.eu/m8g/telephone>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
+
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContractShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/ePO/ontology#Contract> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape> a shacl:NodeShape;
   shacl:closed false;
@@ -236,7 +288,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:name "if accessed through"@en;
     shacl:path <http://data.europa.eu/m8g/ifAccessedThrough>
   ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:class org:Organization;
     shacl:description """This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service."""@en;
     shacl:name "is defined by"@en;
     shacl:path <http://data.europa.eu/m8g/isDefinedBy>
@@ -287,10 +339,6 @@ required for an online channel, whereas a physical signature may be required for
     shacl:path dc:title
   ];
   shacl:targetClass dcat:Dataset .
-
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#DocumentShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass foaf:Document .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#EventShape> a shacl:NodeShape;
   shacl:closed false;
@@ -352,7 +400,7 @@ required for an online channel, whereas a physical signature may be required for
     shacl:path dc:title
   ], [
     shacl:class foaf:Document;
-    shacl:description "This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input."@en;
+    shacl:description "This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence."@en;
     shacl:name "related documentation"@en;
     shacl:path foaf:page
   ], [
@@ -378,17 +426,13 @@ required for an online channel, whereas a physical signature may be required for
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/LifeEvent> .
 
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LinguisticSystemShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:LinguisticSystem .
-
-<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#LocationShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:Location .
-
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OpeningHoursSpecificationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/OpeningHoursSpecification> .
+
+<https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OrganizationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:Organization .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#OutputShape> a shacl:NodeShape;
   shacl:closed false;
@@ -480,6 +524,11 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:name "follows"@en;
     shacl:path <http://purl.org/vocab/cpsv#follows>
   ], [
+    shacl:class skos:Concept;
+    shacl:description "This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en;
+    shacl:name "functions of government"@en;
+    shacl:path dc:type
+  ], [
     shacl:class <http://data.europa.eu/m8g/Channel>;
     shacl:description "This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."@en;
     shacl:name "has channel"@en;
@@ -531,7 +580,7 @@ thereof\"."""@en;
   ], [
     shacl:class <http://data.europa.eu/m8g/Requirement>;
     shacl:description "Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en;
-    shacl:name "hold requirement"@en;
+    shacl:name "holds requirement"@en;
     shacl:path <http://data.europa.eu/m8g/holdsRequirement>
   ], [
     shacl:datatype rdf:langString;
@@ -600,7 +649,6 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:path <http://data.europa.eu/m8g/sector>
   ], [
     shacl:class dc:Location;
-    shacl:description "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en;
     shacl:name "spatial"@en;
     shacl:path dc:spatial
   ], [
@@ -614,17 +662,17 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en;
     shacl:name "thematic area"@en;
     shacl:path <http://data.europa.eu/m8g/thematicArea>
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en;
-    shacl:name "type"@en;
-    shacl:path dc:type
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#RequirementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://purl.org/vocab/cpsv#Rule>;
+    shacl:description "This property links a Requirement to the Rules that the requiremens fulfils. "@en;
+    shacl:name "fulfils"@en;
+    shacl:path <http://data.europa.eu/m8g/fulfils>
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "Unambiguous reference to a Requirement."@en;
     shacl:maxCount 1;
@@ -660,12 +708,6 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
-  ], [
-    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description """The Implements property links a Rule to relevant legislation or policy documents i.e.
-the Legal Resource under which the Rules are being defined."""@en;
-    shacl:name "implements"@en;
-    shacl:path <http://purl.org/vocab/cpsv#implements>
   ], [
     shacl:class dc:LinguisticSystem;
     shacl:description "This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;

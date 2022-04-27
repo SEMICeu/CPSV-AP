@@ -78,8 +78,13 @@
     "BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
     "Channel": "http://data.europa.eu/m8g/Channel",
     "Channel.availabilityRestriction": {
-      "@id": "http://data.europa.eu/m8g/hoursAvailable",
+      "@id": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
       "@type": "@id"
+    },
+    "Channel.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Channel.hasInput": {
       "@container": "@set",
@@ -115,10 +120,40 @@
       "@type": "@id"
     },
     "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ConcessionContract": "http://data.europa.eu/m8g/ConcessionContract",
+    "ConcessionContract.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ConcessionContract.establishedUnder": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/establishedUnder",
+      "@type": "@id"
+    },
+    "ConcessionContract.hasContractingAuthority": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasContractingAuthority",
+      "@type": "@id"
+    },
+    "ConcessionContract.hasEconomicOperator": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasEconomicOperator",
+      "@type": "@id"
+    },
+    "ConcessionContract.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ConcessionContract.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
     "ContactPoint.availabilityRestriction": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hoursAvailable",
+      "@id": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
       "@type": "@id"
     },
     "ContactPoint.contactPage": {
@@ -136,6 +171,7 @@
       "@id": "http://data.europa.eu/m8g/telephone",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "Contract": "http://data.europa.eu/ePO/ontology#Contract",
     "Cost": "http://data.europa.eu/m8g/Cost",
     "Cost.currency": {
       "@id": "http://data.europa.eu/m8g/currency",
@@ -193,7 +229,6 @@
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Document": "http://xmlns.com/foaf/0.1/Document",
     "Event": "http://data.europa.eu/m8g/Event",
     "Event.description": {
       "@container": "@set",
@@ -255,9 +290,8 @@
       "@type": "@id"
     },
     "LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
-    "LinguisticSystem": "http://purl.org/dc/terms/LinguisticSystem",
-    "Location": "http://purl.org/dc/terms/Location",
     "OpeningHoursSpecification": "http://data.europa.eu/m8g/OpeningHoursSpecification",
+    "Organization": "http://www.w3.org/ns/org#Organization",
     "Output": "http://data.europa.eu/m8g/Output",
     "Output.description": {
       "@container": "@set",
@@ -319,6 +353,11 @@
       "@id": "http://purl.org/vocab/cpsv#follows",
       "@type": "@id"
     },
+    "PublicService.functionsOfGovernment": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
     "PublicService.hasChannel": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasChannel",
@@ -354,7 +393,7 @@
       "@id": "http://data.europa.eu/m8g/hasParticipation",
       "@type": "@id"
     },
-    "PublicService.holdRequirement": {
+    "PublicService.holdsRequirement": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/holdsRequirement",
       "@type": "@id"
@@ -431,12 +470,12 @@
       "@id": "http://data.europa.eu/m8g/thematicArea",
       "@type": "@id"
     },
-    "PublicService.type": {
+    "Requirement": "http://data.europa.eu/m8g/Requirement",
+    "Requirement.fulfils": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://data.europa.eu/m8g/fulfils",
       "@type": "@id"
     },
-    "Requirement": "http://data.europa.eu/m8g/Requirement",
     "Requirement.identifier": {
       "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -460,11 +499,6 @@
     "Rule.identifier": {
       "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Rule.implements": {
-      "@container": "@set",
-      "@id": "http://purl.org/vocab/cpsv#implements",
-      "@type": "@id"
     },
     "Rule.language": {
       "@container": "@set",
