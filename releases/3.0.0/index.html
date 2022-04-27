@@ -64,7 +64,7 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>Working Draft</dd>
-              <dt>Published at</dt><dd>2022-03-02</dd>
+              <dt>Published at</dt><dd>2022-05-03</dd>
               <dt>This version</dt><dd><a href="https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0">https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0</a></dd>
               
               
@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/a89d8958ed10e40a4b1b40abd05d58a2e20c1c5f/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/a89d8958ed10e40a4b1b40abd05d58a2e20c1c5f/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cded642a741ae857e49b2fbe2aca243ba88e5d4c/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cded642a741ae857e49b2fbe2aca243ba88e5d4c/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -251,7 +251,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This specification has the status of Working Draft published on 2022-03-02.
+                  This specification has the status of Working Draft published on 2022-05-03.
 	        </p>
                 
               </section>
@@ -665,7 +665,7 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address.</td>
+                        <td property="rdfs:comment">An Address related to an Agent. Asserting the address relationship implies that the Agent has an Address.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -685,7 +685,7 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Agent.</td>
+                        <td property="rdfs:comment">An Identifier for the Agent.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -705,7 +705,7 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the Name of the Agent.</td>
+                        <td property="rdfs:comment">The Name of the Agent.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -725,8 +725,7 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.
-</td>
+                        <td property="rdfs:comment">It links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -811,7 +810,7 @@ In other words, a Business Event groups together a number of public services tha
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
+                        <td property="rdfs:comment">It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -831,7 +830,7 @@ In other words, a Business Event groups together a number of public services tha
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a free text description of the Channel, for example to describe conditiions when to use it.</td>
+                        <td property="rdfs:comment">A free text description of the Channel, for example to describe conditiions when to use it.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -851,8 +850,7 @@ In other words, a Business Event groups together a number of public services tha
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be
-required for an online channel, whereas a physical signature may be required for a face to face service provision.</td>
+                        <td property="rdfs:comment">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -872,7 +870,7 @@ required for an online channel, whereas a physical signature may be required for
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Channel.</td>
+                        <td property="rdfs:comment">An Identifier for the Channel.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -892,7 +890,7 @@ required for an online channel, whereas a physical signature may be required for
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the normal opening hours of a channel.</td>
+                        <td property="rdfs:comment">The normal opening hours of a channel.</td>
                         <td property="skos:scopeNote">The value should follow the flexible format defined for schema.org's opening hours property.
 Following that structure, days of the week are represented by two letter codes (Mo,Tu, We, Th, Fr, Sa, Su).  Lists should be comma separated (for example: Mo, We, Fr) and periods separated by a hyphen (for example: Mo-Fr).
 
@@ -915,7 +913,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property indicates the owner of a specific Channel through which a Public Service is being delivered.</td>
+                        <td property="rdfs:comment">The owner of a specific Channel through which a Public Service is being delivered.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -935,8 +933,8 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. </td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The (estimated) time needed for executing a Public Service which may depend on the Channel chosen.</td>
+                        <td property="skos:scopeNote">The actual information is provided using the ISO8601 syntax for durations. </td>
                         <td></td>
                       </tr>
                     
@@ -955,7 +953,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents the type of Channel as defined in a controlled vocabulary.</td>
+                        <td property="rdfs:comment">Tthe type of Channel as defined in a controlled vocabulary.</td>
                         <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/snb/com-channel/25831c2">Europass channel type</a> Authority Table of the Publications Office</td>
                         <td></td>
                       </tr>
@@ -1011,7 +1009,7 @@ If it is appropriate to add opening hours then this follows the day so if a phon
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Member property, as defined in SKOS, allows to indicate the Concepts that are part of the Collection.</td>
+                        <td property="rdfs:comment">It indicates the Concepts that are part of the Collection.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1026,9 +1024,9 @@ If it is appropriate to add opening hours then this follows the day so if a phon
               <h3 class="h3" id="Concept"><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Concept</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitely defined in the CPSV-AP.
+                    <dt>Description</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitly defined in the CPSV-AP.
 
-In this context the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition ...) we refer to SKOS.
+In this context, the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition ...) we refer to SKOS.
 
 The Concept may or may not belong to (member) a certain Collection.</dd>
                     
@@ -1098,7 +1096,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents a free text description of the Concession Contract.</td>
+                        <td property="rdfs:comment">A free text description of the Concession Contract.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1118,7 +1116,7 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links a Concession Contract to relevant legislation or policy documents i.e.
+                        <td property="rdfs:comment">It links a Concession Contract to relevant legislation or policy documents i.e.
 the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -1139,7 +1137,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service</td>
+                        <td property="rdfs:comment">It links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1159,7 +1157,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property links a Concession Contract with the Economic Operator in charge for the provision and the management of public services.</td>
+                        <td property="rdfs:comment">It links a Concession Contract with the Economic Operator in charge for the provision and the management of public services.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1179,7 +1177,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Concession Contract.</td>
+                        <td property="rdfs:comment">An Identifier for the Concession Contract.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1199,7 +1197,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the Name of the Concession Contract.</td>
+                        <td property="rdfs:comment">The Name of the Concession Contract.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1260,7 +1258,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
+                        <td property="rdfs:comment">It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1300,7 +1298,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">the email of the ContactPoint</td>
+                        <td property="rdfs:comment">The email address of the ContactPoint</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1320,7 +1318,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">the telephone of the ContactPoint</td>
+                        <td property="rdfs:comment">The telephone number of the ContactPoint</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1397,7 +1395,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed.</td>
+                        <td property="rdfs:comment">The currency in which the Cost needs to be paid and the value of the Cost is expressed.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary 
 <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/currency">Currency</a> Authority Table of Publications Office</td>
                         <td></td>
@@ -1418,7 +1416,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a free text description of the Cost.</td>
+                        <td property="rdfs:comment">A free text description of the Cost.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1438,7 +1436,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Cost.</td>
+                        <td property="rdfs:comment">An Identifier for the Cost.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1478,7 +1476,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</td>
+                        <td property="rdfs:comment">It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1498,7 +1496,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents a numeric value indicating the amount of the Cost.</td>
+                        <td property="rdfs:comment">A numeric value indicating the amount of the Cost.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1559,7 +1557,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</td>
+                        <td property="rdfs:comment">A free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1579,7 +1577,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The has part property links a Public Service Dataset to the Public Service.</td>
+                        <td property="rdfs:comment">It links a Public Service Dataset to the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1599,7 +1597,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</td>
+                        <td property="rdfs:comment">The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1619,7 +1617,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..n</td>
-                        <td property="rdfs:comment">This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.</td>
+                        <td property="rdfs:comment">A web page that provides access to the Dataset, its Distributions and/or additional information.</td>
                         <td property="skos:scopeNote">It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator.</td>
                         <td></td>
                       </tr>
@@ -1639,7 +1637,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents the Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</td>
+                        <td property="rdfs:comment">The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1659,7 +1657,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property contains a name given to the Dataset.</td>
+                        <td property="rdfs:comment">A name given to the Dataset.</td>
                         <td property="skos:scopeNote">This property can be repeated for parallel language versions of the name.</td>
                         <td></td>
                       </tr>
@@ -1722,8 +1720,8 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">A free text description of the Event.</td>
+                        <td property="skos:scopeNote">The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description.</td>
                         <td></td>
                       </tr>
                     
@@ -1742,7 +1740,7 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Event.</td>
+                        <td property="rdfs:comment">An Identifier for the Event.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1762,7 +1760,7 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the Name (or title) of the Event.</td>
+                        <td property="rdfs:comment">The Name (or title) of the Event.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1782,7 +1780,7 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links an event directly to a public service that is related to it.</td>
+                        <td property="rdfs:comment">It links an event directly to a public service that is related to it.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1802,7 +1800,7 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</td>
+                        <td property="rdfs:comment">It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1869,7 +1867,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a free text Description of the piece of Evidence.</td>
+                        <td property="rdfs:comment">A free text Description of the piece of Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1889,7 +1887,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the piece of Evidence.</td>
+                        <td property="rdfs:comment">An Identifier for the piece of Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1909,7 +1907,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">Indicates the language(s) in which the Evidence must be provided.</td>
+                        <td property="rdfs:comment">The language(s) in which the Evidence must be provided.</td>
                         <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
@@ -1929,7 +1927,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the official Name of the piece of Evidence.</td>
+                        <td property="rdfs:comment">The official Name of the piece of Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1949,7 +1947,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..n</td>
-                        <td property="rdfs:comment">This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
+                        <td property="rdfs:comment">The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1969,7 +1967,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">This property represents the type of Evidence as described in a controlled vocabulary.</td>
+                        <td property="rdfs:comment">The type of Evidence as described in a controlled vocabulary.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2027,7 +2025,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described.</td>
+                        <td property="rdfs:comment">Another instance of the Legal Resource class that is related to the particular Legal Resource being described.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2042,7 +2040,7 @@ In some cases, the Output of one service will be Evidence for another service. S
               <h3 class="h3" id="Life Event"><a href="http://data.europa.eu/m8g/LifeEvent" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/LifeEvent" data-placement="right">Life Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>The Life Event class represents an important event or situations in a citizen&#39;s life where public services may be required. Note the scope: an individual will encounter any number of &#39;events&#39; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related.
+                    <dt>Description</dt><dd>The Life Event class represents an important event or situations in a citizen&#39;s life where public services may be required. Note the scope: an individual will encounter any number of &#39;events&#39; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event to which a Public Service is related.
 
 For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.</dd>
                     
@@ -2066,14 +2064,14 @@ For example, a couple becoming engaged is not a CPSV-AP Life Event, getting marr
                   <dl>
                     <dt>Description</dt><dd>An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays.</dd>
                     
-                    <dt>Usage</dt><dd>This class is aligned to Schema.org OpeningHoursSpecification class
+                    <dt>Usage</dt><dd>This class is aligned to Schema.org OpeningHoursSpecification class.
 
 The Opening Hours Specification class can be used to provide details of exceptional circumstances, such as being closed on public holidays, which is encoded (in Turtle), thus:
-ex:PublicHolidayClosed a schema:OpeningHoursSpecification;
+ex:PublicHolidayClosed a cv:OpeningHoursSpecification;
 schema:dayOfWeek <http://schema.org/PublicHoliday>.
 
 Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties, for example:
-ex:ChristmasClosed a schema:OpeningHoursSpecification;
+ex:ChristmasClosed a cv:OpeningHoursSpecification;
 schema:validFrom "2016-12-24T012:00Z";
 schema:validThrough "2017-01-02T09:00Z".
 </dd>
@@ -2159,7 +2157,7 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a free text Description of the Output.</td>
+                        <td property="rdfs:comment">A free text Description of the Output.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2179,7 +2177,7 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Output.</td>
+                        <td property="rdfs:comment">An Identifier for the Output.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2199,7 +2197,7 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
+                        <td property="rdfs:comment">The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
@@ -2219,7 +2217,7 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the official Name of the Output.</td>
+                        <td property="rdfs:comment">The official Name of the Output.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2239,7 +2237,7 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the type of Output as defined in a controlled vocabulary.</td>
+                        <td property="rdfs:comment">The type of Output as defined in a controlled vocabulary.</td>
                         <td property="skos:scopeNote">Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit</td>
                         <td></td>
                       </tr>
@@ -2318,7 +2316,7 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Participation.</td>
+                        <td property="rdfs:comment">An Identifier for the Participation.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2338,7 +2336,7 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">Provides the role played. This should be provided using a controlled vocabulary. Since 
+                        <td property="rdfs:comment">It provides the role played. This should be provided using a controlled vocabulary. Since 
 this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
@@ -2404,7 +2402,7 @@ This definition is consistent with the more detailed definition of a "public sec
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</td>
+                        <td property="rdfs:comment">The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</td>
                         <td property="skos:scopeNote">Refers to the official or legal name of a Public Organization. An organization may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.</td>
                         <td></td>
                       </tr>
@@ -2514,8 +2512,8 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">A free text Description of the Public Service.</td>
+                        <td property="skos:scopeNote">The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information.</td>
                         <td></td>
                       </tr>
                     
@@ -2534,7 +2532,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</td>
+                        <td property="rdfs:comment">It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2554,7 +2552,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
+                        <td property="rdfs:comment">The functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/main-activity">COFOG main activity</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
@@ -2574,7 +2572,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office.</td>
+                        <td property="rdfs:comment">It links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2594,7 +2592,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property links a Public Service to a Public Organization, which is the responsible
+                        <td property="rdfs:comment">It links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
 Organization provides the public service directly or outsources it is not relevant. The
 Public Organization that is the Competent Authority of the service is the one that is
@@ -2627,7 +2625,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. </td>
+                        <td property="rdfs:comment">A contact point for the service is almost always helpful. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. </td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2647,7 +2645,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</td>
+                        <td property="rdfs:comment">It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2667,7 +2665,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel.</td>
+                        <td property="rdfs:comment">It links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2687,7 +2685,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.</td>
+                        <td property="rdfs:comment">It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2707,7 +2705,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
+                        <td property="rdfs:comment">It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2727,7 +2725,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</td>
+                        <td property="rdfs:comment">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2747,7 +2745,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents a formally-issued Identifier for the Public Service.</td>
+                        <td property="rdfs:comment">A formally-issued Identifier for the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2767,7 +2765,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Is Classified By property allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</td>
+                        <td property="rdfs:comment">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2787,7 +2785,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Is Described At property links a Public Service to the Public Service Dataset(s) in which it is being described.</td>
+                        <td property="rdfs:comment">It links a Public Service to the Public Service Dataset(s) in which it is being described.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2807,8 +2805,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links the Public Service to the Event class. Several
-Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. </td>
+                        <td property="rdfs:comment">It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. </td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2828,7 +2825,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a keyword, term or phrase to describe the Public Service.</td>
+                        <td property="rdfs:comment">A keyword, term or phrase to describe the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2848,7 +2845,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</td>
+                        <td property="rdfs:comment">The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</td>
                         <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office</td>
                         <td></td>
                       </tr>
@@ -2868,7 +2865,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the official Name of the Public Service.</td>
+                        <td property="rdfs:comment">The official Name of the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2888,7 +2885,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. </td>
+                        <td property="rdfs:comment">The (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. </td>
                         <td property="skos:scopeNote">Some examples are provided below:
 Duration Syntax - Syntax
 5 years - P5Y
@@ -2920,8 +2917,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Produces property links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service. Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.</td>
+                        <td property="skos:scopeNote">Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.</td>
                         <td></td>
                       </tr>
                     
@@ -2940,7 +2937,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents a Public Service related to the particular instance of the Public Service class.</td>
+                        <td property="rdfs:comment">A Public Service related to the particular instance of the Public Service class.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2980,7 +2977,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</td>
+                        <td property="rdfs:comment">The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme">Data theme</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
@@ -3000,7 +2997,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority.</td>
                         <td property="skos:scopeNote">A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">a URI set</a> that is suitable for this purpose, e.g. Malta is identified by
 http://publications.europa.eu/resource/authority/atu/MLT,
 West Flanders by
@@ -3045,7 +3042,7 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...</td>
+                        <td property="rdfs:comment">The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3109,7 +3106,7 @@ To illustrate the notion: the European Directive on services in the internal mar
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property links a Requirement to the Rules that the requiremens fulfils. </td>
+                        <td property="rdfs:comment">The Rules that the requiremens fulfils. </td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3234,7 +3231,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents a free text Description of the Rule.</td>
+                        <td property="rdfs:comment">A free text Description of the Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3254,7 +3251,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">This property represents an Identifier for the Rule.</td>
+                        <td property="rdfs:comment">An Identifier for the Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3274,7 +3271,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
+                        <td property="rdfs:comment">The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
@@ -3294,7 +3291,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">This property represents the Name of the Rule.</td>
+                        <td property="rdfs:comment">The Name of the Rule.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>

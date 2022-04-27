@@ -95,27 +95,26 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en;
+    shacl:description "An Address related to an Agent. Asserting the address relationship implies that the Agent has an Address."@en;
     shacl:maxCount 1;
     shacl:name "address"@en;
     shacl:path <http://www.w3.org/ns/locn#address>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Agent."@en;
+    shacl:description "An Identifier for the Agent."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the Name of the Agent."@en;
+    shacl:description "The Name of the Agent."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
   ], [
     shacl:class <http://data.europa.eu/m8g/Participation>;
-    shacl:description """This property links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.
-"""@en;
+    shacl:description "It links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en;
     shacl:name "plays role"@en;
     shacl:path <http://data.europa.eu/m8g/playsRole>
   ];
@@ -129,47 +128,46 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
-    shacl:description "This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
+    shacl:description "It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
     shacl:maxCount 1;
     shacl:name "availability restriction"@en;
     shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text description of the Channel, for example to describe conditiions when to use it."@en;
+    shacl:description "A free text description of the Channel, for example to describe conditiions when to use it."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
-    shacl:description """In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be
-required for an online channel, whereas a physical signature may be required for a face to face service provision."""@en;
+    shacl:description """In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision."""@en;
     shacl:name "has input"@en;
     shacl:path <http://purl.org/vocab/cpsv#hasInput>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Channel."@en;
+    shacl:description "An Identifier for the Channel."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the normal opening hours of a channel."@en;
+    shacl:description "The normal opening hours of a channel."@en;
     shacl:name "opening hours"@en;
     shacl:path <http://data.europa.eu/m8g/openingHours>
   ], [
     shacl:class org:Organization;
-    shacl:description "This property indicates the owner of a specific Channel through which a Public Service is being delivered."@en;
+    shacl:description "The owner of a specific Channel through which a Public Service is being delivered."@en;
     shacl:name "owned by"@en;
     shacl:path <http://data.europa.eu/m8g/ownedBy>
   ], [
     shacl:datatype xsd:duration;
-    shacl:description "The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. "@en;
+    shacl:description "The (estimated) time needed for executing a Public Service which may depend on the Channel chosen."@en;
     shacl:maxCount 1;
     shacl:name "processing time"@en;
     shacl:path <http://data.europa.eu/m8g/processingTime>
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the type of Channel as defined in a controlled vocabulary."@en;
+    shacl:description "Tthe type of Channel as defined in a controlled vocabulary."@en;
     shacl:maxCount 1;
     shacl:name "type"@en;
     shacl:path dc:type
@@ -180,7 +178,7 @@ required for an online channel, whereas a physical signature may be required for
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
-    shacl:description "The Member property, as defined in SKOS, allows to indicate the Concepts that are part of the Collection."@en;
+    shacl:description "It indicates the Concepts that are part of the Collection."@en;
     shacl:name "member"@en;
     shacl:path skos:member
   ];
@@ -194,38 +192,38 @@ required for an online channel, whereas a physical signature may be required for
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text description of the Concession Contract."@en;
+    shacl:description "A free text description of the Concession Contract."@en;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description """This property links a Concession Contract to relevant legislation or policy documents i.e.
+    shacl:description """It links a Concession Contract to relevant legislation or policy documents i.e.
 the Legal Resource under which the Concession Contracts are being defined."""@en;
     shacl:name "established under"@en;
     shacl:path <http://data.europa.eu/m8g/establishedUnder>
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "This property links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service"@en;
+    shacl:description "It links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service"@en;
     shacl:minCount 1;
     shacl:name "has contracting authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasContractingAuthority>
   ], [
     shacl:class org:Organization;
-    shacl:description "This property links a Concession Contract with the Economic Operator in charge for the provision and the management of public services."@en;
+    shacl:description "It links a Concession Contract with the Economic Operator in charge for the provision and the management of public services."@en;
     shacl:minCount 1;
     shacl:name "has economic operator"@en;
     shacl:path <http://data.europa.eu/m8g/hasEconomicOperator>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Concession Contract."@en;
+    shacl:description "An Identifier for the Concession Contract."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the Name of the Concession Contract."@en;
+    shacl:description "The Name of the Concession Contract."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
@@ -236,7 +234,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
-    shacl:description "This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en;
+    shacl:description "It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information."@en;
     shacl:name "availability restriction"@en;
     shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
@@ -246,12 +244,12 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "the email of the ContactPoint"@en;
+    shacl:description "The email address of the ContactPoint"@en;
     shacl:name "has email"@en;
     shacl:path <http://data.europa.eu/m8g/email>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "the telephone of the ContactPoint"@en;
+    shacl:description "The telephone number of the ContactPoint"@en;
     shacl:name "has telephone"@en;
     shacl:path <http://data.europa.eu/m8g/telephone>
   ];
@@ -265,18 +263,18 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
-    shacl:description "This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed."@en;
+    shacl:description "The currency in which the Cost needs to be paid and the value of the Cost is expressed."@en;
     shacl:maxCount 1;
     shacl:name "currency"@en;
     shacl:path <http://data.europa.eu/m8g/currency>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text description of the Cost."@en;
+    shacl:description "A free text description of the Cost."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Cost."@en;
+    shacl:description "An Identifier for the Cost."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
@@ -289,12 +287,12 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path <http://data.europa.eu/m8g/ifAccessedThrough>
   ], [
     shacl:class org:Organization;
-    shacl:description """This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service."""@en;
+    shacl:description """It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service."""@en;
     shacl:name "is defined by"@en;
     shacl:path <http://data.europa.eu/m8g/isDefinedBy>
   ], [
     shacl:datatype xsd:double;
-    shacl:description "This property represents a numeric value indicating the amount of the Cost."@en;
+    shacl:description "A numeric value indicating the amount of the Cost."@en;
     shacl:maxCount 1;
     shacl:name "value"@en;
     shacl:path <http://data.europa.eu/m8g/hasValue>
@@ -305,35 +303,35 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en;
+    shacl:description "A free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "The has part property links a Public Service Dataset to the Public Service."@en;
+    shacl:description "It links a Public Service Dataset to the Public Service."@en;
     shacl:name "has part"@en;
     shacl:path dc:hasPart
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
+    shacl:description "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class foaf:Document;
-    shacl:description "This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information."@en;
+    shacl:description "A web page that provides access to the Dataset, its Distributions and/or additional information."@en;
     shacl:name "landing page"@en;
     shacl:path dcat:landingPage
   ], [
     shacl:class foaf:Agent;
-    shacl:description "This property represents the Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available."@en;
+    shacl:description "The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "publisher"@en;
     shacl:path dc:publisher
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property contains a name given to the Dataset."@en;
+    shacl:description "A name given to the Dataset."@en;
     shacl:minCount 1;
     shacl:name "title"@en;
     shacl:path dc:title
@@ -344,30 +342,30 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."@en;
+    shacl:description "A free text description of the Event."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Event."@en;
+    shacl:description "An Identifier for the Event."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the Name (or title) of the Event."@en;
+    shacl:description "The Name (or title) of the Event."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
   ], [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "This property links an event directly to a public service that is related to it."@en;
+    shacl:description "It links an event directly to a public service that is related to it."@en;
     shacl:name "related service"@en;
     shacl:path dc:relation
   ], [
     shacl:class skos:Concept;
-    shacl:description """The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child."""@en;
+    shacl:description """It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child."""@en;
     shacl:name "type"@en;
     shacl:path dc:type
   ];
@@ -377,35 +375,35 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text Description of the piece of Evidence."@en;
+    shacl:description "A free text Description of the piece of Evidence."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the piece of Evidence."@en;
+    shacl:description "An Identifier for the piece of Evidence."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class dc:LinguisticSystem;
-    shacl:description "Indicates the language(s) in which the Evidence must be provided."@en;
+    shacl:description "The language(s) in which the Evidence must be provided."@en;
     shacl:name "language"@en;
     shacl:path dc:language
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the official Name of the piece of Evidence."@en;
+    shacl:description "The official Name of the piece of Evidence."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
   ], [
     shacl:class foaf:Document;
-    shacl:description "This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence."@en;
+    shacl:description "The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence."@en;
     shacl:name "related documentation"@en;
     shacl:path foaf:page
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the type of Evidence as described in a controlled vocabulary."@en;
+    shacl:description "The type of Evidence as described in a controlled vocabulary."@en;
     shacl:maxCount 1;
     shacl:name "type"@en;
     shacl:path dc:type
@@ -416,7 +414,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description "This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en;
+    shacl:description "Another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en;
     shacl:name "related"@en;
     shacl:path dc:relation
   ];
@@ -438,30 +436,30 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text Description of the Output."@en;
+    shacl:description "A free text Description of the Output."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Output."@en;
+    shacl:description "An Identifier for the Output."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class dc:LinguisticSystem;
-    shacl:description "This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
+    shacl:description "The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
     shacl:name "language"@en;
     shacl:path dc:language
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the official Name of the Output."@en;
+    shacl:description "The official Name of the Output."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the type of Output as defined in a controlled vocabulary."@en;
+    shacl:description "The type of Output as defined in a controlled vocabulary."@en;
     shacl:name "type"@en;
     shacl:path dc:type
   ];
@@ -477,14 +475,14 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Participation."@en;
+    shacl:description "An Identifier for the Participation."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class skos:Concept;
-    shacl:description """Provides the role played. This should be provided using a controlled vocabulary. Since 
+    shacl:description """It provides the role played. This should be provided using a controlled vocabulary. Since 
 this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations."""@en;
     shacl:minCount 1;
     shacl:name "role"@en;
@@ -496,7 +494,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
+    shacl:description "The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "preferred label"@en;
@@ -514,28 +512,28 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en;
+    shacl:description "A free text Description of the Public Service."@en;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:class <http://purl.org/vocab/cpsv#Rule>;
-    shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario."@en;
+    shacl:description "It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario."@en;
     shacl:name "follows"@en;
     shacl:path <http://purl.org/vocab/cpsv#follows>
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en;
+    shacl:description "The functions of government to indicate the purpose of a government activity, which the public service is intended for."@en;
     shacl:name "functions of government"@en;
     shacl:path dc:type
   ], [
     shacl:class <http://data.europa.eu/m8g/Channel>;
-    shacl:description "This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."@en;
+    shacl:description "It links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."@en;
     shacl:name "has channel"@en;
     shacl:path <http://data.europa.eu/m8g/hasChannel>
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description """This property links a Public Service to a Public Organization, which is the responsible
+    shacl:description """It links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
 Organization provides the public service directly or outsources it is not relevant. The
 Public Organization that is the Competent Authority of the service is the one that is
@@ -554,87 +552,86 @@ thereof\"."""@en;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ], [
     shacl:class <http://data.europa.eu/m8g/ContactPoint>;
-    shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "@en;
+    shacl:description "A contact point for the service is almost always helpful. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "@en;
     shacl:name "has contact point"@en;
     shacl:path <http://data.europa.eu/m8g/hasContactPoint>
   ], [
     shacl:class <http://data.europa.eu/m8g/Cost>;
-    shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@en;
+    shacl:description "It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@en;
     shacl:name "has cost"@en;
     shacl:path <http://data.europa.eu/m8g/hasCost>
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
-    shacl:description "The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."@en;
+    shacl:description "It links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."@en;
     shacl:name "has input"@en;
     shacl:path <http://purl.org/vocab/cpsv#hasInput>
   ], [
     shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description """The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."""@en;
+    shacl:description """It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."""@en;
     shacl:name "has legal resource"@en;
     shacl:path <http://data.europa.eu/m8g/hasLegalResource>
   ], [
     shacl:class <http://data.europa.eu/m8g/Participation>;
-    shacl:description "This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en;
+    shacl:description "It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en;
     shacl:name "has participation"@en;
     shacl:path <http://data.europa.eu/m8g/hasParticipation>
   ], [
     shacl:class <http://data.europa.eu/m8g/Requirement>;
-    shacl:description "Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en;
+    shacl:description "It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en;
     shacl:name "holds requirement"@en;
     shacl:path <http://data.europa.eu/m8g/holdsRequirement>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a formally-issued Identifier for the Public Service."@en;
+    shacl:description "A formally-issued Identifier for the Public Service."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class skos:Concept;
-    shacl:description "The Is Classified By property allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en;
+    shacl:description "It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en;
     shacl:name "is classified by"@en;
     shacl:path <http://data.europa.eu/m8g/isClassifiedBy>
   ], [
     shacl:class dcat:Dataset;
-    shacl:description "The Is Described At property links a Public Service to the Public Service Dataset(s) in which it is being described."@en;
+    shacl:description "It links a Public Service to the Public Service Dataset(s) in which it is being described."@en;
     shacl:name "is described at"@en;
     shacl:path <http://data.europa.eu/m8g/isDescribedAt>
   ], [
     shacl:class <http://data.europa.eu/m8g/Event>;
-    shacl:description """This property links the Public Service to the Event class. Several
-Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. """@en;
+    shacl:description "It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. "@en;
     shacl:name "is grouped by"@en;
     shacl:path <http://data.europa.eu/m8g/isGroupedBy>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@en;
+    shacl:description "A keyword, term or phrase to describe the Public Service."@en;
     shacl:name "keyword"@en;
     shacl:path dcat:keyword
   ], [
     shacl:class dc:LinguisticSystem;
-    shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."@en;
+    shacl:description "The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."@en;
     shacl:name "language"@en;
     shacl:path dc:language
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the official Name of the Public Service."@en;
+    shacl:description "The official Name of the Public Service."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
   ], [
     shacl:datatype xsd:duration;
-    shacl:description "The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. "@en;
+    shacl:description "The (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. "@en;
     shacl:maxCount 1;
     shacl:name "processing time"@en;
     shacl:path <http://data.europa.eu/m8g/processingTime>
   ], [
     shacl:class <http://data.europa.eu/m8g/Output>;
-    shacl:description "The Produces property links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service. Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service."@en;
+    shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
     shacl:name "produces"@en;
     shacl:path <http://purl.org/vocab/cpsv#produces>
   ], [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "This property represents a Public Service related to the particular instance of the Public Service class."@en;
+    shacl:description "A Public Service related to the particular instance of the Public Service class."@en;
     shacl:name "related"@en;
     shacl:path dc:relation
   ], [
@@ -644,11 +641,12 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:path dc:requires
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary."@en;
+    shacl:description "The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary."@en;
     shacl:name "sector"@en;
     shacl:path <http://data.europa.eu/m8g/sector>
   ], [
     shacl:class dc:Location;
+    shacl:description "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en;
     shacl:name "spatial"@en;
     shacl:path dc:spatial
   ], [
@@ -659,7 +657,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
     shacl:class skos:Concept;
-    shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en;
+    shacl:description "The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en;
     shacl:name "thematic area"@en;
     shacl:path <http://data.europa.eu/m8g/thematicArea>
   ];
@@ -669,7 +667,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
   shacl:closed false;
   shacl:property [
     shacl:class <http://purl.org/vocab/cpsv#Rule>;
-    shacl:description "This property links a Requirement to the Rules that the requiremens fulfils. "@en;
+    shacl:description "The Rules that the requiremens fulfils. "@en;
     shacl:name "fulfils"@en;
     shacl:path <http://data.europa.eu/m8g/fulfils>
   ], [
@@ -697,25 +695,25 @@ Public Services may be associated with a particular Event and, likewise, the sam
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents a free text Description of the Rule."@en;
+    shacl:description "A free text Description of the Rule."@en;
     shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents an Identifier for the Rule."@en;
+    shacl:description "An Identifier for the Rule."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:class dc:LinguisticSystem;
-    shacl:description "This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
+    shacl:description "The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
     shacl:name "language"@en;
     shacl:path dc:language
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "This property represents the Name of the Rule."@en;
+    shacl:description "The Name of the Rule."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title

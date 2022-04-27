@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
+  <xs:element name="Contract" type="ContractType"/>
   <xs:element name="LegalResource" type="LegalResourceType"/>
   <xs:element name="BusinessEvent" type="BusinessEventType"/>
   <xs:element name="Channel" type="ChannelType"/>
+  <xs:element name="ConcessionContract" type="ConcessionContractType"/>
   <xs:element name="ContactPoint" type="ContactPointType"/>
   <xs:element name="Cost" type="CostType"/>
   <xs:element name="Event" type="EventType"/>
@@ -13,16 +15,14 @@
   <xs:element name="Participation" type="ParticipationType"/>
   <xs:element name="PublicOrganization" type="PublicOrganizationType"/>
   <xs:element name="Requirement" type="RequirementType"/>
-  <xs:element name="LinguisticSystem" type="LinguisticSystemType"/>
-  <xs:element name="Location" type="LocationType"/>
   <xs:element name="PublicService" type="PublicServiceType"/>
   <xs:element name="Rule" type="RuleType"/>
   <xs:element name="Collection" type="CollectionType"/>
   <xs:element name="Concept" type="ConceptType"/>
   <xs:element name="Dataset" type="DatasetType"/>
   <xs:element name="Address" type="AddressType"/>
+  <xs:element name="Organization" type="OrganizationType"/>
   <xs:element name="Agent" type="AgentType"/>
-  <xs:element name="Document" type="DocumentType"/>
   <xs:complexType name="langstring">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -38,11 +38,19 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="ContractType">
+    <xs:sequence/>
+    <xs:attribute name="ContractRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Contract ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
   <xs:complexType name="LegalResourceType">
     <xs:sequence>
       <xs:element name="related" ref="LegalResource" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents another instance of the Legal Resource class that is related to the particular Legal Resource being described.</xs:documentation>
+          <xs:documentation xml:lang="en">Another instance of the Legal Resource class that is related to the particular Legal Resource being described.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -64,38 +72,42 @@
     <xs:sequence>
       <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A free text description of the Channel, for example to describe conditiions when to use it.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasInput" ref="Evidence" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be
-required for an online channel, whereas a physical signature may be required for a face to face service provision.</xs:documentation>
+          <xs:documentation xml:lang="en">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Channel.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Channel.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="openingHours" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the normal opening hours of a channel.</xs:documentation>
+          <xs:documentation xml:lang="en">The normal opening hours of a channel.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="ownedBy" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="ownedBy" ref="Organization" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property indicates the owner of a specific Channel through which a Public Service is being delivered.</xs:documentation>
+          <xs:documentation xml:lang="en">The owner of a specific Channel through which a Public Service is being delivered.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="processingTime" type="xs:duration" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The value of this property is the (estimated) time needed for executing a Public Service which may depend on the Channel chosen . The actual information is provided using the ISO8601 syntax for durations. </xs:documentation>
+          <xs:documentation xml:lang="en">The (estimated) time needed for executing a Public Service which may depend on the Channel chosen.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the type of Channel as defined in a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">Tthe type of Channel as defined in a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -105,26 +117,66 @@ required for an online channel, whereas a physical signature may be required for
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
+  <xs:complexType name="ConcessionContractType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A free text description of the Concession Contract.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="establishedUnder" ref="LegalResource" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">It links a Concession Contract to relevant legislation or policy documents i.e.
+the Legal Resource under which the Concession Contracts are being defined.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasContractingAuthority" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">It links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasEconomicOperator" ref="Organization" maxOccurs="unbounded" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">It links a Concession Contract with the Economic Operator in charge for the provision and the management of public services.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An Identifier for the Concession Contract.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Name of the Concession Contract.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ConcessionContractRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ConcessionContract ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
   <xs:complexType name="ContactPointType">
     <xs:sequence>
       <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="contactPage" ref="Document" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="contactPage" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A contact form that could be used to reach out the contact point</xs:documentation>
+          <xs:documentation xml:lang="en">A contact form that could be used to reach out the contact point.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">the email of the ContactPoint</xs:documentation>
+          <xs:documentation xml:lang="en">The email address of the ContactPoint</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">the telephone of the ContactPoint</xs:documentation>
+          <xs:documentation xml:lang="en">The telephone number of the ContactPoint</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -138,17 +190,17 @@ required for an online channel, whereas a physical signature may be required for
     <xs:sequence>
       <xs:element name="currency" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the currency in which the Cost needs to be paid and the value of the Cost is expressed.</xs:documentation>
+          <xs:documentation xml:lang="en">The currency in which the Cost needs to be paid and the value of the Cost is expressed.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text description of the Cost.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text description of the Cost.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Cost.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Cost.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ifAccessedThrough" ref="Channel" maxOccurs="1" minOccurs="0">
@@ -156,14 +208,14 @@ required for an online channel, whereas a physical signature may be required for
           <xs:documentation xml:lang="en">Where the cost varies depending on the channel used, for example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isDefinedBy" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="isDefinedBy" ref="Organization" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="value" type="xs:double" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a numeric value indicating the amount of the Cost.</xs:documentation>
+          <xs:documentation xml:lang="en">A numeric value indicating the amount of the Cost.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -177,27 +229,27 @@ required for an online channel, whereas a physical signature may be required for
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text description of the Event. The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text description of the Event.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Event.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Event.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Name (or title) of the Event.</xs:documentation>
+          <xs:documentation xml:lang="en">The Name (or title) of the Event.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="relatedService" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links an event directly to a public service that is related to it.</xs:documentation>
+          <xs:documentation xml:lang="en">It links an event directly to a public service that is related to it.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</xs:documentation>
+          <xs:documentation xml:lang="en">It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -211,32 +263,32 @@ required for an online channel, whereas a physical signature may be required for
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text Description of the piece of Evidence.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text Description of the piece of Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the piece of Evidence.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the piece of Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Indicates the language(s) in which the Evidence must be provided.</xs:documentation>
+          <xs:documentation xml:lang="en">The language(s) in which the Evidence must be provided.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the official Name of the piece of Evidence.</xs:documentation>
+          <xs:documentation xml:lang="en">The official Name of the piece of Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="relatedDocumentation" ref="Document" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="relatedDocumentation" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input.</xs:documentation>
+          <xs:documentation xml:lang="en">The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the type of Evidence as described in a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">The type of Evidence as described in a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -266,27 +318,27 @@ required for an online channel, whereas a physical signature may be required for
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text Description of the Output.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text Description of the Output.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Output.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Output.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>
+          <xs:documentation xml:lang="en">The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the official Name of the Output.</xs:documentation>
+          <xs:documentation xml:lang="en">The official Name of the Output.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the type of Output as defined in a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">The type of Output as defined in a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -305,12 +357,12 @@ required for an online channel, whereas a physical signature may be required for
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Participation.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Participation.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="role" type="ConceptType" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Provides the role played. This should be provided using a controlled vocabulary. Since 
+          <xs:documentation xml:lang="en">It provides the role played. This should be provided using a controlled vocabulary. Since 
 this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations.</xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -325,10 +377,10 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     <xs:sequence>
       <xs:element name="preferredLabel" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</xs:documentation>
+          <xs:documentation xml:lang="en">The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="spatial" ref="Location" maxOccurs="unbounded" minOccurs="1">
+      <xs:element name="spatial" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="en">A Public Organisation has to be associated to one or multiple locations.</xs:documentation>
         </xs:annotation>
@@ -342,6 +394,11 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   </xs:complexType>
   <xs:complexType name="RequirementType">
     <xs:sequence>
+      <xs:element name="fulfils" ref="Rule" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Rules that the requiremens fulfils. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="en">Unambiguous reference to a Requirement.</xs:documentation>
@@ -364,42 +421,31 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  <xs:complexType name="LinguisticSystemType">
-    <xs:sequence/>
-    <xs:attribute name="LinguisticSystemRef" type="xs:IDREF">
-      <xs:annotation>
-        <xs:documentation xml:lang="en">Reference to LinguisticSystem ID</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
-  <xs:complexType name="LocationType">
-    <xs:sequence/>
-    <xs:attribute name="LocationRef" type="xs:IDREF">
-      <xs:annotation>
-        <xs:documentation xml:lang="en">Reference to Location ID</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
   <xs:complexType name="PublicServiceType">
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text Description of the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="follows" ref="Rule" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="functionsOfGovernment" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The functions of government to indicate the purpose of a government activity, which the public service is intended for.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasChannel" ref="Channel" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office.</xs:documentation>
+          <xs:documentation xml:lang="en">It links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasCompetentAuthority" ref="PublicOrganization" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links a Public Service to a Public Organization, which is the responsible
+          <xs:documentation xml:lang="en">It links a Public Service to a Public Organization, which is the responsible
 Agent for the delivery of the Public Service. Whether the particular Public
 Organization provides the public service directly or outsources it is not relevant. The
 Public Organization that is the Competent Authority of the service is the one that is
@@ -417,83 +463,82 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="hasContactPoint" ref="ContactPoint" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. </xs:documentation>
+          <xs:documentation xml:lang="en">A contact point for the service is almost always helpful. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasCost" ref="Cost" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</xs:documentation>
+          <xs:documentation xml:lang="en">It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasInput" ref="Evidence" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasLegalResource" ref="LegalResource" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.</xs:documentation>
+          <xs:documentation xml:lang="en">It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasParticipation" ref="Participation" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="holdRequirement" ref="Requirement" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="holdsRequirement" ref="Requirement" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a formally-issued Identifier for the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">A formally-issued Identifier for the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isClassifiedBy" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Is Classified By property allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isDescribedAt" ref="Dataset" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Is Described At property links a Public Service to the Public Service Dataset(s) in which it is being described.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to the Public Service Dataset(s) in which it is being described.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isGroupedBy" ref="Event" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links the Public Service to the Event class. Several
-Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. </xs:documentation>
+          <xs:documentation xml:lang="en">It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="keyword" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a keyword, term or phrase to describe the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">A keyword, term or phrase to describe the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</xs:documentation>
+          <xs:documentation xml:lang="en">The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the official Name of the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">The official Name of the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="processingTime" type="xs:duration" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. </xs:documentation>
+          <xs:documentation xml:lang="en">The (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="produces" ref="Output" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Produces property links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service. Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="related" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a Public Service related to the particular instance of the Public Service class.</xs:documentation>
+          <xs:documentation xml:lang="en">A Public Service related to the particular instance of the Public Service class.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="requires" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
@@ -503,10 +548,10 @@ Public Services may be associated with a particular Event and, likewise, the sam
       </xs:element>
       <xs:element name="sector" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="spatial" ref="Location" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="spatial" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority.</xs:documentation>
         </xs:annotation>
@@ -518,12 +563,7 @@ Public Services may be associated with a particular Event and, likewise, the sam
       </xs:element>
       <xs:element name="thematicArea" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="type" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.</xs:documentation>
+          <xs:documentation xml:lang="en">The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -537,28 +577,22 @@ Public Services may be associated with a particular Event and, likewise, the sam
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents a free text Description of the Rule.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text Description of the Rule.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Rule.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Rule.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="implements" ref="LegalResource" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Implements property links a Rule to relevant legislation or policy documents i.e.
-the Legal Resource under which the Rules are being defined.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="language" ref="LinguisticSystem" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>
+          <xs:documentation xml:lang="en">The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Name of the Rule.</xs:documentation>
+          <xs:documentation xml:lang="en">The Name of the Rule.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="1" minOccurs="0">
@@ -577,7 +611,7 @@ the Legal Resource under which the Rules are being defined.</xs:documentation>
     <xs:sequence>
       <xs:element name="member" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Member property, as defined in SKOS, allows to indicate the Concepts that are part of the Collection.</xs:documentation>
+          <xs:documentation xml:lang="en">It indicates the Concepts that are part of the Collection.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -599,32 +633,32 @@ the Legal Resource under which the Rules are being defined.</xs:documentation>
     <xs:sequence>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</xs:documentation>
+          <xs:documentation xml:lang="en">A free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasPart" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The has part property links a Public Service Dataset to the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service Dataset to the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</xs:documentation>
+          <xs:documentation xml:lang="en">The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="landingPage" ref="Document" maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="landingPage" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.</xs:documentation>
+          <xs:documentation xml:lang="en">A web page that provides access to the Dataset, its Distributions and/or additional information.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="publisher" ref="Agent" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</xs:documentation>
+          <xs:documentation xml:lang="en">The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="title" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property contains a name given to the Dataset.</xs:documentation>
+          <xs:documentation xml:lang="en">A name given to the Dataset.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -698,41 +732,40 @@ the Legal Resource under which the Rules are being defined.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
+  <xs:complexType name="OrganizationType">
+    <xs:sequence/>
+    <xs:attribute name="OrganizationRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Organization ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
   <xs:complexType name="AgentType">
     <xs:sequence>
       <xs:element name="address" ref="Address" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Address related to an Agent. Asserting the address relationship implies that the Agent has an Address.</xs:documentation>
+          <xs:documentation xml:lang="en">An Address related to an Agent. Asserting the address relationship implies that the Agent has an Address.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents an Identifier for the Agent.</xs:documentation>
+          <xs:documentation xml:lang="en">An Identifier for the Agent.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property represents the Name of the Agent.</xs:documentation>
+          <xs:documentation xml:lang="en">The Name of the Agent.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="playsRole" ref="Participation" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">This property links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.
-</xs:documentation>
+          <xs:documentation xml:lang="en">It links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
     <xs:attribute name="AgentRef" type="xs:IDREF">
       <xs:annotation>
         <xs:documentation xml:lang="en">Reference to Agent ID</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
-  <xs:complexType name="DocumentType">
-    <xs:sequence/>
-    <xs:attribute name="DocumentRef" type="xs:IDREF">
-      <xs:annotation>
-        <xs:documentation xml:lang="en">Reference to Document ID</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
