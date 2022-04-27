@@ -45,10 +45,6 @@ dct:hasVersion rdf:type owl:AnnotationProperty .
 dct:license rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/status
-dct:status rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
