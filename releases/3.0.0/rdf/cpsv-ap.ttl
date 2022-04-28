@@ -770,11 +770,6 @@ foaf:Agent rdf:type owl:Class ;
 <http://purl.org/adms/status/Completed> rdf:type owl:NamedIndividual .
 
 
-###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:NamedIndividual ;
-                                       dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en .
-
-
 #################################################################
 #    Annotations
 #################################################################
@@ -804,7 +799,6 @@ foaf:Agent rdf:type owl:Class ;
   owl:distinctMembers ( <http://data.europa.eu/m8g/cpsvap>
                         <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>
                         <http://purl.org/adms/assettype/Ontology>
-                        <http://purl.org/dc/terms/identifier>
                       )
 ] .
 
