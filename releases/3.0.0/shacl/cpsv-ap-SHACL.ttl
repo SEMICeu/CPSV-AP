@@ -172,7 +172,7 @@
     shacl:path <http://data.europa.eu/m8g/processingTime>
   ], [
     shacl:class skos:Concept;
-    shacl:description "Tthe type of Channel as defined in a controlled vocabulary."@en;
+    shacl:description "The type of Channel as defined in a controlled vocabulary."@en;
     shacl:maxCount 1;
     shacl:name "type"@en;
     shacl:path dc:type
@@ -209,7 +209,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path <http://data.europa.eu/m8g/establishedUnder>
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "It links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service"@en;
+    shacl:description "It links a Concession Contract with the Contracting Authority which is ultimately responsible for a public service."@en;
     shacl:minCount 1;
     shacl:name "has contracting authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasContractingAuthority>
@@ -249,12 +249,12 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "The email address of the ContactPoint"@en;
+    shacl:description "The email address of the ContactPoint."@en;
     shacl:name "has email"@en;
     shacl:path <http://data.europa.eu/m8g/email>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "The telephone number of the ContactPoint"@en;
+    shacl:description "The telephone number of the ContactPoint."@en;
     shacl:name "has telephone"@en;
     shacl:path <http://data.europa.eu/m8g/telephone>
   ];
