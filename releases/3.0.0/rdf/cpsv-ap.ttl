@@ -75,7 +75,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://data.europa.eu/m8g/contactPage
 cv:contactPage rdf:type owl:ObjectProperty ;
-               rdfs:range <https://xmlns.com/foaf/0.1/Document> ;
+               rdfs:range <http://xmlns.com/foaf/0.1/Document> ;
                rdfs:comment "Cardinality [0..*]. A contact form that could be used to reach out the contact point."@en ;
                rdfs:label "contact page"@en .
 
@@ -217,7 +217,7 @@ cv:thematicArea rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:ObjectProperty ;
-             rdfs:range <https://purl.org/dc/terms/LinguisticSystem> ;
+             rdfs:range <http://purl.org/dc/terms/LinguisticSystem> ;
              vann:usageNote "The recommended controlled vocabularies for this property is the Language Authority Table of the Publications Office (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language)"@en ;
              rdfs:comment "Cardinality [0..n]. Indicates the language(s) in which the Evidence must be provided."@en ,
                           "Cardinality [0..n]. This property represents the language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ,
@@ -249,7 +249,7 @@ dct:requires rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/spatial
 dct:spatial rdf:type owl:ObjectProperty ;
-            rdfs:range <https://purl.org/dc/terms/Location> ;
+            rdfs:range <http://purl.org/dc/terms/Location> ;
             vann:usageNote "A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers URI set (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) that is suitable for this purpose, e.g. Malta is identified by http://publications.europa.eu/resource/authority/atu/MLT, West Flanders by http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. In case the ATU code list is not suitable, NUTS (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts) or LAU (https://ec.europa.eu/eurostat/web/nuts/local-administrative-units), NAL Place (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place) or Geonames (http://www.geonames.org/) are recommended to use, in that order. If those are still not sufficient, we recommend to define your own code list. N.B. The spatial restriction is not meant to be used to describe eligibility or the speed of operation of the service. These aspects will be covered by the Criterion class."@en ,
                            "The value should be a URI from the Administrative Territorial Units (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) Authority Table maintained by the Publications Office."@en ;
             rdfs:comment "Cardinality [0..n]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ,
@@ -302,7 +302,7 @@ adms:status rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/ns/dcat#landingPage
 dcat:landingPage rdf:type owl:ObjectProperty ;
-                 rdfs:range <https://xmlns.com/foaf/0.1/Document> ;
+                 rdfs:range <http://xmlns.com/foaf/0.1/Document> ;
                  vann:usageNote "It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator." ;
                  rdfs:comment "Cardinality [0..n]. This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information."@en ;
                  rdfs:label "landing page"@en .
@@ -317,20 +317,20 @@ locn:address rdf:type owl:ObjectProperty ;
 
 ###  http://xmlns.com/foaf/0.1/page
 foaf:page rdf:type owl:ObjectProperty ;
-          rdfs:range <https://xmlns.com/foaf/0.1/Document> ;
+          rdfs:range <http://xmlns.com/foaf/0.1/Document> ;
           rdfs:comment "Cardinality [0..n]. This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input."@en ;
           rdfs:label "related documentation"@en .
 
 
-###  https://purl.org/dc/terms/hasPart
-<https://purl.org/dc/terms/hasPart> rdf:type owl:ObjectProperty ;
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> rdf:type owl:ObjectProperty ;
                                     rdfs:range cpsv:PublicService ;
                                     rdfs:comment "Cardinality [0..n]. The has part property links a Public Service Dataset to the Public Service."@en ;
                                     rdfs:label "has part"@en .
 
 
-###  https://purl.org/dc/terms/relation
-<https://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty ;
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty ;
                                      rdfs:range eli:LegalResource ,
                                                 cpsv:PublicService ;
                                      rdfs:comment "Cardinality [0..n]. This property represents a Public Service related to the particular instance of the Public Service class."@en ,
@@ -338,8 +338,8 @@ foaf:page rdf:type owl:ObjectProperty ;
                                      rdfs:label "related"@en .
 
 
-###  https://purl.org/dc/terms/type
-<https://purl.org/dc/terms/type> rdf:type owl:ObjectProperty ;
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:ObjectProperty ;
                                  rdfs:range skos:Concept ;
                                  vann:usageNote "Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit"@en ;
                                  rdfs:comment "Cardinality [0..1]. This property represents the type of Evidence as described in a controlled vocabulary."@en ,
@@ -348,7 +348,8 @@ foaf:page rdf:type owl:ObjectProperty ;
                                               "Cardinality [0..n]. This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en ,
                                               "Cardinality [0..n]. This property represents the type of Channel as defined in a controlled vocabulary."@en ,
                                               "Cardinality [0..n]. This property represents the type of Output as defined in a controlled vocabulary.."@en ,
-                                              "Cardinality [0..n]. This property represents the type of Requirement as described in a controlled vocabulary."@en .
+                                              "Cardinality [0..n]. This property represents the type of Requirement as described in a controlled vocabulary."@en ;
+                                 rdfs:label "Type"@en .
 
 
 #################################################################
@@ -535,13 +536,13 @@ locn:thoroughfare rdf:type owl:DatatypeProperty ;
                   rdfs:label "thoroughfare"@en .
 
 
-###  https://purl.org/dc/terms/identifier
-<https://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
                                        rdfs:range rdf:langString .
 
 
-###  https://purl.org/dc/terms/title
-<https://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
                                   rdfs:range rdf:langString ;
                                   vann:usageNote "This property can be repeated for parallel language versions of the name."@en ;
                                   rdfs:comment "Cardinality [1..n]. This property contains a name given to the Dataset."@en ;
@@ -705,7 +706,9 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
 
 
 ###  http://www.w3.org/ns/org#Organization
-org:Organization rdf:type owl:Class .
+org:Organization rdf:type owl:Class ;
+                 rdfs:comment "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"@en ;
+                 rdfs:label "Organization"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -715,15 +718,15 @@ foaf:Agent rdf:type owl:Class ;
            rdfs:label "Agent"@en .
 
 
-###  https://purl.org/dc/terms/LinguisticSystem
-<https://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class ;
+###  http://purl.org/dc/terms/LinguisticSystem
+<http://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class ;
                                              rdfs:comment "Optional class. A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
                                              rdfs:isDefinedBy dct: ;
                                              rdfs:label "Linguistic System"@en .
 
 
-###  https://purl.org/dc/terms/Location
-<https://purl.org/dc/terms/Location> rdf:type owl:Class ;
+###  http://purl.org/dc/terms/Location
+<http://purl.org/dc/terms/Location> rdf:type owl:Class ;
                                      rdfs:comment "Optional class. An identifiable geographic place or named place."@en ;
                                      rdfs:isDefinedBy dct: ;
                                      rdfs:label "Location"@en .
@@ -736,8 +739,8 @@ foaf:Agent rdf:type owl:Class ;
                                      rdfs:label "Dataset"@en .
 
 
-###  https://xmlns.com/foaf/0.1/Document
-<https://xmlns.com/foaf/0.1/Document> rdf:type owl:Class ;
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class ;
                                       rdfs:comment "Optional class. A document."@en ;
                                       rdfs:isDefinedBy foaf: ;
                                       rdfs:label "Document"@en .
@@ -767,8 +770,8 @@ foaf:Agent rdf:type owl:Class ;
 <http://purl.org/adms/status/Completed> rdf:type owl:NamedIndividual .
 
 
-###  https://purl.org/dc/terms/identifier
-<https://purl.org/dc/terms/identifier> rdf:type owl:NamedIndividual ;
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:NamedIndividual ;
                                        dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en .
 
 
@@ -776,20 +779,20 @@ foaf:Agent rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-<https://purl.org/dc/terms/identifier> rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
+<http://purl.org/dc/terms/identifier> rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
                                                     "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
                                        dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ;
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Event."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ;
                                        rdfs:isDefinedBy dct: ;
-                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the Cost."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
+                                       rdfs:comment "Cardinality [1..1]. This property represents an Identifier for the piece of Evidence."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Participation."@en ,
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Output."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Agent."@en ,
-                                                    "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
+                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
                                                     "Cardinality [1..1]. This property represents an Identifier for the Channel."@en ,
-                                                    "Cardinality [0..n]. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ;
+                                                    "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ;
                                        rdfs:label "identifier"@en .
 
 
@@ -801,7 +804,7 @@ foaf:Agent rdf:type owl:Class ;
   owl:distinctMembers ( <http://data.europa.eu/m8g/cpsvap>
                         <http://publications.europa.eu/resource/authority/corporate-body/DIGIT>
                         <http://purl.org/adms/assettype/Ontology>
-                        <https://purl.org/dc/terms/identifier>
+                        <http://purl.org/dc/terms/identifier>
                       )
 ] .
 
