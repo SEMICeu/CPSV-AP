@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/94a84069a5a52b39a731f3f91a41a74b551c5489/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/94a84069a5a52b39a731f3f91a41a74b551c5489/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/2ae35381dc955759dcd2b251ed4e5c6e4ebff05d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/2ae35381dc955759dcd2b251ed4e5c6e4ebff05d/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -324,7 +324,7 @@
               <h3 class="h3" id="Address"><a href="http://www.w3.org/ns/locn#Address" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#Address" data-placement="right">Address</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A spatial object that identifies a fixed location of a property, in a human-readable way.</dd>
+                    <dt>Description</dt><dd>A spatial object that in a human-readable way identifies a fixed location.</dd>
                     
                     <dt>Usage</dt><dd><p>
 An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353
@@ -332,7 +332,7 @@ An "address representation" as conceptually defined by the <a href="https://insp
 </p></br>
 
 <p>
-The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. At the time of publication, work is progressing on <a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> that defines a method through which different Addresses can be converted from one conceptual model to another.
+The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. However,<a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> provides a method through which different Addresses can be converted from one conceptual model to another.
 </p></br>
 
 <p>
@@ -347,7 +347,9 @@ The first of these allows publishers to simply provide the complete Address as o
 
 <p>
 The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.
-</p></br></dd>
+</p></br>
+
+This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Address">Core Location Vocabulary</a></dd>
                     
 		    
                     <dt>Properties</dt>
@@ -355,6 +357,7 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
                     <dd>For this entity the following properties are defined:
                       <a href="#Address%3Aaddress%20area">address area</a>, 
                       <a href="#Address%3Aaddress%20ID">address ID</a>, 
+                      <a href="#Address%3Aadministrative%20unit">administrative unit</a>, 
                       <a href="#Address%3Aadministrative%20unit%20level%201%20(country)">administrative unit level 1 (country)</a>, 
                       <a href="#Address%3Aadministrative%20unit%20level%202%20(country%2Fregion%2Fstate)">administrative unit level 2 (country/region/state)</a>, 
                       <a href="#Address%3Afull%20address">full address</a>, 
@@ -420,12 +423,32 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
 			<td>0..*</td>
                         <td property="rdfs:comment">A globally unique identifier for each instance of an Address.</td>
                         <td property="skos:scopeNote">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
-
-The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Location Core Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
-
+<br/><br/>
+The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Core  Location Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
+<br/><br/>
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
-
-To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Location Core Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
+<br/><br/>
+To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Core Location  Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Address%3Aadministrative%20unit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/adminUnit">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/adminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/adminUnit" data-placement="right">
+                            administrative unit</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://data.europa.eu/m8g/AdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/AdminUnit" data-placement="right">AdminUnit</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The adminUnit relationship links an Address with the Administrative Unit class.</td>
+                        <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
@@ -465,7 +488,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</td>
-                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office and Eurostat include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
+                        <td property="skos:scopeNote">Values could be a region or province, more granular than level 1.</td>
                         <td></td>
                       </tr>
                     
@@ -526,7 +549,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
 			<td>0..*</td>
                         <td property="rdfs:comment">Proper noun(s) applied to the real world entity identified by the locator.</td>
                         <td property="skos:scopeNote">The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
-
+<br/><br/>
 The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
                         <td></td>
                       </tr>
@@ -1357,10 +1380,10 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                     <dd>For this entity the following properties are defined:
                       <a href="#Cost%3Acurrency">currency</a>, 
                       <a href="#Cost%3Adescription">description</a>, 
+                      <a href="#Cost%3Ahas%20value">has value</a>, 
                       <a href="#Cost%3Aidentifier">identifier</a>, 
                       <a href="#Cost%3Aif%20accessed%20through">if accessed through</a>, 
-                      <a href="#Cost%3Ais%20defined%20by">is defined by</a>, 
-                      <a href="#Cost%3Avalue">value</a>.</dd>
+                      <a href="#Cost%3Ais%20defined%20by">is defined by</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1421,6 +1444,26 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td></td>
                       </tr>
                     
+                      <tr id="Cost%3Ahas%20value" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasValue">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasValue" data-placement="right">
+                            has value</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#double" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#double" data-placement="right">Double</a>
+                            
+                          
+                        </td>
+			<td>0..1</td>
+                        <td property="rdfs:comment">A numeric value indicating the amount of the Cost.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Cost%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
                         <td>
                           <code property="rdfs:label">
@@ -1477,26 +1520,6 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Cost%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasValue">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasValue" data-placement="right">
-                            value</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#double" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#double" data-placement="right">Double</a>
-                            
-                          
-                        </td>
-			<td>0..1</td>
-                        <td property="rdfs:comment">A numeric value indicating the amount of the Cost.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>

@@ -11,6 +11,11 @@
       "@id": "http://www.w3.org/ns/locn#addressId",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Address.administrativeUnit": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/adminUnit",
+      "@type": "@id"
+    },
     "Address.administrativeUnitLevel1 (country)": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#adminUnitL1",
@@ -182,6 +187,10 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "Cost.hasValue": {
+      "@id": "http://data.europa.eu/m8g/hasValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
     "Cost.identifier": {
       "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -194,10 +203,6 @@
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/isDefinedBy",
       "@type": "@id"
-    },
-    "Cost.value": {
-      "@id": "http://data.europa.eu/m8g/hasValue",
-      "@type": "http://www.w3.org/2001/XMLSchema#double"
     },
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "Dataset.description": {

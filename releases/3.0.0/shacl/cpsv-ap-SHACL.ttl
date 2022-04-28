@@ -44,6 +44,11 @@
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressId>
   ], [
+    shacl:class <http://data.europa.eu/m8g/AdminUnit>;
+    shacl:description "The adminUnit relationship links an Address with the Administrative Unit class."@en;
+    shacl:name "administrative unit"@en;
+    shacl:path <http://data.europa.eu/m8g/adminUnit>
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
     shacl:name "administrative unit level 1 (country)"@en;
@@ -294,7 +299,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:datatype xsd:double;
     shacl:description "A numeric value indicating the amount of the Cost."@en;
     shacl:maxCount 1;
-    shacl:name "value"@en;
+    shacl:name "has value"@en;
     shacl:path <http://data.europa.eu/m8g/hasValue>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Cost> .
