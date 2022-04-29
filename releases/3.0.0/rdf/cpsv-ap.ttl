@@ -397,8 +397,8 @@ foaf:page rdf:type owl:ObjectProperty ;
 
 ###  http://data.europa.eu/m8g/email
 cv:email rdf:type owl:DatatypeProperty ;
-         rdfs:range rdf:langString ;
-         rdfs:comment "Cardinality [0..n]. The email address of the ContactPoint."@en ;
+         rdfs:range rdfs:Literal ;
+         rdfs:comment "Cardinality [0..n]. An electronic address through which the Contact Point can be contacted."@en ;
          rdfs:label "has email"@en .
 
 
@@ -412,8 +412,10 @@ cv:hasValue rdf:type owl:DatatypeProperty ;
 ###  http://data.europa.eu/m8g/openingHours
 cv:openingHours rdf:type owl:DatatypeProperty ;
                 rdfs:range rdf:langString ;
-                vann:usageNote "The value should follow the flexible format defined for schema.org's opening hours property. Following that structure, days of the week are represented by two letter codes (Mo,Tu, We, Th, Fr, Sa, Su). Lists should be comma separated (for example: Mo, We, Fr) and periods separated by a hyphen (for example: Mo-Fr). If it is appropriate to add opening hours then this follows the day so if a phone service is available 08:00-20:00 Monday to Saturday and 08:00-18:00 on Sundays that would be encoded as Mo-Sa 08:00-20:00, Su 08:00-18:00."@en ;
-                rdfs:comment "Cardinality [0..n]. The normal opening hours of a channel."@en ;
+                vann:usageNote "Days are specified using two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. For example, if the contact point is open Monday-Friday, 9 -5, the value of the openingHours property would be Mo-Fr 09:00-17:00. If the Contact Point is only available on Tuesday and Thursday between 6 and 8pm, the value would be Tu,Th 16:00-20:00."@en ,
+                               "The value should follow the flexible format defined for schema.org's opening hours property. Following that structure, days of the week are represented by two letter codes (Mo,Tu, We, Th, Fr, Sa, Su). Lists should be comma separated (for example: Mo, We, Fr) and periods separated by a hyphen (for example: Mo-Fr). If it is appropriate to add opening hours then this follows the day so if a phone service is available 08:00-20:00 Monday to Saturday and 08:00-18:00 on Sundays that would be encoded as Mo-Sa 08:00-20:00, Su 08:00-18:00."@en ;
+                rdfs:comment "Cardinality [0..n]. The normal opening hours of a channel."@en ,
+                             "The (structured) hours at which the contact point is normally available."@en ;
                 rdfs:label "opening hours"@en .
 
 
@@ -429,8 +431,8 @@ cv:processingTime rdf:type owl:DatatypeProperty ;
 
 ###  http://data.europa.eu/m8g/telephone
 cv:telephone rdf:type owl:DatatypeProperty ;
-             rdfs:range rdf:langString ;
-             rdfs:comment "Cardinality [0..n]. The telephone number of the ContactPoint."@en ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "Cardinality [0..n]. A telephone number through which the Contact Point can be contacted."@en ;
              rdfs:label "has telephone"@en .
 
 

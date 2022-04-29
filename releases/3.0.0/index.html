@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cc5a0d88072c3eb0449895804115ac0081a84644/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cc5a0d88072c3eb0449895804115ac0081a84644/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/da1f0174db1ca6a15da30beabc1a0ba8a3a60aa0/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/da1f0174db1ca6a15da30beabc1a0ba8a3a60aa0/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -1246,7 +1246,8 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                       <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>, 
                       <a href="#Contact%20Point%3Acontact%20page">contact page</a>, 
                       <a href="#Contact%20Point%3Ahas%20email">has email</a>, 
-                      <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>.</dd>
+                      <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>, 
+                      <a href="#Contact%20Point%3Aopening%20hours">opening hours</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1281,7 +1282,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information.</td>
+                        <td property="rdfs:comment">The time interval during which the Contact Point is not available.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1316,12 +1317,12 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The email address of the ContactPoint.</td>
+                        <td property="rdfs:comment">An electronic address through which the Contact Point can be contacted.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1336,13 +1337,33 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The telephone number of the ContactPoint.</td>
+                        <td property="rdfs:comment">A telephone number through which the Contact Point can be contacted.</td>
                         <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Contact%20Point%3Aopening%20hours" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/openingHours">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/openingHours" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/openingHours" data-placement="right">
+                            opening hours</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">The (structured) hours at which the contact point is normally available.</td>
+                        <td property="skos:scopeNote">Days are specified using two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. For example, if the contact point is open Monday-Friday, 9 -5, the value of the openingHours property would be Mo-Fr 09:00-17:00. If the Contact Point is only available on Tuesday and Thursday between 6 and 8pm, the value would be Tu,Th 16:00-20:00.</td>
                         <td></td>
                       </tr>
                     

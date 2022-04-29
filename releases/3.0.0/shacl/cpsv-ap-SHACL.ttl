@@ -3,6 +3,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -239,7 +240,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
-    shacl:description "It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information."@en;
+    shacl:description "The time interval during which the Contact Point is not available."@en;
     shacl:name "availability restriction"@en;
     shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
@@ -248,15 +249,20 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "contact page"@en;
     shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The email address of the ContactPoint."@en;
+    shacl:datatype rdfs:Literal;
+    shacl:description "An electronic address through which the Contact Point can be contacted."@en;
     shacl:name "has email"@en;
     shacl:path <http://data.europa.eu/m8g/hasEmail>
   ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The telephone number of the ContactPoint."@en;
+    shacl:datatype rdfs:Literal;
+    shacl:description "A telephone number through which the Contact Point can be contacted."@en;
     shacl:name "has telephone"@en;
     shacl:path <http://data.europa.eu/m8g/hasTelephone>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "The (structured) hours at which the contact point is normally available."@en;
+    shacl:name "opening hours"@en;
+    shacl:path <http://data.europa.eu/m8g/openingHours>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
 

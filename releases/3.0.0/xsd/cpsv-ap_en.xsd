@@ -161,7 +161,7 @@ the Legal Resource under which the Concession Contracts are being defined.</xs:d
     <xs:sequence>
       <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information.</xs:documentation>
+          <xs:documentation xml:lang="en">The time interval during which the Contact Point is not available.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="contactPage" maxOccurs="unbounded" minOccurs="0">
@@ -171,12 +171,17 @@ the Legal Resource under which the Concession Contracts are being defined.</xs:d
       </xs:element>
       <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The email address of the ContactPoint.</xs:documentation>
+          <xs:documentation xml:lang="en">An electronic address through which the Contact Point can be contacted.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The telephone number of the ContactPoint.</xs:documentation>
+          <xs:documentation xml:lang="en">A telephone number through which the Contact Point can be contacted.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="openingHours" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The (structured) hours at which the contact point is normally available.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
