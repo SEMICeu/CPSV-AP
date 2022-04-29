@@ -168,15 +168,15 @@
     },
     "ContactPoint.hasEmail": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/email",
+      "@id": "http://data.europa.eu/m8g/hasEmail",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "ContactPoint.hasTelephone": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/telephone",
+      "@id": "http://data.europa.eu/m8g/hasTelephone",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Contract": "http://data.europa.eu/ePO/ontology#Contract",
+    "Contract": "http://data.europa.eu/a4g/ontology#Contract",
     "Cost": "http://data.europa.eu/m8g/Cost",
     "Cost.currency": {
       "@id": "http://data.europa.eu/m8g/currency",

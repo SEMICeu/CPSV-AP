@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/6b0d2a74f4ca30bb2184b9fdafd24c7ee23dd1ac/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/6b0d2a74f4ca30bb2184b9fdafd24c7ee23dd1ac/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cc5a0d88072c3eb0449895804115ac0081a84644/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/cc5a0d88072c3eb0449895804115ac0081a84644/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -1306,10 +1306,10 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/email">
+                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasEmail">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/email" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/email" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasEmail" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasEmail" data-placement="right">
                             has email</a>
                           </code>
                         </td>
@@ -1326,10 +1326,10 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/telephone">
+                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasTelephone">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/telephone" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/telephone" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasTelephone" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasTelephone" data-placement="right">
                             has telephone</a>
                           </code>
                         </td>
@@ -1353,7 +1353,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Contract"><a href="http://data.europa.eu/ePO/ontology#Contract" data-toggle="tooltip" data-content="http://data.europa.eu/ePO/ontology#Contract" data-placement="right">Contract</a></h3>
+              <h3 class="h3" id="Contract"><a href="http://data.europa.eu/a4g/ontology#Contract" data-toggle="tooltip" data-content="http://data.europa.eu/a4g/ontology#Contract" data-placement="right">Contract</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A voluntary, deliberate, and legally binding agreement between two or more competent parties.</dd>
@@ -1600,7 +1600,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service Dataset to the Public Service.</td>
+                        <td property="rdfs:comment">It links a Dataset to the Public Service.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1660,7 +1660,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</td>
+                        <td property="rdfs:comment">The Publisher of the Dataset, i.e. an entity  (organisation) responsible for making the Dataset available.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2426,7 +2426,7 @@ This definition is consistent with the more detailed definition of a "public sec
                           
                         </td>
 			<td>1</td>
-                        <td property="rdfs:comment">The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</td>
+                        <td property="rdfs:comment">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</td>
                         <td property="skos:scopeNote">Refers to the official or legal name of a Public Organization. An organization may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.</td>
                         <td></td>
                       </tr>
@@ -2441,13 +2441,15 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td>
                           
 			     
-			    <a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a>
+			    <a href="http://data.europa.eu/88u/dataset/atu-type" data-toggle="tooltip" data-content="http://data.europa.eu/88u/dataset/atu-type" data-placement="right">AdministrativeTerritorialUnit</a>
                             
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">A Public Organisation has to be associated to one or multiple locations.</td>
-                        <td property="skos:scopeNote">The value should be a URI from the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units</a> Authority Table maintained by the Publications Office.</td>
+                        <td property="rdfs:comment">AThis property links an Organization to the Administrative Region(s) that it covers.</td>
+                        <td property="skos:scopeNote">The value of the properly should be the URI of the region as defined in an authoritative list of regions. In Europe, this is likely to be the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry.
+<br/><br/>
+The ATU list does not include a geometry. That is, the territory is only identified by its name not its spatial coordinates. This is likely to be the case for similar lists. If geometries are available for the Public Organization's territory, they can be linked from the territorial unit using the Core Location Vocabulary's locn:geometry property.</td>
                         <td></td>
                       </tr>
                     
@@ -2576,7 +2578,7 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The functions of government to indicate the purpose of a government activity, which the public service is intended for.</td>
+                        <td property="rdfs:comment">The purpose of a government activity, which the public service is intended for.</td>
                         <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/main-activity">COFOG main activity</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
@@ -2749,7 +2751,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</td>
+                        <td property="rdfs:comment">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2809,7 +2811,7 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service to the Public Service Dataset(s) in which it is being described.</td>
+                        <td property="rdfs:comment">It links a Public Service to the Dataset(s) in which it is being described.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2870,7 +2872,7 @@ thereof&quot;.</td>
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office</td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies forthis property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     
@@ -3046,7 +3048,7 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary.</td>
+                        <td property="rdfs:comment">It indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3170,7 +3172,7 @@ To illustrate the notion: the European Directive on services in the internal mar
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">Name of the Requirement</td>
+                        <td property="rdfs:comment">Name of the Requirement.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3296,7 +3298,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
+                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     

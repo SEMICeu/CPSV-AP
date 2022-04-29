@@ -377,12 +377,12 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     <xs:sequence>
       <xs:element name="preferredLabel" type="xs:string" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</xs:documentation>
+          <xs:documentation xml:lang="en">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="spatial" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A Public Organisation has to be associated to one or multiple locations.</xs:documentation>
+          <xs:documentation xml:lang="en">AThis property links an Organization to the Administrative Region(s) that it covers.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -406,7 +406,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
       </xs:element>
       <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Name of the Requirement</xs:documentation>
+          <xs:documentation xml:lang="en">Name of the Requirement.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
@@ -435,7 +435,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
       </xs:element>
       <xs:element name="functionsOfGovernment" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The functions of government to indicate the purpose of a government activity, which the public service is intended for.</xs:documentation>
+          <xs:documentation xml:lang="en">The purpose of a government activity, which the public service is intended for.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasChannel" ref="Channel" maxOccurs="unbounded" minOccurs="0">
@@ -488,7 +488,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="holdsRequirement" ref="Requirement" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">
@@ -503,7 +503,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="isDescribedAt" ref="Dataset" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">It links a Public Service to the Public Service Dataset(s) in which it is being described.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Public Service to the Dataset(s) in which it is being described.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isGroupedBy" ref="Event" maxOccurs="unbounded" minOccurs="0">
@@ -558,7 +558,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="status" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">It indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="thematicArea" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
@@ -638,7 +638,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="hasPart" ref="PublicService" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">It links a Public Service Dataset to the Public Service.</xs:documentation>
+          <xs:documentation xml:lang="en">It links a Dataset to the Public Service.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="unbounded" minOccurs="0">
@@ -653,7 +653,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="publisher" ref="Agent" maxOccurs="1" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available.</xs:documentation>
+          <xs:documentation xml:lang="en">The Publisher of the Dataset, i.e. an entity  (organisation) responsible for making the Dataset available.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="title" type="xs:string" maxOccurs="unbounded" minOccurs="1">

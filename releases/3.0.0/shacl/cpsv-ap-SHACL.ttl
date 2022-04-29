@@ -251,18 +251,18 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:datatype rdf:langString;
     shacl:description "The email address of the ContactPoint."@en;
     shacl:name "has email"@en;
-    shacl:path <http://data.europa.eu/m8g/email>
+    shacl:path <http://data.europa.eu/m8g/hasEmail>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The telephone number of the ContactPoint."@en;
     shacl:name "has telephone"@en;
-    shacl:path <http://data.europa.eu/m8g/telephone>
+    shacl:path <http://data.europa.eu/m8g/hasTelephone>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#ContractShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://data.europa.eu/ePO/ontology#Contract> .
+  shacl:targetClass <http://data.europa.eu/a4g/ontology#Contract> .
 
 <https://semiceu.github.io//shacl/cpsv-ap-SHACL_en#CostShape> a shacl:NodeShape;
   shacl:closed false;
@@ -314,7 +314,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path dc:description
   ], [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "It links a Public Service Dataset to the Public Service."@en;
+    shacl:description "It links a Dataset to the Public Service."@en;
     shacl:name "has part"@en;
     shacl:path dc:hasPart
   ], [
@@ -329,7 +329,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path dcat:landingPage
   ], [
     shacl:class foaf:Agent;
-    shacl:description "The Publisher of the Public Service Dataset, i.e. an entity  (organisation) responsible for making the Public Service Dataset available."@en;
+    shacl:description "The Publisher of the Dataset, i.e. an entity  (organisation) responsible for making the Dataset available."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "publisher"@en;
@@ -499,14 +499,14 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
+    shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "preferred label"@en;
     shacl:path skos:prefLabel
   ], [
-    shacl:class dc:Location;
-    shacl:description "A Public Organisation has to be associated to one or multiple locations."@en;
+    shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
+    shacl:description "AThis property links an Organization to the Administrative Region(s) that it covers."@en;
     shacl:minCount 1;
     shacl:name "spatial"@en;
     shacl:path dc:spatial
@@ -528,7 +528,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:path <http://purl.org/vocab/cpsv#follows>
   ], [
     shacl:class skos:Concept;
-    shacl:description "The functions of government to indicate the purpose of a government activity, which the public service is intended for."@en;
+    shacl:description "The purpose of a government activity, which the public service is intended for."@en;
     shacl:name "functions of government"@en;
     shacl:path dc:type
   ], [
@@ -582,7 +582,7 @@ thereof\"."""@en;
     shacl:path <http://data.europa.eu/m8g/hasParticipation>
   ], [
     shacl:class <http://data.europa.eu/m8g/Requirement>;
-    shacl:description "It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en;
+    shacl:description "It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary."@en;
     shacl:name "holds requirement"@en;
     shacl:path <http://data.europa.eu/m8g/holdsRequirement>
   ], [
@@ -599,7 +599,7 @@ thereof\"."""@en;
     shacl:path <http://data.europa.eu/m8g/isClassifiedBy>
   ], [
     shacl:class dcat:Dataset;
-    shacl:description "It links a Public Service to the Public Service Dataset(s) in which it is being described."@en;
+    shacl:description "It links a Public Service to the Dataset(s) in which it is being described."@en;
     shacl:name "is described at"@en;
     shacl:path <http://data.europa.eu/m8g/isDescribedAt>
   ], [
@@ -656,7 +656,7 @@ thereof\"."""@en;
     shacl:path dc:spatial
   ], [
     shacl:class skos:Concept;
-    shacl:description "Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."@en;
+    shacl:description "It indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."@en;
     shacl:maxCount 1;
     shacl:name "status"@en;
     shacl:path <http://www.w3.org/ns/adms#status>
@@ -684,7 +684,7 @@ thereof\"."""@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "Name of the Requirement"@en;
+    shacl:description "Name of the Requirement."@en;
     shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path dc:title
