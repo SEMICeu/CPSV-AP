@@ -102,17 +102,24 @@ cv:establishedUnder rdf:type owl:ObjectProperty ;
                     rdfs:label "established under"@en .
 
 
+###  http://data.europa.eu/m8g/fulfils
+cv:fulfils rdf:type owl:ObjectProperty ;
+           rdfs:range cpsv:Rule ;
+           rdfs:comment "Cardinality [0..n]. The Rules that the requiremens fulfils."@en ;
+           rdfs:label "fulfils"@en .
+
+
 ###  http://data.europa.eu/m8g/hasChannel
 cv:hasChannel rdf:type owl:ObjectProperty ;
               rdfs:range cv:Channel ;
-              rdfs:comment "Cardinality [0..n]. This property links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."@en ;
+              rdfs:comment "Cardinality [0..n]. It links the Public Service to any Channel through which an Agent provides, uses or otherwise interacts with the Public Service, such as an online service, phone number or office."@en ;
               rdfs:label "has channel"@en .
 
 
 ###  http://data.europa.eu/m8g/hasCompetentAuthority
 cv:hasCompetentAuthority rdf:type owl:ObjectProperty ;
                          rdfs:range cv:PublicOrganisation ;
-                         rdfs:comment "Cardinality [1..n]. This property links a Public Service to a Public Organisation, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organisation provides the public service directly or outsources it is not relevant. The Public Organisation that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service."@en ;
+                         rdfs:comment "Cardinality [1..n]. It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\""@en ;
                          rdfs:label "has competent authority"@en .
 
 
@@ -133,7 +140,7 @@ cv:hasContractingAuthority rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/hasCost
 cv:hasCost rdf:type owl:ObjectProperty ;
            rdfs:range cv:Cost ;
-           rdfs:comment "Cardinality [0..n]. The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@en ;
+           rdfs:comment "Cardinality [0..n]. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship"@en ;
            rdfs:label "has cost"@en .
 
 
@@ -147,21 +154,21 @@ cv:hasEconomicOperator rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/hasLegalResource
 cv:hasLegalResource rdf:type owl:ObjectProperty ;
                     rdfs:range eli:LegalResource ;
-                    rdfs:comment "Cardinality [0..n]. The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@en ;
+                    rdfs:comment "Cardinality [0..n]. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@en ;
                     rdfs:label "has legal resource"@en .
 
 
 ###  http://data.europa.eu/m8g/hasParticipation
 cv:hasParticipation rdf:type owl:ObjectProperty ;
                     rdfs:range cv:Participation ;
-                    rdfs:comment "Cardinality [0..n]. This property links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."@en ;
+                    rdfs:comment "Cardinality [0..n]. It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information"@en ;
                     rdfs:label "has participation"@en .
 
 
 ###  http://data.europa.eu/m8g/holdsRequirement
 cv:holdsRequirement rdf:type owl:ObjectProperty ;
                     rdfs:range cv:Requirement ;
-                    rdfs:comment "Cardinality [0..n]. Links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary"@en ;
+                    rdfs:comment "Cardinality [0..n]. It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary."@en ;
                     rdfs:label "holds requirement"@en .
 
 
@@ -175,7 +182,7 @@ cv:ifAccessedThrough rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/isClassifiedBy
 cv:isClassifiedBy rdf:type owl:ObjectProperty ;
                   rdfs:range skos:Concept ;
-                  rdfs:comment "Cardinality [0..n]. The Is Classified By property allows to classify the Public Service with any Concept, other than those already foreseen and defined explicitely in the CPSV-AP (Thematic Area, Sector, …). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience … The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en ;
+                  rdfs:comment "Cardinality [0..n]. It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en ;
                   rdfs:label "is classified by"@en .
 
 
@@ -189,14 +196,14 @@ cv:isDefinedBy rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/isDescribedAt
 cv:isDescribedAt rdf:type owl:ObjectProperty ;
                  rdfs:range <https://www.w3.org/ns/dcat#Dataset> ;
-                 rdfs:comment "Cardinality [0..n]. The Is Described At property links a Public Service to the dataset where it belongs to. It is used to track the metadata of the origin of the public service descriptions."@en ;
+                 rdfs:comment "Cardinality [0..n]. It links a Public Service to the Dataset(s) in which it is being described."@en ;
                  rdfs:label "is described at"@en .
 
 
 ###  http://data.europa.eu/m8g/isGroupedBy
 cv:isGroupedBy rdf:type owl:ObjectProperty ;
                rdfs:range cv:Event ;
-               rdfs:comment "Cardinality [0..n]. This property links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events."@en ;
+               rdfs:comment "Cardinality [0..n]. It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events."@en ;
                rdfs:label "is grouped by"@en .
 
 
@@ -224,7 +231,8 @@ cv:role rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/sector
 cv:sector rdf:type owl:ObjectProperty ;
           rdfs:range skos:Concept ;
-          rdfs:comment "Cardinality [0..n]. This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary."@en ;
+          vann:usageNote "The possible values for this property are described in the controlled vocabulary Data theme Authority Table of the Publications Office."@en ;
+          rdfs:comment "Cardinality [0..n]. The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary."@en ;
           rdfs:label "sector"@en .
 
 
@@ -239,14 +247,14 @@ cv:specialOpeningHoursSpecification rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/thematicArea
 cv:thematicArea rdf:type owl:ObjectProperty ;
                 rdfs:range skos:Concept ;
-                rdfs:comment "Cardinality [0..1]. Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."@en ;
+                rdfs:comment "Cardinality [0..1]. The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en ;
                 rdfs:label "thematicArea"@en .
 
 
 ###  http://purl.org/dc/terms/hasPart
 dct:hasPart rdf:type owl:ObjectProperty ;
             rdfs:range cpsv:PublicService ;
-            rdfs:comment "Cardinality [0..n]. It links a Public Service Dataset to the Public Service."@en ;
+            rdfs:comment "Cardinality [0..n]. It links a Dataset to the Public Service."@en ;
             rdfs:label "has part"@en .
 
 
@@ -256,15 +264,15 @@ dct:language rdf:type owl:ObjectProperty ;
              vann:usageNote "The recommended controlled vocabularies for this property is the Language Authority Table of the Publications Office."@en ;
              rdfs:comment "Cardinality [0..n]. The language(s) in which the Evidence must be provided."@en ,
                           "Cardinality [0..n]. The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ,
-                          "Cardinality [0..n]. This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."@en ,
-                          "Cardinality [0..n]. This property represents the language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ;
+                          "Cardinality [0..n]. The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language"@en ,
+                          "Cardinality [0..n]. The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en ;
              rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:ObjectProperty ;
               rdfs:range foaf:Agent ;
-              rdfs:comment "Cardinality [1..1]. The Publisher of the Public Service Dataset, i.e. an entity (organisation) responsible for making the Public Service Dataset available."@en ;
+              rdfs:comment "Cardinality [1..1]. The Publisher of the Dataset, i.e. an entity (organisation) responsible for making the Dataset available."@en ;
               rdfs:label "publisher"@en .
 
 
@@ -272,9 +280,9 @@ dct:publisher rdf:type owl:ObjectProperty ;
 dct:relation rdf:type owl:ObjectProperty ;
              rdfs:range eli:LegalResource ,
                         cpsv:PublicService ;
-             rdfs:comment "Cardinality [0..n]. Another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en ,
-                          "Cardinality [0..n]. It links an event directly to a public service that is related to it."@en ,
-                          "Cardinality [0..n]. This property represents a Public Service related to the particular instance of the Public Service class."@en ;
+             rdfs:comment "Cardinality [0..n]. A Public Service related to the particular instance of the Public Service class."@en ,
+                          "Cardinality [0..n]. Another instance of the Legal Resource class that is related to the particular Legal Resource being described."@en ,
+                          "Cardinality [0..n]. It links an event directly to a public service that is related to it."@en ;
              rdfs:label "related"@en ,
                         "related service"@en .
 
@@ -288,40 +296,46 @@ dct:requires rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/spatial
 dct:spatial rdf:type owl:ObjectProperty ;
-            rdfs:range dct:Location ;
+            rdfs:range <http://data.europa.eu/88u/dataset/atu-type> ,
+                       dct:Location ;
             vann:usageNote "A common usage of the spatial property will be to define the Administrative Territorial Unit(s) - typically a country or region - in which a Public Service is available. The Publications Office of the European Union offers URI set (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) that is suitable for this purpose, e.g. Malta is identified by http://publications.europa.eu/resource/authority/atu/MLT, West Flanders by http://publications.europa.eu/resource/authority/atu/BEL_PR_WVL and so on. In case the ATU code list is not suitable, NUTS (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/nuts) or LAU (https://ec.europa.eu/eurostat/web/nuts/local-administrative-units), NAL Place (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place) or Geonames (http://www.geonames.org/) are recommended to use, in that order. If those are still not sufficient, we recommend to define your own code list. N.B. The spatial restriction is not meant to be used to describe eligibility or the speed of operation of the service. These aspects will be covered by the Criterion class."@en ,
-                           "The value should be a URI from the Administrative Territorial Units (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu) Authority Table maintained by the Publications Office."@en ;
+                           """The value of the properly should be the URI of the region as defined in an authoritative list of regions. In Europe, this is likely to be the Administrative Territorial Units Named Authority List maintained by the Publications Office's Metadata Registry.
+
+The ATU list does not include a geometry. That is, the territory is only identified by its name not its spatial coordinates. This is likely to be the case for similar lists. If geometries are available for the Public Organization's territory, they can be linked from the territorial unit using the Core Location Vocabulary's locn:geometry property."""@en ;
             rdfs:comment "Cardinality [0..n]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ,
-                         "Cardinality [1..n]. A Public Organisation has to be associated to one or multiple locations."@en ;
+                         "Cardinality [1..n]. This property links an Organization to the Administrative Region(s) that it covers."@en ;
             rdfs:label "spatial"@en .
 
 
 ###  http://purl.org/dc/terms/type
 dct:type rdf:type owl:ObjectProperty ;
          rdfs:range skos:Concept ;
-         vann:usageNote "Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit"@en ,
+         vann:usageNote "For example: a rule for non-disclosure of a dataset, a rule for disclosure of a dataset, etc."@en ,
+                        "Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit"@en ,
+                        "The possible values for this property are described in the controlled vocabulary COFOG main activity Authority Table of the Publications Office."@en ,
                         "The recommended controlled vocabularies forthis property is the Europass channel type Authority Table of the Publications Office."@en ;
          rdfs:comment "Cardinality [0..1]. The type of Evidence as described in a controlled vocabulary."@en ,
                       "Cardinality [0..1]. Type of Rule."@en ,
+                      "Cardinality [0..n]. Category to which the Requirement belongs."@en ,
                       "Cardinality [0..n]. It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child."@en ,
+                      "Cardinality [0..n]. The purpose of a government activity, which the public service is intended for.."@en ,
                       "Cardinality [0..n]. The type of Channel as defined in a controlled vocabulary."@en ,
-                      "Cardinality [0..n]. The type of Output as defined in a controlled vocabulary."@en ,
-                      "Cardinality [0..n]. This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for."@en ,
-                      "Cardinality [0..n]. This property represents the type of Requirement as described in a controlled vocabulary."@en ;
-         rdfs:label "type"@en .
+                      "Cardinality [0..n]. The type of Output as defined in a controlled vocabulary."@en ;
+         rdfs:label "functions of goverment"@en ,
+                    "type"@en .
 
 
 ###  http://purl.org/vocab/cpsv#follows
 cpsv:follows rdf:type owl:ObjectProperty ;
              rdfs:range cpsv:Rule ;
-             rdfs:comment "Cardinality [0..n]. The follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario."@en ;
+             rdfs:comment "Cardinality [0..n]. It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario."@en ;
              rdfs:label "follows"@en .
 
 
 ###  http://purl.org/vocab/cpsv#hasInput
 cpsv:hasInput rdf:type owl:ObjectProperty ;
               rdfs:range cv:Evidence ;
-              vann:usageNote "Cardinality [0..n]. The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."@en ;
+              vann:usageNote "Cardinality [0..n]. It links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel."@en ;
               rdfs:comment "Cardinality [0..n]. In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision."@en ;
               rdfs:label "has input"@en .
 
@@ -336,7 +350,8 @@ cpsv:implements rdf:type owl:ObjectProperty ;
 ###  http://purl.org/vocab/cpsv#produces
 cpsv:produces rdf:type owl:ObjectProperty ;
               rdfs:range cv:Output ;
-              rdfs:comment "Cardinality [0..n]. The Produces property links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service. Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service."@en ;
+              vann:usageNote "Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service."@en ;
+              rdfs:comment "Cardinality [0..n]. It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en ;
               rdfs:label "produces"@en .
 
 
@@ -350,7 +365,7 @@ skos:member rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/ns/adms#status
 adms:status rdf:type owl:ObjectProperty ;
             rdfs:range skos:Concept ;
-            rdfs:comment "Cardinality [0..1]. Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."@en ;
+            rdfs:comment "Cardinality [0..1]. It indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."@en ;
             rdfs:label "status"@en .
 
 
@@ -422,17 +437,17 @@ cv:telephone rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:DatatypeProperty ;
                 rdfs:range rdf:langString ;
-                vann:usageNote "The description is likely to be the text that a business or citizen sees for that specific Event when looking for relevant Public Services. Public administrations are therefore encouraged to include a reasonable level of detail in the description."@en ;
+                vann:usageNote "The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ;
                 rdfs:comment "Cardinality [0..n]. A free text Description of the Output."@en ,
                              "Cardinality [0..n]. A free text Description of the piece of Evidence."@en ,
                              "Cardinality [0..n]. A free text description of the Channel, for example to describe conditiions when to use it."@en ,
                              "Cardinality [0..n]. A free text description of the Cost."@en ,
                              "Cardinality [0..n]. A free text description of the Event."@en ,
                              "Cardinality [1..*]. A free text description of the Concession Contract."@en ,
+                             "Cardinality [1..n]. A free text Description of the Public Service."@en ,
+                             "Cardinality [1..n]. A free text Description of the Rule."@en ,
                              "Cardinality [1..n]. A free text description of the Participation."@en ,
-                             "Cardinality [1..n]. A free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en ,
-                             "Cardinality [1..n]. This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ,
-                             "Cardinality [1..n]. This property represents a free text Description of the Rule."@en ;
+                             "Cardinality [1..n]. A free-text account of the Dataset. This property can be repeated for parallel language versions of the description."@en ;
                 rdfs:label "description"@en .
 
 
@@ -442,6 +457,7 @@ dct:identifier rdf:type owl:DatatypeProperty ;
                dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
                rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
                             "Cardinality [0..n]. The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en ,
+                            "Cardinality [1..1]. A formally-issued Identifier for the Public Service."@en ,
                             "Cardinality [1..1]. An Identifier for the Agent."@en ,
                             "Cardinality [1..1]. An Identifier for the Channel."@en ,
                             "Cardinality [1..1]. An Identifier for the Concession Contract."@en ,
@@ -449,10 +465,9 @@ dct:identifier rdf:type owl:DatatypeProperty ;
                             "Cardinality [1..1]. An Identifier for the Event."@en ,
                             "Cardinality [1..1]. An Identifier for the Output."@en ,
                             "Cardinality [1..1]. An Identifier for the Participation."@en ,
+                            "Cardinality [1..1]. An Identifier for the Rule."@en ,
                             "Cardinality [1..1]. An Identifier for the piece of Evidence."@en ,
-                            "Cardinality [1..1]. This property represents a formally-issued Identifier for the Public Service."@en ,
-                            "Cardinality [1..1]. This property represents an Identifier for the Requirement."@en ,
-                            "Cardinality [1..1]. This property represents an Identifier for the Rule."@en ;
+                            "Cardinality [1..1]. Unambiguous reference to a Requirement."@en ;
                rdfs:isDefinedBy dct: ;
                rdfs:label "identifier"@en .
 
@@ -462,15 +477,15 @@ dct:title rdf:type owl:DatatypeProperty ;
           rdfs:range rdf:langString ;
           vann:usageNote "This property can be repeated for parallel language versions of the name."@en ;
           rdfs:comment "Cardinality [1..n]. A name given to the Dataset."@en ,
+                       "Cardinality [1..n]. Name of the Requirement."@en ,
                        "Cardinality [1..n]. The Name (or title) of the Event."@en ,
                        "Cardinality [1..n]. The Name of the Agent."@en ,
                        "Cardinality [1..n]. The Name of the Concession Contract."@en ,
+                       "Cardinality [1..n]. The Name of the Rule."@en ,
                        "Cardinality [1..n]. The official Name of the Output."@en ,
+                       "Cardinality [1..n]. The official Name of the Public Service."@en ,
                        "Cardinality [1..n]. The official Name of the piece of Evidence."@en ,
-                       "Cardinality [1..n]. This property contains a name given to the Public Service Dataset. This property can be repeated for parallel language versions of the name."@en ,
-                       "Cardinality [1..n]. This property represents the Name of the Rule."@en ,
-                       "Cardinality [1..n]. This property represents the official Name of the Public Service."@en ,
-                       "Cardinality [1..n]. This property represents the official Name of the Requirement."@en ;
+                       "Cardinality [1..n]. This property contains a name given to the Public Service Dataset. This property can be repeated for parallel language versions of the name."@en ;
           rdfs:label "name"@en ,
                      "title"@en .
 
@@ -478,15 +493,15 @@ dct:title rdf:type owl:DatatypeProperty ;
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:DatatypeProperty ;
                rdfs:range rdf:langString ;
-               vann:usageNote "The value should be a URI from the Administrative Territorial Units Authority Table maintained by the Publications Office. (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu)"@en ;
-               rdfs:comment "Cardinality [1..1]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ;
+               vann:usageNote "Refers to the official or legal name of a Public Organization. An organization may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property."@en ;
+               rdfs:comment "Cardinality [1..1]. The primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en ;
                rdfs:label "preferred label"@en .
 
 
 ###  http://www.w3.org/ns/dcat#keyword
 dcat:keyword rdf:type owl:DatatypeProperty ;
              rdfs:range rdf:langString ;
-             rdfs:comment "Cardinality [0..n]. This property represents a keyword, term or phrase to describe the Public Service."@en ;
+             rdfs:comment "Cardinality [0..n]. A keyword, term or phrase to describe the Public Service."@en ;
              rdfs:label "keyword"@en .
 
 
@@ -593,6 +608,12 @@ locn:thoroughfare rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://data.europa.eu/88u/dataset/atu-type
+<http://data.europa.eu/88u/dataset/atu-type> rdf:type owl:Class ;
+                                             rdfs:comment "A code from a list that represents the administrative territorial unit of the EU Member States, based on national official / legal information and the ISO 3166-2 standard."@en ;
+                                             rdfs:label "Administrative Territorial Unit"@en .
+
 
 ###  http://data.europa.eu/ePO/ontology#Contract
 <http://data.europa.eu/ePO/ontology#Contract> rdf:type owl:Class ;
