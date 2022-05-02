@@ -169,12 +169,17 @@
     "ContactPoint.hasEmail": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasEmail",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "ContactPoint.hasTelephone": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasTelephone",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ContactPoint.openingHours": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/openingHours",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Contract": "http://data.europa.eu/a4g/ontology#Contract",
     "Cost": "http://data.europa.eu/m8g/Cost",

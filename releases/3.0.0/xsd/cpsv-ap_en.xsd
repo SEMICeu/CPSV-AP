@@ -77,7 +77,7 @@
       </xs:element>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A free text description of the Channel, for example to describe conditiions when to use it.</xs:documentation>
+          <xs:documentation xml:lang="en">A free text description of the Channel, for example to describe conditions when to use it.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasInput" ref="Evidence" maxOccurs="unbounded" minOccurs="0">
@@ -387,7 +387,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
       </xs:element>
       <xs:element name="spatial" maxOccurs="unbounded" minOccurs="1">
         <xs:annotation>
-          <xs:documentation xml:lang="en">AThis property links an Organization to the Administrative Region(s) that it covers.</xs:documentation>
+          <xs:documentation xml:lang="en">It links an Organization to the Administrative Region(s) that it covers.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

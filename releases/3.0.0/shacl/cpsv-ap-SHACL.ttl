@@ -140,7 +140,7 @@
     shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "A free text description of the Channel, for example to describe conditiions when to use it."@en;
+    shacl:description "A free text description of the Channel, for example to describe conditions when to use it."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
@@ -512,7 +512,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
     shacl:path skos:prefLabel
   ], [
     shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
-    shacl:description "AThis property links an Organization to the Administrative Region(s) that it covers."@en;
+    shacl:description "It links an Organization to the Administrative Region(s) that it covers."@en;
     shacl:minCount 1;
     shacl:name "spatial"@en;
     shacl:path dc:spatial
