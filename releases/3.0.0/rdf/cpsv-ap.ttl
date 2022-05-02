@@ -303,7 +303,7 @@ dct:spatial rdf:type owl:ObjectProperty ;
 
 The ATU list does not include a geometry. That is, the territory is only identified by its name not its spatial coordinates. This is likely to be the case for similar lists. If geometries are available for the Public Organization's territory, they can be linked from the territorial unit using the Core Location Vocabulary's locn:geometry property."""@en ;
             rdfs:comment "Cardinality [0..n]. A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@en ,
-                         "Cardinality [1..n]. This property links an Organization to the Administrative Region(s) that it covers."@en ;
+                         "Cardinality [1..n]. It links an Organization to the Administrative Region(s) that it covers."@en ;
             rdfs:label "spatial"@en .
 
 
@@ -311,9 +311,9 @@ The ATU list does not include a geometry. That is, the territory is only identif
 dct:type rdf:type owl:ObjectProperty ;
          rdfs:range skos:Concept ;
          vann:usageNote "For example: a rule for non-disclosure of a dataset, a rule for disclosure of a dataset, etc."@en ,
-                        "Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit"@en ,
+                        "Possible values of Output types are: Declaration, Physical object, Code, Financial obligation, Financial benefit, Recognition, Permit."@en ,
                         "The possible values for this property are described in the controlled vocabulary COFOG main activity Authority Table of the Publications Office."@en ,
-                        "The recommended controlled vocabularies forthis property is the Europass channel type Authority Table of the Publications Office."@en ;
+                        "The recommended controlled vocabularies for this property is the Europass Channel Type Authority Table of the Publications Office."@en ;
          rdfs:comment "Cardinality [0..1]. The type of Evidence as described in a controlled vocabulary."@en ,
                       "Cardinality [0..1]. Type of Rule."@en ,
                       "Cardinality [0..n]. Category to which the Requirement belongs."@en ,
@@ -442,7 +442,7 @@ dct:description rdf:type owl:DatatypeProperty ;
                 vann:usageNote "The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@en ;
                 rdfs:comment "Cardinality [0..n]. A free text Description of the Output."@en ,
                              "Cardinality [0..n]. A free text Description of the piece of Evidence."@en ,
-                             "Cardinality [0..n]. A free text description of the Channel, for example to describe conditiions when to use it."@en ,
+                             "Cardinality [0..n]. A free text description of the Channel, for example to describe conditions when to use it."@en ,
                              "Cardinality [0..n]. A free text description of the Cost."@en ,
                              "Cardinality [0..n]. A free text description of the Event."@en ,
                              "Cardinality [1..*]. A free text description of the Concession Contract."@en ,
