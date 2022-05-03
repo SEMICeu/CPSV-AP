@@ -503,7 +503,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="isClassifiedBy" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</xs:documentation>
+          <xs:documentation xml:lang="en">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, etc.). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience, etc.  The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isDescribedAt" ref="Dataset" maxOccurs="unbounded" minOccurs="0">
@@ -568,7 +568,7 @@ thereof".</xs:documentation>
       </xs:element>
       <xs:element name="thematicArea" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...</xs:documentation>
+          <xs:documentation xml:lang="en">The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment, etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

@@ -106,7 +106,7 @@
     shacl:name "address"@en;
     shacl:path <http://www.w3.org/ns/locn#address>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Agent."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -149,7 +149,7 @@
     shacl:name "has input"@en;
     shacl:path <http://purl.org/vocab/cpsv#hasInput>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Channel."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -221,7 +221,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "has economic operator"@en;
     shacl:path <http://data.europa.eu/m8g/hasEconomicOperator>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Concession Contract."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -284,7 +284,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Cost."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -324,7 +324,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "has part"@en;
     shacl:path dc:hasPart
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
@@ -357,7 +357,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Event."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -390,7 +390,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the piece of Evidence."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -451,7 +451,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Output."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -485,7 +485,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Participation."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -592,7 +592,7 @@ thereof\"."""@en;
     shacl:name "holds requirement"@en;
     shacl:path <http://data.europa.eu/m8g/holdsRequirement>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "A formally-issued Identifier for the Public Service."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -600,7 +600,7 @@ thereof\"."""@en;
     shacl:path dc:identifier
   ], [
     shacl:class skos:Concept;
-    shacl:description "It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ... The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en;
+    shacl:description "It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, etc.). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience, etc.  The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."@en;
     shacl:name "is classified by"@en;
     shacl:path <http://data.europa.eu/m8g/isClassifiedBy>
   ], [
@@ -668,7 +668,7 @@ thereof\"."""@en;
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
     shacl:class skos:Concept;
-    shacl:description "The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en;
+    shacl:description "The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment, etc."@en;
     shacl:name "thematic area"@en;
     shacl:path <http://data.europa.eu/m8g/thematicArea>
   ];
@@ -682,7 +682,7 @@ thereof\"."""@en;
     shacl:name "fulfils"@en;
     shacl:path <http://data.europa.eu/m8g/fulfils>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "Unambiguous reference to a Requirement."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -711,7 +711,7 @@ thereof\"."""@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:datatype rdfs:Literal;
     shacl:description "An Identifier for the Rule."@en;
     shacl:maxCount 1;
     shacl:minCount 1;
