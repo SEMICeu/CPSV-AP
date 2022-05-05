@@ -1,0 +1,528 @@
+{
+  "@context": {
+    "Address": "http://www.w3.org/ns/locn#Address",
+    "Address.addressArea": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.addressId": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressId",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Address.administrativeUnit": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/adminUnit",
+      "@type": "@id"
+    },
+    "Address.administrativeUnitLevel1 (country)": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.administrativeUnitLevel2 (country/region/state)": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.fullAddress": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.locatorDesignator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Address.locatorName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.postCode": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Address.postName (city)": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.postOfficeBox": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Address.thoroughfare": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "Agent.address": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Agent.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Agent.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Agent.playsRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/playsRole",
+      "@type": "@id"
+    },
+    "BusinessEvent": "http://data.europa.eu/m8g/BusinessEvent",
+    "Channel": "http://data.europa.eu/m8g/Channel",
+    "Channel.availabilityRestriction": {
+      "@id": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
+      "@type": "@id"
+    },
+    "Channel.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Channel.hasInput": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#hasInput",
+      "@type": "@id"
+    },
+    "Channel.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Channel.openingHours": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/openingHours",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Channel.ownedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/ownedBy",
+      "@type": "@id"
+    },
+    "Channel.processingTime": {
+      "@id": "http://data.europa.eu/m8g/processingTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Channel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Collection": "http://www.w3.org/2004/02/skos/core#Collection",
+    "Collection.member": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#member",
+      "@type": "@id"
+    },
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ConcessionContract": "http://data.europa.eu/m8g/ConcessionContract",
+    "ConcessionContract.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ConcessionContract.establishedUnder": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/establishedUnder",
+      "@type": "@id"
+    },
+    "ConcessionContract.hasContractingAuthority": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasContractingAuthority",
+      "@type": "@id"
+    },
+    "ConcessionContract.hasEconomicOperator": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasEconomicOperator",
+      "@type": "@id"
+    },
+    "ConcessionContract.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ConcessionContract.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
+    "ContactPoint.availabilityRestriction": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
+      "@type": "@id"
+    },
+    "ContactPoint.contactPage": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/contactPage",
+      "@type": "@id"
+    },
+    "ContactPoint.hasEmail": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasEmail",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ContactPoint.hasTelephone": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasTelephone",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ContactPoint.openingHours": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/openingHours",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Contract": "http://data.europa.eu/a4g/ontology#Contract",
+    "Cost": "http://data.europa.eu/m8g/Cost",
+    "Cost.currency": {
+      "@id": "http://data.europa.eu/m8g/currency",
+      "@type": "@id"
+    },
+    "Cost.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Cost.hasValue": {
+      "@id": "http://data.europa.eu/m8g/hasValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "Cost.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Cost.ifAccessedThrough": {
+      "@id": "http://data.europa.eu/m8g/ifAccessedThrough",
+      "@type": "@id"
+    },
+    "Cost.isDefinedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/isDefinedBy",
+      "@type": "@id"
+    },
+    "Dataset": "http://www.w3.org/ns/dcat#Dataset",
+    "Dataset.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Dataset.hasPart": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "@type": "@id"
+    },
+    "Dataset.identifier": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Dataset.landingPage": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dcat#landingPage",
+      "@type": "@id"
+    },
+    "Dataset.publisher": {
+      "@id": "http://purl.org/dc/terms/publisher",
+      "@type": "@id"
+    },
+    "Dataset.title": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Event": "http://data.europa.eu/m8g/Event",
+    "Event.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Event.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Event.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Event.relatedService": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "@id"
+    },
+    "Event.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Evidence": "http://data.europa.eu/m8g/Evidence",
+    "Evidence.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Evidence.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Evidence.language": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Evidence.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Evidence.relatedDocumentation": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
+    },
+    "Evidence.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "LegalResource": "http://data.europa.eu/eli/ontology#LegalResource",
+    "LegalResource.related": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "@id"
+    },
+    "LifeEvent": "http://data.europa.eu/m8g/LifeEvent",
+    "OpeningHoursSpecification": "http://data.europa.eu/m8g/OpeningHoursSpecification",
+    "Organization": "http://www.w3.org/ns/org#Organization",
+    "Output": "http://data.europa.eu/m8g/Output",
+    "Output.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Output.language": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Output.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Participation": "http://data.europa.eu/m8g/Participation",
+    "Participation.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Participation.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Participation.role": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/role",
+      "@type": "@id"
+    },
+    "PublicOrganization": "http://data.europa.eu/m8g/PublicOrganisation",
+    "PublicOrganization.preferredLabel": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicOrganization.spatial": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    },
+    "PublicService": "http://purl.org/vocab/cpsv#PublicService",
+    "PublicService.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicService.follows": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#follows",
+      "@type": "@id"
+    },
+    "PublicService.functionsOfGovernment": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "PublicService.hasChannel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasChannel",
+      "@type": "@id"
+    },
+    "PublicService.hasCompetentAuthority": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+      "@type": "@id"
+    },
+    "PublicService.hasContactPoint": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasContactPoint",
+      "@type": "@id"
+    },
+    "PublicService.hasCost": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCost",
+      "@type": "@id"
+    },
+    "PublicService.hasInput": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#hasInput",
+      "@type": "@id"
+    },
+    "PublicService.hasLegalResource": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasLegalResource",
+      "@type": "@id"
+    },
+    "PublicService.hasParticipation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "@id"
+    },
+    "PublicService.holdsRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/holdsRequirement",
+      "@type": "@id"
+    },
+    "PublicService.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "PublicService.isClassifiedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/isClassifiedBy",
+      "@type": "@id"
+    },
+    "PublicService.isDescribedAt": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/isDescribedAt",
+      "@type": "@id"
+    },
+    "PublicService.isGroupedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/isGroupedBy",
+      "@type": "@id"
+    },
+    "PublicService.keyword": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dcat#keyword",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicService.language": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "PublicService.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicService.processingTime": {
+      "@id": "http://data.europa.eu/m8g/processingTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "PublicService.produces": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces",
+      "@type": "@id"
+    },
+    "PublicService.related": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "@id"
+    },
+    "PublicService.requires": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/requires",
+      "@type": "@id"
+    },
+    "PublicService.sector": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/sector",
+      "@type": "@id"
+    },
+    "PublicService.spatial": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    },
+    "PublicService.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "PublicService.thematicArea": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/thematicArea",
+      "@type": "@id"
+    },
+    "Requirement": "http://data.europa.eu/m8g/Requirement",
+    "Requirement.fulfils": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/fulfils",
+      "@type": "@id"
+    },
+    "Requirement.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Requirement.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Requirement.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Rule": "http://purl.org/vocab/cpsv#Rule",
+    "Rule.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Rule.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Rule.language": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Rule.name": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Rule.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    }
+  }
+}
