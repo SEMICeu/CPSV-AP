@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/3eb7ae0c523adcfa5d75da7ed708a284d15fc13f/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/3eb7ae0c523adcfa5d75da7ed708a284d15fc13f/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/24c9c17b5fe79c579d6d5369e6fb574edddbab7b/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/24c9c17b5fe79c579d6d5369e6fb574edddbab7b/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -3238,6 +3238,7 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                     <dd>For this entity the following properties are defined:
                       <a href="#Rule%3Adescription">description</a>, 
                       <a href="#Rule%3Aidentifier">identifier</a>, 
+                      <a href="#Rule%3Aimplements">implements</a>, 
                       <a href="#Rule%3Alanguage">language</a>, 
                       <a href="#Rule%3Aname">name</a>, 
                       <a href="#Rule%3Atype">type</a>.</dd>
@@ -3296,6 +3297,27 @@ Detailed modelling of the rules related to Public Services is out of scope of th
                         </td>
 			<td>1</td>
                         <td property="rdfs:comment">An Identifier for the Rule.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rule%3Aimplements" typeof="rdfs:Property" resource="http://purl.org/vocab/cpsv#implements">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/vocab/cpsv#implements" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#implements" data-placement="right">
+                            implements</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Legal Resource" data-placement="right">Legal Resource</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">It links a Rule to relevant legislation or policy documents i.e.
+the Legal Resource under which the Rules are being defined.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>

@@ -510,6 +510,11 @@
       "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
+    "Rule.implements": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#implements",
+      "@type": "@id"
+    },
     "Rule.language": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/language",

@@ -1006,6 +1006,16 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
+          "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
+          "sh:description": {
+            "en": "It links a Rule to relevant legislation or policy documents i.e.\r\nthe Legal Resource under which the Rules are being defined."
+          },
+          "sh:name": {
+            "en": "implements"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#implements"
+        },
+        {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
             "en": "The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."

@@ -590,6 +590,12 @@ thereof".</xs:documentation>
           <xs:documentation xml:lang="en">An Identifier for the Rule.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="implements" ref="LegalResource" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">It links a Rule to relevant legislation or policy documents i.e.
+the Legal Resource under which the Rules are being defined.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</xs:documentation>

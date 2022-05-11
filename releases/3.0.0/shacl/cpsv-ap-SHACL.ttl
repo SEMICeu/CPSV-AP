@@ -718,6 +718,12 @@ thereof\"."""@en;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description """It links a Rule to relevant legislation or policy documents i.e.
+the Legal Resource under which the Rules are being defined."""@en;
+    shacl:name "implements"@en;
+    shacl:path <http://purl.org/vocab/cpsv#implements>
+  ], [
     shacl:class dc:LinguisticSystem;
     shacl:description "The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."@en;
     shacl:name "language"@en;
