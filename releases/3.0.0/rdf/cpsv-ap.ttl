@@ -83,7 +83,7 @@ cv:adminUnit rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/contactPage
 cv:contactPage rdf:type owl:ObjectProperty ;
                rdfs:range foaf:Document ;
-               rdfs:comment "Cardinality [0..n]. A contact form that could be used to reach out the contact point."@en ;
+               rdfs:comment "Cardinality [0..n]. A contact page that could be used to reach out the contact point."@en ;
                rdfs:label "contact page"@en .
 
 

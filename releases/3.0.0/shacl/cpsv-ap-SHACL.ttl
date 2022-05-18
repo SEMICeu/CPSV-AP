@@ -245,7 +245,7 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
   ], [
     shacl:class foaf:Document;
-    shacl:description "A contact form that could be used to reach out the contact point."@en;
+    shacl:description "A contact page that could be used to reach out the contact point."@en;
     shacl:name "contact page"@en;
     shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
