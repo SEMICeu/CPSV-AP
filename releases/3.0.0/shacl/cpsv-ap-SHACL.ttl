@@ -413,6 +413,11 @@ the Legal Resource under which the Concession Contracts are being defined."""@en
     shacl:name "related documentation"@en;
     shacl:path foaf:page
   ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Requirement for which the Evidence provides proof."@en;
+    shacl:name "supports requirement"@en;
+    shacl:path <http://data.europa.eu/m8g/supportsRequirement>
+  ], [
     shacl:class skos:Concept;
     shacl:description "The type of Evidence as described in a controlled vocabulary."@en;
     shacl:maxCount 1;
@@ -681,6 +686,11 @@ thereof\"."""@en;
     shacl:description "The Rules that the requiremens fulfils. "@en;
     shacl:name "fulfils"@en;
     shacl:path <http://data.europa.eu/m8g/fulfils>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Evidence>;
+    shacl:description "Evidence that supplies information, proof or support for the Requirement."@en;
+    shacl:name "has supporting evidence"@en;
+    shacl:path <http://data.europa.eu/m8g/hasSupportingEvidence>
   ], [
     shacl:datatype rdfs:Literal;
     shacl:description "Unambiguous reference to a Requirement."@en;

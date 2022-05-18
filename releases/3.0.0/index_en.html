@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/catalogue-of-services-isa/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/24c9c17b5fe79c579d6d5369e6fb574edddbab7b/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/24c9c17b5fe79c579d6d5369e6fb574edddbab7b/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/01c34027ea8e344b1a34b11671542b5032b681a6/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/01c34027ea8e344b1a34b11671542b5032b681a6/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/catalogue-of-services-isa/CPSV-AP/issues">https://github.com/catalogue-of-services-isa/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -1868,7 +1868,11 @@ Evidence can be any resource - document, artefact - anything needed for executin
 
 In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s).</dd>
                     
-		    
+		     
+		    <dt>Subclass of<dt><dd>
+                        <a href="#Dataset">Dataset</a>
+		   </dd>
+                    
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
@@ -1877,6 +1881,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                       <a href="#Evidence%3Alanguage">language</a>, 
                       <a href="#Evidence%3Aname">name</a>, 
                       <a href="#Evidence%3Arelated%20documentation">related documentation</a>, 
+                      <a href="#Evidence%3Asupports%20requirement">supports requirement</a>, 
                       <a href="#Evidence%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -1993,6 +1998,26 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
 			<td>0..n</td>
                         <td property="rdfs:comment">The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%3Asupports%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/supportsRequirement">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/supportsRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/supportsRequirement" data-placement="right">
+                            supports requirement</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Requirement" data-placement="right">Requirement</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">Requirement for which the Evidence provides proof.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3113,6 +3138,7 @@ To illustrate the notion: the European Directive on services in the internal mar
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Requirement%3Afulfils">fulfils</a>, 
+                      <a href="#Requirement%3Ahas%20supporting%20evidence">has supporting evidence</a>, 
                       <a href="#Requirement%3Aidentifier">identifier</a>, 
                       <a href="#Requirement%3Aname">name</a>, 
                       <a href="#Requirement%3Atype">type</a>.</dd>
@@ -3151,6 +3177,26 @@ To illustrate the notion: the European Directive on services in the internal mar
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The Rules that the requiremens fulfils. </td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Requirement%3Ahas%20supporting%20evidence" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasSupportingEvidence">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasSupportingEvidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasSupportingEvidence" data-placement="right">
+                            has supporting evidence</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Evidence" data-placement="right">Evidence</a>
+			    
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">Evidence that supplies information, proof or support for the Requirement.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>

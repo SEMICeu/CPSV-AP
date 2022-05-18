@@ -291,6 +291,11 @@ the Legal Resource under which the Concession Contracts are being defined.</xs:d
           <xs:documentation xml:lang="en">The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="supportsRequirement" ref="Requirement" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Requirement for which the Evidence provides proof.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="type" type="ConceptType" maxOccurs="1" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">The type of Evidence as described in a controlled vocabulary.</xs:documentation>
@@ -402,6 +407,11 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
       <xs:element name="fulfils" ref="Rule" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">The Rules that the requiremens fulfils. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasSupportingEvidence" ref="Evidence" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Evidence that supplies information, proof or support for the Requirement.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="identifier" type="xs:string" maxOccurs="1" minOccurs="1">

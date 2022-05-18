@@ -165,6 +165,13 @@ cv:hasParticipation rdf:type owl:ObjectProperty ;
                     rdfs:label "has participation"@en .
 
 
+###  http://data.europa.eu/m8g/hasSupportingEvidence
+cv:hasSupportingEvidence rdf:type owl:ObjectProperty ;
+                         rdfs:range cv:Evidence ;
+                         rdfs:comment "Cardinality [0..n]. Evidence that supplies information, proof or support for the Requirement."@en ;
+                         rdfs:label "has supporting evidence"@en .
+
+
 ###  http://data.europa.eu/m8g/holdsRequirement
 cv:holdsRequirement rdf:type owl:ObjectProperty ;
                     rdfs:range cv:Requirement ;
@@ -242,6 +249,13 @@ cv:specialOpeningHoursSpecification rdf:type owl:ObjectProperty ;
                                     rdfs:comment "Cardinality [0..1]. It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."@en ,
                                                  "Cardinality [0..n]. It links a ContactPoint to information about when the ContactPointl is not available, overriding the general opening hours information.."@en ;
                                     rdfs:label "availability restriction"@en .
+
+
+###  http://data.europa.eu/m8g/supportsRequirement
+cv:supportsRequirement rdf:type owl:ObjectProperty ;
+                       rdfs:range cv:Requirement ;
+                       rdfs:comment "Cardinality [0..n]. Requirement for which the Evidence provides proof."@en ;
+                       rdfs:label "supports requirement"@en .
 
 
 ###  http://data.europa.eu/m8g/thematicArea
@@ -684,6 +698,7 @@ cv:Event rdf:type owl:Class ;
 
 ###  http://data.europa.eu/m8g/Evidence
 cv:Evidence rdf:type owl:Class ;
+            rdfs:subClassOf <https://www.w3.org/ns/dcat#Dataset> ;
             vann:usageNote "Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces. Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered. In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s)."@en ;
             rdfs:comment "Optional class. The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can to prove that a specific requirement is met."@en ;
             rdfs:isDefinedBy cv: ;
