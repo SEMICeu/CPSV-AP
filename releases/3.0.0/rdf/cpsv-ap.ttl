@@ -261,7 +261,7 @@ cv:supportsRequirement rdf:type owl:ObjectProperty ;
 ###  http://data.europa.eu/m8g/thematicArea
 cv:thematicArea rdf:type owl:ObjectProperty ;
                 rdfs:range skos:Concept ;
-                rdfs:comment "Cardinality [0..1]. The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en ;
+                rdfs:comment "Cardinality [0..n]. The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..."@en ;
                 rdfs:label "thematicArea"@en .
 
 
