@@ -64,7 +64,7 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>SEMIC Recommendation</dd>
-              <dt>Published at</dt><dd>2022-05-30</dd>
+              <dt>Published at</dt><dd>2022-05-31</dd>
               <dt>This version</dt><dd><a href="https://semiceu.github.io/CPSV-AP/releases/3.0.0">https://semiceu.github.io/CPSV-AP/releases/3.0.0</a></dd>
               
               
@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CPSV-AP/tree/3.0.0/releases/3.0.0">https://github.com/SEMICeu/CPSV-AP/tree/3.0.0/releases/3.0.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/7727a538ac9de6dab80f5a75d74ffa0e087d5f59/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/7727a538ac9de6dab80f5a75d74ffa0e087d5f59/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/65bfdacd213bac61a1250b827542ae7b488726d5/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/65bfdacd213bac61a1250b827542ae7b488726d5/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CPSV-AP/issues">https://github.com/SEMICeu/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -251,7 +251,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This specification has the status of Working Draft published on 2022-05-30.
+                  This specification has the status of SEMIC Recommendation published on 2022-05-31.
 	        </p>
                 
               </section>
@@ -508,7 +508,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">The complete address written as a string.</td>
-                        <td property="skos:scopeNote">Use of this property is recommended as it will not suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France".</td>
+                        <td property="skos:scopeNote">Use of this property is not recommended as it will suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France".</td>
                         <td></td>
                       </tr>
                     
@@ -748,8 +748,8 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links an Agent to the Participation class.</td>
+                        <td property="skos:scopeNote">The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
                         <td></td>
                       </tr>
                     
@@ -763,9 +763,9 @@ The key difference between a locator and a locator name is that the latter is a 
               <h3 class="h3" id="Business Event"><a href="http://data.europa.eu/m8g/BusinessEvent" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/BusinessEvent" data-placement="right">Business Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>This class represents a Business Event, which specialises Event. A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time. A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State.
-
-In other words, a Business Event groups together a number of public services that need to be delivered for completing that particular event.</dd>
+                    <dt>Definition</dt><dd>A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time.</dd>
+                    
+                    <dt>Usage</dt><dd>A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State. In other words, a Business Event groups together a number of public services that need to be delivered for completing that particular event.</dd>
                     
 		     
 		    <dt>Subclass of<dt><dd>
@@ -833,8 +833,8 @@ In other words, a Business Event groups together a number of public services tha
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a channel to information about when the channel is not available.</td>
+                        <td property="skos:scopeNote">The information overrides the general opening hours information. The details are provided using the Opening Hours Specification class.</td>
                         <td></td>
                       </tr>
                     
@@ -873,8 +873,8 @@ In other words, a Business Event groups together a number of public services tha
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The property links a Public Service directly to one or more pieces of Evidence.</td>
+                        <td property="skos:scopeNote">In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision.</td>
                         <td></td>
                       </tr>
                     
@@ -991,7 +991,9 @@ If it is appropriate to add opening hours then this follows the day so if a phon
               <h3 class="h3" id="Collection"><a href="http://www.w3.org/2004/02/skos/core#Collection" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Collection" data-placement="right">Collection</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>This class represents the Collection to which a Concept belongs. Grouping different concepts defines a controlled vocabulary. In this context, the CPSV-AP reuses the Collection class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Collection (labels, preferred labels, alternative labels, definition, etc.) we refer to SKOS.</dd>
+                    <dt>Definition</dt><dd>This class represent the way Concepts belong together. Thus, different concepts are grouped and define a controlled vocabulary.</dd>
+                    
+                    <dt>Usage</dt><dd>In this context, the CPSV-AP reuses the Collection class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Collection (labels, preferred labels, alternative labels, definition, etc.) we refer to SKOS.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1047,11 +1049,9 @@ If it is appropriate to add opening hours then this follows the day so if a phon
               <h3 class="h3" id="Concept"><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Concept</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By. This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitly defined in the CPSV-AP.
-
-In this context, the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition, etc.) we refer to SKOS.
-
-The Concept may or may not belong to (member) a certain Collection.</dd>
+                    <dt>Definition</dt><dd>This class represents any concept that can be used for classifying the Public Service and which relates to the Public Service through the property Is Classified By.</dd>
+                    
+                    <dt>Usage</dt><dd>This class has been added in the CPSV-AP to complement the need for adding other ways of classifying the Public Service, which have not been explicitly defined in the CPSV-AP. In this context, the CPSV-AP reuses the Concept class as defined in the SKOS Simple Knowledge Organization System. For describing the attributes of a Concept (labels, preferred labels, alternative labels, definition, etc.) we refer to SKOS. The Concept may or may not belong to (member) a certain Collection.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1067,9 +1067,10 @@ The Concept may or may not belong to (member) a certain Collection.</dd>
               <h3 class="h3" id="Concession Contract"><a href="http://data.europa.eu/m8g/ConcessionContract" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ConcessionContract" data-placement="right">Concession Contract</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>Concessions are contracts for pecuniary interest by means of which one or more contracting authorities or contracting entities entrusts the execution of works, or the provision and the management of services, to one or more economic operators. The object of such contracts is the procurement of works or services by means of a concession, the consideration of which consists in the right to exploit the works or services or in that right together with payment. Such contracts may, but do not necessarily, involve a transfer of ownership to contracting authorities or contracting entities, but contracting authorities or contracting entities always obtain the benefits of the works or services in question.</dd>
+                    <dt>Definition</dt><dd>Concessions are contracts for pecuniary interest by means of which one or more contracting authorities or contracting entities entrusts the execution of works, or the provision and the management of services, to one or more economic operators.</dd>
                     
-                    <dt>Usage</dt><dd>The definition comes from the Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0023&from=EN">2014/23/EU</a>.</dd>
+                    <dt>Usage</dt><dd>The object of such contracts is the procurement of works or services by means of a concession, the consideration of which consists in the right to exploit the works or services or in that right together with payment. Such contracts may, but do not necessarily, involve a transfer of ownership to contracting authorities or contracting entities, but contracting authorities or contracting entities always obtain the benefits of the works or services in
+question. The definition comes from the Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0023&from=EN">2014/23/EU</a>.</dd>
                     
 		     
 		    <dt>Subclass of<dt><dd>
@@ -1520,8 +1521,8 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..1</td>
-                        <td property="rdfs:comment">Where the cost varies depending on the channel used, for example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property. </td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The costs created by the use of different Channels.</td>
+                        <td property="skos:scopeNote">For example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property.</td>
                         <td></td>
                       </tr>
                     
@@ -1540,8 +1541,8 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links the Cost class to one or more instances of the Public Organization class.</td>
+                        <td property="skos:scopeNote">This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.</td>
                         <td></td>
                       </tr>
                     
@@ -1555,7 +1556,7 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
               <h3 class="h3" id="Dataset"><a href="http://www.w3.org/ns/dcat#Dataset" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Dataset" data-placement="right">Dataset</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The class describes the metadata of where the dataset is being described, for instance on a regional public service portal and/or a national eGovernment portal.</dd>
+                    <dt>Definition</dt><dd>This class represents a collection of metadata and where they can be found, for instance on a regional public service portal and/or a national eGovernment portal.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1716,10 +1717,9 @@ the Legal Resource under which the Concession Contracts are being defined.</td>
               <h3 class="h3" id="Event"><a href="http://data.europa.eu/m8g/Event" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Event" data-placement="right">Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service. It is not expected to be used directly, rather, one or other of its subclasses should be used. The properties of the class are, of course, inherited by those subclasses.
-
-The Event class is used as a hook either to a single related Public Service, such as diagnosis of illness being related to application for sickness benefit ;
-or to a group of Public Services, such as all those related to the establishment of a new business.</dd>
+                    <dt>Definition</dt><dd>This class represents an event that can be of any type that triggers, makes use of, or in some way is related to, a Public Service.</dd>
+                    
+                    <dt>Usage</dt><dd>It is not expected to be used directly, rather, one or other of its subclasses should be used. The properties of the class are, of course, inherited by those subclasses. The Event class is used as a hook either to a single related Public Service, such as diagnosis of illness being related to application for sickness benefit; or to a group of Public Services, such as all those related to the establishment of a new business.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1844,8 +1844,8 @@ or to a group of Public Services, such as all those related to the establishment
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links an Event to a controlled vocabulary of event types.</td>
+                        <td property="skos:scopeNote">It is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.</td>
                         <td></td>
                       </tr>
                     
@@ -1859,7 +1859,7 @@ or to a group of Public Services, such as all those related to the establishment
               <h3 class="h3" id="Evidence"><a href="http://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Evidence" data-placement="right">Evidence</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can to prove that a specific requirement is met.
+                    <dt>Definition</dt><dd>The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can prove that a specific requirement is met.
 </dd>
                     
                     <dt>Usage</dt><dd>Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces.
@@ -1997,8 +1997,8 @@ In some cases, the Output of one service will be Evidence for another service. S
                           
                         </td>
 			<td>0..n</td>
-                        <td property="rdfs:comment">The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The documentation that contains information.</td>
+                        <td property="skos:scopeNote">For instance, a particular template for an administrative document, an application or a guide on formatting the Evidence.</td>
                         <td></td>
                       </tr>
                     
@@ -2110,9 +2110,9 @@ In some cases, the Output of one service will be Evidence for another service. S
               <h3 class="h3" id="Life Event"><a href="http://data.europa.eu/m8g/LifeEvent" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/LifeEvent" data-placement="right">Life Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The Life Event class represents an important event or situations in a citizen&#39;s life where public services may be required. Note the scope: an individual will encounter any number of &#39;events&#39; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event to which a Public Service is related.
-
-For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.</dd>
+                    <dt>Definition</dt><dd>The Life Event class represents an important event or situation in a citizen&#39;s life where public services are required.</dd>
+                    
+                    <dt>Usage</dt><dd>Note on the scope: an individual will encounter any number of 'events'; in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event to which a Public Service is related. For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.</dd>
                     
 		     
 		    <dt>Subclass of<dt><dd>
@@ -2160,7 +2160,7 @@ schema:validThrough "2017-01-02T09:00Z".
               <h3 class="h3" id="Organization"><a href="http://www.w3.org/ns/org#Organization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#Organization" data-placement="right">Organization</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.</dd>
+                    <dt>Definition</dt><dd>A group of people that get together in a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.</dd>
                     
 		     
 		    <dt>Subclass of<dt><dd>
@@ -2267,8 +2267,8 @@ schema:validThrough "2017-01-02T09:00Z".
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
+                        <td property="rdfs:comment">The language(s) in which the Output is available. </td>
+                        <td property="skos:scopeNote">This could be one or multiple languages, for instance in countries with more than one official language. The recommended controlled vocabularies for this property is the <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     
@@ -2322,8 +2322,9 @@ schema:validThrough "2017-01-02T09:00Z".
               <h3 class="h3" id="Participation"><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participation</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority. However, this simple structure does not allow statements to be made about those participants, such the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology&#39;s Membership class that allows more complex
-relationships and richer metadata to be applied to a role filled by a given Agent.</dd>
+                    <dt>Definition</dt><dd>The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority.</dd>
+                    
+                    <dt>Usage</dt><dd>This simple structure does not allow statements to be made about those participants, such as the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology&#39;s Membership class that allows more complex relationships and richer metadata to be applied to a role filled by a given Agent.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -2406,9 +2407,8 @@ relationships and richer metadata to be applied to a role filled by a given Agen
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">It provides the role played. This should be provided using a controlled vocabulary. Since 
-this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It provides the role played. This should be provided using a controlled vocabulary.</td>
+                        <td property="skos:scopeNote">Since this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations.</td>
                         <td></td>
                       </tr>
                     
@@ -2509,16 +2509,9 @@ The ATU list does not include a geometry. That is, the territory is only identif
               <h3 class="h3" id="Public Service"><a href="http://purl.org/vocab/cpsv#PublicService" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#PublicService" data-placement="right">Public Service</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>This class represents the Public Service itself, as it is described in a public service
-catalogue. A Public Service is a mandatory or discretionary set of activities
-performed, or able to be performed, by or on behalf of a public organisation, publicly
-funded and arise from public policy. Services may be for the benefit of an individual,
-a business, or other public authority, or groups of any of these. A service exists
-whether it is used or not, and the term &#39;benefit&#39; may apply in the sense of enabling
-the fulfilment of an obligation. As defined in the revised version of the European
-Interoperability Framework, a European public service comprises any service
-provided by public administrations in Europe, or by other organisations on their
-behalf, to businesses, citizens or others public administrations.</dd>
+                    <dt>Definition</dt><dd>A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy.</dd>
+                    
+                    <dt>Usage</dt><dd>This class represents the Public Service itself, as it is described in a public service catalogue. Services may be for the benefit of an individual, a business, or other public authority, or groups of any of these. A service exists whether it is used or not, and the term 'benefit' may apply in the sense of enabling the fulfilment of an obligation. As defined in the revised version of the European Interoperability Framework, a European public service comprises any service provided by public administrations in Europe, or by other organisations on their behalf, to businesses, citizens or others public administrations.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -2604,8 +2597,8 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a Public Service to the Rule(s) under which it operates.</td>
+                        <td property="skos:scopeNote">The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.</td>
                         <td></td>
                       </tr>
                     
@@ -2664,21 +2657,8 @@ behalf, to businesses, citizens or others public administrations.</dd>
                           
                         </td>
 			<td>1..*</td>
-                        <td property="rdfs:comment">It links a Public Service to a Public Organization, which is the responsible
-Agent for the delivery of the Public Service. Whether the particular Public
-Organization provides the public service directly or outsources it is not relevant. The
-Public Organization that is the Competent Authority of the service is the one that is
-ultimately responsible for managing and providing the public service.
-
-The term Competent Authority is defined in the Services Directive (2006/123/EC) in
-the following way:
-&quot;Any body or authority which has a supervisory or regulatory role in a Member State
-in relation to service activities, including, in particular, administrative authorities,
-including courts acting as such, professional bodies, and those professional
-associations or other professional organisations which, in the exercise of their legal
-autonomy, regulate in a collective manner access to service activities or the exercise
-thereof&quot;.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service.</td>
+                        <td property="skos:scopeNote">Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: "Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof".</td>
                         <td></td>
                       </tr>
                     
@@ -2697,8 +2677,8 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">A contact point for the service is almost always helpful. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. </td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The way a Public Service is linked to the class Contact Point.</td>
+                        <td property="skos:scopeNote">Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant.</td>
                         <td></td>
                       </tr>
                     
@@ -2717,8 +2697,8 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service.</td>
+                        <td property="skos:scopeNote">Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.</td>
                         <td></td>
                       </tr>
                     
@@ -2777,8 +2757,8 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a Public Service to the Participation class.</td>
+                        <td property="skos:scopeNote">The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information.</td>
                         <td></td>
                       </tr>
                     
@@ -2797,8 +2777,8 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links a Public Service to a class that describes the Requirement.</td>
+                        <td property="skos:scopeNote">Usage: It describes the needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary.</td>
                         <td></td>
                       </tr>
                     
@@ -2837,8 +2817,9 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, etc.). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience, etc.  The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in  the CPSV-AP (Thematic Area, Sector, etc.).</td>
+                        <td property="skos:scopeNote">It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation,
+type of audience, etc. The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary.</td>
                         <td></td>
                       </tr>
                     
@@ -2877,8 +2858,8 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. </td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">It links the Public Service to the Event class.</td>
+                        <td property="skos:scopeNote">Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events.</td>
                         <td></td>
                       </tr>
                     
@@ -2917,8 +2898,10 @@ thereof&quot;.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.</td>
+                        <td property="rdfs:comment">The language(s) in which the Public Service is available.</td>
+                        <td property="skos:scopeNote">This could be one language or multiple languages, for instance in countries with more than one official language.
+
+The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     
@@ -3029,8 +3012,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The way a Public Service makes use of other Public Services.</td>
+                        <td property="skos:scopeNote">One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence.</td>
                         <td></td>
                       </tr>
                     
@@ -3049,8 +3032,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary.</td>
-                        <td property="skos:scopeNote">The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme">Data theme</a> Authority Table of the Publications Office. </td>
+                        <td property="rdfs:comment">The industry or sector a Public Service relates to, or is intended for.</td>
+                        <td property="skos:scopeNote">For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary. The possible values for this property are described in the controlled vocabulary <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme">Data theme</a> Authority Table of the Publications Office. </td>
                         <td></td>
                       </tr>
                     
@@ -3111,8 +3094,8 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment, etc.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The Thematic Area of a Public Service as</td>
+                        <td property="skos:scopeNote">For example: social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment, etc.</td>
                         <td></td>
                       </tr>
                     
@@ -3128,7 +3111,7 @@ N.B. The spatial restriction is not meant to be used to describe eligibility or 
                   <dl>
                     <dt>Definition</dt><dd>Condition or prerequisite that is to be proven by Evidence.</dd>
                     
-                    <dt>Usage</dt><dd>Not all public services are needed or usable by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
+                    <dt>Usage</dt><dd>Not all public services are needed or are used by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
 
 Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.
 To illustrate the notion: the European Directive on services in the internal market defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy.</dd>
@@ -3271,12 +3254,9 @@ To illustrate the notion: the European Directive on services in the internal mar
               <h3 class="h3" id="Rule"><a href="http://purl.org/vocab/cpsv#Rule" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#Rule" data-placement="right">Rule</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service, licence, and authentication requirements of the Public Service.
-
-Instances of the Rule class are FRBR Expressions, that is, a concrete expression such
-as a document, of the more abstract concept of the rules themselves. The CPSV-AP does not envisage instances of the Rule class as machine-readable business rules.
-
-Detailed modelling of the rules related to Public Services is out of scope of the CPSV-AP.</dd>
+                    <dt>Definition</dt><dd>The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows.</dd>
+                    
+                    <dt>Usage</dt><dd>It includes the terms of service, licence, and authentication requirements of the Public Service. Instances of the Rule class are FRBR Expressions, that is, a concrete expression such as a document, of the more abstract concept of the rules themselves. The CPSV-AP does not envisage instances of the Rule class as machine-readable business rules. Detailed modelling of the rules related to Public Services is out of scope of the CPSV-AP.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -3383,8 +3363,8 @@ the Legal Resource under which the Rules are being defined.</td>
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language.</td>
-                        <td property="skos:scopeNote">The recommended controlled vocabularies for this property is the <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
+                        <td property="rdfs:comment">The language(s) in which the Rule is available.</td>
+                        <td property="skos:scopeNote">This could be one or multiple languages, for instance in countries with more than one official language. The recommended controlled vocabularies for this property is the <a href=" https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language">Language</a> Authority Table of the Publications Office.</td>
                         <td></td>
                       </tr>
                     
