@@ -289,6 +289,11 @@
       "@id": "http://xmlns.com/foaf/0.1/page",
       "@type": "@id"
     },
+    "Evidence.supportsRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/supportsRequirement",
+      "@type": "@id"
+    },
     "Evidence.type": {
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
@@ -484,6 +489,11 @@
     "Requirement.fulfils": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/fulfils",
+      "@type": "@id"
+    },
+    "Requirement.hasSupportingEvidence": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
       "@type": "@id"
     },
     "Requirement.identifier": {

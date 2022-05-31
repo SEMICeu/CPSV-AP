@@ -257,7 +257,7 @@
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
-            "en": "A contact form that could be used to reach out the contact point."
+            "en": "A contact page that could be used to reach out the contact point."
           },
           "sh:name": {
             "en": "contact page"
@@ -490,6 +490,16 @@
           "sh:path": "http://xmlns.com/foaf/0.1/page"
         },
         {
+          "sh:class": "http://data.europa.eu/m8g/Requirement",
+          "sh:description": {
+            "en": "Requirement for which the Evidence provides proof."
+          },
+          "sh:name": {
+            "en": "supports requirement"
+          },
+          "sh:path": "http://data.europa.eu/m8g/supportsRequirement"
+        },
+        {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "en": "The type of Evidence as described in a controlled vocabulary."
@@ -665,6 +675,16 @@
             "en": "fulfils"
           },
           "sh:path": "http://data.europa.eu/m8g/fulfils"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "en": "Evidence that supplies information, proof or support for the Requirement."
+          },
+          "sh:name": {
+            "en": "has supporting evidence"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence"
         },
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
