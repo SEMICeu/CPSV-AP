@@ -80,7 +80,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/OpeningHoursSpecification",
           "sh:description": {
-            "en": "It links a channel to information about when the channel is not available, overriding the general opening hours information. The details are provided using the Opening Hours Specification class."
+            "en": "It links a channel to information about when the channel is not available."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -101,7 +101,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
-            "en": "In the majority of cases, the evidence required to use a Public Service will be independent of the channel through which the service is accessed. The Has Input property should normally be used to link a Public Service directly to one or more pieces of Evidence. However, where the type of Evidence required varies according to the channel used to access the Public Service, then the Has Input property may be used at the Channel level. For example, a digital signature may be required for an online channel, whereas a physical signature may be required for a face to face service provision.\r"
+            "en": "The property links a Public Service directly to one or more pieces of Evidence."
           },
           "sh:name": {
             "en": "has input"
@@ -338,7 +338,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Channel",
           "sh:description": {
-            "en": "Where the cost varies depending on the channel used, for example, if accessed through an online service cf. accessed at a physical location, the cost can be linked to the channel using the If Accessed Through property. "
+            "en": "The costs created by the use of different Channels."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -349,7 +349,7 @@
         {
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
-            "en": "It links the Cost class with one or more instances of the Public Organization class. This property indicates which Public Organization is the Competent Authority for defining the costs associated with the delivery of a particular Public Service.\r"
+            "en": "It links the Cost class to one or more instances of the Public Organization class."
           },
           "sh:name": {
             "en": "is defined by"
@@ -421,7 +421,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "It links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child.\r"
+            "en": "It links an Event to a controlled vocabulary of event types."
           },
           "sh:name": {
             "en": "type"
@@ -482,7 +482,7 @@
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
-            "en": "The documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Evidence."
+            "en": "The documentation that contains information."
           },
           "sh:name": {
             "en": "related documentation"
@@ -557,7 +557,7 @@
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
-            "en": "The language(s) in which the Output is available. This could be one or multiple languages, for instance in countries with more than one official language."
+            "en": "The language(s) in which the Output is available. "
           },
           "sh:name": {
             "en": "language"
@@ -619,7 +619,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "It provides the role played. This should be provided using a controlled vocabulary. Since \r\nthis is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations."
+            "en": "It provides the role played. This should be provided using a controlled vocabulary."
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -741,7 +741,7 @@
         {
           "sh:class": "http://purl.org/vocab/cpsv#Rule",
           "sh:description": {
-            "en": "It links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario."
+            "en": "It links a Public Service to the Rule(s) under which it operates."
           },
           "sh:name": {
             "en": "follows"
@@ -771,7 +771,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
-            "en": "It links a Public Service to a Public Organization, which is the responsible\r\nAgent for the delivery of the Public Service. Whether the particular Public\r\nOrganization provides the public service directly or outsources it is not relevant. The\r\nPublic Organization that is the Competent Authority of the service is the one that is\r\nultimately responsible for managing and providing the public service.\r\n\r\nThe term Competent Authority is defined in the Services Directive (2006/123/EC) in\r\nthe following way:\r\n\"Any body or authority which has a supervisory or regulatory role in a Member State\r\nin relation to service activities, including, in particular, administrative authorities,\r\nincluding courts acting as such, professional bodies, and those professional\r\nassociations or other professional organisations which, in the exercise of their legal\r\nautonomy, regulate in a collective manner access to service activities or the exercise\r\nthereof\".\r"
+            "en": "It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service."
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -782,7 +782,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/ContactPoint",
           "sh:description": {
-            "en": "A contact point for the service is almost always helpful. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant. "
+            "en": "The way a Public Service is linked to the class Contact Point."
           },
           "sh:name": {
             "en": "has contact point"
@@ -792,7 +792,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Cost",
           "sh:description": {
-            "en": "It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."
+            "en": "It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service."
           },
           "sh:name": {
             "en": "has cost"
@@ -822,7 +822,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:description": {
-            "en": "It links a Public Service to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."
+            "en": "It links a Public Service to the Participation class."
           },
           "sh:name": {
             "en": "has participation"
@@ -832,7 +832,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
-            "en": "It links a Public Service to a class that describes the requirement for needing or using the service, such as residency in a given location, being over a certain age etc. The Requirement class is defined in the Core Criterion and Core Evidence Vocabulary."
+            "en": "It links a Public Service to a class that describes the Requirement."
           },
           "sh:name": {
             "en": "holds requirement"
@@ -854,7 +854,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in the CPSV-AP (Thematic Area, Sector, etc.). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience, etc.  The Concept is at its turn related to a Collection, which groups the different concepts into a controlled vocabulary."
+            "en": "It allows to classify the Public Service with any Concept other than those already foreseen and defined explicitly in  the CPSV-AP (Thematic Area, Sector, etc.)."
           },
           "sh:name": {
             "en": "is classified by"
@@ -874,7 +874,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Event",
           "sh:description": {
-            "en": "It links the Public Service to the Event class. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events. "
+            "en": "It links the Public Service to the Event class."
           },
           "sh:name": {
             "en": "is grouped by"
@@ -894,7 +894,7 @@
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
-            "en": "The language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language."
+            "en": "The language(s) in which the Public Service is available."
           },
           "sh:name": {
             "en": "language"
@@ -946,7 +946,7 @@
         {
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
           "sh:description": {
-            "en": "One Public Service may require, or in some way make use of, the output of one or several other Public Services. In this case, for a Public Service to be executed, another Public Service must be executed beforehand. The nature of the requirement will be described in the associated Rule or Evidence."
+            "en": "The way a Public Service makes use of other Public Services."
           },
           "sh:name": {
             "en": "requires"
@@ -956,7 +956,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary."
+            "en": "The industry or sector a Public Service relates to, or is intended for."
           },
           "sh:name": {
             "en": "sector"
@@ -987,7 +987,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment, etc."
+            "en": "The Thematic Area of a Public Service as"
           },
           "sh:name": {
             "en": "thematic area"
@@ -1038,7 +1038,7 @@
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
-            "en": "The language(s) in which the Rule is available. This could be one or multiple languages, for instance in countries with more than one official language."
+            "en": "The language(s) in which the Rule is available."
           },
           "sh:name": {
             "en": "language"
@@ -1344,7 +1344,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:description": {
-            "en": "It links an Agent to the Participation class. The Participation class facilitates the detailed description of how an Agent participates in or interacts with a Public Service and may include temporal and spatial information."
+            "en": "It links an Agent to the Participation class."
           },
           "sh:name": {
             "en": "plays role"
