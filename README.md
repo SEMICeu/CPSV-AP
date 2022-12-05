@@ -2,7 +2,7 @@
 
 This is the issue tracker for the CPSV-AP.
 
-The latest release of CPSV-AP can be found at: https://semiceu.github.io/CPSV-AP/releases/3.0.0/
+The latest release of CPSV-AP can be found at: https://semiceu.github.io/CPSV-AP/releases/3.1.0/
 
 The Core Public Service Vocabulary Application Profile (CPSV-AP) is a data model that has been developed in the context of a Working Group for describing public services.
 
@@ -10,5 +10,5 @@ Public services are described in a structured and machine-readable way by standa
 
 More information about the CPSV-AP can be found here: https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/about.
 
-Copyright © 2021 European Union. All material in this repository is published under the license [CC-By 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
+Copyright © 2021 European Union. All material in this repository is published under the license [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
 
