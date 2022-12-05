@@ -190,7 +190,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CPSV-AP/tree/3.1.0/releases/3.1.0">https://github.com/SEMICeu/CPSV-AP/tree/3.1.0/releases/3.1.0</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/765196e29fb86ba3c29b2dcce98748c01b3898cc/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/765196e29fb86ba3c29b2dcce98748c01b3898cc/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CPSV-AP/issues">https://github.com/SEMICeu/CPSV-AP/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -280,7 +280,6 @@
                     <p>This document describes the usage of the following entities for a correct usage of the Core Vocabulary: 
                       <br />
                       |
-                      <a href="#"></a> |
                       <a href="#Address">Address</a> |
                       <a href="#Agent">Agent</a> |
                       <a href="#Business Event">Business Event</a> |
@@ -293,6 +292,7 @@
                       <a href="#Dataset">Dataset</a> |
                       <a href="#Event">Event</a> |
                       <a href="#Evidence">Evidence</a> |
+                      <a href="#Evidence Type">Evidence Type</a> |
                       <a href="#Legal Resource">Legal Resource</a> |
                       <a href="#Life Event">Life Event</a> |
                       <a href="#Organization">Organization</a> |
@@ -319,85 +319,6 @@
             </div>
             <div class="region region--no-space-top">
               <h2 class="h2">Entities</h2>
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id=""><a href="http://data.europa.eu/m8g/EvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceType" data-placement="right"></a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Definition</dt><dd>Information about the characteristics of an Evidence.</dd>
-                    
-                    <dt>Usage</dt><dd>The Evidence Type and the characteristics it describes are not concrete individual responses to a Requirement (i.e. Evidence), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide (e.g. membership of a class of Evidences).</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		     
-                    <dd>For this entity the following properties are defined:
-                      <a href="#%3Aevidence%20type%20classification">evidence type classification</a>, 
-                      <a href="#%3Aidentifier">identifier</a>.</dd>
-                    
-                  </dl>
-                </div>
-		 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
-                        <th class="data-table__header-title--sortable">Expected Range</th>
-			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Definition</th>
-                        <th class="data-table__header-title--sortable">Usage</th>
-                        <th class="data-table__header-title--sortable">Codelist</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="%3Aevidence%20type%20classification" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/evidenceTypeClassification">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/evidenceTypeClassification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/evidenceTypeClassification" data-placement="right">
-                            evidence type classification</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
-                            
-                          
-                        </td>
-			<td>0..*</td>
-                        <td property="rdfs:comment">Category to which the Evidence Type belongs.</td>
-                        <td property="skos:scopeNote">The categories agreed are left open but could for example specify the layout and content expected for an Evidence. An example could be id cards.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
-                            identifier</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
-                            
-                          
-                        </td>
-			<td>1</td>
-                        <td property="rdfs:comment">Unambiguous reference to the Evidence Type.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
             </div>
             
               <div class="region region--no-space-top">
@@ -1854,7 +1775,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                         <td>
                           
 			    
-			    <a href="#EvidenceType" data-placement="right">EvidenceType</a>
+			    <a href="#Evidence Type" data-placement="right">Evidence Type</a>
 			    
                           
                         </td>
@@ -1960,6 +1881,85 @@ In some cases, the Output of one service will be Evidence for another service. S
                         </td>
 			<td>0..1</td>
                         <td property="rdfs:comment">The type of Evidence as described in a controlled vocabulary.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Evidence Type"><a href="http://data.europa.eu/m8g/EvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceType" data-placement="right">Evidence Type</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>Information about the characteristics of an Evidence.</dd>
+                    
+                    <dt>Usage</dt><dd>The Evidence Type and the characteristics it describes are not concrete individual responses to a Requirement (i.e. Evidence), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide (e.g. membership of a class of Evidences).</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Evidence%20Type%3Aevidence%20type%20classification">evidence type classification</a>, 
+                      <a href="#Evidence%20Type%3Aidentifier">identifier</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Evidence%20Type%3Aevidence%20type%20classification" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/evidenceTypeClassification">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/evidenceTypeClassification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/evidenceTypeClassification" data-placement="right">
+                            evidence type classification</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
+                            
+                          
+                        </td>
+			<td>0..*</td>
+                        <td property="rdfs:comment">Category to which the Evidence Type belongs.</td>
+                        <td property="skos:scopeNote">The categories agreed are left open but could for example specify the layout and content expected for an Evidence. An example could be id cards.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%20Type%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+			<td>1</td>
+                        <td property="rdfs:comment">Unambiguous reference to the Evidence Type.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -2672,7 +2672,7 @@ The ATU list does not include a geometry. That is, the territory is only identif
                         <td>
                           
 			    
-			    <a href="#EvidenceType" data-placement="right">EvidenceType</a>
+			    <a href="#Evidence Type" data-placement="right">Evidence Type</a>
 			    
                           
                         </td>
@@ -3642,7 +3642,7 @@ the Legal Resource under which the Service Concession Contracts are being define
                 (non-normative)
                 
 <p>
-A changelog describing the (major) changes to the previous version (2.2.1) of the CPSV-AP and the new version that is being proposed in this specification (3.0.0), can be found <a href="https://github.com/SEMICeu/CPSV-AP/blob/3.1.0/releases/3.1.0/Changelog.md">here</a>.
+A changelog describing the (major) changes to the previous version (3.0.0) of the CPSV-AP and the new version that is being proposed in this specification (3.1.0), can be found <a href="https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.1.0/Changelog.md">here</a>.
 <p>
 
             </div>
