@@ -1050,7 +1050,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The Thematic Area of a Public Service as"
+            "en": "The Thematic Area of a Public Service"
           },
           "sh:name": {
             "en": "thematic area"

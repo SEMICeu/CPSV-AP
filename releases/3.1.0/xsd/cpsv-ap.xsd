@@ -599,7 +599,7 @@ the Legal Resource under which the Service Concession Contracts are being define
       </xs:element>
       <xs:element name="thematicArea" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The Thematic Area of a Public Service as</xs:documentation>
+          <xs:documentation xml:lang="en">The Thematic Area of a Public Service</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
