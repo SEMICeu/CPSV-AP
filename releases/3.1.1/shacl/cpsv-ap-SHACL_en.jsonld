@@ -6,6 +6,13 @@
       "@id": "qb:codeList",
       "@type": "@id"
     },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdfs:comment": {
       "@id": "rdfs:comment"
@@ -87,7 +94,11 @@
       "@type": "@id"
     },
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "vl": "https://data.vlaanderen.be/ns/shacl#"
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
   },
   "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap",
   "shapes": [
@@ -112,12 +123,11 @@
           "sh:name": {
             "en": "related"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/relation",
           "vl:message": {
-            "en": "De verwachte waarde voor related is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for related is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#LegalResourceShape/accaa0502d4e297d7ed26c3cf8b69b43cd2323dc",
@@ -131,9 +141,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/relation",
           "vl:message": {
-            "en": "De range van related moet van het type <http://data.europa.eu/eli/ontology#LegalResource> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of related must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
@@ -162,9 +171,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor type"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for type"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/2c2e861c64607bcf2ba7176ce18df71cc690e57e",
@@ -175,12 +183,11 @@
           "sh:name": {
             "en": "availability restriction"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
           "vl:message": {
-            "en": "De verwachte waarde voor availability restriction is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for availability restriction is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -194,9 +201,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
@@ -210,9 +216,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "De range van processing time moet van het type <http://www.w3.org/2001/XMLSchema#duration> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of processing time must be of type <http://www.w3.org/2001/XMLSchema#duration>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -223,12 +228,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -242,9 +246,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -255,12 +258,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -274,9 +276,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/7816fa198c5151c7c5680b445b410afba0f362db",
@@ -290,9 +291,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/openingHours",
           "vl:message": {
-            "en": "De range van opening hours moet van het type <http://www.w3.org/2006/time#TemporalEntity> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of opening hours must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/838e4bb2be9ce8cea21f29f28858145596010131",
@@ -306,9 +306,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/ownedBy",
           "vl:message": {
-            "en": "De range van owned by moet van het type <http://www.w3.org/ns/org#Organization> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of owned by must be of type <http://www.w3.org/ns/org#Organization>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/8a0c8ba54a63f20695ae0c4782a7f90e51fc4b01",
@@ -319,12 +318,11 @@
           "sh:name": {
             "en": "processing time"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "De verwachte waarde voor processing time is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for processing time is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
@@ -338,9 +336,8 @@
           },
           "sh:path": "http://purl.org/vocab/cpsv#hasInput",
           "vl:message": {
-            "en": "De range van has input moet van het type <http://data.europa.eu/m8g/Evidence> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has input must be of type <http://data.europa.eu/m8g/Evidence>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/939028c42179e18627eac7954154b35dbc9c5a42",
@@ -351,12 +348,11 @@
           "sh:name": {
             "en": "opening hours"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/openingHours",
           "vl:message": {
-            "en": "De verwachte waarde voor opening hours is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for opening hours is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
@@ -370,9 +366,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
           "vl:message": {
-            "en": "De range van availability restriction moet van het type <http://www.w3.org/2006/time#TemporalEntity> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of availability restriction must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/a2cd982ca6d33ff22b892e96e813dfaf4842d9bb",
@@ -383,12 +378,11 @@
           "sh:name": {
             "en": "owned by"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/ownedBy",
           "vl:message": {
-            "en": "De verwachte waarde voor owned by is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for owned by is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -399,12 +393,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/b129207d038ab53064378895a366dd6223462aa5",
@@ -418,9 +411,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor processing time"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for processing time"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -434,9 +426,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/ce8eb8d70b0315b592091191b2a34b661e18032b",
@@ -447,12 +438,11 @@
           "sh:name": {
             "en": "has input"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/vocab/cpsv#hasInput",
           "vl:message": {
-            "en": "De verwachte waarde voor has input is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has input is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -466,25 +456,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ChannelShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Channel%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Channel."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Channel"
@@ -495,22 +468,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/0867cf853418cb9d7d1fb8b906e353ec44462596",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPoint%3Ahas%20email",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An electronic address through which the Contact Point can be contacted."
-          },
-          "sh:name": {
-            "en": "has email"
-          },
-          "sh:path": "http://data.europa.eu/m8g/email",
-          "vl:message": {
-            "en": "De range van has email moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/0c404fa56c64463c15f65878d02efa16eec065b0",
           "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPoint%3Ahas%20email",
           "sh:description": {
@@ -519,12 +476,11 @@
           "sh:name": {
             "en": "has email"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/m8g/email",
           "vl:message": {
-            "en": "De verwachte waarde voor has email is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has email is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/2c2e861c64607bcf2ba7176ce18df71cc690e57e",
@@ -535,12 +491,11 @@
           "sh:name": {
             "en": "availability restriction"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
           "vl:message": {
-            "en": "De verwachte waarde voor availability restriction is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for availability restriction is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
@@ -554,25 +509,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/openingHours",
           "vl:message": {
-            "en": "De range van opening hours moet van het type <http://www.w3.org/2006/time#TemporalEntity> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/81d774660d4c0f4b9837a4c09b8cd7b9bbe24567",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPoint%3Ahas%20telephone",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A telephone number through which the Contact Point can be contacted."
-          },
-          "sh:name": {
-            "en": "has telephone"
-          },
-          "sh:path": "http://data.europa.eu/m8g/telephone",
-          "vl:message": {
-            "en": "De range van has telephone moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of opening hours must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/8547f9fea103d51b54d608cf10f98b003fde7378",
@@ -583,12 +521,11 @@
           "sh:name": {
             "en": "has telephone"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/m8g/telephone",
           "vl:message": {
-            "en": "De verwachte waarde voor has telephone is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has telephone is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/939028c42179e18627eac7954154b35dbc9c5a42",
@@ -599,12 +536,11 @@
           "sh:name": {
             "en": "opening hours"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/openingHours",
           "vl:message": {
-            "en": "De verwachte waarde voor opening hours is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for opening hours is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
@@ -618,9 +554,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/contactPage",
           "vl:message": {
-            "en": "De range van contact page moet van het type <http://xmlns.com/foaf/0.1/Document> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of contact page must be of type <http://xmlns.com/foaf/0.1/Document>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
@@ -634,9 +569,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
           "vl:message": {
-            "en": "De range van availability restriction moet van het type <http://www.w3.org/2006/time#TemporalEntity> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of availability restriction must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ContactPointShape/a736c4b01ea7557518c0c146f3e311947ce00ccc",
@@ -647,12 +581,11 @@
           "sh:name": {
             "en": "contact page"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/contactPage",
           "vl:message": {
-            "en": "De verwachte waarde voor contact page is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for contact page is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
@@ -674,9 +607,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor if accessed through"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for if accessed through"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/0e79ef5fb9e3c47fc26e2c4054e70de85aeef448",
@@ -687,12 +619,11 @@
           "sh:name": {
             "en": "is defined by"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/isDefinedBy",
           "vl:message": {
-            "en": "De verwachte waarde voor is defined by is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for is defined by is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/0f01df91b1de87f3463afeb15eb17fb2b6c72eb4",
@@ -706,9 +637,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough",
           "vl:message": {
-            "en": "De range van if accessed through moet van het type <http://data.europa.eu/m8g/Channel> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of if accessed through must be of type <http://data.europa.eu/m8g/Channel>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/1f3895e40402964778aff822b36b6820050ecd8a",
@@ -722,9 +652,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasValue",
           "vl:message": {
-            "en": "De range van has value moet van het type <http://www.w3.org/2001/XMLSchema#double> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has value must be of type <http://www.w3.org/2001/XMLSchema#double>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/3435304b8a2fc3277d3acac5245bbb3489465288",
@@ -738,9 +667,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/currency",
           "vl:message": {
-            "en": "De range van currency moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of currency must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/49cee4396d571117473d56c99f5101467cbe59d3",
@@ -754,9 +682,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/isDefinedBy",
           "vl:message": {
-            "en": "De range van is defined by moet van het type <http://www.w3.org/ns/org#Organization> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of is defined by must be of type <http://www.w3.org/ns/org#Organization>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/52adccb60392267e3398249f4f1904467f99ad1c",
@@ -770,9 +697,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasValue",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor has value"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for has value"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -786,9 +712,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -799,12 +724,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -818,9 +742,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -831,12 +754,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -850,9 +772,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/c4ff2a5f9b7cd2f0a3ffbf0acf9d19bd508759bf",
@@ -866,9 +787,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/currency",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor currency"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for currency"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/c90428fbe09f8377e994279893416d89a474c968",
@@ -879,12 +799,11 @@
           "sh:name": {
             "en": "has value"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/m8g/hasValue",
           "vl:message": {
-            "en": "De verwachte waarde voor has value is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has value is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -898,25 +817,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Cost%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Cost."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/fe4234d7d5d57c51daba9831effa4addcae8d8a7",
@@ -927,12 +829,11 @@
           "sh:name": {
             "en": "currency"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/currency",
           "vl:message": {
-            "en": "De verwachte waarde voor currency is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for currency is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CostShape/fec4c066b3bf2190dbb7fccd0b45e8aa15f26cf4",
@@ -943,12 +844,11 @@
           "sh:name": {
             "en": "if accessed through"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough",
           "vl:message": {
-            "en": "De verwachte waarde voor if accessed through is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for if accessed through is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Cost"
@@ -970,9 +870,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -986,9 +885,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -999,12 +897,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/50a278b580af7f10bcb00d4ac1520b892ff0106f",
@@ -1015,12 +912,11 @@
           "sh:name": {
             "en": "has related service"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasRelatedService",
           "vl:message": {
-            "en": "De verwachte waarde voor has related service is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has related service is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1034,9 +930,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -1047,12 +942,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -1066,9 +960,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -1082,9 +975,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -1095,12 +987,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -1111,12 +1002,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/b294397dcc861f6573c6465d2465e0b5140589c2",
@@ -1130,9 +1020,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasRelatedService",
           "vl:message": {
-            "en": "De range van has related service moet van het type <http://purl.org/vocab/cpsv#PublicService> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has related service must be of type <http://purl.org/vocab/cpsv#PublicService>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -1146,9 +1035,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -1162,9 +1050,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -1178,25 +1065,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EventShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Event%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Event."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Event"
@@ -1218,9 +1088,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/conformsTo",
           "vl:message": {
-            "en": "De range van is conformant to moet van het type <http://data.europa.eu/m8g/EvidenceType> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of is conformant to must be of type <http://data.europa.eu/m8g/EvidenceType>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/236f0210baaf149903750c43bbe7012c21debb2a",
@@ -1234,9 +1103,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor type"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for type"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
@@ -1250,9 +1118,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
@@ -1266,9 +1133,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De range van language moet van het type <http://purl.org/dc/terms/LinguisticSystem> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of language must be of type <http://purl.org/dc/terms/LinguisticSystem>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -1282,9 +1148,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/44256ab457df9192446c72aaec177f289253be17",
@@ -1295,12 +1160,11 @@
           "sh:name": {
             "en": "related documentation"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://xmlns.com/foaf/0.1/page",
           "vl:message": {
-            "en": "De verwachte waarde voor related documentation is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for related documentation is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -1311,12 +1175,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3",
@@ -1330,9 +1193,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/supportsRequirement",
           "vl:message": {
-            "en": "De range van supports requirement moet van het type <http://data.europa.eu/m8g/Requirement> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of supports requirement must be of type <http://data.europa.eu/m8g/Requirement>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1346,9 +1208,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -1359,12 +1220,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -1378,9 +1238,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -1394,9 +1253,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -1407,12 +1265,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/9eac088bf51f5c2b77f62ebd6d42b5a436f36b94",
@@ -1423,12 +1280,11 @@
           "sh:name": {
             "en": "supports requirement"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/supportsRequirement",
           "vl:message": {
-            "en": "De verwachte waarde voor supports requirement is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for supports requirement is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -1439,12 +1295,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/bb340555c3764b91a6f4e94cd922c4792144f8e0",
@@ -1455,12 +1310,11 @@
           "sh:name": {
             "en": "is conformant to"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/conformsTo",
           "vl:message": {
-            "en": "De verwachte waarde voor is conformant to is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for is conformant to is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -1474,9 +1328,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -1490,9 +1343,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -1506,9 +1358,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d",
@@ -1522,9 +1373,8 @@
           },
           "sh:path": "http://xmlns.com/foaf/0.1/page",
           "vl:message": {
-            "en": "De range van related documentation moet van het type <http://xmlns.com/foaf/0.1/Document> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of related documentation must be of type <http://xmlns.com/foaf/0.1/Document>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/db878f1cb93930f64561d0504123c66feacfad5a",
@@ -1535,28 +1385,11 @@
           "sh:name": {
             "en": "language"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De verwachte waarde voor language is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Evidence%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the piece of Evidence."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for language is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
@@ -1575,12 +1408,11 @@
           "sh:name": {
             "en": "evidence type classification"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/evidenceTypeClassification",
           "vl:message": {
-            "en": "De verwachte waarde voor evidence type classification is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for evidence type classification is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceTypeShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1594,9 +1426,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceTypeShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -1607,12 +1438,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceTypeShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -1626,9 +1456,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10",
@@ -1642,25 +1471,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/evidenceTypeClassification",
           "vl:message": {
-            "en": "De range van evidence type classification moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceTypeShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#EvidenceType%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "Unambiguous reference to the Evidence Type."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of evidence type classification must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/EvidenceType"
@@ -1689,9 +1501,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
@@ -1705,9 +1516,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De range van language moet van het type <http://purl.org/dc/terms/LinguisticSystem> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of language must be of type <http://purl.org/dc/terms/LinguisticSystem>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -1721,9 +1531,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -1734,12 +1543,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1753,9 +1561,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -1766,12 +1573,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -1785,9 +1591,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -1801,9 +1606,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -1814,12 +1618,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -1830,12 +1633,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -1849,9 +1651,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -1865,9 +1666,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -1881,9 +1681,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/db878f1cb93930f64561d0504123c66feacfad5a",
@@ -1894,28 +1693,11 @@
           "sh:name": {
             "en": "language"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De verwachte waarde voor language is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#OutputShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Output%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Output."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for language is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Output"
@@ -1934,12 +1716,11 @@
           "sh:name": {
             "en": "has participant"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasParticipant",
           "vl:message": {
-            "en": "De verwachte waarde voor has participant is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has participant is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/5cdb060907c15fb0f5b76b308cfdbbf62f59a2ba",
@@ -1953,9 +1734,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasParticipant",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor has participant"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for has participant"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -1969,9 +1749,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -1982,12 +1761,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -2001,9 +1779,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
@@ -2017,9 +1794,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor description"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/91fca326def04ee4ef7ed1efba4e59fae00d1faa",
@@ -2030,12 +1806,11 @@
           "sh:name": {
             "en": "role"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/role",
           "vl:message": {
-            "en": "De verwachte waarde voor role is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for role is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/96872d3a91278412b47d750ed71a4938984306c0",
@@ -2049,9 +1824,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/role",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor role"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for role"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/a80662b8305434df5e0a4edc73b2bb9037308c42",
@@ -2065,9 +1839,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasParticipant",
           "vl:message": {
-            "en": "De range van has participant moet van het type <http://xmlns.com/foaf/0.1/Agent> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has participant must be of type <http://xmlns.com/foaf/0.1/Agent>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -2078,12 +1851,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -2097,9 +1869,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/d2254b8259635ec986bc7c65b0227299193c6c16",
@@ -2113,9 +1884,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/role",
           "vl:message": {
-            "en": "De range van role moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of role must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -2129,25 +1899,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Participation%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The unambiguous structured reference for the Participation."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ParticipationShape/fab6e43cda87d2059922dd2de3511bcb321bf4e0",
@@ -2161,9 +1914,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasParticipant",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor has participant"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for has participant"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Participation"
@@ -2185,9 +1937,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/spatial",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor spatial"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for spatial"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
@@ -2201,9 +1952,8 @@
           },
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
           "vl:message": {
-            "en": "De range van preferred label moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of preferred label must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9",
@@ -2217,9 +1967,8 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor preferred label"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for preferred label"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f",
@@ -2230,12 +1979,11 @@
           "sh:name": {
             "en": "preferred label"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
           "vl:message": {
-            "en": "De verwachte waarde voor preferred label is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for preferred label is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
@@ -2249,9 +1997,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/spatial",
           "vl:message": {
-            "en": "De range van spatial moet van het type <http://data.europa.eu/88u/dataset/atu-type> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of spatial must be of type <http://data.europa.eu/88u/dataset/atu-type>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/b93b49bf7122a561ecc9674449665256e441faf5",
@@ -2262,12 +2009,11 @@
           "sh:name": {
             "en": "spatial"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/spatial",
           "vl:message": {
-            "en": "De verwachte waarde voor spatial is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for spatial is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicOrganisationShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
@@ -2281,9 +2027,8 @@
           },
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor preferred label"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for preferred label"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
@@ -2305,9 +2050,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/fulfils",
           "vl:message": {
-            "en": "De range van fulfils moet van het type <http://purl.org/vocab/cpsv#Rule> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of fulfils must be of type <http://purl.org/vocab/cpsv#Rule>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/1abd4f982243530f0fb88d4e008be49b42efc782",
@@ -2318,12 +2062,11 @@
           "sh:name": {
             "en": "fulfils"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/fulfils",
           "vl:message": {
-            "en": "De verwachte waarde voor fulfils is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for fulfils is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
@@ -2337,9 +2080,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -2353,9 +2095,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -2366,12 +2107,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -2385,9 +2125,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -2401,9 +2140,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4",
@@ -2417,9 +2155,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence",
           "vl:message": {
-            "en": "De range van has supporting evidence moet van het type <http://data.europa.eu/m8g/Evidence> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has supporting evidence must be of type <http://data.europa.eu/m8g/Evidence>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -2430,12 +2167,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -2446,12 +2182,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -2465,9 +2200,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -2481,9 +2215,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/c22f4d4b19d815c393ed318f76984a19f430e18e",
@@ -2494,28 +2227,11 @@
           "sh:name": {
             "en": "has supporting evidence"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence",
           "vl:message": {
-            "en": "De verwachte waarde voor has supporting evidence is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RequirementShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Requirement%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "Unambiguous reference to a Requirement."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for has supporting evidence is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Requirement"
@@ -2537,9 +2253,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasContractingAuthority",
           "vl:message": {
-            "en": "De range van has contracting authority moet van het type <http://data.europa.eu/m8g/PublicOrganisation> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has contracting authority must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
@@ -2553,9 +2268,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/414ff6a96841aee86e8791e52a0fb5e5ef9a7142",
@@ -2566,12 +2280,11 @@
           "sh:name": {
             "en": "has contracting authority"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasContractingAuthority",
           "vl:message": {
-            "en": "De verwachte waarde voor has contracting authority is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has contracting authority is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/5f8ff8d410fffd3c66572f17ffd0fc00c8a5dade",
@@ -2582,12 +2295,11 @@
           "sh:name": {
             "en": "established under"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/establishedUnder",
           "vl:message": {
-            "en": "De verwachte waarde voor established under is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for established under is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/61c1f5a02eb55fea91b186759ff633ada55ef542",
@@ -2601,9 +2313,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasEconomicOperator",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor has economic operator"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for has economic operator"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -2617,9 +2328,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -2630,12 +2340,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -2649,9 +2358,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
@@ -2665,9 +2373,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor description"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -2681,9 +2388,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -2694,12 +2400,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -2710,12 +2415,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/bd9ae6e6b3d6f86219d564ffaf4e11569f19f06a",
@@ -2729,9 +2433,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasEconomicOperator",
           "vl:message": {
-            "en": "De range van has economic operator moet van het type <http://www.w3.org/ns/org#Organization> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has economic operator must be of type <http://www.w3.org/ns/org#Organization>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -2745,9 +2448,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -2761,9 +2463,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -2777,9 +2478,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/d8f08abad404ef4bca5eb1b1ab59435956e0685c",
@@ -2793,9 +2493,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/establishedUnder",
           "vl:message": {
-            "en": "De range van established under moet van het type <http://data.europa.eu/eli/ontology#LegalResource> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of established under must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/dcf97ec7589aaff5124f8d360eac0f1b4041dd81",
@@ -2806,28 +2505,11 @@
           "sh:name": {
             "en": "has economic operator"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasEconomicOperator",
           "vl:message": {
-            "en": "De verwachte waarde voor has economic operator is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContract%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Service Concession Contract."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for has economic operator is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#ServiceConcessionContractShape/f0efa7944285dc5b66fc9c917dc2069e6b4db250",
@@ -2841,9 +2523,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasContractingAuthority",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor has contracting authority"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for has contracting authority"
+          }
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/ServiceConcessionContract"
@@ -2865,9 +2546,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasInputType",
           "vl:message": {
-            "en": "De range van has input type moet van het type <http://data.europa.eu/m8g/EvidenceType> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has input type must be of type <http://data.europa.eu/m8g/EvidenceType>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/013f2eeaf472274d350811a8ded979c8275857a5",
@@ -2881,9 +2561,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasChannel",
           "vl:message": {
-            "en": "De range van has channel moet van het type <http://data.europa.eu/m8g/Channel> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has channel must be of type <http://data.europa.eu/m8g/Channel>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/0574b333ee091dcbcc53e07a1ffbeaa1533d5f6a",
@@ -2894,12 +2573,11 @@
           "sh:name": {
             "en": "is described at"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/isDescribedAt",
           "vl:message": {
-            "en": "De verwachte waarde voor is described at is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for is described at is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
@@ -2913,9 +2591,8 @@
           },
           "sh:path": "http://www.w3.org/ns/adms#status",
           "vl:message": {
-            "en": "De range van status moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of status must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/1aaa988702b5b8caa5aab67b1bc340dce40a1783",
@@ -2929,9 +2606,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority",
           "vl:message": {
-            "en": "De range van has competent authority moet van het type <http://data.europa.eu/m8g/PublicOrganisation> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has competent authority must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
@@ -2945,9 +2621,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
@@ -2961,9 +2636,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De range van language moet van het type <http://purl.org/dc/terms/LinguisticSystem> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of language must be of type <http://purl.org/dc/terms/LinguisticSystem>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
@@ -2977,9 +2651,8 @@
           },
           "sh:path": "http://www.w3.org/ns/adms#status",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor status"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for status"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3339565e8ee09847fb5a997a8b1355cf76a90e6e",
@@ -2990,12 +2663,11 @@
           "sh:name": {
             "en": "holds requirement"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/holdsRequirement",
           "vl:message": {
-            "en": "De verwachte waarde voor holds requirement is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for holds requirement is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/37b71c4409f37efcb388ee7226886dd39d7033bd",
@@ -3009,9 +2681,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/relatedService",
           "vl:message": {
-            "en": "De range van related service moet van het type <http://purl.org/vocab/cpsv#PublicService> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of related service must be of type <http://purl.org/vocab/cpsv#PublicService>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3833ee6007343a68911e59f730b9c7d5625a15e1",
@@ -3025,9 +2696,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/sector",
           "vl:message": {
-            "en": "De range van sector moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of sector must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3894f9fa605c37b8ff4766859d3107f97cc5f934",
@@ -3041,9 +2711,8 @@
           },
           "sh:path": "http://www.w3.org/ns/dcat#keyword",
           "vl:message": {
-            "en": "De range van keyword moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of keyword must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/38cdba2d3411fe95c0698cc43e2c9ffd78c46521",
@@ -3054,12 +2723,11 @@
           "sh:name": {
             "en": "sector"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/sector",
           "vl:message": {
-            "en": "De verwachte waarde voor sector is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for sector is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1",
@@ -3070,12 +2738,11 @@
           "sh:name": {
             "en": "status"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/adms#status",
           "vl:message": {
-            "en": "De verwachte waarde voor status is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for status is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
@@ -3089,9 +2756,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "De range van processing time moet van het type <http://www.w3.org/2001/XMLSchema#duration> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of processing time must be of type <http://www.w3.org/2001/XMLSchema#duration>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/3e5470e12cd11245086e35b55e6446a388fd8964",
@@ -3102,12 +2768,11 @@
           "sh:name": {
             "en": "addressee"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/audience",
           "vl:message": {
-            "en": "De verwachte waarde voor addressee is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for addressee is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/4818505ce79380053cd4bf83365b74766e26b80a",
@@ -3118,12 +2783,11 @@
           "sh:name": {
             "en": "has channel"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasChannel",
           "vl:message": {
-            "en": "De verwachte waarde voor has channel is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has channel is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/4f4d82c8903226cc4534c77be3f9a2486e473a6f",
@@ -3134,12 +2798,11 @@
           "sh:name": {
             "en": "is classified by"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/isClassifiedBy",
           "vl:message": {
-            "en": "De verwachte waarde voor is classified by is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for is classified by is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
@@ -3153,9 +2816,8 @@
           },
           "sh:path": "http://purl.org/vocab/cpsv#produces",
           "vl:message": {
-            "en": "De range van produces moet van het type <http://data.europa.eu/m8g/Output> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of produces must be of type <http://data.europa.eu/m8g/Output>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/59263d34cd9c655e707d40d27dbf78ecd3d6b76a",
@@ -3166,12 +2828,11 @@
           "sh:name": {
             "en": "thematic area"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/thematicArea",
           "vl:message": {
-            "en": "De verwachte waarde voor thematic area is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for thematic area is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/5bc739112726cd993c279f81380611cafc3a9857",
@@ -3182,12 +2843,11 @@
           "sh:name": {
             "en": "keyword"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/dcat#keyword",
           "vl:message": {
-            "en": "De verwachte waarde voor keyword is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for keyword is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/63e05cc560c16dca7a31a3c52844d206a245cc69",
@@ -3198,12 +2858,11 @@
           "sh:name": {
             "en": "is grouped by"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/isGroupedBy",
           "vl:message": {
-            "en": "De verwachte waarde voor is grouped by is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for is grouped by is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -3217,9 +2876,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -3230,12 +2888,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -3249,9 +2906,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4",
@@ -3265,9 +2921,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasCost",
           "vl:message": {
-            "en": "De range van has cost moet van het type <http://data.europa.eu/m8g/Cost> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has cost must be of type <http://data.europa.eu/m8g/Cost>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
@@ -3281,9 +2936,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/contactPoint",
           "vl:message": {
-            "en": "De range van contact point moet van het type <http://data.europa.eu/m8g/ContactPoint> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of contact point must be of type <http://data.europa.eu/m8g/ContactPoint>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8600dc53e8da037a0c3e416515eaa53a7af02a08",
@@ -3294,12 +2948,11 @@
           "sh:name": {
             "en": "related service"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/relatedService",
           "vl:message": {
-            "en": "De verwachte waarde voor related service is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for related service is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8a0c8ba54a63f20695ae0c4782a7f90e51fc4b01",
@@ -3310,12 +2963,11 @@
           "sh:name": {
             "en": "processing time"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "De verwachte waarde voor processing time is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for processing time is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8d7e6e3d76197e8bad7564f34438ddfda58906bd",
@@ -3329,9 +2981,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/isClassifiedBy",
           "vl:message": {
-            "en": "De range van is classified by moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of is classified by must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
@@ -3345,9 +2996,8 @@
           },
           "sh:path": "http://purl.org/vocab/cpsv#hasInput",
           "vl:message": {
-            "en": "De range van has input moet van het type <http://data.europa.eu/m8g/Evidence> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has input must be of type <http://data.europa.eu/m8g/Evidence>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
@@ -3361,9 +3011,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor description"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
@@ -3377,9 +3026,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/spatial",
           "vl:message": {
-            "en": "De range van spatial moet van het type <http://purl.org/dc/terms/Location> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of spatial must be of type <http://purl.org/dc/terms/Location>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/966ab8e83c830e2d7676016cddb1928c8c2d119c",
@@ -3393,9 +3041,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/audience",
           "vl:message": {
-            "en": "De range van addressee moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of addressee must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -3409,9 +3056,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
@@ -3422,12 +3068,11 @@
           "sh:name": {
             "en": "contact point"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/contactPoint",
           "vl:message": {
-            "en": "De verwachte waarde voor contact point is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for contact point is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -3438,12 +3083,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/a2f88e07a4e6f43f6738fa94347a04766d0b30d2",
@@ -3457,9 +3101,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/isDescribedAt",
           "vl:message": {
-            "en": "De range van is described at moet van het type <http://www.w3.org/ns/dcat#Dataset> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of is described at must be of type <http://www.w3.org/ns/dcat#Dataset>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -3470,12 +3113,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/b129207d038ab53064378895a366dd6223462aa5",
@@ -3489,9 +3131,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/processingTime",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor processing time"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for processing time"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/b19f1113c59fce0aa3743160e2952dbb0b46c495",
@@ -3505,9 +3146,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/requires",
           "vl:message": {
-            "en": "De range van requires moet van het type <http://purl.org/vocab/cpsv#PublicService> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of requires must be of type <http://purl.org/vocab/cpsv#PublicService>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/b3298d22e02dabdb98f5271a3e3ef2e3d95c2409",
@@ -3521,9 +3161,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/thematicArea",
           "vl:message": {
-            "en": "De range van thematic area moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of thematic area must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/b8b696cbf9fa17e3447da768e0631bddfa17fddf",
@@ -3534,12 +3173,11 @@
           "sh:name": {
             "en": "requires"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/requires",
           "vl:message": {
-            "en": "De verwachte waarde voor requires is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for requires is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/b93b49bf7122a561ecc9674449665256e441faf5",
@@ -3550,12 +3188,11 @@
           "sh:name": {
             "en": "spatial"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/spatial",
           "vl:message": {
-            "en": "De verwachte waarde voor spatial is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for spatial is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -3569,9 +3206,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/c07ada401e3aace3f953540318206533d3c22be7",
@@ -3585,9 +3221,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/holdsRequirement",
           "vl:message": {
-            "en": "De range van holds requirement moet van het type <http://data.europa.eu/m8g/Requirement> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of holds requirement must be of type <http://data.europa.eu/m8g/Requirement>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -3601,9 +3236,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/c678d3b6ae22a358f800ce1cdb7f277c9efa4b62",
@@ -3617,9 +3251,8 @@
           },
           "sh:path": "http://purl.org/vocab/cpsv#follows",
           "vl:message": {
-            "en": "De range van follows moet van het type <http://purl.org/vocab/cpsv#Rule> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of follows must be of type <http://purl.org/vocab/cpsv#Rule>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/c79731a9f0d3268bf54d69b65bfa614132b72c5b",
@@ -3630,12 +3263,11 @@
           "sh:name": {
             "en": "follows"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/vocab/cpsv#follows",
           "vl:message": {
-            "en": "De verwachte waarde voor follows is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for follows is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1",
@@ -3646,12 +3278,11 @@
           "sh:name": {
             "en": "produces"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/vocab/cpsv#produces",
           "vl:message": {
-            "en": "De verwachte waarde voor produces is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for produces is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/ce8eb8d70b0315b592091191b2a34b661e18032b",
@@ -3662,12 +3293,11 @@
           "sh:name": {
             "en": "has input"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/vocab/cpsv#hasInput",
           "vl:message": {
-            "en": "De verwachte waarde voor has input is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has input is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6",
@@ -3681,9 +3311,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/isGroupedBy",
           "vl:message": {
-            "en": "De range van is grouped by moet van het type <http://data.europa.eu/m8g/Event> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of is grouped by must be of type <http://data.europa.eu/m8g/Event>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/d48349f1f6bda80f4465115b500eea9daa813424",
@@ -3694,12 +3323,11 @@
           "sh:name": {
             "en": "has cost"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasCost",
           "vl:message": {
-            "en": "De verwachte waarde voor has cost is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has cost is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/d4ca6ac1d97db36794aa2fcb137582dc061799a7",
@@ -3710,12 +3338,11 @@
           "sh:name": {
             "en": "functions of government"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor functions of government is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for functions of government is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -3729,9 +3356,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/daedda88b37d728083714514e646d60a4ff381be",
@@ -3745,9 +3371,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van functions of government moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of functions of government must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/db878f1cb93930f64561d0504123c66feacfad5a",
@@ -3758,28 +3383,11 @@
           "sh:name": {
             "en": "language"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De verwachte waarde voor language is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicService%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A formally-issued Identifier for the Public Service."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for language is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/e3b5766ba50799d3ec5bb119b130ffd2b20c2003",
@@ -3790,12 +3398,11 @@
           "sh:name": {
             "en": "has competent authority"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority",
           "vl:message": {
-            "en": "De verwachte waarde voor has competent authority is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has competent authority is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/e60d9718764241fd0032ba1929dd53f4294a964a",
@@ -3809,9 +3416,8 @@
           "sh:path": "http://www.w3.org/ns/dcat#keyword",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor keyword"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for keyword"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/ef2c104f9bc5019523318900356723ac0a8500e2",
@@ -3822,12 +3428,11 @@
           "sh:name": {
             "en": "has participation"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasParticipation",
           "vl:message": {
-            "en": "De verwachte waarde voor has participation is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has participation is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/f04e304095842b2d788f1262685ae592d4a3f8da",
@@ -3841,9 +3446,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor has competent authority"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for has competent authority"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/f0cd7a7f4525dfc72a824773c6dc39bd5ba0e03e",
@@ -3854,12 +3458,11 @@
           "sh:name": {
             "en": "has input type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasInputType",
           "vl:message": {
-            "en": "De verwachte waarde voor has input type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has input type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/f39233c7b5ad6a8711ac224eae0d15501d94a5da",
@@ -3870,12 +3473,11 @@
           "sh:name": {
             "en": "has legal resource"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/hasLegalResource",
           "vl:message": {
-            "en": "De verwachte waarde voor has legal resource is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has legal resource is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/fb0f4ce42568457dd68730013f20f7749a22ad39",
@@ -3889,9 +3491,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasParticipation",
           "vl:message": {
-            "en": "De range van has participation moet van het type <http://data.europa.eu/m8g/Participation> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has participation must be of type <http://data.europa.eu/m8g/Participation>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#PublicServiceShape/fd522758830afb24ffe73ea6dae91598c8e9ff23",
@@ -3905,9 +3506,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/hasLegalResource",
           "vl:message": {
-            "en": "De range van has legal resource moet van het type <http://data.europa.eu/eli/ontology#LegalResource> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has legal resource must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
+          }
         }
       ],
       "sh:targetClass": "http://purl.org/vocab/cpsv#PublicService"
@@ -3929,9 +3529,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor type"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for type"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
@@ -3945,9 +3544,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
@@ -3961,9 +3559,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De range van language moet van het type <http://purl.org/dc/terms/LinguisticSystem> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of language must be of type <http://purl.org/dc/terms/LinguisticSystem>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -3977,9 +3574,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/45c29ae77863bf76765c44a8c34f3cab08469fbf",
@@ -3990,12 +3586,11 @@
           "sh:name": {
             "en": "implements"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/vocab/cpsv#implements",
           "vl:message": {
-            "en": "De verwachte waarde voor implements is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for implements is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
@@ -4006,12 +3601,11 @@
           "sh:name": {
             "en": "type"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/type",
           "vl:message": {
-            "en": "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for type is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/51d41afe5401d1b6a58328411e940a808f944ea1",
@@ -4025,9 +3619,8 @@
           },
           "sh:path": "http://purl.org/vocab/cpsv#implements",
           "vl:message": {
-            "en": "De range van implements moet van het type <http://data.europa.eu/eli/ontology#LegalResource> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of implements must be of type <http://data.europa.eu/eli/ontology#LegalResource>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -4041,9 +3634,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -4054,12 +3646,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -4073,9 +3664,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
@@ -4089,9 +3679,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor description"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -4105,9 +3694,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -4118,12 +3706,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -4134,12 +3721,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -4153,9 +3739,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -4169,9 +3754,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -4185,9 +3769,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/db878f1cb93930f64561d0504123c66feacfad5a",
@@ -4198,28 +3781,11 @@
           "sh:name": {
             "en": "language"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/language",
           "vl:message": {
-            "en": "De verwachte waarde voor language is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#RuleShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Rule%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Rule."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for language is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://purl.org/vocab/cpsv#Rule"
@@ -4238,12 +3804,11 @@
           "sh:name": {
             "en": "member"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/2004/02/skos/core#member",
           "vl:message": {
-            "en": "De verwachte waarde voor member is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for member is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#CollectionShape/d875a34c2a5b0d03bcfe904f1f9b83872f37ed3b",
@@ -4257,9 +3822,8 @@
           },
           "sh:path": "http://www.w3.org/2004/02/skos/core#member",
           "vl:message": {
-            "en": "De range van member moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of member must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         }
       ],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Collection"
@@ -4288,9 +3852,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/frequency",
           "vl:message": {
-            "en": "De range van frequency moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of frequency must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#TemporalEntityShape/63a8cf23801ef605734507c621693524f22476dd",
@@ -4301,12 +3864,11 @@
           "sh:name": {
             "en": "frequency"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/frequency",
           "vl:message": {
-            "en": "De verwachte waarde voor frequency is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for frequency is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#TemporalEntityShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -4317,12 +3879,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#TemporalEntityShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -4336,9 +3897,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -4352,9 +3912,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         }
       ],
       "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
@@ -4373,12 +3932,11 @@
           "sh:name": {
             "en": "has part"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/hasPart",
           "vl:message": {
-            "en": "De verwachte waarde voor has part is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for has part is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
@@ -4389,12 +3947,11 @@
           "sh:name": {
             "en": "landing page"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/dcat#landingPage",
           "vl:message": {
-            "en": "De verwachte waarde voor landing page is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for landing page is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
@@ -4408,9 +3965,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van title moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of title must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
@@ -4424,9 +3980,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/publisher",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor publisher"
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for publisher"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/6cae9880e515253132af1452a38a8a5827165149",
@@ -4437,12 +3992,11 @@
           "sh:name": {
             "en": "description"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De verwachte waarde voor description is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for description is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
@@ -4456,9 +4010,8 @@
           "sh:path": "http://purl.org/dc/terms/description",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor description"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
@@ -4472,9 +4025,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor description"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for description"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/92d65d33f2a5d5345f1980ffd0cf304e47dd0caf",
@@ -4488,9 +4040,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor title"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for title"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
@@ -4501,12 +4052,11 @@
           "sh:name": {
             "en": "publisher"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://purl.org/dc/terms/publisher",
           "vl:message": {
-            "en": "De verwachte waarde voor publisher is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for publisher is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/a0ccdf3bd7f5d161d07f375a26e68c18ca91dc19",
@@ -4520,9 +4070,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/publisher",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor publisher"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for publisher"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -4533,12 +4082,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
@@ -4552,9 +4100,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/publisher",
           "vl:message": {
-            "en": "De range van publisher moet van het type <http://xmlns.com/foaf/0.1/Agent> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of publisher must be of type <http://xmlns.com/foaf/0.1/Agent>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/c8cbca0f9dd8797f331150a9e22d9e3ca53ab372",
@@ -4568,9 +4115,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/hasPart",
           "vl:message": {
-            "en": "De range van has part moet van het type <http://purl.org/vocab/cpsv#PublicService> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of has part must be of type <http://purl.org/vocab/cpsv#PublicService>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -4584,9 +4130,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/description",
           "vl:message": {
-            "en": "De range van description moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97",
@@ -4597,28 +4142,11 @@
           "sh:name": {
             "en": "title"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor title is een Literal"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Dataset%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for title is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
@@ -4632,9 +4160,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor title"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for title"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
@@ -4648,9 +4175,8 @@
           },
           "sh:path": "http://www.w3.org/ns/dcat#landingPage",
           "vl:message": {
-            "en": "De range van landing page moet van het type <http://xmlns.com/foaf/0.1/Document> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of landing page must be of type <http://xmlns.com/foaf/0.1/Document>."
+          }
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
@@ -4669,12 +4195,11 @@
           "sh:name": {
             "en": "locator name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#locatorName",
           "vl:message": {
-            "en": "De verwachte waarde voor locator name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for locator name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/03690748629ed1c685fc6a365780375be09bce76",
@@ -4688,9 +4213,8 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor administrative unit level 1"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for administrative unit level 1"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
@@ -4704,9 +4228,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
           "vl:message": {
-            "en": "De range van thoroughfare moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of thoroughfare must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b",
@@ -4717,28 +4240,11 @@
           "sh:name": {
             "en": "administrative unit level 2"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
           "vl:message": {
-            "en": "De verwachte waarde voor administrative unit level 2 is een Literal"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/2a00282e88009a074dbdbf158b265c330964c1d7",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Address%3Apost%20office%20box",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A location designator for a postal delivery point at a post office, usually a number."
-          },
-          "sh:name": {
-            "en": "post office box"
-          },
-          "sh:path": "http://www.w3.org/ns/locn#poBox",
-          "vl:message": {
-            "en": "De range van post office box moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for administrative unit level 2 is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
@@ -4752,9 +4258,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
           "vl:message": {
-            "en": "De range van administrative unit level 1 moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of administrative unit level 1 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e",
@@ -4768,9 +4273,8 @@
           "sh:path": "http://www.w3.org/ns/locn#fullAddress",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor full address"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for full address"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
@@ -4784,41 +4288,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#addressArea",
           "vl:message": {
-            "en": "De range van address area moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/685aa96e0ad9933fb7afe810c607adee1a821f6a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Address%3Apost%20code",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
-          },
-          "sh:name": {
-            "en": "post code"
-          },
-          "sh:path": "http://www.w3.org/ns/locn#postCode",
-          "vl:message": {
-            "en": "De range van post code moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/6e68b263ff6691874a96806549be459766bcdd21",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Address%3Alocator%20designator",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
-          },
-          "sh:name": {
-            "en": "locator designator"
-          },
-          "sh:path": "http://www.w3.org/ns/locn#locatorDesignator",
-          "vl:message": {
-            "en": "De range van locator designator moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of address area must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918",
@@ -4832,9 +4303,8 @@
           "sh:path": "http://www.w3.org/ns/locn#locatorName",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor locator name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for locator name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
@@ -4848,9 +4318,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
           "vl:message": {
-            "en": "De range van administrative unit level 2 moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of administrative unit level 2 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef",
@@ -4861,12 +4330,11 @@
           "sh:name": {
             "en": "address ID"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#addressId",
           "vl:message": {
-            "en": "De verwachte waarde voor address ID is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for address ID is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/9097b947404def8604330ec2fc5a0bd405128b35",
@@ -4877,12 +4345,11 @@
           "sh:name": {
             "en": "locator designator"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#locatorDesignator",
           "vl:message": {
-            "en": "De verwachte waarde voor locator designator is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for locator designator is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
@@ -4896,9 +4363,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#postName",
           "vl:message": {
-            "en": "De range van post name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of post name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e",
@@ -4909,12 +4375,11 @@
           "sh:name": {
             "en": "administrative unit level 1"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
           "vl:message": {
-            "en": "De verwachte waarde voor administrative unit level 1 is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for administrative unit level 1 is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/9c278b09ca17b0ef710224829c0354dc4c2f9a40",
@@ -4925,12 +4390,11 @@
           "sh:name": {
             "en": "post office box"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#poBox",
           "vl:message": {
-            "en": "De verwachte waarde voor post office box is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for post office box is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/9c2d6af39a55e5e6a76f6b852bbcbada029c21af",
@@ -4941,12 +4405,11 @@
           "sh:name": {
             "en": "full address"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#fullAddress",
           "vl:message": {
-            "en": "De verwachte waarde voor full address is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for full address is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/a9a46434014b93624ab68c9a56a5bc66a38da9a4",
@@ -4960,9 +4423,8 @@
           "sh:path": "http://www.w3.org/ns/locn#postName",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor post name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for post name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/aa9622c05f497ef1b06496716742dd5cbfc6f0c9",
@@ -4973,12 +4435,11 @@
           "sh:name": {
             "en": "thoroughfare"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
           "vl:message": {
-            "en": "De verwachte waarde voor thoroughfare is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for thoroughfare is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/ac2d62a08fd924f88a79f0e70cda9fca4d484fd2",
@@ -4992,9 +4453,8 @@
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor thoroughfare"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for thoroughfare"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/ae24e9fc95115753cabe5ad6bd3c05b9751cd13c",
@@ -5008,9 +4468,8 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor administrative unit level 2"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for administrative unit level 2"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/b35e8c8ed2d85ea47f163d53cafca733ecb29389",
@@ -5024,9 +4483,8 @@
           "sh:path": "http://www.w3.org/ns/locn#addressArea",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor address area"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for address area"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1",
@@ -5037,28 +4495,11 @@
           "sh:name": {
             "en": "post code"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#postCode",
           "vl:message": {
-            "en": "De verwachte waarde voor post code is een Literal"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/d681cbab014b3cae793721d3f3782d595e083835",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Address%3Aaddress%20ID",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "A globally unique identifier for each instance of an Address."
-          },
-          "sh:name": {
-            "en": "address ID"
-          },
-          "sh:path": "http://www.w3.org/ns/locn#addressId",
-          "vl:message": {
-            "en": "De range van address ID moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "The expected value for post code is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
@@ -5072,9 +4513,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#locatorName",
           "vl:message": {
-            "en": "De range van locator name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of locator name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
@@ -5088,9 +4528,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#fullAddress",
           "vl:message": {
-            "en": "De range van full address moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of full address must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72",
@@ -5101,12 +4540,11 @@
           "sh:name": {
             "en": "address area"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#addressArea",
           "vl:message": {
-            "en": "De verwachte waarde voor address area is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for address area is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa",
@@ -5117,12 +4555,11 @@
           "sh:name": {
             "en": "post name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#postName",
           "vl:message": {
-            "en": "De verwachte waarde voor post name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for post name is a Literal"
+          }
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/locn#Address"
@@ -5151,9 +4588,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De range van name moet van het type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/2c7d994dd540f92c116cac913e2aa5d588945f1f",
@@ -5164,12 +4600,11 @@
           "sh:name": {
             "en": "address"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://www.w3.org/ns/locn#address",
           "vl:message": {
-            "en": "De verwachte waarde voor address is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for address is a rdfs:Resource (URI or blank node)"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/3ebdf1520cc4c255e68fed56bc8fa1d659e63f2b",
@@ -5183,9 +4618,8 @@
           },
           "sh:path": "http://data.europa.eu/m8g/participates",
           "vl:message": {
-            "en": "De range van participates moet van het type <http://data.europa.eu/m8g/Participation> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of participates must be of type <http://data.europa.eu/m8g/Participation>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/5de4ef5193a558e17a34633888421d09b957d267",
@@ -5199,9 +4633,8 @@
           },
           "sh:path": "http://www.w3.org/ns/locn#address",
           "vl:message": {
-            "en": "De range van address moet van het type <http://www.w3.org/ns/locn#Address> zijn."
-          },
-          "vl:rule": ""
+            "en": "The range of address must be of type <http://www.w3.org/ns/locn#Address>."
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
@@ -5215,9 +4648,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor identifier"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
@@ -5231,9 +4663,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "Minimaal 1 waarden verwacht voor name"
-          },
-          "vl:rule": ""
+            "en": "Minimally 1 values are expected for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/9caf9e629daa0e64ece77788576468821d7cff8c",
@@ -5244,12 +4675,11 @@
           "sh:name": {
             "en": "name"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/title",
           "vl:message": {
-            "en": "De verwachte waarde voor name is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for name is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -5260,12 +4690,11 @@
           "sh:name": {
             "en": "identifier"
           },
-          "sh:nodekind": "sh:Literal",
+          "sh:nodeKind": "sh:Literal",
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "De verwachte waarde voor identifier is een Literal"
-          },
-          "vl:rule": ""
+            "en": "The expected value for identifier is a Literal"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9",
@@ -5279,9 +4708,8 @@
           "sh:path": "http://purl.org/dc/terms/title",
           "sh:uniqueLang": "true",
           "vl:message": {
-            "en": "Slechts 1 waarde voor elke taal toegelaten voor name"
-          },
-          "vl:rule": ""
+            "en": "Only 1 value for each language is allowed for name"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -5295,25 +4723,8 @@
           },
           "sh:path": "http://purl.org/dc/terms/identifier",
           "vl:message": {
-            "en": "Maximaal 1 waarden toegelaten voor identifier"
-          },
-          "vl:rule": ""
-        },
-        {
-          "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
-          "rdfs:seeAlso": "https://semiceu.github.io//doc/application-profile/cpsv-ap#Agent%3Aidentifier",
-          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "en": "An Identifier for the Agent."
-          },
-          "sh:name": {
-            "en": "identifier"
-          },
-          "sh:path": "http://purl.org/dc/terms/identifier",
-          "vl:message": {
-            "en": "De range van identifier moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."
-          },
-          "vl:rule": ""
+            "en": "Maximally 1 values allowed for identifier"
+          }
         },
         {
           "@id": "https://semiceu.github.io//doc/application-profile/cpsv-ap#AgentShape/fa36d3daf49d3081345d97a78915e5f823c4ec0f",
@@ -5324,12 +4735,11 @@
           "sh:name": {
             "en": "participates"
           },
-          "sh:nodekind": "sh:BlankNodeOrIRI",
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/m8g/participates",
           "vl:message": {
-            "en": "De verwachte waarde voor participates is een rdfs:Resource (URI of blank node)"
-          },
-          "vl:rule": ""
+            "en": "The expected value for participates is a rdfs:Resource (URI or blank node)"
+          }
         }
       ],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
