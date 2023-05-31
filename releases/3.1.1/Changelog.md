@@ -10,6 +10,7 @@
 | R3  | ContactPoint.specialOpeningHoursSpecifications                                        | ContactPoint.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
 | R4  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
 | R5  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
+| R6  | Agent.participates                                        | Agent.participates                        | Relax cardinality | [#113](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/113) |
 
 ### Changes from 3.0.0 to 3.1.0
 
