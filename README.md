@@ -2,7 +2,7 @@
 
 This is the issue tracker for the CPSV-AP.
 
-The latest release of CPSV-AP can be found at: https://semiceu.github.io/CPSV-AP/releases/3.1.0/
+The latest release of CPSV-AP can be found at: https://semiceu.github.io/CPSV-AP/releases/3.1.1/
 
 The Core Public Service Vocabulary Application Profile (CPSV-AP) is a data model that has been developed in the context of a Working Group for describing public services.
 
