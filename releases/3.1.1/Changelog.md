@@ -3,14 +3,14 @@
 ### Changes from 3.1.0 to 3.1.1
 | Nr  | CPSV-AP v3.1.0 2022                                            | CPSV-AP v3.1.1 2023                                 | Rationale                                                                          | GitHub/Change                                                        |
 | --- | -------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| C1  | Channel                                       | Channel                           | Split definition from usage note | [#116](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/116) |
-| C2  | Dataset                                       | Dataset                           | Split definition from usage note | [#116](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/116) |
-| R1  | PublicService.hasInput                                       | PublicService.hasInput                          | Split definition from usage note | [#116](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/116) |
-| R2  | ContactPoint.openingHours                                       | ContactPoint.openingHours                         | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
+| C1  | Channel                                       | Channel                           | Split definition from usage note | [#116](https://github.com/SEMICeu/CPSV-AP/issues/116) |
+| C2  | Dataset                                       | Dataset                           | Split definition from usage note | [#116](https://github.com/SEMICeu/CPSV-AP/issues/116) |
+| R1  | PublicService.hasInput                                       | PublicService.hasInput                          | Split definition from usage note | [#116](https://github.com/SEMICeu/CPSV-AP/issues/116) |
+| R2  | ContactPoint.openingHours                                       | ContactPoint.openingHours                         | More generic definitions | [#117](https://github.com/SEMICeu/CPSV-AP/issues/117) |
 | R3  | ContactPoint.specialOpeningHoursSpecifications                                        | ContactPoint.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
-| R4  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
-| R5  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/117) |
-| R6  | Agent.participates                                        | Agent.participates                        | Relax cardinality | [#113](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/113) |
+| R4  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/CPSV-AP/issues/117) |
+| R5  | Channel.specialOpeningHoursSpecifications                                        | Channel.specialOpeningHoursSpecifications                          | More generic definitions | [#117](https://github.com/SEMICeu/CPSV-AP/issues/117) |
+| R6  | Agent.participates                                        | Agent.participates                        | Relax cardinality | [#113](https://github.com/SEMICeu/CPSV-AP/issues/113) |
 
 ### Changes from 3.0.0 to 3.1.0
 
