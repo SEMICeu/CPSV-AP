@@ -11,4 +11,4 @@ Public services are described in a structured and machine-readable way by standa
 
 More information about the CPSV-AP can be found here: https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/about.
 
-Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the ADMS repository on GitHub.
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CPSV-AP repository on GitHub.
