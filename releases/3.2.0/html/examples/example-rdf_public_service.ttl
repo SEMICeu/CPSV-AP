@@ -1,0 +1,91 @@
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:publicService1 dct:description "Service pour la déclaration à l'impôt des personnes physiques en ligne"@fr ;
+	cv:contactPoint ex:contactPoint1 ;
+	cv:hasCompetentAuthority ex:publicOrganisation1 ;
+	dct:identifier "Tax-on-web" ;
+	dct:title "Tax-on-web"@en ;
+	cpsv:hasInput ex:evidence1 ;
+	cv:hasInputType ex:evidenceType1 ;
+	cv:hasChannel ex:channel1 ;
+	a cpsv:PublicService .
+
+ex:publicOrganisation1 skos:prefLabel "Service Public Fédéral FINANCES"@fr, "Federale Overheidsdiesnt FINANCIEN"@nl, 
+	"Federal Public Service FINANCE"@en, "Foderaler Offentlicher Dienst FINANZEN"@de ;
+	dct:spatial <http://publications.europa.eu/resource/authority/atu/BEL> ;
+	a cv:PublicOrganisation .
+
+ex:requirement1 dct:title "Request to provide certificate about childcare costs"@en ;
+	dct:identifier "req-123" ;
+	dct:type ex:federalreduction ;
+	cv:hasSupportingEvidence ex:evidence1 ;
+	a cv:Requirement .
+
+ex:evidence1 dct:description "Attestation en matière de frais de garde d'enfants de l'année 2020"@fr ;
+	dct:conformsTo ex:evidenceType1 ;
+	dct:title "Attestation garde d'enfants"@fr ;
+	dct:identifier "evi-123" ;
+	cv:supportsRequirement ex:requirement1 ;
+	a cv:Evidence .
+
+ex:evidenceType1 cv:evidenceTypeClassification ex:certicate ;
+	dct:identifier "evt-123" ;
+	a cv:EvidenceType .
+
+ex:channel1 dct:type <http://data.europa.eu/snb/com-channel/b37115f83e> ;
+	dct:identifier "cha-123" ;
+	a cv:Channel .
+
+ex:contactPoint1 cv:openingHours ex:openingHours1 ;
+	cv:specialOpeningHoursSpecification ex:specialOpeningHours1 ;
+	cv:telephone "+32 257 25757" ;
+	a cv:ContactPoint .
+
+ex:openingHours1 cv:frequency <http://publications.europa.eu/resource/authority/frequency/DAILY> ;
+	dct:description "Every day from 9 a.m. to 5 p.m."@en ;
+	time:hasBeginning [
+		time:inDateTime [
+			time:hour 9 ;
+			time:minute 0 ;
+			time:unitType time:unitMinute ;
+			rdf:type time:DateTimeDescription ;
+		] ;
+		rdf:type time:Instant ;
+	] ;
+	time:hasEnd [
+		time:inDateTime [
+			time:hour 17 ;
+			time:minute 0 ;
+			time:unitType time:unitMinute ;
+			rdf:type time:DateTimeDescription ;
+		] ;
+		rdf:type time:Instant ;
+	] ;
+	a time:TemporalEntity .
+
+ex:specialOpeningHours1 dct:description "closed on weekend"@en ;
+	time:hasBeginning [
+		time:inDateTime [
+			time:dayOfWeek time:Saturday ;
+			rdf:type time:DateTimeDescription ;
+		] ;
+		rdf:type time:Instant ;
+	] ;
+	time:hasEnd [
+		time:inDateTime [
+			time:dayOfWeek time:Sunday ;
+			rdf:type time:DateTimeDescription ;
+		] ;
+		rdf:type time:Instant ;
+	] ;
+	a time:TemporalEntity .

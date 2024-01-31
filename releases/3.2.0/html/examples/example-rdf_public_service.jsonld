@@ -1,0 +1,237 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/CPSV-AP/releases/3.2.0/context/cpsv-ap.jsonld",
+   {
+    "cpsv" : "http://purl.org/vocab/cpsv#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "org-type": "http://publications.europa.eu/resource/authority/organization-type/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:publicService1",
+      "@type": "PublicService",
+      "dct:description" : {
+          "@language": "fr",
+          "@value": "Service pour la déclaration à l'impôt des personnes physiques en ligne"
+      },
+      "cv:contactPoint" : {
+        "@id": "ex:contactPoint1"
+      },
+      "cv:hasCompetentAuthority" : {
+        "@id": "ex:publicOrganisation1"
+      },
+      "dct:identifier" : "Tax-on-web",
+      "dct:title" : {
+          "@language": "en",
+          "@value": "Tax-on-web"
+      },
+      "cpsv:hasInput" : {
+        "@id": "ex:evidence1"
+      },
+      "cv:hasInputType" : {
+        "@id": "ex:evidenceType1"
+      },
+      "cv:hasChannel" : {
+        "@id": "ex:channel1"
+      }
+    },
+    {
+      "@id": "ex:publicOrganisation1",
+      "@type": "PublicOrganization",
+      "skos:prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "Service Public Fédéral FINANCES"
+        },
+        {
+          "@language": "nl",
+          "@value": "Federale Overheidsdiesnt FINANCIEN"
+        },
+        {
+          "@language": "en",
+          "@value": "Federal Public Service FINANCE"
+        },
+        {
+          "@language": "de",
+          "@value": "Foderaler Offentlicher Dienst FINANZEN"
+        }
+      ],
+      "dct:spatial": {
+        "@id": "http://publications.europa.eu/resource/authority/atu/BEL"
+      }
+    },
+    {
+      "@id": "ex:requirement1",
+      "@type": "Requirement",
+      "dct:title" : {
+        "@language": "en",
+        "@value": "Request to provide certificate about childcare costs"
+      },
+      "dct:identifier" : "req-123",
+      "dct:type" : {
+        "@id" : "ex:federalreduction"
+      },
+      "cv:hasSupportingEvidence" : {
+        "@id" : "ex:evidence1"
+      }
+    },
+    {
+      "@id": "ex:evidence1",
+      "@type": "Evidence",
+      "dct:description" : {
+        "@language": "fr",
+        "@value": "Attestation en matière de frais de garde d'enfants de l'année 2020"
+      },
+      "dct:conformsTo" : {
+        "@id" :"ex:evidenceType1"
+      },
+      "dct:title" : {
+        "@language": "fr",
+        "@value": "Attestation garde d'enfants"
+      },
+      "dct:identifier" : "evi-123",
+      "cv:supportsRequirement" : {
+        "@id" : "ex:requirement1"
+      }
+    },
+    {
+      "@id": "ex:evidenceType1",
+      "@type": "EvidenceType",
+      "cv:evidenceTypeClassification" : {
+        "@id" : "ex:certicate"
+      },
+      "dct:identifier" : "evt-123"
+    },
+    {
+      "@id": "ex:channel1",
+      "@type": "Channel",
+      "dct:type" : {
+        "@id" : "http://data.europa.eu/snb/com-channel/b37115f83e"
+      },
+      "dct:identifier" : "cha-123"
+    },
+    {
+      "@id": "ex:contactPoint1",
+      "@type": "ContactPoint",
+      "cv:openingHours": {
+        "@id": "ex:openingHours1"
+      },
+      "cv:specialOpeningHoursSpecification": {
+        "@id": "ex:specialOpeningHours1"
+      },
+      "cv:telephone": "+32 257 25757"
+    },
+    {
+      "@id": "ex:openingHours1",
+      "@type": "TemporalEntity",
+      "cv:frequency": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/DAILY"
+      },
+      "dct:description": {
+        "@language": "en",
+        "@value": "Every day from 9 a.m. to 5 p.m."
+      },
+      "time:hasBeginning": {
+        "@id": "_:g0"
+      },
+      "time:hasEnd": {
+        "@id": "_:g2"
+      }
+    },
+    {
+      "@id": "_:g0",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g1"
+      }
+    },
+    {
+      "@id": "_:g1",
+      "@type": "time:DateTimeDescription",
+      "time:hour": {
+        "@type": "xsd:integer",
+        "@value": "9"
+      },
+      "time:minute": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "time:unitType": {
+        "@id": "time:unitMinute"
+      }
+    },
+    {
+      "@id": "_:g2",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g3"
+      }
+    },
+    {
+      "@id": "_:g3",
+      "@type": "time:DateTimeDescription",
+      "time:hour": {
+        "@type": "xsd:integer",
+        "@value": "17"
+      },
+      "time:minute": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "time:unitType": {
+        "@id": "time:unitMinute"
+      }
+    },
+    {
+      "@id": "ex:specialOpeningHours1",
+      "@type": "TemporalEntity",
+      "dct:description": {
+        "@language": "en",
+        "@value": "closed on weekend"
+      },
+      "time:hasBeginning": {
+        "@id": "_:g4"
+      },
+      "time:hasEnd": {
+        "@id": "_:g6"
+      }
+    },
+    {
+      "@id": "_:g4",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g5"
+      }
+    },
+    {
+      "@id": "_:g5",
+      "@type": "time:DateTimeDescription",
+      "time:dayOfWeek": {
+        "@id": "time:Saturday"
+      }
+    },
+    {
+      "@id": "_:g6",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g7"
+      }
+    },
+    {
+      "@id": "_:g7",
+      "@type": "time:DateTimeDescription",
+      "time:dayOfWeek": {
+        "@id": "time:Sunday"
+      }
+    }
+  ]
+}
