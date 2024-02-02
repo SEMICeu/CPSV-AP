@@ -335,8 +335,7 @@ cv:Evidence a owl:Class;
 
 Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered.
 
-In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s)."""@en;
-  rdfs:subClassOf dcat:Dataset .
+In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s)."""@en .
 
 foaf:page a owl:ObjectProperty;
   rdfs:comment "The documentation that contains information."@en;
