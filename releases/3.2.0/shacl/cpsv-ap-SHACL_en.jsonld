@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/",
+    "@vocab": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl",
     "qb": "http://purl.org/linked-data/cube#",
     "qb:codeList": {
       "@id": "qb:codeList",
@@ -100,29 +100,22 @@
       "@id": "vl:message"
     }
   },
-  "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/",
+  "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl",
   "shapes": [
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AdministrativeTerritorialUnitShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://data.europa.eu/88u/dataset/atu-type"
-    },
-    {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ConcessionContractShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ConcessionContractShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://data.europa.eu/a4g/ontology#ConcessionContract"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LegalResourceShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LegalResourceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LegalResourceShape/accaa0502d4e297d7ed26c3cf8b69b43cd2323dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LegalResourceShape/accaa0502d4e297d7ed26c3cf8b69b43cd2323dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LegalResource.related",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:description": {
@@ -137,12 +130,12 @@
       "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResource"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#BusinessEventShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#BusinessEventShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#BusinessEventShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#BusinessEvent.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -157,12 +150,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/BusinessEvent"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.type",
           "sh:description": {
             "en": "The type of Channel as defined in a controlled vocabulary."
@@ -174,7 +167,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -186,7 +179,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.processingtime",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
           "sh:description": {
@@ -198,7 +191,7 @@
           "sh:path": "http://data.europa.eu/m8g/processingTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.identifier",
           "sh:description": {
             "en": "An Identifier for the Channel."
@@ -210,7 +203,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/7816fa198c5151c7c5680b445b410afba0f362db",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/7816fa198c5151c7c5680b445b410afba0f362db",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.openinghours",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -222,7 +215,7 @@
           "sh:path": "http://data.europa.eu/m8g/openingHours"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/838e4bb2be9ce8cea21f29f28858145596010131",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/838e4bb2be9ce8cea21f29f28858145596010131",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.ownedby",
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
@@ -234,7 +227,7 @@
           "sh:path": "http://data.europa.eu/m8g/ownedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.hasinput",
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
@@ -246,7 +239,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#hasInput"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.availabilityrestriction",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -258,7 +251,7 @@
           "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/b129207d038ab53064378895a366dd6223462aa5",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/b129207d038ab53064378895a366dd6223462aa5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.processingtime",
           "sh:description": {
             "en": "The (estimated) time needed for executing a Public Service which may depend on the Channel chosen."
@@ -270,7 +263,7 @@
           "sh:path": "http://data.europa.eu/m8g/processingTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.identifier",
           "sh:description": {
             "en": "An Identifier for the Channel."
@@ -282,7 +275,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ChannelShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ChannelShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Channel.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -297,12 +290,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Channel"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPointShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ContactPointShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPoint.openinghours",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -314,7 +307,7 @@
           "sh:path": "http://data.europa.eu/m8g/openingHours"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPoint.contactpage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
@@ -326,7 +319,7 @@
           "sh:path": "http://data.europa.eu/m8g/contactPage"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ContactPoint.availabilityrestriction",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -341,12 +334,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/087d0405381982924afe297939637a5acd4e6fb6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/087d0405381982924afe297939637a5acd4e6fb6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.ifaccessedthrough",
           "sh:description": {
             "en": "The costs created by the use of different Channels."
@@ -358,7 +351,7 @@
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/0f01df91b1de87f3463afeb15eb17fb2b6c72eb4",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/0f01df91b1de87f3463afeb15eb17fb2b6c72eb4",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.ifaccessedthrough",
           "sh:class": "http://data.europa.eu/m8g/Channel",
           "sh:description": {
@@ -370,7 +363,7 @@
           "sh:path": "http://data.europa.eu/m8g/ifAccessedThrough"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/1f3895e40402964778aff822b36b6820050ecd8a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/1f3895e40402964778aff822b36b6820050ecd8a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.hasvalue",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#double",
           "sh:description": {
@@ -382,7 +375,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasValue"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/3435304b8a2fc3277d3acac5245bbb3489465288",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/3435304b8a2fc3277d3acac5245bbb3489465288",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.currency",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -394,7 +387,7 @@
           "sh:path": "http://data.europa.eu/m8g/currency"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/49cee4396d571117473d56c99f5101467cbe59d3",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/49cee4396d571117473d56c99f5101467cbe59d3",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.isdefinedby",
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
@@ -406,7 +399,7 @@
           "sh:path": "http://data.europa.eu/m8g/isDefinedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/52adccb60392267e3398249f4f1904467f99ad1c",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/52adccb60392267e3398249f4f1904467f99ad1c",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.hasvalue",
           "sh:description": {
             "en": "A numeric value indicating the amount of the Cost."
@@ -418,7 +411,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasValue"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.identifier",
           "sh:description": {
             "en": "An Identifier for the Cost."
@@ -430,7 +423,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.identifier",
           "sh:description": {
             "en": "An Identifier for the Cost."
@@ -442,7 +435,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/c4ff2a5f9b7cd2f0a3ffbf0acf9d19bd508759bf",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/c4ff2a5f9b7cd2f0a3ffbf0acf9d19bd508759bf",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.currency",
           "sh:description": {
             "en": "The currency in which the Cost needs to be paid and the value of the Cost is expressed."
@@ -454,7 +447,7 @@
           "sh:path": "http://data.europa.eu/m8g/currency"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CostShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CostShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Cost.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -469,12 +462,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Cost"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -486,7 +479,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.identifier",
           "sh:description": {
             "en": "An Identifier for the Event."
@@ -498,7 +491,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.name",
           "sh:description": {
             "en": "The Name (or title) of the Event."
@@ -510,7 +503,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/b294397dcc861f6573c6465d2465e0b5140589c2",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/b294397dcc861f6573c6465d2465e0b5140589c2",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.hasrelatedservice",
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
           "sh:description": {
@@ -522,7 +515,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasRelatedService"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.identifier",
           "sh:description": {
             "en": "An Identifier for the Event."
@@ -534,7 +527,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Event.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -549,12 +542,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Event"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.isconformantto",
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:description": {
@@ -566,7 +559,7 @@
           "sh:path": "http://purl.org/dc/terms/conformsTo"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.type",
           "sh:description": {
             "en": "The type of Evidence as described in a controlled vocabulary."
@@ -578,7 +571,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -590,11 +583,11 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.language",
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
-            "en": "The language(s) in which the Evidence must be provided."
+            "en": "The language(s) of the piece of Evidence."
           },
           "sh:name": {
             "en": "language"
@@ -602,7 +595,7 @@
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -614,7 +607,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.supportsrequirement",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -626,7 +619,19 @@
           "sh:path": "http://data.europa.eu/m8g/supportsRequirement"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/5d3b501368b0e6230133103390ac50e7385e214a",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.ispartof",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.identifier",
           "sh:description": {
             "en": "An Identifier for the piece of Evidence."
@@ -638,7 +643,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.name",
           "sh:description": {
             "en": "The official Name of the piece of Evidence."
@@ -650,7 +655,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.identifier",
           "sh:description": {
             "en": "An Identifier for the piece of Evidence."
@@ -662,7 +667,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -674,7 +679,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Evidence.relateddocumentation",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
@@ -689,12 +694,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceTypeShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceTypeShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceTypeShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceType.identifier",
           "sh:description": {
             "en": "Unambiguous reference to the Evidence Type."
@@ -706,7 +711,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceTypeShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceTypeShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceType.identifier",
           "sh:description": {
             "en": "Unambiguous reference to the Evidence Type."
@@ -718,7 +723,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#EvidenceType.evidencetypeclassification",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -733,12 +738,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/EvidenceType"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LifeEventShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LifeEventShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LifeEventShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LifeEvent.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -753,12 +758,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/LifeEvent"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -770,7 +775,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.language",
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
@@ -782,7 +787,7 @@
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -794,7 +799,19 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/5d3b501368b0e6230133103390ac50e7385e214a",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.ispartof",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A related resource in which the described resource is physically or logically included."
+          },
+          "sh:name": {
+            "en": "is part of"
+          },
+          "sh:path": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.identifier",
           "sh:description": {
             "en": "An Identifier for the Output."
@@ -806,7 +823,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.name",
           "sh:description": {
             "en": "The official Name of the Output."
@@ -818,7 +835,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.identifier",
           "sh:description": {
             "en": "An Identifier for the Output."
@@ -830,7 +847,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OutputShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OutputShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Output.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -845,12 +862,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Output"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/5cdb060907c15fb0f5b76b308cfdbbf62f59a2ba",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/5cdb060907c15fb0f5b76b308cfdbbf62f59a2ba",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.hasparticipant",
           "sh:description": {
             "en": "The Agent involved in the Participation."
@@ -862,7 +879,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasParticipant"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.identifier",
           "sh:description": {
             "en": "The unambiguous structured reference for the Participation."
@@ -874,7 +891,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.description",
           "sh:description": {
             "en": "A textual explanation of the Participation."
@@ -886,7 +903,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/96872d3a91278412b47d750ed71a4938984306c0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/96872d3a91278412b47d750ed71a4938984306c0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.role",
           "sh:description": {
             "en": "The function of an Agent within a Participation."
@@ -898,7 +915,7 @@
           "sh:path": "http://data.europa.eu/m8g/role"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/a80662b8305434df5e0a4edc73b2bb9037308c42",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/a80662b8305434df5e0a4edc73b2bb9037308c42",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.hasparticipant",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -910,7 +927,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasParticipant"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.identifier",
           "sh:description": {
             "en": "The unambiguous structured reference for the Participation."
@@ -922,7 +939,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/d2254b8259635ec986bc7c65b0227299193c6c16",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/d2254b8259635ec986bc7c65b0227299193c6c16",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.role",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -934,7 +951,7 @@
           "sh:path": "http://data.europa.eu/m8g/role"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -946,7 +963,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ParticipationShape/fab6e43cda87d2059922dd2de3511bcb321bf4e0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ParticipationShape/fab6e43cda87d2059922dd2de3511bcb321bf4e0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Participation.hasparticipant",
           "sh:description": {
             "en": "The Agent involved in the Participation."
@@ -961,12 +978,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Participation"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganisationShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicOrganisationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganisationShape/10dfd2757a1b1830fd182ca42b11fef0a722fdc6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicOrganisationShape/10dfd2757a1b1830fd182ca42b11fef0a722fdc6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganization.spatial",
           "sh:description": {
             "en": "It links an Organization to the Administrative Region(s) that it covers."
@@ -978,7 +995,7 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganization.preferredlabel",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -990,9 +1007,9 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganization.spatial",
-          "sh:class": "http://data.europa.eu/88u/dataset/atu-type",
+          "sh:class": "http://purl.org/dc/terms/Location",
           "sh:description": {
             "en": "It links an Organization to the Administrative Region(s) that it covers."
           },
@@ -1002,7 +1019,7 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganisationShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicOrganisationShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicOrganization.preferredlabel",
           "sh:description": {
             "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
@@ -1017,12 +1034,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/12f11a71c12e794a688d7ade9ea37cee23bcb5e1",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/12f11a71c12e794a688d7ade9ea37cee23bcb5e1",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.fulfils",
           "sh:class": "http://purl.org/vocab/cpsv#Rule",
           "sh:description": {
@@ -1034,7 +1051,7 @@
           "sh:path": "http://data.europa.eu/m8g/fulfils"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1046,7 +1063,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1058,7 +1075,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.identifier",
           "sh:description": {
             "en": "Unambiguous reference to a Requirement."
@@ -1070,7 +1087,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.name",
           "sh:description": {
             "en": "Name of the Requirement."
@@ -1082,7 +1099,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.hassupportingevidence",
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
@@ -1094,7 +1111,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RequirementShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RequirementShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Requirement.identifier",
           "sh:description": {
             "en": "Unambiguous reference to a Requirement."
@@ -1109,12 +1126,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Requirement"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/1d811361d9c6e034b3404ea8f5f2920335a2f8ac",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/1d811361d9c6e034b3404ea8f5f2920335a2f8ac",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.hascontractingauthority",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -1126,7 +1143,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasContractingAuthority"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1138,7 +1155,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/61c1f5a02eb55fea91b186759ff633ada55ef542",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/61c1f5a02eb55fea91b186759ff633ada55ef542",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.haseconomicoperator",
           "sh:description": {
             "en": "It links a Service Concession Contract with the Economic Operator in charge for the provision and the management of public services."
@@ -1150,7 +1167,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasEconomicOperator"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.identifier",
           "sh:description": {
             "en": "An Identifier for the Service Concession Contract."
@@ -1162,7 +1179,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.description",
           "sh:description": {
             "en": "A free text description of the Service Concession Contract."
@@ -1174,7 +1191,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.name",
           "sh:description": {
             "en": "The Name of the Service Concession Contract."
@@ -1186,7 +1203,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/bd9ae6e6b3d6f86219d564ffaf4e11569f19f06a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/bd9ae6e6b3d6f86219d564ffaf4e11569f19f06a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.haseconomicoperator",
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
@@ -1198,7 +1215,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasEconomicOperator"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.identifier",
           "sh:description": {
             "en": "An Identifier for the Service Concession Contract."
@@ -1210,7 +1227,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1222,7 +1239,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/d8f08abad404ef4bca5eb1b1ab59435956e0685c",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/d8f08abad404ef4bca5eb1b1ab59435956e0685c",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.establishedunder",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:description": {
@@ -1234,7 +1251,7 @@
           "sh:path": "http://data.europa.eu/m8g/establishedUnder"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContractShape/f0efa7944285dc5b66fc9c917dc2069e6b4db250",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ServiceConcessionContractShape/f0efa7944285dc5b66fc9c917dc2069e6b4db250",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ServiceConcessionContract.hascontractingauthority",
           "sh:description": {
             "en": "It links a Service Concession Contract with the Contracting Authority which is ultimately responsible for a public service."
@@ -1249,33 +1266,26 @@
       "sh:targetClass": "http://data.europa.eu/m8g/ServiceConcessionContract"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DurationShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://fixme.com#Duration"
-    },
-    {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LinguisticSystemShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LinguisticSystemShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://purl.org/dc/terms/LinguisticSystem"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LocationShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LocationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://purl.org/dc/terms/Location"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/00491da88fc785ff44242faf9f143510aff1acb1",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/00491da88fc785ff44242faf9f143510aff1acb1",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hasinputtype",
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:description": {
@@ -1287,7 +1297,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasInputType"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/013f2eeaf472274d350811a8ded979c8275857a5",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/013f2eeaf472274d350811a8ded979c8275857a5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.haschannel",
           "sh:class": "http://data.europa.eu/m8g/Channel",
           "sh:description": {
@@ -1299,7 +1309,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasChannel"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.status",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1311,7 +1321,7 @@
           "sh:path": "http://www.w3.org/ns/adms#status"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/1aaa988702b5b8caa5aab67b1bc340dce40a1783",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/1aaa988702b5b8caa5aab67b1bc340dce40a1783",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hascompetentauthority",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -1323,7 +1333,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1335,7 +1345,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.language",
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
@@ -1347,7 +1357,7 @@
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.status",
           "sh:description": {
             "en": "It indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary."
@@ -1359,7 +1369,7 @@
           "sh:path": "http://www.w3.org/ns/adms#status"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/37b71c4409f37efcb388ee7226886dd39d7033bd",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/37b71c4409f37efcb388ee7226886dd39d7033bd",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.relatedservice",
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
           "sh:description": {
@@ -1371,7 +1381,7 @@
           "sh:path": "http://data.europa.eu/m8g/relatedService"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/3833ee6007343a68911e59f730b9c7d5625a15e1",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/3833ee6007343a68911e59f730b9c7d5625a15e1",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.sector",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1383,7 +1393,7 @@
           "sh:path": "http://data.europa.eu/m8g/sector"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/3894f9fa605c37b8ff4766859d3107f97cc5f934",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/3894f9fa605c37b8ff4766859d3107f97cc5f934",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.keyword",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1395,7 +1405,7 @@
           "sh:path": "http://www.w3.org/ns/dcat#keyword"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/3dbb21d3906d6073be5dc25797f85ed6fdcbb20a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.processingtime",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
           "sh:description": {
@@ -1407,7 +1417,7 @@
           "sh:path": "http://data.europa.eu/m8g/processingTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.produces",
           "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:description": {
@@ -1419,7 +1429,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#produces"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/5d3b501368b0e6230133103390ac50e7385e214a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/5d3b501368b0e6230133103390ac50e7385e214a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.ispartof",
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
           "sh:description": {
@@ -1431,7 +1441,7 @@
           "sh:path": "http://purl.org/dc/terms/isPartOf"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.identifier",
           "sh:description": {
             "en": "A formally-issued Identifier for the Public Service."
@@ -1443,7 +1453,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hascost",
           "sh:class": "http://data.europa.eu/m8g/Cost",
           "sh:description": {
@@ -1455,7 +1465,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasCost"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.contactpoint",
           "sh:class": "http://data.europa.eu/m8g/ContactPoint",
           "sh:description": {
@@ -1467,7 +1477,7 @@
           "sh:path": "http://data.europa.eu/m8g/contactPoint"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/8d7e6e3d76197e8bad7564f34438ddfda58906bd",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/8d7e6e3d76197e8bad7564f34438ddfda58906bd",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.isclassifiedby",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1479,7 +1489,7 @@
           "sh:path": "http://data.europa.eu/m8g/isClassifiedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hasinput",
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
@@ -1491,7 +1501,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#hasInput"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.description",
           "sh:description": {
             "en": "A free text Description of the Public Service."
@@ -1503,7 +1513,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.spatial",
           "sh:class": "http://purl.org/dc/terms/Location",
           "sh:description": {
@@ -1515,7 +1525,7 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/966ab8e83c830e2d7676016cddb1928c8c2d119c",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/966ab8e83c830e2d7676016cddb1928c8c2d119c",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.addressee",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1527,7 +1537,7 @@
           "sh:path": "http://purl.org/dc/terms/audience"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.name",
           "sh:description": {
             "en": "The official Name of the Public Service."
@@ -1539,7 +1549,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/b129207d038ab53064378895a366dd6223462aa5",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/b129207d038ab53064378895a366dd6223462aa5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.processingtime",
           "sh:description": {
             "en": "The (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. "
@@ -1551,7 +1561,7 @@
           "sh:path": "http://data.europa.eu/m8g/processingTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/b19f1113c59fce0aa3743160e2952dbb0b46c495",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/b19f1113c59fce0aa3743160e2952dbb0b46c495",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.requires",
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
           "sh:description": {
@@ -1563,7 +1573,7 @@
           "sh:path": "http://purl.org/dc/terms/requires"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/b3298d22e02dabdb98f5271a3e3ef2e3d95c2409",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/b3298d22e02dabdb98f5271a3e3ef2e3d95c2409",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.thematicarea",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1575,7 +1585,7 @@
           "sh:path": "http://data.europa.eu/m8g/thematicArea"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/c07ada401e3aace3f953540318206533d3c22be7",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/c07ada401e3aace3f953540318206533d3c22be7",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.holdsrequirement",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -1587,7 +1597,7 @@
           "sh:path": "http://data.europa.eu/m8g/holdsRequirement"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.identifier",
           "sh:description": {
             "en": "A formally-issued Identifier for the Public Service."
@@ -1599,7 +1609,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/c678d3b6ae22a358f800ce1cdb7f277c9efa4b62",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/c678d3b6ae22a358f800ce1cdb7f277c9efa4b62",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.follows",
           "sh:class": "http://purl.org/vocab/cpsv#Rule",
           "sh:description": {
@@ -1611,7 +1621,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#follows"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/d3ef634aa1b06aac763c48d5e92a5d81735435e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.isgroupedby",
           "sh:class": "http://data.europa.eu/m8g/Event",
           "sh:description": {
@@ -1623,7 +1633,7 @@
           "sh:path": "http://data.europa.eu/m8g/isGroupedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1635,7 +1645,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/daedda88b37d728083714514e646d60a4ff381be",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/daedda88b37d728083714514e646d60a4ff381be",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.functionsofgovernment",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1647,7 +1657,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/f04e304095842b2d788f1262685ae592d4a3f8da",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/f04e304095842b2d788f1262685ae592d4a3f8da",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hascompetentauthority",
           "sh:description": {
             "en": "It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service."
@@ -1659,7 +1669,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/fb0f4ce42568457dd68730013f20f7749a22ad39",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/fb0f4ce42568457dd68730013f20f7749a22ad39",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.hasparticipation",
           "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:description": {
@@ -1671,7 +1681,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasParticipation"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicServiceShape/fd522758830afb24ffe73ea6dae91598c8e9ff23",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#PublicServiceShape/fd522758830afb24ffe73ea6dae91598c8e9ff23",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#PublicService.haslegalresource",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:description": {
@@ -1686,12 +1696,12 @@
       "sh:targetClass": "http://purl.org/vocab/cpsv#PublicService"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.type",
           "sh:description": {
             "en": "Type of Rule."
@@ -1703,7 +1713,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1715,7 +1725,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.language",
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
           "sh:description": {
@@ -1727,7 +1737,7 @@
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1739,7 +1749,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/51d41afe5401d1b6a58328411e940a808f944ea1",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/51d41afe5401d1b6a58328411e940a808f944ea1",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.implements",
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResource",
           "sh:description": {
@@ -1751,7 +1761,7 @@
           "sh:path": "http://purl.org/vocab/cpsv#implements"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.identifier",
           "sh:description": {
             "en": "An Identifier for the Rule."
@@ -1763,7 +1773,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.description",
           "sh:description": {
             "en": "A free text Description of the Rule."
@@ -1775,7 +1785,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.name",
           "sh:description": {
             "en": "The Name of the Rule."
@@ -1787,7 +1797,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.identifier",
           "sh:description": {
             "en": "An Identifier for the Rule."
@@ -1799,7 +1809,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#RuleShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#RuleShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Rule.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1814,33 +1824,40 @@
       "sh:targetClass": "http://purl.org/vocab/cpsv#Rule"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TextShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#TextShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#LiteralShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#LiteralShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DoubleShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DoubleShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#double"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CollectionShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DurationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CollectionShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CollectionShape/d875a34c2a5b0d03bcfe904f1f9b83872f37ed3b",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CollectionShape/d875a34c2a5b0d03bcfe904f1f9b83872f37ed3b",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Collection.member",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1855,26 +1872,26 @@
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Collection"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#ConceptShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#ConceptShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#CodeShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#CodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TemporalEntityShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#TemporalEntityShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TemporalEntity.frequency",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -1886,7 +1903,7 @@
           "sh:path": "http://data.europa.eu/m8g/frequency"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#TemporalEntity.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1901,12 +1918,12 @@
       "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/488f0bcb1b2d7cb5288ca9952a7b94f106f95859",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.title",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1918,7 +1935,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.publisher",
           "sh:description": {
             "en": "The Publisher of the Dataset, i.e. an entity  (organisation) responsible for making the Dataset available."
@@ -1930,7 +1947,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.description",
           "sh:description": {
             "en": "A free-text account of the Dataset. This property can be repeated for parallel language versions of the description."
@@ -1942,7 +1959,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/a0ccdf3bd7f5d161d07f375a26e68c18ca91dc19",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/a0ccdf3bd7f5d161d07f375a26e68c18ca91dc19",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.publisher",
           "sh:description": {
             "en": "The Publisher of the Dataset, i.e. an entity  (organisation) responsible for making the Dataset available."
@@ -1954,7 +1971,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.publisher",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -1966,7 +1983,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/c8cbca0f9dd8797f331150a9e22d9e3ca53ab372",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/c8cbca0f9dd8797f331150a9e22d9e3ca53ab372",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.haspart",
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
           "sh:description": {
@@ -1978,7 +1995,7 @@
           "sh:path": "http://purl.org/dc/terms/hasPart"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -1990,7 +2007,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.title",
           "sh:description": {
             "en": "A name given to the Dataset."
@@ -2002,7 +2019,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Dataset.landingpage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
@@ -2017,12 +2034,12 @@
       "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.thoroughfare",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2034,7 +2051,7 @@
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.administrativeunitlevel1",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2046,7 +2063,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.addressarea",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2058,7 +2075,7 @@
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.administrativeunitlevel2",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2070,7 +2087,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.postname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2082,7 +2099,7 @@
           "sh:path": "http://www.w3.org/ns/locn#postName"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.locatorname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2094,7 +2111,7 @@
           "sh:path": "http://www.w3.org/ns/locn#locatorName"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address.fulladdress",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2109,19 +2126,19 @@
       "sh:targetClass": "http://www.w3.org/ns/locn#Address"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#OrganizationShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#OrganizationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/ns/org#Organization"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -2133,7 +2150,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/3ebdf1520cc4c255e68fed56bc8fa1d659e63f2b",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/3ebdf1520cc4c255e68fed56bc8fa1d659e63f2b",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.participates",
           "sh:class": "http://data.europa.eu/m8g/Participation",
           "sh:description": {
@@ -2145,7 +2162,7 @@
           "sh:path": "http://data.europa.eu/m8g/participates"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/5de4ef5193a558e17a34633888421d09b957d267",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.address",
           "sh:class": "http://www.w3.org/ns/locn#Address",
           "sh:description": {
@@ -2157,7 +2174,7 @@
           "sh:path": "http://www.w3.org/ns/locn#address"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.identifier",
           "sh:description": {
             "en": "An Identifier for the Agent."
@@ -2169,7 +2186,7 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.name",
           "sh:description": {
             "en": "The noun given to the Agent."
@@ -2181,7 +2198,7 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
-          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#AgentShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#AgentShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Agent.identifier",
           "sh:description": {
             "en": "An Identifier for the Agent."
@@ -2196,7 +2213,7 @@
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
     },
     {
-      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#DocumentShape",
+      "@id": "https://semiceu.github.io/CPSV-AP/releases/3.2.0//shacl/cpsv-ap-SHACL.ttl#DocumentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],

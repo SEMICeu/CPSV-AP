@@ -34,6 +34,9 @@
           "@language": "en",
           "@value": "Tax-on-web"
       },
+      "cv:holdsRequirement" : {
+        "@id": "ex:requirement1"
+      },
       "cpsv:hasInput" : {
         "@id": "ex:evidence1"
       },
@@ -194,6 +197,9 @@
     {
       "@id": "ex:specialOpeningHours1",
       "@type": "TemporalEntity",
+      "cv:frequency": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/WEEKLY"
+      },
       "dct:description": {
         "@language": "en",
         "@value": "closed on weekend"

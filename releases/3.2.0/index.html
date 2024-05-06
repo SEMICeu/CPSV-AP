@@ -126,9 +126,9 @@
     var respecConfig = {
       postProcess: [quickreference],
       edDraftURI: "https://semiceu.github.io/CPSV-AP/releases/3.2.0/",
-      latestVersion: "https://semiceu.github.io/CPSV-AP/releases/3.1.1/",
+      latestVersion: "https://semiceu.github.io/CPSV-AP/releases/3.2.0/",
       specStatus: "LD",
-      publishDate: "2024-01-31",
+      publishDate: "2024-05-06",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/CPSV-AP",
@@ -239,8 +239,9 @@ CPSV-AP provides a minimal common basis within Europe to describe public service
   <ul>
     <li>facilitating the access to public service information;</li>
     <li>building user-centric catalogues of public services at all levels from regional to a European federated catalogue;</li>
-    <li>managing portfolios of public services; and</li>
-    <li>finding information of generic and specialised public services.</li>
+    <li>managing portfolios of public services;</li>
+    <li>finding information of generic and specialised public services; and</li>
+    <li>the execution of a public service, i.e.; when a public service is performed and produces a physical object.</li>
   </ul>
 </p>
 <p>
@@ -262,7 +263,7 @@ CPSV-AP provides a minimal common basis within Europe to describe public service
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status SEMIC Candidate Recommendation published at 2024-01-31.
+            This Application Profile has the status SEMIC Recommendation published at 2024-05-06.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/CPSV-AP/blob/master/releases/3.2.0/Changelog.md">Changelog</a>.
@@ -385,7 +386,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#AdministrativeTerritorialUnit">Administrative Territorial Unit</a> | <a href="#Code">Code</a> | <a href="#Document">Document</a> | <a href="#Double">Double</a> | <a href="#Duration">Duration</a> | <a href="#LinguisticSystem">Linguistic System</a> | <a href="#Literal">Literal</a> | <a href="#Location">Location</a> | <a href="#Text">Text</a> |
+                            | <a href="#Code">Code</a> | <a href="#Document">Document</a> | <a href="#Double">Double</a> | <a href="#Duration">Duration</a> | <a href="#LinguisticSystem">Linguistic System</a> | <a href="#Literal">Literal</a> | <a href="#Location">Location</a> | <a href="#Text">Text</a> |
                         </p>
                 
     </div>
@@ -1121,7 +1122,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#AdministrativeTerritorialUnit" data-placement="right">Administrative Territorial Unit</a>
+                                            <a href="#Location" data-placement="right">Location</a>
                                         
                                     
                                 </td>
@@ -2175,7 +2176,8 @@ Durations begin with an uppercase P followed by the number and the relevant desi
 Note that days and times are separated by an uppercase T which also
 disambiguates M as meaning month (P2M means 2 months) or minute (PT2M means 2 minutes). Durations may also be defined as a number of weeks so P4W means 4 weeks. A full explanation is provided in the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">Wikipedia page</a> that references the official <a href="https://www.iso.org/standard/70907.html">ISO standard</a>.
 <br/><br/>
-This approach is consistent with both <a href="https://schema.org/">schema.org</a> and the <a href="https://www.w3.org/TR/owl-time/">W3C OWL Time Ontology<a/>.
+This approach is consistent with both <a href="https://schema.org/">schema.org</a> and the <a href="https://www.w3.org/TR/owl-time/">W3C OWL Time Ontology.<a/>
+
                                 </td>
 				<!--
                                 <td>
@@ -5246,6 +5248,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                             For this entity the following properties are defined: <a href="#Evidence.description">description</a>
                             , <a href="#Evidence.identifier">identifier</a>
                             , <a href="#Evidence.isconformantto">is conformant to</a>
+                            , <a href="#Evidence.ispartof">is part of</a>
                             , <a href="#Evidence.language">language</a>
                             , <a href="#Evidence.name">name</a>
                             , <a href="#Evidence.relateddocumentation">related documentation</a>
@@ -5419,6 +5422,49 @@ In some cases, the Output of one service will be Evidence for another service. S
                                 </td>
                             </tr>
                         
+                            <tr id="Evidence.ispartof"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/isPartOf"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CPSV-AP/issues/new?title=Issue%20for%20is part of%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CPSV-AP/releases/3.2.0/%23Evidence.ispartof" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/isPartOf"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/isPartOf"
+                                           data-placement="right">
+                                        is part of</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Dataset" data-placement="right">Dataset</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A related resource in which the described resource is physically or logically included.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    It links an Evidence to the Dataset using it.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Evidence.language"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/language"
@@ -5447,7 +5493,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    The language(s) in which the Evidence must be provided.
+                                    The language(s) of the piece of Evidence.
                                 </td>
                                 <td property="skos:scopeNote">
                                     The recommended controlled vocabularies for this property is the <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language">Language</a> Authority Table of the Publications Office.
@@ -5537,6 +5583,8 @@ In some cases, the Output of one service will be Evidence for another service. S
                                 </td>
                                 <td property="skos:scopeNote">
                                     For instance, a particular template for an administrative document, an application or a guide on formatting the Evidence.
+
+A concrete example is an energy audit report which provides more context to the evidence of a home energy efficiency score. The audit report is the related documentation while the energy score is the evidence.
                                 </td>
 				<!--
                                 <td>
@@ -6178,6 +6226,7 @@ In some cases, the Output of one service will be Evidence for another service. S
                         <dd>
                             For this entity the following properties are defined: <a href="#Output.description">description</a>
                             , <a href="#Output.identifier">identifier</a>
+                            , <a href="#Output.ispartof">is part of</a>
                             , <a href="#Output.language">language</a>
                             , <a href="#Output.name">name</a>
                             , <a href="#Output.type">type</a>
@@ -6295,6 +6344,49 @@ In some cases, the Output of one service will be Evidence for another service. S
                                 </td>
                                 <td property="skos:scopeNote">
                                     
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Output.ispartof"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/isPartOf"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CPSV-AP/issues/new?title=Issue%20for%20is part of%20in%20Output&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CPSV-AP/releases/3.2.0/%23Output.ispartof" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/isPartOf"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/isPartOf"
+                                           data-placement="right">
+                                        is part of</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Dataset" data-placement="right">Dataset</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A related resource in which the described resource is physically or logically included.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    It links an Output to the Dataset using it.
                                 </td>
 				<!--
                                 <td>
@@ -7667,22 +7759,6 @@ the Legal Resource under which the Service Concession Contracts are being define
 	    <tbody class="supertype">
             
 		<tr><td>
-                   <a href="https://github.com/SEMICeu/CPSV-AP/issues/new?title=Issue%20for%20AdministrativeTerritorialUnit&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="AdministrativeTerritorialUnit">
-                        <a href="http://data.europa.eu/88u/dataset/atu-type"
-                           data-toggle="tooltip"
-                           data-content="http://data.europa.eu/88u/dataset/atu-type"
-                           data-placement="right">Administrative Territorial Unit</a>
-                    </div>
-                
-		</td><td>
-                    A code from a list that represents the administrative territorial unit of the EU Member States, based on national official / legal information and the ISO 3166-2 standard.
-		</td></tr>
-		<tr><td>
                    <a href="https://github.com/SEMICeu/CPSV-AP/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
@@ -7737,9 +7813,9 @@ the Legal Resource under which the Service Concession Contracts are being define
 		</td><td>
                 
                     <div id="Duration">
-                        <a href="http://fixme.com#Duration"
+                        <a href="http://www.w3.org/2001/XMLSchema#duration"
                            data-toggle="tooltip"
-                           data-content="http://fixme.com#Duration"
+                           data-content="http://www.w3.org/2001/XMLSchema#duration"
                            data-placement="right">Duration</a>
                     </div>
                 
@@ -8030,7 +8106,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.addressarea">address area </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#addressArea</div></td>
 							</tr>
@@ -8040,7 +8116,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.addressID">address ID </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#addressId</div></td>
 							</tr>
@@ -8050,7 +8126,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.administrativeunitlevel1">administrative unit level 1 </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#adminUnitL1</div></td>
 							</tr>
@@ -8060,7 +8136,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.administrativeunitlevel2">administrative unit level 2 </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#adminUnitL2</div></td>
 							</tr>
@@ -8070,7 +8146,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.fulladdress">full address </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#fullAddress</div></td>
 							</tr>
@@ -8080,7 +8156,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.locatordesignator">locator designator </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#locatorDesignator</div></td>
 							</tr>
@@ -8090,7 +8166,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.locatorname">locator name </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#locatorName</div></td>
 							</tr>
@@ -8100,7 +8176,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.postcode">post code </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#postCode</div></td>
 							</tr>
@@ -8110,7 +8186,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.postname">post name </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#postName</div></td>
 							</tr>
@@ -8120,7 +8196,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.postofficebox">post office box </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#poBox</div></td>
 							</tr>
@@ -8130,7 +8206,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Address.thoroughfare">thoroughfare </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#thoroughfare</div></td>
 							</tr>
@@ -8144,36 +8220,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Agent">Agent</a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
-								<td></td>
-								<td><a href="#Agent.address">address </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/locn#address</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Agent">Agent</a></td>
-								<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Agent.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -8183,17 +8233,43 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Agent">Agent</a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Agent.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
 						
 					
 						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
 							<tr>
 								<td><a href="#Agent">Agent</a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
-								<td></td>
+								<td>Optional</td>
+								<td><a href="#Agent.address">address </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#address</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Agent">Agent</a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
+								<td>Optional</td>
 								<td><a href="#Agent.participates">participates </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/participates</div></td>
 							</tr>
@@ -8205,19 +8281,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#BusinessEvent">Business Event</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/BusinessEvent</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#BusinessEvent.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
+						
+					
+					
+						
+					
+					
 						
 					
 				
@@ -8232,6 +8308,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+							<tr>
+								<td><a href="#Channel">Channel</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Channel.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
 					
 						
 					
@@ -8263,7 +8347,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.availabilityrestriction">availability restriction </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/specialOpeningHoursSpecification</div></td>
 							</tr>
@@ -8273,7 +8357,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
@@ -8283,27 +8367,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.hasinput">has input </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#hasInput</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Channel">Channel</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
-								<td><a href="#Channel.identifier">identifier </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.openinghours">opening hours </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/openingHours</div></td>
 							</tr>
@@ -8313,7 +8389,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.ownedby">owned by </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ownedBy</div></td>
 							</tr>
@@ -8323,7 +8399,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.processingtime">processing time </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/processingTime</div></td>
 							</tr>
@@ -8333,7 +8409,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Channel">Channel</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Channel</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Channel.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -8354,7 +8430,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Collection">Collection</a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#Collection</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Collection.member">member </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#member</div></td>
 							</tr>
@@ -8413,7 +8489,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ContactPoint">Contact Point</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ContactPoint</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#ContactPoint.availabilityrestriction">availability restriction </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/specialOpeningHoursSpecification</div></td>
 							</tr>
@@ -8423,7 +8499,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ContactPoint">Contact Point</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ContactPoint</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#ContactPoint.contactpage">contact page </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/contactPage</div></td>
 							</tr>
@@ -8433,7 +8509,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ContactPoint">Contact Point</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ContactPoint</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#ContactPoint.hasemail">has email </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/email</div></td>
 							</tr>
@@ -8443,7 +8519,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ContactPoint">Contact Point</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ContactPoint</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#ContactPoint.hastelephone">has telephone </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/telephone</div></td>
 							</tr>
@@ -8453,7 +8529,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ContactPoint">Contact Point</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ContactPoint</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#ContactPoint.openinghours">opening hours </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/openingHours</div></td>
 							</tr>
@@ -8471,6 +8547,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+							<tr>
+								<td><a href="#Cost">Cost</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
+								<td>Mandatory</td>
+								<td><a href="#Cost.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
 					
 						
 					
@@ -8494,7 +8578,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Cost">Cost</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Cost.currency">currency </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/currency</div></td>
 							</tr>
@@ -8504,7 +8588,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Cost">Cost</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Cost.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
@@ -8514,27 +8598,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Cost">Cost</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Cost.hasvalue">has value </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasValue</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Cost">Cost</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
-								<td><a href="#Cost.identifier">identifier </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#Cost">Cost</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Cost.ifaccessedthrough">if accessed through </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ifAccessedThrough</div></td>
 							</tr>
@@ -8544,7 +8620,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Cost">Cost</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Cost</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Cost.isdefinedby">is defined by </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/isDefinedBy</div></td>
 							</tr>
@@ -8556,46 +8632,54 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Dataset.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
 						
 					
 						
+					
+						
+					
+						
+					
+						
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td></td>
+								<td>Mandatory</td>
+								<td><a href="#Dataset.publisher">publisher </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
+							</tr>
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Dataset">Dataset</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
+								<td>Optional</td>
 								<td><a href="#Dataset.haspart">has part </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/hasPart</div></td>
 							</tr>
@@ -8605,7 +8689,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Dataset.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -8615,20 +8699,12 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Dataset">Dataset</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Dataset.landingpage">landing page </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#landingPage</div></td>
 							</tr>
 						
 					
-						
-							<tr>
-								<td><a href="#Dataset">Dataset</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/dcat#Dataset</div></td>
-								<td></td>
-								<td><a href="#Dataset.publisher">publisher </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/publisher</div></td>
-							</tr>
 						
 					
 						
@@ -8651,44 +8727,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Event">Event</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td></td>
-								<td><a href="#Event.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Event">Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td></td>
-								<td><a href="#Event.hasrelatedservice">has related service </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/hasRelatedService</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Event">Event</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Event.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -8698,10 +8740,44 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Event">Event</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Event.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Event">Event</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
+								<td>Optional</td>
+								<td><a href="#Event.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Event">Event</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Event</div></td>
+								<td>Optional</td>
+								<td><a href="#Event.hasrelatedservice">has related service </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/hasRelatedService</div></td>
+							</tr>
+						
+					
+						
+					
 						
 					
 				
@@ -8712,62 +8788,74 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
-								<td><a href="#Evidence.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Evidence">Evidence</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Evidence.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
 						
 					
 						
+					
+						
+					
+						
+					
+						
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Mandatory</td>
+								<td><a href="#Evidence.name">name </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td>Optional</td>
+								<td><a href="#Evidence.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td>Optional</td>
 								<td><a href="#Evidence.isconformantto">is conformant to </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/conformsTo</div></td>
 							</tr>
@@ -8777,27 +8865,29 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Optional</td>
+								<td><a href="#Evidence.ispartof">is part of </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/isPartOf</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td>Optional</td>
 								<td><a href="#Evidence.language">language </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/language</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Evidence">Evidence</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
-								<td><a href="#Evidence.name">name </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Evidence.relateddocumentation">related documentation </a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
 							</tr>
@@ -8807,7 +8897,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Evidence.supportsrequirement">supports requirement </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/supportsRequirement</div></td>
 							</tr>
@@ -8817,7 +8907,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Evidence.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -8831,6 +8921,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+							<tr>
+								<td><a href="#EvidenceType">Evidence Type</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
+								<td>Mandatory</td>
+								<td><a href="#EvidenceType.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
 					
 					
 						
@@ -8842,20 +8940,12 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#EvidenceType">Evidence Type</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#EvidenceType.evidencetypeclassification">evidence type classification </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/evidenceTypeClassification</div></td>
 							</tr>
 						
 					
-						
-							<tr>
-								<td><a href="#EvidenceType">Evidence Type</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
-								<td></td>
-								<td><a href="#EvidenceType.identifier">identifier </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
-							</tr>
 						
 					
 				
@@ -8873,7 +8963,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#LegalResource">Legal Resource</a></td>
 								<td><div class="shorten">http://data.europa.eu/eli/ontology#LegalResource</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#LegalResource.related">related </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/relation</div></td>
 							</tr>
@@ -8894,7 +8984,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#LifeEvent">Life Event</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/LifeEvent</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#LifeEvent.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -8919,70 +9009,84 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Output">Output</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
-								<td></td>
-								<td><a href="#Output.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Output">Output</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Output.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Output">Output</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
-								<td></td>
-								<td><a href="#Output.language">language </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/language</div></td>
-							</tr>
+					
 						
 					
 						
 							<tr>
 								<td><a href="#Output">Output</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Output.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
 						
 					
 						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
 							<tr>
 								<td><a href="#Output">Output</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
-								<td></td>
+								<td>Optional</td>
+								<td><a href="#Output.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Output">Output</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
+								<td>Optional</td>
+								<td><a href="#Output.ispartof">is part of </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/isPartOf</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Output">Output</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
+								<td>Optional</td>
+								<td><a href="#Output.language">language </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/language</div></td>
+							</tr>
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Output">Output</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
+								<td>Optional</td>
 								<td><a href="#Output.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -8994,48 +9098,22 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Participation">Participation</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Participation</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Participation.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Participation">Participation</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Participation</div></td>
-								<td></td>
-								<td><a href="#Participation.hasparticipant">has participant </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/hasParticipant</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#Participation">Participation</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Participation</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Participation.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -9045,10 +9123,36 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Participation">Participation</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Participation</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Participation.role">role </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/role</div></td>
 							</tr>
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Participation">Participation</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Participation</div></td>
+								<td>Optional</td>
+								<td><a href="#Participation.hasparticipant">has participant </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/hasParticipant</div></td>
+							</tr>
+						
+					
+						
+					
 						
 					
 				
@@ -9057,20 +9161,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#PublicOrganization">Public Organization</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#PublicOrganization.preferredlabel">preferred label </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
 							</tr>
@@ -9080,10 +9174,20 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicOrganization">Public Organization</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#PublicOrganization.spatial">spatial </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/spatial</div></td>
 							</tr>
+						
+					
+					
+						
+					
+						
+					
+					
+						
+					
 						
 					
 				
@@ -9096,7 +9200,29 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
+							<tr>
+								<td><a href="#PublicService">Public Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#PublicService.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
 					
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#PublicService">Public Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#PublicService.hascompetentauthority">has competent authority </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/hasCompetentAuthority</div></td>
+							</tr>
 						
 					
 						
@@ -9112,7 +9238,13 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
+							<tr>
+								<td><a href="#PublicService">Public Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#PublicService.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
 						
 					
 						
@@ -9126,9 +9258,13 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
+							<tr>
+								<td><a href="#PublicService">Public Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td>Mandatory</td>
+								<td><a href="#PublicService.name">name </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
 						
 					
 						
@@ -9209,7 +9345,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.addressee">addressee </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/audience</div></td>
 							</tr>
@@ -9219,27 +9355,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.contactpoint">contact point </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/contactPoint</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#PublicService">Public Service</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
-								<td><a href="#PublicService.description">description </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.follows">follows </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#follows</div></td>
 							</tr>
@@ -9249,7 +9377,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.functionsofgovernment">functions of government </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -9259,27 +9387,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.haschannel">has channel </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasChannel</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#PublicService">Public Service</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
-								<td><a href="#PublicService.hascompetentauthority">has competent authority </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/hasCompetentAuthority</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.hascost">has cost </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasCost</div></td>
 							</tr>
@@ -9289,7 +9409,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.hasinput">has input </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#hasInput</div></td>
 							</tr>
@@ -9299,7 +9419,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.hasinputtype">has input type </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasInputType</div></td>
 							</tr>
@@ -9309,7 +9429,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.haslegalresource">has legal resource </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasLegalResource</div></td>
 							</tr>
@@ -9319,7 +9439,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.hasparticipation">has participation </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasParticipation</div></td>
 							</tr>
@@ -9329,27 +9449,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.holdsrequirement">holds requirement </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/holdsRequirement</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#PublicService">Public Service</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
-								<td><a href="#PublicService.identifier">identifier </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.isclassifiedby">is classified by </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/isClassifiedBy</div></td>
 							</tr>
@@ -9359,7 +9471,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.isgroupedby">is grouped by </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/isGroupedBy</div></td>
 							</tr>
@@ -9369,7 +9481,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.ispartof">is part of </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/isPartOf</div></td>
 							</tr>
@@ -9379,7 +9491,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.keyword">keyword </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#keyword</div></td>
 							</tr>
@@ -9389,27 +9501,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.language">language </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/language</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#PublicService">Public Service</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
-								<td><a href="#PublicService.name">name </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.processingtime">processing time </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/processingTime</div></td>
 							</tr>
@@ -9419,7 +9523,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9429,7 +9533,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.relatedservice">related service </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/relatedService</div></td>
 							</tr>
@@ -9439,7 +9543,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.requires">requires </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/requires</div></td>
 							</tr>
@@ -9449,7 +9553,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.sector">sector </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/sector</div></td>
 							</tr>
@@ -9459,7 +9563,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.spatial">spatial </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/spatial</div></td>
 							</tr>
@@ -9469,7 +9573,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.status">status </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/adms#status</div></td>
 							</tr>
@@ -9479,7 +9583,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicService">Public Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicService.thematicarea">thematic area </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/thematicArea</div></td>
 							</tr>
@@ -9495,48 +9599,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 						
 					
 						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Requirement">Requirement</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
-								<td></td>
-								<td><a href="#Requirement.fulfils">fulfils </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/fulfils</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Requirement">Requirement</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
-								<td></td>
-								<td><a href="#Requirement.hassupportingevidence">has supporting evidence </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/hasSupportingEvidence</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Requirement">Requirement</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Requirement.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -9546,9 +9612,33 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Requirement">Requirement</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Requirement.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Requirement">Requirement</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
+								<td>Optional</td>
+								<td><a href="#Requirement.fulfils">fulfils </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/fulfils</div></td>
 							</tr>
 						
 					
@@ -9556,7 +9646,21 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Requirement">Requirement</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
-								<td></td>
+								<td>Optional</td>
+								<td><a href="#Requirement.hassupportingevidence">has supporting evidence </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/hasSupportingEvidence</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Requirement">Requirement</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
+								<td>Optional</td>
 								<td><a href="#Requirement.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -9568,36 +9672,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#Rule">Rule</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Rule.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
@@ -9607,17 +9685,51 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Rule">Rule</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#Rule.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
 						
 					
 						
+					
+						
+					
+						
 							<tr>
 								<td><a href="#Rule">Rule</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
+								<td>Mandatory</td>
+								<td><a href="#Rule.name">name </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+							<tr>
+								<td><a href="#Rule">Rule</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
+								<td>Optional</td>
 								<td><a href="#Rule.implements">implements </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#implements</div></td>
 							</tr>
@@ -9627,27 +9739,19 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#Rule">Rule</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Rule.language">language </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/language</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#Rule">Rule</a></td>
-								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
-								<td><a href="#Rule.name">name </a></td>
-								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#Rule">Rule</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#Rule</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#Rule.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -9659,56 +9763,22 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
-					
-						
 							<tr>
 								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ServiceConcessionContract.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
 						
 					
 						
-							<tr>
-								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
-								<td><a href="#ServiceConcessionContract.establishedunder">established under </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/establishedUnder</div></td>
-							</tr>
-						
 					
 						
 							<tr>
 								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ServiceConcessionContract.hascontractingauthority">has contracting authority </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasContractingAuthority</div></td>
 							</tr>
@@ -9718,7 +9788,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ServiceConcessionContract.haseconomicoperator">has economic operator </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasEconomicOperator</div></td>
 							</tr>
@@ -9728,7 +9798,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ServiceConcessionContract.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -9738,10 +9808,44 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
-								<td></td>
+								<td>Mandatory</td>
 								<td><a href="#ServiceConcessionContract.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+							<tr>
+								<td><a href="#ServiceConcessionContract">Service Concession Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/ServiceConcessionContract</div></td>
+								<td>Optional</td>
+								<td><a href="#ServiceConcessionContract.establishedunder">established under </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/establishedUnder</div></td>
+							</tr>
+						
+					
+						
+					
+						
+					
+						
+					
 						
 					
 				

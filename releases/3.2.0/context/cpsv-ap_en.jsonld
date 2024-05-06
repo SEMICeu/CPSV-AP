@@ -52,7 +52,6 @@
       "@id": "http://www.w3.org/ns/locn#thoroughfare",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "AdministrativeTerritorialUnit": "http://data.europa.eu/88u/dataset/atu-type",
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
     "Agent.address": {
       "@container": "@set",
@@ -205,7 +204,7 @@
     },
     "Document": "http://xmlns.com/foaf/0.1/Document",
     "Double": "http://www.w3.org/2001/XMLSchema#double",
-    "Duration": "http://fixme.com#Duration",
+    "Duration": "http://www.w3.org/2001/XMLSchema#duration",
     "Event": "http://data.europa.eu/m8g/Event",
     "Event.description": {
       "@container": "@set",
@@ -237,6 +236,11 @@
     "Evidence.isConformantTo": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
+      "@type": "@id"
+    },
+    "Evidence.isPartOf": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "@id"
     },
     "Evidence.language": {
@@ -296,6 +300,11 @@
     },
     "Output.identifier": {
       "@id": "http://purl.org/dc/terms/identifier"
+    },
+    "Output.isPartOf": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "@id"
     },
     "Output.language": {
       "@container": "@set",

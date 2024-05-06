@@ -15,6 +15,7 @@ ex:publicService1 dct:description "Service pour la déclaration à l'impôt des 
 	cv:hasCompetentAuthority ex:publicOrganisation1 ;
 	dct:identifier "Tax-on-web" ;
 	dct:title "Tax-on-web"@en ;
+	cv:holdsRequirement ex:requirement1 ;
 	cpsv:hasInput ex:evidence1 ;
 	cv:hasInputType ex:evidenceType1 ;
 	cv:hasChannel ex:channel1 ;
@@ -58,34 +59,35 @@ ex:openingHours1 cv:frequency <http://publications.europa.eu/resource/authority/
 			time:hour 9 ;
 			time:minute 0 ;
 			time:unitType time:unitMinute ;
-			rdf:type time:DateTimeDescription ;
+			a time:DateTimeDescription ;
 		] ;
-		rdf:type time:Instant ;
+		a time:Instant ;
 	] ;
 	time:hasEnd [
 		time:inDateTime [
 			time:hour 17 ;
 			time:minute 0 ;
 			time:unitType time:unitMinute ;
-			rdf:type time:DateTimeDescription ;
+			a time:DateTimeDescription ;
 		] ;
-		rdf:type time:Instant ;
+		a time:Instant ;
 	] ;
 	a time:TemporalEntity .
 
-ex:specialOpeningHours1 dct:description "closed on weekend"@en ;
+ex:specialOpeningHours1 cv:frequency <http://publications.europa.eu/resource/authority/frequency/WEEKLY> ;
+	dct:description "closed on weekend"@en ;
 	time:hasBeginning [
 		time:inDateTime [
 			time:dayOfWeek time:Saturday ;
-			rdf:type time:DateTimeDescription ;
+			a time:DateTimeDescription ;
 		] ;
-		rdf:type time:Instant ;
+		a time:Instant ;
 	] ;
 	time:hasEnd [
 		time:inDateTime [
 			time:dayOfWeek time:Sunday ;
-			rdf:type time:DateTimeDescription ;
+			a time:DateTimeDescription ;
 		] ;
-		rdf:type time:Instant ;
+		a time:Instant ;
 	] ;
 	a time:TemporalEntity .
