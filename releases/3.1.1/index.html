@@ -25,6 +25,21 @@
   <meta name="msapplication-wide310x150logo" content="/cms/icons/DUETLogo.jpg" />
   <meta name="msapplication-square310x310logo" content="/cms/icons/DUETLogo.jpg" />
   <meta name="msapplication-TileColor" content="#7ED956" />
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//health.semic.eu/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 
 <body>
@@ -624,7 +639,8 @@ The key difference between a locator and a locator name is that the latter is a 
               <h3 class="h3" id="Agent"><a href="http://xmlns.com/foaf/0.1/Agent" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Agent" data-placement="right">Agent</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>The Agent class is any resource that acts or has the power to act. This includes people, organisations and groups. The Public Organization class, defined in the Core Public Organisation Vocabulary, is a notable subclass of Agent.</dd>
+                    <dt>Definition</dt><dd>The Agent class is any resource that acts or has the power to act. This includes people, organisations and groups. The Public Organization class, defined in the Core Public Organisation Vocabulary, is a notable subclass of Agent.
+</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1692,7 +1708,8 @@ For more structured data use the model in Time Ontology, see an <a href="https:/
 
 Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered.
 
-In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s).</dd>
+In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s).
+</dd>
                     
 		     
 		    <dt>Subclass of<dt><dd>
@@ -2701,7 +2718,8 @@ The ATU list does not include a geometry. That is, the territory is only identif
                           
                         </td>
 			<td>0..*</td>
-                        <td property="rdfs:comment">It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.</td>
+                        <td property="rdfs:comment">It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis.
+</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -3456,6 +3474,7 @@ question. The definition comes from the Directive <a href="https://eur-lex.europ
                         </td>
 			<td>0..*</td>
                         <td property="rdfs:comment">It links a Service Concession Contract to relevant legislation or policy documents i.e.
+
 the Legal Resource under which the Service Concession Contracts are being defined.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
