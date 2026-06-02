@@ -8,7 +8,7 @@ The Core Public Service Vocabulary Application Profile (CPSV-AP) is a data model
 
 Public services are described in a structured and machine-readable way by standardising the semantics. Public administrations and service providers can in turn use this approach to describe their services and guarantee a level of cross-domain and cross-border interoperability at European, national and local level.
 
-More information about the CPSV-AP can be found here: https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/about.
+More information about the CPSV-AP can be found on the [SEMIC Support Centre](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile)
 
 ## Structure of the repository
 /releases: CPSV-AP releases (1.00, 2.00 etc), each release might have different distributions.
@@ -29,6 +29,14 @@ The table below shows webinars and events related to **latest version of CPSV-AP
 <td>  
 <p><strong>Date</strong></p>  
 </td>  
+</tr> 
+<tr>  
+<td>  
+<p><a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/event/cpsv-ap-webinar-19-may-2026">CPSV-AP Webinar</a></p>  
+</td>  
+<td>  
+<p>19/05/2026</p>  
+</td>  
 </tr>  
 <tr>  
 <td>  
@@ -36,22 +44,6 @@ The table below shows webinars and events related to **latest version of CPSV-AP
 </td>  
 <td>  
 <p>20/06/2024</p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies-and-style-guide-blog-post">Webinar on review of Core Vocabularies and Style Guide Blog post</a></p>  
-</td>  
-<td>  
-<p>09/04/2024</p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies">Webinar on review of Core Vocabularies</a></p>  
-</td>  
-<td>  
-<p>27/10/2023</p>  
 </td>  
 </tr>  
 </tbody>  
@@ -68,6 +60,22 @@ The table below shows webinars and events related to **previous versions of CPSV
 </td>  
 <td>  
 <p><strong>Date</strong></p>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies-and-style-guide-blog-post">Webinar on review of Core Vocabularies and Style Guide Blog post</a></p>  
+</td>  
+<td>  
+<p>09/04/2024</p>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies">Webinar on review of Core Vocabularies</a></p>  
+</td>  
+<td>  
+<p>27/10/2023</p>  
 </td>  
 </tr>  
 <tr>  
